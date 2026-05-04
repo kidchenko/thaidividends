@@ -156,3 +156,51 @@ import { Icon } from "astro-icon/components";
     });
   }
 </script>
+
+<style>
+  /* Entrance/exit transition for the native <dialog>. Uses @starting-style +
+     transition-behavior: allow-discrete to animate the discrete `open` and
+     overlay states. Falls back to no animation in older browsers. */
+  #dividend-dialog {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+    transition:
+      opacity 180ms ease-out,
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      overlay 220ms ease-out allow-discrete,
+      display 220ms ease-out allow-discrete;
+  }
+  #dividend-dialog[open] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  @starting-style {
+    #dividend-dialog[open] {
+      opacity: 0;
+      transform: translateY(-6px) scale(0.97);
+    }
+  }
+
+  #dividend-dialog::backdrop {
+    opacity: 0;
+    transition:
+      opacity 180ms ease-out,
+      overlay 180ms ease-out allow-discrete,
+      display 180ms ease-out allow-discrete;
+  }
+  #dividend-dialog[open]::backdrop {
+    opacity: 1;
+  }
+  @starting-style {
+    #dividend-dialog[open]::backdrop {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #dividend-dialog,
+    #dividend-dialog::backdrop {
+      transition: none;
+    }
+  }
+</style>

@@ -113,11 +113,12 @@ export function getSymbolStats(events: DividendEvent[], today: string = todayIso
       confirmedCount += 1;
     }
   }
-  // Upcoming = nearest future (ex-date >= today)
-  const future = events.filter((e) => e.exDate >= today);
+  // Use payment date when available so a dividend whose ex-date passed but
+  // whose cash hasn't been distributed yet still counts as upcoming.
+  const effectiveDate = (e: DividendEvent): string => e.paymentDate ?? e.exDate;
+  const future = events.filter((e) => effectiveDate(e) >= today);
   const upcoming = future.length > 0 ? future[future.length - 1] : null; // closest future
-  // Last paid = nearest past (ex-date < today)
-  const past = events.filter((e) => e.exDate < today);
+  const past = events.filter((e) => effectiveDate(e) < today);
   const lastPaid = past.length > 0 ? past[0] : null; // newest past (events sorted desc)
   return {
     count: events.length,

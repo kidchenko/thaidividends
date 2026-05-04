@@ -15,8 +15,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "3K-BAT",
+    "name": "THAI ENERGY STORAGE TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "88TH",
     "name": "88(Thailand) Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "A",
+    "name": "AREEYA PROPERTY PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -50,6 +60,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "AAV",
+    "name": "ASIA AVIATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "ABBV19",
     "name": "Depositary Receipt on ABBV Issued by YUANTA",
     "currency": "Baht"
@@ -57,6 +72,21 @@
   {
     "symbol": "ABFTH",
     "name": "THE ABF THAILAND BOND INDEX FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ABICO",
+    "name": "ABICO HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ABPIF",
+    "name": "AMATA B. GRIMM POWER POWER PLANT INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ACAP",
+    "name": "ASIA CAPITAL GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -100,6 +130,21 @@
     "currency": "Baht"
   },
   {
+    "symbol": "AF",
+    "name": "AIRA FACTORING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AFC",
+    "name": "ASIA FIBER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AGE",
+    "name": "ASIA GREEN ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "AH",
     "name": "AAPICO HITECH PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -130,13 +175,28 @@
     "currency": "Baht"
   },
   {
+    "symbol": "AIMCG",
+    "name": "AIM COMMERCIAL GROWTH FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
     "symbol": "AIMIRT",
     "name": "AIM INDUSTRIAL GROWTH FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
     "currency": "Baht"
   },
   {
+    "symbol": "AIRA",
+    "name": "AIRA CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "AIT",
     "name": "ADVANCED INFORMATION TECHNOLOGY PUBLIC CO.,LTD.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AJ",
+    "name": "A.J. PLAST PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -150,6 +210,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "ALL",
+    "name": "ALL INSPIRE DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "ALLA",
     "name": "ALLA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -160,6 +225,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "ALPHAX",
+    "name": "ALPHA DIVISIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ALT",
+    "name": "ALT TELECOM PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "ALUCON",
     "name": "ALUCON PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -167,6 +242,11 @@
   {
     "symbol": "AMA",
     "name": "AMA MARINE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMANAH",
+    "name": "AMANAH LEASING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -205,6 +285,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "AMR",
+    "name": "AMR ASIA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ANAN",
+    "name": "ANANDA DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "ANI",
     "name": "Asia Network International Public Company Limited",
     "currency": "Baht"
@@ -230,6 +320,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "APCS",
+    "name": "ASIA PRECISION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "APO",
     "name": "Asian Palm Oil Public Company Limited",
     "currency": "Baht"
@@ -245,6 +340,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "AQUA",
+    "name": "AQUA CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "ARIP",
     "name": "ARIP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -257,6 +357,11 @@
   {
     "symbol": "AS",
     "name": "ASPHERE INNOVATIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASAP",
+    "name": "SYNERGETIC AUTO PERFORMANCE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -287,6 +392,11 @@
   {
     "symbol": "ASML01",
     "name": "Depositary Receipt on ASML Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASN",
+    "name": "ASN BROKER PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -400,6 +510,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "BAT-3K",
+    "name": "HITACHI CHEMICAL STORAGE BATTERY (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "BAY",
     "name": "BANK OF AYUDHYA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -460,6 +575,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "BEAUTY",
+    "name": "BEAUTY COMMUNITY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "BEC",
     "name": "BEC WORLD PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -470,6 +590,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "BEYOND",
+    "name": "BOUND AND BEYOND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "BGC",
     "name": "BG CONTAINER GLASS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -477,6 +602,11 @@
   {
     "symbol": "BGRIM",
     "name": "B.GRIMM POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BGT",
+    "name": "BGT CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -492,6 +622,11 @@
   {
     "symbol": "BIG",
     "name": "BIG CAMERA CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BIGC",
+    "name": "BIG C SUPERCENTER PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -530,8 +665,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "BKI",
+    "name": "BANGKOK INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "BKIH",
     "name": "BKI HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKKCP",
+    "name": "BANGKOK COMMERCIAL PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -560,6 +705,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "BLESS",
+    "name": "BLESS ASSET GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "BLK06",
     "name": "Depositary Receipt on BLK Issued by KKPS",
     "currency": "Baht"
@@ -567,6 +717,11 @@
   {
     "symbol": "BM",
     "name": "BANGKOK SHEET METAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BMSCITH",
+    "name": "BCAP MSCI THAILAND ETF",
     "currency": "Baht"
   },
   {
@@ -605,6 +760,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "BROCK",
+    "name": "BAAN ROCK GARDEN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "BRR",
     "name": "BURIRAM SUGAR PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -612,6 +772,26 @@
   {
     "symbol": "BRRGIF",
     "name": "BURIRAM SUGAR GROUP POWER PLANT INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BSBM",
+    "name": "BANGSAPHAN BARMILL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BSET100",
+    "name": "BCAP SET 100 ETF",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BSM",
+    "name": "BUILDERSMART PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BSRC",
+    "name": "BANGCHAK SRIRACHA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -627,6 +807,21 @@
   {
     "symbol": "BTNC",
     "name": "BOUTIQUE NEWCITY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BTS",
+    "name": "BTS GROUP HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BTSGIF",
+    "name": "BTS RAIL MASS TRANSIT GROWTH INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BTW",
+    "name": "BT WEALTH INDUSTRIES PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -670,6 +865,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CAZ",
+    "name": "CAZ (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CBG",
     "name": "CARABAO GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -685,6 +885,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CEN",
+    "name": "CAPITAL ENGINEERING NETWORK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CENTEL",
     "name": "CENTRAL PLAZA HOTEL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -697,6 +902,16 @@
   {
     "symbol": "CFARM",
     "name": "CHUWIT FARM (2019) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CFRESH",
+    "name": "SEAFRESH INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CGH",
+    "name": "COUNTRY GROUP HOLDINGS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -725,6 +940,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CHEWA",
+    "name": "CHEWATHAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CHG",
     "name": "CHULARAT HOSPITAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -735,13 +955,38 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CHIC",
+    "name": "CHIC REPUBLIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CHMOBILE19",
     "name": "Depositary Receipt on CHMOBILE Issued by YUANTA",
     "currency": "Baht"
   },
   {
+    "symbol": "CHO",
+    "name": "CHO THAVEE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHOTI",
+    "name": "KIANG HUAT SEA GULL TRADING FROZEN FOOD PUBLIC CO., LTD.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CI",
+    "name": "CHARN ISSARA DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CIMBT",
     "name": "CIMB THAI BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CITY",
+    "name": "CITY STEEL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -775,8 +1020,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CMC",
+    "name": "CHAOPRAYAMAHANAKORN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CME03",
     "name": "Depositary Receipt on CME Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CMO",
+    "name": "CMO PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -787,6 +1042,11 @@
   {
     "symbol": "CN01",
     "name": "Depositary Receipt on CAM CSI300 ETF Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CNS",
+    "name": "CAPITAL NOMURA SECURITIES PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -805,6 +1065,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "COL",
+    "name": "COL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "COLOR",
     "name": "SALEE COLOUR PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -815,8 +1080,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "COMAN",
+    "name": "COMANCHE INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "COSTCO19",
     "name": "Depositary Receipt on COSTCO Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "COTTO",
+    "name": "SCG CERAMICS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -825,7 +1100,17 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CPANEL",
+    "name": "CPANEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CPAXT",
+    "name": "CP AXTRA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPAXTT",
     "name": "CP AXTRA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
@@ -845,6 +1130,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CPL",
+    "name": "CPL GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CPN",
     "name": "CENTRAL PATTANA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -860,6 +1150,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CPNRF",
+    "name": "CPN RETAIL GROWTH LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CPR",
     "name": "CPR GOMU INDUSTRIAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -867,6 +1162,11 @@
   {
     "symbol": "CPT",
     "name": "CPT DRIVES AND POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPTGF",
+    "name": "C.P. TOWER GROWTH LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -882,6 +1182,11 @@
   {
     "symbol": "CRC",
     "name": "CENTRAL RETAIL CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CRD",
+    "name": "CHIANGMAI RIMDOI PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -905,6 +1210,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CRYSTAL",
+    "name": "CRYSTAL RETAIL GROWTH LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CSC",
     "name": "CROWN SEAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -920,6 +1230,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CSL",
+    "name": "CS LOXINFO PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CSP",
+    "name": "CSP STEEL CENTER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CSR",
     "name": "CITY SPORTS AND RECREATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -930,8 +1250,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "CTARAF",
+    "name": "CENTARA HOTELS & RESORTS LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "CTW",
     "name": "CHAROONG THAI WIRE & CABLE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CV",
+    "name": "CLOVER POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CWT",
+    "name": "CHAI WATANA TANNERY GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -970,8 +1305,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "DEMCO",
+    "name": "DEMCO PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "DEXON",
     "name": "DEXON Technology Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DHOUSE",
+    "name": "DHOUSE PATTANA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1005,6 +1350,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "DPAINT",
+    "name": "DELTA PAINT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "DREIT",
     "name": "DUSIT THANI FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
     "currency": "Baht"
@@ -1015,6 +1365,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "DSGT",
+    "name": "DSG INTERNATIONAL (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DTAC",
+    "name": "TOTAL ACCESS COMMUNICATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "DTCENT",
     "name": "D.T.C. Enterprise Public Company Limited",
     "currency": "Baht"
@@ -1022,6 +1382,26 @@
   {
     "symbol": "DTCI",
     "name": "D.T.C. INDUSTRIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DTCPF",
+    "name": "DUSIT THANI FREEHOLD & LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DUSIT",
+    "name": "DUSIT THANI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EA",
+    "name": "ENERGY ABSOLUTE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EARTH",
+    "name": "ENERGY EARTH PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1040,6 +1420,31 @@
     "currency": "Baht"
   },
   {
+    "symbol": "EBANK",
+    "name": "KTAM SET BANKING ETF TRACKER",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ECF",
+    "name": "EAST COAST FURNITECH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ECOMM",
+    "name": "KTAM SET COMMERCE ETF TRACKER",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EFOOD",
+    "name": "KTAM SET FOOD AND BEVERAGE ETF TRACKER",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EFORL",
+    "name": "E FOR L AIM PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "EGATIF",
     "name": "NORTH BANGKOK POWER PLANT BLOCK 1 INFRASTRUCTURE FUND, ELECTRICITY GENERATING AUTHORITY OF THAILAND",
     "currency": "Baht"
@@ -1047,6 +1452,11 @@
   {
     "symbol": "EGCO",
     "name": "ELECTRICITY GENERATING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EICT",
+    "name": "KTAM SET ICT ETF TRACKER",
     "currency": "Baht"
   },
   {
@@ -1060,6 +1470,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "ENY",
+    "name": "KTAM SET ENERGY ETF TRACKER",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EP",
+    "name": "EASTERN POWER GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "EPG",
     "name": "EASTERN POLYMER GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1067,6 +1487,16 @@
   {
     "symbol": "ERW",
     "name": "THE ERAWAN GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ERWPF",
+    "name": "ERAWAN HOTEL GROWTH PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ESET50",
+    "name": "KTAM SET50 ETF TRACKER",
     "currency": "Baht"
   },
   {
@@ -1082,6 +1512,11 @@
   {
     "symbol": "ETC",
     "name": "EARTH TECH ENVIRONMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ETE",
+    "name": "EASTERN TECHNICAL ENGINEERING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1135,6 +1570,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "FN",
+    "name": "FN FACTORY OUTLET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FNS",
+    "name": "FNS HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "FORTH",
     "name": "FORTH CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1165,6 +1610,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "FSS",
+    "name": "FINANSIA SYRUS SECURITIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "FTE",
     "name": "FIRETRADE ENGINEERING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1180,8 +1630,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "FUTUREPF",
+    "name": "FUTURE PARK LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "FUTURERT",
     "name": "Future City Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FVC",
+    "name": "FILTER VISION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1205,6 +1665,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "GCAP",
+    "name": "G CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GENCO",
+    "name": "GENERAL ENVIRONMENTAL CONSERVATION PUBLIC CO., LTD.",
+    "currency": "Baht"
+  },
+  {
     "symbol": "GFC",
     "name": "Genesis Fertility Center Public Company Limited",
     "currency": "Baht"
@@ -1225,13 +1695,43 @@
     "currency": "Baht"
   },
   {
+    "symbol": "GL",
+    "name": "GROUP LEASE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "GLAND",
     "name": "GRAND CANAL LAND PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "GLANDRT",
+    "name": "GLAND OFFICE LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
     "symbol": "GLOBAL",
     "name": "SIAM GLOBAL HOUSE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GLORY",
+    "name": "GLORY FOREVER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GLOW",
+    "name": "GLOW ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GOLD",
+    "name": "GOLDEN LAND PROPERTY DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GOLDPF",
+    "name": "GOLD PROPERTY FUND (LEASE HOLD)",
     "currency": "Baht"
   },
   {
@@ -1257,6 +1757,16 @@
   {
     "symbol": "GPSC",
     "name": "GLOBAL POWER SYNERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GRAMMY",
+    "name": "GMM GRAMMY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GRAND",
+    "name": "GRANDE ASSET HOTELS AND PROPERTY PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1450,6 +1960,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "IFEC",
+    "name": "INTER FAR EAST ENERGY CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "IFS",
     "name": "IFS CAPITAL (THAILAND) PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1457,6 +1972,11 @@
   {
     "symbol": "IHL",
     "name": "INTERHIDES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IIG",
+    "name": "I&I GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1472,6 +1992,11 @@
   {
     "symbol": "ILM",
     "name": "INDEX LIVING MALL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IMH",
+    "name": "INTERMEDICAL CARE AND LAB HOSPITAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1530,6 +2055,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "IRCP",
+    "name": "INTERNATIONAL RESEARCH CORPORATION PUBLIC CO., LTD.",
+    "currency": "Baht"
+  },
+  {
     "symbol": "IROYAL",
     "name": "Interroyal Engineering Public Company Limited",
     "currency": "Baht"
@@ -1552,6 +2082,16 @@
   {
     "symbol": "ITC",
     "name": "i-Tail Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ITD",
+    "name": "ITALIAN-THAI DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ITEL",
+    "name": "INTERLINK TELECOM PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1580,6 +2120,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "J",
+    "name": "JAS ASSET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "JAK",
     "name": "JAKPAISAN ESTATE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1587,6 +2132,16 @@
   {
     "symbol": "JAPAN13",
     "name": "Depositary Receipt on CAM JAPAN HDG ETF Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JAS",
+    "name": "JASMINE INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JCP",
+    "name": "JC LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -1607,6 +2162,11 @@
   {
     "symbol": "JEPI19",
     "name": "Depositary Receipt on JEPI ETF Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JKN",
+    "name": "JKN GLOBAL GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1650,6 +2210,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "JTS",
+    "name": "JASMINE TECHNOLOGY SOLUTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "JUBILE",
     "name": "JUBILEE ENTERPRISE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1662,6 +2227,11 @@
   {
     "symbol": "KAMART",
     "name": "KARMARTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KASET",
+    "name": "THAI HA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1690,6 +2260,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "KCCAMC",
+    "name": "Knight Club Capital Asset Management Public Company Limited",
+    "currency": "Baht"
+  },
+  {
     "symbol": "KCE",
     "name": "KCE ELECTRONICS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1700,13 +2275,28 @@
     "currency": "Baht"
   },
   {
+    "symbol": "KCM",
+    "name": "K.C. METALSHEET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "KDH",
     "name": "THONBURI MEDICAL CENTRE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "KEX",
+    "name": "KEX EXPRESS (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "KEYENCE23",
     "name": "Depositary Receipt on KEYENCE Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KGEN",
+    "name": "KING GEN PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1735,6 +2325,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "KKC",
+    "name": "KULTHORN KIRBY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "KKP",
     "name": "KIATNAKIN PHATRA BANK PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1752,6 +2347,11 @@
   {
     "symbol": "KOOL",
     "name": "CL VENTURE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KPNPF",
+    "name": "KPN PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -1850,6 +2450,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "LDC",
+    "name": "LDC DENTAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "LEE",
     "name": "LEE FEED MILL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -1885,6 +2490,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "LHPF",
+    "name": "LAND AND HOUSES FREEHOLD AND LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "LHRREIT",
     "name": "Land and Houses Residential FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
     "currency": "Baht"
@@ -1892,6 +2502,11 @@
   {
     "symbol": "LHSC",
     "name": "LH SHOPPING CENTERS LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LIT",
+    "name": "LEASE IT PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -1907,6 +2522,11 @@
   {
     "symbol": "LOXLEY",
     "name": "LOXLEY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LPF",
+    "name": "LOTUS'S RETAIL GROWTH FREEHOLD AND LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -1940,6 +2560,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "LTX",
+    "name": "LUCKYTEX (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "LUXF",
     "name": "LUXURY REAL ESTATE INVESTMENT FUND",
     "currency": "Baht"
@@ -1957,6 +2582,16 @@
   {
     "symbol": "M-CHAI",
     "name": "MAHACHAI HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "M-II",
+    "name": "MFC INDUSTRIAL INVESTMENT PROPERTY AND LEASEHOLD FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "M-PAT",
+    "name": "MFC PATONG HERITAGE PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -2025,6 +2660,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "MCOT",
+    "name": "MCOT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "MCS",
     "name": "M.C.S.STEEL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2085,6 +2725,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "MGE",
+    "name": "MFC GLOBAL EQUITY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "MGI",
     "name": "Miss Grand International Public Company Limited",
     "currency": "Baht"
@@ -2125,6 +2770,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "MILL",
+    "name": "MILLCON STEEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "MINT",
     "name": "MINOR INTERNATIONAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2132,6 +2782,11 @@
   {
     "symbol": "MIPF",
     "name": "MILLIONAIRE PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MIT",
+    "name": "MFC INDUSTRIAL REAL ESTATE INVESTMENT TRUST",
     "currency": "Baht"
   },
   {
@@ -2147,6 +2802,16 @@
   {
     "symbol": "MJLF",
     "name": "MAJOR CINEPLEX LIFESTYLE LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MK",
+    "name": "M.K. REAL ESTATE DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ML",
+    "name": "MIDA LEASING PUBLIC CO., LTD.",
     "currency": "Baht"
   },
   {
@@ -2177,6 +2842,16 @@
   {
     "symbol": "MODERN",
     "name": "MODERNFORM GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MONO",
+    "name": "MONO NEXT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MONTRI",
+    "name": "101 MONTRI STORAGE PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -2275,6 +2950,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "MUD",
+    "name": "MUD & HOUND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "MUFG19",
     "name": "Depositary Receipt on MUFG Issued by YUANTA",
     "currency": "Baht"
@@ -2300,6 +2980,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "NATION",
+    "name": "NATION GROUP (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "NC",
     "name": "NEWCITY (BANGKOK) PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2307,6 +2992,16 @@
   {
     "symbol": "NCAP",
     "name": "NEXT CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NCH",
+    "name": "N. C. HOUSING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NCL",
+    "name": "NCL INTERNATIONAL LOGISTICS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2360,6 +3055,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "NFC",
+    "name": "NFC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "NIKE80",
     "name": "Depositary Receipt on NIKE Issued by KTB",
     "currency": "Baht"
@@ -2372,6 +3072,11 @@
   {
     "symbol": "NINTENDO23",
     "name": "Depositary Receipt on NINTENDO Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NKI",
+    "name": "THE NAVAKIJ INSURANCE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2400,6 +3105,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "NOVA",
+    "name": "NOVA EMPIRE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "NOVOB80",
     "name": "Depositary Receipt on NOVOB Issued by KTB",
     "currency": "Baht"
@@ -2407,6 +3117,16 @@
   {
     "symbol": "NPK",
     "name": "NEW PLUS KNITTING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NRF",
+    "name": "NR INSTANT PRODUCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NSI",
+    "name": "NAM SENG INSURANCE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2440,6 +3160,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "NV",
+    "name": "NOVA ORGANIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NVD",
+    "name": "NIRVANA DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "NVDA01",
     "name": "Depositary Receipt on NVDA Issued by BLS",
     "currency": "Baht"
@@ -2465,6 +3195,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "NWR",
+    "name": "NAWARAT PATANAKARN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "NYT",
     "name": "NAMYONG TERMINAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2472,6 +3207,21 @@
   {
     "symbol": "OCC",
     "name": "O.C.C. PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OGC",
+    "name": "OCEAN GLASS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OHTL",
+    "name": "OHTL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OISHI",
+    "name": "OISHI GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2585,13 +3335,28 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PEER",
+    "name": "PEER FOR YOU PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PEP80",
     "name": "Depositary Receipt on PEP Issued by KTB",
     "currency": "Baht"
   },
   {
+    "symbol": "PERM",
+    "name": "PERMSIN STEEL WORKS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PETROCN80",
     "name": "Depositary Receipt on PETROCN Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PF",
+    "name": "PROPERTY PERFECT PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2650,6 +3415,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PK",
+    "name": "PATKOL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PK-P",
+    "name": "Preferred Shares of PATKOL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PL",
     "name": "PHATRA LEASING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2660,8 +3435,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PLANET",
+    "name": "PLANET COMMUNICATIONS ASIA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PLAT",
     "name": "THE PLATINUM GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PLE",
+    "name": "POWER LINE ENGINEERING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2705,13 +3490,38 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PORT",
+    "name": "SAHATHAI TERMINAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PPF",
+    "name": "PINTHONG INDUSTRIAL PARK PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PPM",
     "name": "PORN PROM METAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "PPP",
+    "name": "PREMIER PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PPS",
+    "name": "PROJECT PLANNING SERVICE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PQS",
     "name": "Premier Quality Starch Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PR",
+    "name": "PRESIDENT RICE PRODUCTS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2745,6 +3555,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PRIN",
+    "name": "PRINSIRI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PRINC",
     "name": "PRINCIPAL CAPITAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2752,6 +3567,16 @@
   {
     "symbol": "PRM",
     "name": "PRIMA MARINE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PROEN",
+    "name": "PROEN CORP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PROS",
+    "name": "PROSPER ENGINEERING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2770,6 +3595,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PS",
+    "name": "PRUKSA REAL ESTATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PSH",
     "name": "PRUKSA HOLDING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2785,6 +3615,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "PSTC",
+    "name": "POWER SOLUTION TECHNOLOGIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "PT",
     "name": "PREMIER TECHNOLOGY PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -2792,6 +3627,11 @@
   {
     "symbol": "PTC",
     "name": "PREMIER TANK CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTECH",
+    "name": "PLUS TECH INNOVATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2850,8 +3690,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "QHHR",
+    "name": "QUALITY HOUSES HOTEL AND RESIDENCE FREEHOLD AND LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "QHHRREIT",
     "name": "Quality Houses Hotel and Residence Freehold and Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QHOP",
+    "name": "QUALITY HOSPITALITY LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QHPF",
+    "name": "QUALITY HOUSES LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -2895,8 +3750,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "RICHY",
+    "name": "RICHY PLACE 2002 PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "RJH",
     "name": "RAJTHANEE HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RML",
+    "name": "RAIMON LAND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ROBINS",
+    "name": "ROBINSON PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2910,8 +3780,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "ROH",
+    "name": "ROYAL ORCHID HOTEL (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "ROJNA",
     "name": "ROJANA INDUSTRIAL PARK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RP",
+    "name": "RAJA FERRY PORT PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -2925,8 +3805,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "RS",
+    "name": "RS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "RSP",
     "name": "RICH SPORT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RT",
+    "name": "RIGHT TUNNELLING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RWI",
+    "name": "RAYONG WIRE INDUSTRIES PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3060,6 +3955,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SCBB",
+    "name": "THE SIAM COMMERCIAL BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCBB-P",
+    "name": "Preferred Shares of THE SIAM COMMERCIAL BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SCC",
     "name": "THE SIAM CEMENT PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3085,8 +3990,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SCI",
+    "name": "SCI ELECTRIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SCL",
     "name": "S.C.L. Motor Part Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCM",
+    "name": "SUCCESSMORE BEING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCN",
+    "name": "SCAN INTER PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3097,6 +4017,11 @@
   {
     "symbol": "SE",
     "name": "SIAMEAST SOLUTIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SE-ED",
+    "name": "SE-EDUCATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3140,13 +4065,28 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SF",
+    "name": "SIAM FUTURE DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SFLEX",
     "name": "STARFLEX PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "SFP",
+    "name": "SIAM FOOD PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SFT",
     "name": "SHRINKFLEX (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SGC",
+    "name": "SG Capital Public Company Limited",
     "currency": "Baht"
   },
   {
@@ -3170,8 +4110,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SHREIT",
+    "name": "STRATEGIC HOSPITALITY EXTENDABLE FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SIA19",
     "name": "Depositary Receipt on SIA Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIAM",
+    "name": "SIAM STEEL INTERNATIONAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3182,6 +4132,11 @@
   {
     "symbol": "SIMAT",
     "name": "SIMAT TECHNOLOGIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SINGER",
+    "name": "SINGER THAILAND PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3202,6 +4157,11 @@
   {
     "symbol": "SIRI",
     "name": "SANSIRI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIRIP",
+    "name": "SIRI PRIME OFFICE PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -3235,6 +4195,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SKE",
+    "name": "SAKOL ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SKN",
     "name": "S.KIJCHAI ENTERPRISE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3247,6 +4212,11 @@
   {
     "symbol": "SKY",
     "name": "SKY ICT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SLP",
+    "name": "SALEE PRINTING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3270,6 +4240,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SMK",
+    "name": "SYN MUN KONG INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SMO",
     "name": "SMOTHONG GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3282,6 +4257,11 @@
   {
     "symbol": "SMT",
     "name": "STARS MICROELECTRONICS (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SNC",
+    "name": "SNC FORMER PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3340,6 +4320,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SPACK",
+    "name": "S. PACK & PRINT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SPALI",
     "name": "SUPALAI PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3367,6 +4352,11 @@
   {
     "symbol": "SPENGY80",
     "name": "Depositary Receipt on SPENGY ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPF",
+    "name": "SAMUI AIRPORT PROPERTY FUND (LEASEHOLD)",
     "currency": "Baht"
   },
   {
@@ -3415,6 +4405,21 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SPWPF",
+    "name": "SRI PANWA HOTEL PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SQ",
+    "name": "SAHAKOL EQUIPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SR",
+    "name": "SIAMRAJ PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SRICHA",
     "name": "SRIRACHA CONSTRUCTION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3427,6 +4432,11 @@
   {
     "symbol": "SRS",
     "name": "SIRISOFT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSC",
+    "name": "SERMSUK PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3450,8 +4460,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SST",
+    "name": "SUB SRI THAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSTPF",
+    "name": "SUB SRI THAI PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SSTRT",
     "name": "SUB SRI THAI REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSTSS",
+    "name": "SUBSRITHAI SMART STORAGE PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -3475,6 +4500,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "STEC",
+    "name": "SINO-THAI ENGINEERING AND CONSTRUCTION PUBLIC CO.,LTD.",
+    "currency": "Baht"
+  },
+  {
     "symbol": "STECH",
     "name": "SIAM TECHNIC CONCRETE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3495,13 +4525,28 @@
     "currency": "Baht"
   },
   {
+    "symbol": "STHAI",
+    "name": "SHUN THAI RUBBER GLOVES INDUSTRY PUBLIC CO., LTD",
+    "currency": "Baht"
+  },
+  {
     "symbol": "STI",
     "name": "STONEHENGE INTER PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "STOWER",
+    "name": "SKY TOWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "STP",
     "name": "SAHATHAI PRINTING & PACKAGING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STPI",
+    "name": "STP&I PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3530,6 +4575,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SUPER",
+    "name": "SUPER ENERGY CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SUPEREIF",
     "name": "SUPER ENERGY POWER PLANT INFRASTRUCTURE FUND",
     "currency": "Baht"
@@ -3545,6 +4595,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "SVH",
+    "name": "SAMITIVEJ PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "SVI",
     "name": "SVI PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3552,6 +4607,11 @@
   {
     "symbol": "SVOA",
     "name": "SVOA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SVR",
+    "name": "SIVAROM REAL ESTATE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3585,6 +4645,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TAE",
+    "name": "THAI AGRO ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TAIWAN19",
     "name": "Depositary Receipt on YT TAIWAN50 ETF Issued by YUANTA",
     "currency": "Baht"
@@ -3600,8 +4665,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TAKUNI",
+    "name": "TAKUNI GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TAN",
     "name": "Tanachira Retail Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TAPAC",
+    "name": "TAPACO PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3632,6 +4707,31 @@
   {
     "symbol": "TCAP-P",
     "name": "Preferred Shares of THANACHART CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCC",
+    "name": "THAI CAPITAL CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCCC",
+    "name": "THAI CENTRAL CHEMICAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCIF",
+    "name": "THAI COMMERCIAL INVESTMENT FREEHOLD AND LEASEHOLD FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCJ",
+    "name": "T.C.J. ASIA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCMC",
+    "name": "TCM CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3705,6 +4805,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TF",
+    "name": "THAI PRESIDENT FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TFFIF",
     "name": "THAILAND FUTURE FUND",
     "currency": "Baht"
@@ -3725,6 +4830,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TFUND",
+    "name": "TICON PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TGCI",
+    "name": "THAI-GERMAN CERAMIC INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TGE",
     "name": "THACHANG GREEN ENERGY PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3732,6 +4847,16 @@
   {
     "symbol": "TGH",
     "name": "THAI GROUP HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TGROWTH",
+    "name": "TICON INDUSTRIAL GROWTH LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TH100",
+    "name": "ThaiDEX SET100 ETF",
     "currency": "Baht"
   },
   {
@@ -3755,13 +4880,53 @@
     "currency": "Baht"
   },
   {
+    "symbol": "THCOM",
+    "name": "THAICOM PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THE",
+    "name": "THE STEEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "THG",
     "name": "THONBURI HEALTHCARE GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "THIF",
+    "name": "THAI HOTEL INVESTMENT FREEHOLD AND LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "THIP",
     "name": "THANTAWAN INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THMUI",
+    "name": "THAI MUI CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THRE",
+    "name": "THAI REINSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THREL",
+    "name": "THAIRE LIFE ASSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIC",
+    "name": "THE THAI INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIC-P",
+    "name": "Preferred Shares of THE THAI INSURANCE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3772,6 +4937,16 @@
   {
     "symbol": "TIF1",
     "name": "THAI INDUSTRIAL FUND 1",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIGER",
+    "name": "THAI ENGER HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIP",
+    "name": "DHIPAYA INSURANCE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3820,8 +4995,28 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TKT",
+    "name": "T.KRUNGTHAI INDUSTRIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TLHPF",
+    "name": "THAILAND HOSPITALITY PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TLI",
     "name": "THAI LIFE INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TLOGIS",
+    "name": "TPARK LOGISTICS PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TM",
+    "name": "TECHNO MEDICAL PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3860,8 +5055,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TNDT",
+    "name": "THAI NONDESTRUCTIVE TESTING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TNH",
     "name": "THAI NAKARIN HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNITY",
+    "name": "TRINITY WATTHANA PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3872,6 +5077,16 @@
   {
     "symbol": "TNP",
     "name": "THANAPIRIYA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNPC",
+    "name": "THAI NAM PLASTIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNPF",
+    "name": "TRINITY FREEHOLD AND LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -3905,6 +5120,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TPA",
+    "name": "THAI POLY ACRYLIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TPAC",
     "name": "THAI PLASPAC PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3912,6 +5132,11 @@
   {
     "symbol": "TPBI",
     "name": "TPBI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPC",
+    "name": "THAI PLASTIC AND CHEMICALS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3937,6 +5162,11 @@
   {
     "symbol": "TPLAS",
     "name": "THAI PLASTIC INDUSTRIAL (1994) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPOLY",
+    "name": "THAI POLYCONS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -3970,8 +5200,23 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TRC",
+    "name": "TRC CONSTRUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRIF",
+    "name": "Thai Retail Investment Fund",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TRIPCOM80",
     "name": "Depositary Receipt on TRIPCOM Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRITN",
+    "name": "TRITON HOLDING PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4000,6 +5245,16 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TRUEE",
+    "name": "TRUE CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRV",
+    "name": "T.R.V. RUBBER PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TRVUS06",
     "name": "Depositary Receipt on TRVUS Issued by KKPS",
     "currency": "Baht"
@@ -4007,6 +5262,16 @@
   {
     "symbol": "TSC",
     "name": "THAI STEEL CABLE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TSE",
+    "name": "THAI SOLAR ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TSR",
+    "name": "TSR LIVING SOLUTION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4030,8 +5295,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TTCL",
+    "name": "TTCL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TTI",
     "name": "THAI TEXTILE INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTL",
+    "name": "TTL INDUSTRIES PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4045,6 +5320,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TTTM",
+    "name": "THAI TORAY TEXTILE MILLS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TTW",
     "name": "TTW PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -4055,13 +5335,33 @@
     "currency": "Baht"
   },
   {
+    "symbol": "TURTLE",
+    "name": "SUPER TURTLE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TVDH",
+    "name": "TVD HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TVH",
     "name": "THAIVIVAT HOLDINGS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
+    "symbol": "TVI",
+    "name": "THAIVIVAT INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "TVO",
     "name": "THAI VEGETABLE OIL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TVT",
+    "name": "TV THUNDER PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4072,6 +5372,11 @@
   {
     "symbol": "TWPC",
     "name": "THAI WAH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TWZ",
+    "name": "TWZ CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4087,6 +5392,11 @@
   {
     "symbol": "UBE",
     "name": "UBON BIO ETHANOL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UBIS",
+    "name": "UBIS (ASIA) PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4110,6 +5420,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "UNIPF",
+    "name": "UNILOFT PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
     "symbol": "UNIQ",
     "name": "UNIQUE ENGINEERING AND CONSTRUCTION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -4127,6 +5442,11 @@
   {
     "symbol": "UOB19",
     "name": "Depositary Receipt on UOB Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UOB8TF",
+    "name": "UOB FREEHOLD EIGHT THONGLOR PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -4150,6 +5470,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "URBNPF",
+    "name": "URBANA PROPERTY FUND (LEASE HOLD)",
+    "currency": "Baht"
+  },
+  {
     "symbol": "USTR24",
     "name": "Depositary Receipt on USTR ETF Issued by FSS",
     "currency": "Baht"
@@ -4160,8 +5485,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "UV",
+    "name": "UNIVENTURES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "UVAN",
     "name": "UNIVANICH PALM OIL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VARO",
+    "name": "VAROPAKORN PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4230,8 +5565,18 @@
     "currency": "Baht"
   },
   {
+    "symbol": "VNT",
+    "name": "VINYTHAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "VRANDA",
     "name": "VERANDA RESORT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VS",
+    "name": "VISERVE ENTERPRISE PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4255,6 +5600,21 @@
     "currency": "Baht"
   },
   {
+    "symbol": "WFX",
+    "name": "WORLD FLEX PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WG",
+    "name": "WHITE GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WGE",
+    "name": "WELL GRADED ENGINEERING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "WHA",
     "name": "WHA CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -4267,6 +5627,11 @@
   {
     "symbol": "WHAIR",
     "name": "WHA INDUSTRIAL LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WHAPF",
+    "name": "WHA PREMIUM FACTORY AND WAREHOUSE FREEHOLD AND LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
   },
   {
@@ -4310,6 +5675,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "WORK",
+    "name": "WORKPOINT ENTERTAINMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "WP",
     "name": "WP ENERGY PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -4320,6 +5690,11 @@
     "currency": "Baht"
   },
   {
+    "symbol": "WSOL",
+    "name": "WSOL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
     "symbol": "XO",
     "name": "EXOTIC FOOD PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -4327,6 +5702,16 @@
   {
     "symbol": "XPG",
     "name": "XSPRING CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "XYZ",
+    "name": "RSXYZ PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "YGG",
+    "name": "YGGDRAZIL GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {
@@ -4342,6 +5727,11 @@
   {
     "symbol": "ZEN",
     "name": "ZEN CORPORATION GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ZIGA",
+    "name": "ZIGA INNOVATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
   },
   {

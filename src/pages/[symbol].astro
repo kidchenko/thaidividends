@@ -10,7 +10,6 @@ import {
   getSymbolStats,
   groupEventsByYear,
   getCadence,
-  formatExDate,
   todayIso,
   withBase,
   type DividendEvent,
@@ -33,15 +32,59 @@ const confirmedCount = events.filter((e) => typeof e.amount === "number").length
 const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
 
-const formatDateLong = (iso: string): string =>
-  format(parseISO(iso), "EEE dd MMM yyyy");
+const isFuture = (e: DividendEvent) => (e.paymentDate ?? e.exDate) >= today;
+const formatDateShort = (iso: string): string => format(parseISO(iso), "dd MMM");
 
-const formatPeriod = (start: string | null, end: string | null): string | null => {
-  if (!start || !end) return null;
-  return `${format(parseISO(start), "dd MMM")} – ${format(parseISO(end), "dd MMM yyyy")}`;
-};
+// Trailing 12 months: sum of confirmed amounts whose ex-date sits in the
+// last 365 days. More meaningful than the all-time sum because the tracking
+// window varies per stock.
+const cutoff = ((): string => {
+  const d = parseISO(today);
+  d.setUTCFullYear(d.getUTCFullYear() - 1);
+  return format(d, "yyyy-MM-dd");
+})();
+const ttmAmount = events.reduce(
+  (sum, e) => (typeof e.amount === "number" && e.exDate >= cutoff && e.exDate <= today ? sum + e.amount : sum),
+  0,
+);
+const ttmCount = events.filter(
+  (e) => typeof e.amount === "number" && e.exDate >= cutoff && e.exDate <= today,
+).length;
 
-const isFuture = (e: DividendEvent) => e.exDate >= today;
+// Smart milestone for the 4th card. Priority:
+//   future ex-date  → "Next ex-date"
+//   pending payment → "Next payment"   (ex passed, cash hasn't paid yet)
+//   else            → "Last paid"
+type Milestone = { label: string; date: string; sub: string | null };
+const milestone: Milestone | null = (() => {
+  const futureEx = [...events].reverse().find((e) => e.exDate >= today);
+  if (futureEx) {
+    return {
+      label: "Next ex-date",
+      date: futureEx.exDate,
+      sub: futureEx.paymentDate ? `pays ${formatDateShort(futureEx.paymentDate)}` : null,
+    };
+  }
+  const pendingPayment = [...events]
+    .reverse()
+    .find((e) => e.exDate < today && e.paymentDate && e.paymentDate >= today);
+  if (pendingPayment && pendingPayment.paymentDate) {
+    return {
+      label: "Next payment",
+      date: pendingPayment.paymentDate,
+      sub: `ex ${formatDateShort(pendingPayment.exDate)}`,
+    };
+  }
+  const lastPast = events.find((e) => (e.paymentDate ?? e.exDate) < today);
+  if (lastPast) {
+    return {
+      label: "Last paid",
+      date: lastPast.paymentDate ?? lastPast.exDate,
+      sub: lastPast.paymentDate ? `ex ${formatDateShort(lastPast.exDate)}` : null,
+    };
+  }
+  return null;
+})();
 ---
 
 <Layout title={`${symbol} — Thai Dividends Calendar`} description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}>
@@ -79,21 +122,29 @@ const isFuture = (e: DividendEvent) => e.exDate >= today;
             </div>
           </div>
           <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Total / share</div>
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Last 12 months</div>
             <div class="font-display tabular-nums text-2xl font-medium text-accent">
-              {formatAmount(stats.totalAmount)} <span class="text-base text-muted">฿</span>
+              {ttmCount > 0 ? formatAmount(ttmAmount) : "—"}
+              {ttmCount > 0 && <span class="text-base text-muted ml-0.5">฿</span>}
             </div>
+            {ttmCount > 0 && (
+              <div class="font-display italic text-[12px] text-muted mt-1">
+                {ttmCount} {ttmCount === 1 ? "payout" : "payouts"}
+              </div>
+            )}
           </div>
           <div class="bg-bg p-4">
             <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
-              {stats.upcoming ? "Next ex-date" : "Last paid"}
+              {milestone ? milestone.label : "Last paid"}
             </div>
             <div class="font-display italic tabular-nums text-base text-text/90">
-              {(() => {
-                const ev = stats.upcoming ?? stats.lastPaid;
-                return ev ? format(parseISO(ev.exDate), "dd MMM yyyy") : "—";
-              })()}
+              {milestone ? format(parseISO(milestone.date), "dd MMM yyyy") : "—"}
             </div>
+            {milestone?.sub && (
+              <div class="font-display italic text-[12px] text-muted mt-1">
+                {milestone.sub}
+              </div>
+            )}
           </div>
         </section>
 
@@ -102,7 +153,8 @@ const isFuture = (e: DividendEvent) => e.exDate >= today;
           <section class="mb-14">
             <header class="flex items-baseline justify-between mb-4">
               <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-                <span class="italic font-light text-muted">Amounts over time</span>
+                <span class="font-medium">{symbol}</span>
+                <span class="italic font-light text-muted ml-2">dividends</span>
               </h2>
               <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
                 {confirmedCount} confirmed
@@ -127,80 +179,99 @@ const isFuture = (e: DividendEvent) => e.exDate >= today;
           </section>
         )}
 
-        <!-- Dividend list, grouped by year -->
-        {yearGroups.map((group) => (
-          <section class="mb-12">
-            <h2 class="font-display text-[clamp(1.5rem,3vw,2.25rem)] tracking-tight mb-5 flex items-baseline gap-4">
-              <span class="italic font-light text-muted">Year</span>
-              <span class="font-medium tabular-nums">{group.year}</span>
-              <span class="flex-1 border-b border-border ml-2"></span>
-              <span class="text-[11px] tracking-[0.15em] uppercase text-muted font-sans">
-                {group.events.length} {group.events.length === 1 ? "event" : "events"}
-              </span>
+        <!-- Dividend history, grouped by year (recent open, older collapsed) -->
+        <section class="mb-14">
+          <header class="flex items-baseline justify-between mb-4">
+            <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+              <span class="italic font-light text-muted">History</span>
             </h2>
-            <ul class="m-0 p-0 list-none flex flex-col">
-              {group.events.map((e) => {
-                const upcoming = isFuture(e);
-                const period = formatPeriod(e.operationStart, e.operationEnd);
-                return (
-                  <li class={`event-row group grid grid-cols-[1fr_auto] gap-4 py-5 border-t border-border ${
-                    upcoming ? "border-l-2 border-l-accent pl-4 -ml-4" : ""
-                  }`}>
-                    <div>
-                      <div class="flex items-baseline gap-2 flex-wrap mb-1.5">
-                        <span class="font-display text-[18px] sm:text-xl tabular-nums font-medium">
-                          {formatDateLong(e.exDate)}
-                        </span>
-                        {upcoming && (
-                          <span class="inline-block px-1.5 py-0.5 text-[9px] font-bold tracking-[0.18em] uppercase bg-accent text-bg">
-                            Upcoming
+            <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
+              {events.length} {events.length === 1 ? "event" : "events"} · since {stats.firstDate ? format(parseISO(stats.firstDate), "MMM yyyy") : "—"}
+            </span>
+          </header>
+
+          <div class="border-t border-border">
+            {yearGroups.map((group, idx) => {
+              const isOpen = idx < 2;
+              const yearTotal = group.events.reduce(
+                (s, e) => s + (typeof e.amount === "number" ? e.amount : 0),
+                0,
+              );
+              const hasUpcoming = group.events.some(isFuture);
+              return (
+                <details class="year-block group/y border-b border-border" open={isOpen}>
+                  <summary class="year-summary flex items-baseline gap-3 sm:gap-4 py-4 cursor-pointer list-none select-none hover:bg-panel/40 transition-colors px-1 -mx-1">
+                    <svg viewBox="0 0 8 8" class="w-2 h-2 shrink-0 text-muted/70 transition-transform duration-200 group-open/y:rotate-90" aria-hidden="true">
+                      <path d="M2 1 L6 4 L2 7 Z" fill="currentColor" />
+                    </svg>
+                    <span class="font-display tabular-nums text-[clamp(1.4rem,3vw,1.875rem)] font-medium leading-none">
+                      {group.year}
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-muted font-sans">
+                      {group.events.length} {group.events.length === 1 ? "event" : "events"}
+                    </span>
+                    {hasUpcoming && (
+                      <span class="text-[9px] font-bold uppercase tracking-[0.18em] bg-accent text-bg px-1.5 py-0.5">
+                        Upcoming
+                      </span>
+                    )}
+                    <span class="flex-1 border-b border-dotted border-border/70 self-center mx-1"></span>
+                    <span class="font-display tabular-nums text-base sm:text-lg text-text leading-none">
+                      {formatAmount(yearTotal)}
+                      <span class="text-muted text-xs sm:text-sm ml-0.5">฿</span>
+                    </span>
+                  </summary>
+                  <ul class="m-0 p-0 list-none flex flex-col pb-2">
+                    {group.events.map((e) => {
+                      const upcoming = isFuture(e);
+                      return (
+                        <li class={`event-row-compact grid grid-cols-[5.5rem_1fr_auto] sm:grid-cols-[6.5rem_1fr_auto] items-baseline gap-x-3 sm:gap-x-4 py-2.5 pl-7 sm:pl-8 border-t border-border/50 text-[13px] ${
+                          upcoming ? "border-l-2 border-l-accent" : ""
+                        }`}>
+                          <span class="font-display tabular-nums text-text">
+                            {formatDateShort(e.exDate)}
                           </span>
-                        )}
-                        {e.tentative && (
-                          <span class="inline-block px-1.5 py-0.5 text-[9px] font-bold tracking-[0.18em] uppercase border border-accent text-accent">
-                            Tentative
+                          <div class="text-muted text-[12px] flex flex-wrap items-baseline gap-x-3 gap-y-1 min-w-0">
+                            {e.tentative && (
+                              <span class="text-accent text-[9px] font-bold uppercase tracking-[0.15em]">Tentative</span>
+                            )}
+                            {e.caType !== "XD" && (
+                              <span class="text-muted text-[9px] font-bold uppercase tracking-[0.15em] border border-border px-1">
+                                {e.caType}
+                              </span>
+                            )}
+                            {e.paymentDate && (
+                              <span>
+                                <span class="text-faint">paid</span>{" "}
+                                <span class="font-display italic text-text/85">{formatDateShort(e.paymentDate)}</span>
+                              </span>
+                            )}
+                            {e.dividendType !== "Cash Dividend" && <span>{e.dividendType}</span>}
+                            {e.sourceOfDividend && e.sourceOfDividend !== "Retained Earnings" && (
+                              <span class="text-faint">{e.sourceOfDividend}</span>
+                            )}
+                          </div>
+                          <span class={`font-display tabular-nums leading-none text-[15px] sm:text-base whitespace-nowrap ${
+                            e.amount === null ? "text-muted italic" : "font-semibold text-text"
+                          }`}>
+                            {e.amount === null ? "—" : formatAmount(e.amount)}
+                            <span class="text-muted text-[10px] ml-0.5">฿</span>
                           </span>
-                        )}
-                        {e.caType !== "XD" && (
-                          <span class="inline-block px-1.5 py-0.5 text-[9px] font-bold tracking-[0.18em] uppercase border border-muted text-muted">
-                            {e.caType}
-                          </span>
-                        )}
-                      </div>
-                      <div class="text-[12px] sm:text-[13px] text-muted flex flex-wrap gap-x-3 gap-y-1">
-                        <span>{e.dividendType}</span>
-                        {e.paymentDate && (
-                          <span>
-                            <span class="text-faint">paid</span>{" "}
-                            <span class="font-display italic text-text/85">{formatExDate(e.paymentDate)}</span>
-                          </span>
-                        )}
-                        {e.recordDate && (
-                          <span>
-                            <span class="text-faint">record</span>{" "}
-                            <span class="font-display italic text-text/85">{formatExDate(e.recordDate)}</span>
-                          </span>
-                        )}
-                        {e.sourceOfDividend && <span>{e.sourceOfDividend}</span>}
-                        {period && <span class="text-faint">{period}</span>}
-                      </div>
-                    </div>
-                    <div class="text-right">
-                      <div class={`font-display text-[clamp(1.5rem,3vw,2rem)] tabular-nums leading-none ${
-                        e.amount === null ? "text-muted italic" : "font-semibold text-text"
-                      }`}>
-                        {e.amount === null ? "—" : formatAmount(e.amount)}
-                      </div>
-                      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mt-1">
-                        ฿ / share
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        ))}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </details>
+              );
+            })}
+          </div>
+        </section>
+
+        <style>
+          /* Hide native disclosure marker — we use our own chevron */
+          .year-summary::-webkit-details-marker { display: none; }
+          .year-summary { list-style: none; }
+        </style>
       </>
     ) : (
       <section class="py-12 text-center">

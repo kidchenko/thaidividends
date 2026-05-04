@@ -1,11 +1,13 @@
 ---
 import type { Cadence } from "../lib/dividends";
+import { todayIso } from "../lib/dividends";
 
 interface Props {
   cadence: Cadence;
 }
 
 const { cadence } = Astro.props;
+const today = todayIso();
 const monthAbbr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 // Cell intensity: scale 0–1 based on max amount per cell across all cells.
@@ -13,13 +15,17 @@ const maxCellAmount = Math.max(
   ...[...cadence.cells.values()].map((c) => c.totalAmount),
   0.01,
 );
+
+const formatAmount = (n: number): string =>
+  n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
 ---
 
 {cadence.years.length === 0 ? (
   <p class="text-muted italic text-[13px]">No dividend history to plot.</p>
 ) : (
-  <div class="cadence">
-    <div class="cadence-grid">
+  <div class="cadence relative">
+    <div class="cadence-scroll -mx-4 sm:mx-0">
+    <div class="cadence-grid px-4 sm:px-0">
       <div></div>
       {monthAbbr.map((m) => (
         <div class="cadence-col-label" title={m}>
@@ -36,13 +42,21 @@ const maxCellAmount = Math.max(
             const cell = cadence.cells.get(`${year}-${m}`);
             const has = !!cell && cell.events.length > 0;
             const intensity = has ? Math.min(1, cell!.totalAmount / maxCellAmount) : 0;
-            // 3 visual tiers so empty months don't all look identical at a glance.
             const tier = !has ? 0 : intensity < 0.34 ? 1 : intensity < 0.67 ? 2 : 3;
-            const title = has
-              ? `${monthAbbr[i]} ${year} · ${cell!.events.length} event${cell!.events.length === 1 ? "" : "s"}${cell!.totalAmount > 0 ? ` · ${cell!.totalAmount.toFixed(2)} ฿` : ""}`
-              : `${monthAbbr[i]} ${year} · no event`;
+            const upcoming = has && cell!.events.some((e) => (e.paymentDate ?? e.exDate) >= today);
+            const tipMeta = has
+              ? `${cell!.events.length} ${cell!.events.length === 1 ? "event" : "events"}${upcoming ? " · upcoming" : ""}`
+              : "No event";
+            const tipAmount = has && cell!.totalAmount > 0
+              ? `${formatAmount(cell!.totalAmount)} ฿`
+              : "—";
             return (
-              <div class={`cadence-cell tier-${tier}`} title={title}>
+              <div
+                class={`cadence-cell tier-${tier}`}
+                data-tip-date={`${monthAbbr[i]} ${year}`}
+                data-tip-amount={tipAmount}
+                data-tip-meta={tipMeta}
+              >
                 {has && cell!.events.length > 1 && (
                   <span class="cadence-count">{cell!.events.length}</span>
                 )}
@@ -52,27 +66,99 @@ const maxCellAmount = Math.max(
         </Fragment>
       ))}
     </div>
+    </div>
+
+    <!-- Tooltip (positioned by JS on hover) -->
+    <div
+      data-cadence-tooltip
+      role="tooltip"
+      class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+             bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+             whitespace-nowrap border border-text rounded-sm"
+    >
+      <div data-tip-slot="amount" class="font-display font-semibold text-[13px] tabular-nums"></div>
+      <div data-tip-slot="date" class="opacity-80 mt-0.5"></div>
+      <div data-tip-slot="meta" class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-1"></div>
+    </div>
 
     <!-- Legend -->
-    <div class="flex gap-3 items-center text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
-      <span>none</span>
-      <span class="inline-flex gap-px">
-        <span class="cadence-cell tier-0 legend-cell"></span>
-        <span class="cadence-cell tier-1 legend-cell"></span>
-        <span class="cadence-cell tier-2 legend-cell"></span>
-        <span class="cadence-cell tier-3 legend-cell"></span>
+    <div class="flex gap-2 sm:gap-3 items-center text-[10px] tracking-[0.15em] uppercase text-muted mt-4">
+      <span>No dividends</span>
+      <span class="inline-flex gap-1">
+        <span class="cadence-cell tier-1 legend-cell" aria-hidden="true"></span>
+        <span class="cadence-cell tier-2 legend-cell" aria-hidden="true"></span>
+        <span class="cadence-cell tier-3 legend-cell" aria-hidden="true"></span>
       </span>
-      <span>more / larger</span>
+      <span>More dividends</span>
     </div>
   </div>
 )}
 
+<script>
+  // Custom tooltip for cadence cells. Skip legend cells (they're decorative).
+  const showCadenceTip = (cell: HTMLElement) => {
+    const wrap = cell.closest<HTMLElement>(".cadence");
+    if (!wrap) return;
+    const tooltip = wrap.querySelector<HTMLElement>("[data-cadence-tooltip]");
+    if (!tooltip) return;
+    const set = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    set("amount", cell.dataset.tipAmount ?? "");
+    set("date", cell.dataset.tipDate ?? "");
+    set("meta", cell.dataset.tipMeta ?? "");
+    tooltip.classList.remove("hidden");
+    const wrapRect = wrap.getBoundingClientRect();
+    const cellRect = cell.getBoundingClientRect();
+    const x = cellRect.left - wrapRect.left + cellRect.width / 2;
+    const y = cellRect.top - wrapRect.top - 8;
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
+  };
+
+  const hideCadenceTip = (cell: HTMLElement) => {
+    const wrap = cell.closest<HTMLElement>(".cadence");
+    wrap?.querySelector<HTMLElement>("[data-cadence-tooltip]")?.classList.add("hidden");
+  };
+
+  document.addEventListener("mouseover", (e) => {
+    const cell = (e.target as HTMLElement).closest<HTMLElement>(".cadence-cell[data-tip-date]");
+    if (cell) showCadenceTip(cell);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const cell = (e.target as HTMLElement).closest<HTMLElement>(".cadence-cell[data-tip-date]");
+    if (cell) hideCadenceTip(cell);
+  });
+  document.addEventListener("click", (e) => {
+    const cell = (e.target as HTMLElement).closest<HTMLElement>(".cadence-cell[data-tip-date]");
+    if (cell) {
+      e.preventDefault();
+      showCadenceTip(cell);
+      return;
+    }
+    document.querySelectorAll<HTMLElement>("[data-cadence-tooltip]").forEach((t) => t.classList.add("hidden"));
+  });
+</script>
+
 <style>
+  .cadence-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .cadence-scroll::-webkit-scrollbar { height: 4px; }
+  .cadence-scroll::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+  }
   .cadence-grid {
     display: grid;
-    grid-template-columns: minmax(36px, auto) repeat(12, minmax(0, 1fr));
-    gap: 3px;
+    grid-template-columns: minmax(36px, auto) repeat(12, minmax(28px, 1fr));
+    gap: 4px 6px;
     align-items: center;
+    min-width: 480px;
   }
   .cadence-col-label {
     text-align: center;
@@ -93,15 +179,20 @@ const maxCellAmount = Math.max(
     text-align: right;
   }
   .cadence-cell {
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 16px;
     border: 1px solid var(--border);
     background: transparent;
-    display: grid;
-    place-items: center;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
     transition: transform 80ms ease;
   }
+  @media (min-width: 640px) {
+    .cadence-cell { height: 20px; }
+  }
   .cadence-cell:hover {
-    transform: scale(1.08);
+    transform: scale(1.04);
   }
   .cadence-cell.tier-0 { background: transparent; }
   .cadence-cell.tier-1 { background: var(--accent-soft); border-color: var(--accent-soft); }
@@ -109,11 +200,17 @@ const maxCellAmount = Math.max(
   .cadence-cell.tier-3 { background: var(--accent); border-color: var(--accent); }
 
   .cadence-count {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 9px;
     font-family: var(--font-sans);
     font-weight: 700;
     color: var(--bg);
     line-height: 1;
+    pointer-events: none;
   }
   .cadence-cell.tier-0 .cadence-count,
   .cadence-cell.tier-1 .cadence-count {
@@ -121,8 +218,7 @@ const maxCellAmount = Math.max(
   }
 
   .legend-cell {
-    width: 14px;
-    height: 14px;
-    aspect-ratio: 1 / 1;
+    width: 22px;
+    height: 10px;
   }
 </style>

@@ -11,13 +11,17 @@ const today = todayIso();
 
 const data = events
   .filter((e) => typeof e.amount === "number")
-  .map((e) => ({
-    exDate: e.exDate,
-    amount: e.amount as number,
-    timestamp: new Date(e.exDate + "T00:00:00Z").getTime(),
-    isUpcoming: e.exDate >= today,
-    tentative: e.tentative,
-  }))
+  .map((e) => {
+    const effective = e.paymentDate ?? e.exDate;
+    return {
+      exDate: e.exDate,
+      paymentDate: e.paymentDate,
+      amount: e.amount as number,
+      timestamp: new Date(e.exDate + "T00:00:00Z").getTime(),
+      isUpcoming: effective >= today,
+      tentative: e.tentative,
+    };
+  })
   .sort((a, b) => a.timestamp - b.timestamp);
 
 // Per-year aggregation
@@ -53,7 +57,7 @@ const padding = span * 0.05;
 const tMinPadded = tMin - padding;
 const tMaxPadded = tMaxRaw + padding;
 const tRange = tMaxPadded - tMinPadded;
-const eventBarW = Math.min(28, Math.max(12, chartW / Math.max(data.length, 1) / 1.4));
+const eventBarW = Math.min(10, Math.max(3, chartW / Math.max(data.length, 1) / 2.2));
 const xForT = (t: number): number => PAD_L + ((t - tMinPadded) / tRange) * chartW;
 const yForA = (a: number, max: number): number => PAD_T + (1 - a / max) * chartH;
 
@@ -126,6 +130,9 @@ const formatDate = (iso: string): string =>
           const x = xForT(d.timestamp);
           const y = yForA(d.amount, eventMax);
           const h = (H - PAD_B) - y;
+          const dateLabel = d.paymentDate
+            ? `Ex ${formatDate(d.exDate)} · Pay ${formatDate(d.paymentDate)}`
+            : `Ex ${formatDate(d.exDate)}`;
           return (
             <rect
               x={x - eventBarW / 2}
@@ -134,7 +141,7 @@ const formatDate = (iso: string): string =>
               height={Math.max(h, 1)}
               class={`tl-bar ${d.isUpcoming ? "fill-bg stroke-accent" : "fill-accent stroke-accent"}`}
               stroke-width="1.5"
-              data-tip-date={formatDate(d.exDate)}
+              data-tip-date={dateLabel}
               data-tip-amount={`${formatAmount(d.amount)} ฿`}
               data-tip-meta={d.isUpcoming ? "Upcoming" : "Paid"}
             />
@@ -152,7 +159,7 @@ const formatDate = (iso: string): string =>
     </div>
 
     <!-- Per-year chart -->
-    <div data-chart="year" class="chart-pane relative hidden">
+    <div data-chart="year" class="chart-pane relative">
       <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Dividend amounts aggregated by year">
         <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
         <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
@@ -201,12 +208,20 @@ const formatDate = (iso: string): string =>
       <div data-tip-slot="meta" class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-1"></div>
     </div>
 
-    <div class="flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
+    <div data-legend="event" class="legend-row flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
       <span class="inline-flex items-center gap-1.5">
         <span class="inline-block w-3 h-2 bg-accent"></span> paid
       </span>
       <span class="inline-flex items-center gap-1.5">
         <span class="inline-block w-3 h-2 border border-accent bg-bg"></span> upcoming
+      </span>
+    </div>
+    <div data-legend="year" class="legend-row flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3 h-2 bg-accent"></span> complete year
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3 h-2 bg-accent-soft border border-accent"></span> in progress
       </span>
     </div>
   </div>
@@ -291,9 +306,11 @@ const formatDate = (iso: string): string =>
     background: transparent;
     color: var(--muted);
   }
-  /* Show only the active chart pane */
+  /* Show only the active chart pane + matching legend */
   .timeline-wrap[data-grouping="event"] [data-chart="year"],
-  .timeline-wrap[data-grouping="year"] [data-chart="event"] {
+  .timeline-wrap[data-grouping="year"] [data-chart="event"],
+  .timeline-wrap[data-grouping="event"] [data-legend="year"],
+  .timeline-wrap[data-grouping="year"] [data-legend="event"] {
     display: none;
   }
   .tl-bar { cursor: pointer; transition: filter 100ms ease; }

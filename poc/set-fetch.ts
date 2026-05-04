@@ -4,7 +4,7 @@ import { chromium, type BrowserContext, type Page } from "patchright";
 
 // Date range to fetch. Past covered for "what already paid"; future covered so
 // announced dividends show up in the calendar before they happen.
-const START = { year: 2025, month: 1 };
+const START = { year: 2016, month: 1 };
 const END = (() => {
   const now = new Date();
   const horizon = new Date(now);
