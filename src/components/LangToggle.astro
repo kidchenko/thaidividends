@@ -1,0 +1,40 @@
+---
+import { type Lang, t } from "../lib/i18n";
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+
+const otherLang: Lang = lang === "en" ? "th" : "en";
+const otherLabel = otherLang === "en" ? "EN" : "TH";
+
+// Swap the locale segment in the current URL. Astro.url.pathname includes the
+// configured base path, which is exactly what we want for navigation hrefs.
+const currentPath = Astro.url.pathname;
+const altPath = currentPath.replace(/\/(en|th)(\/|$)/, `/${otherLang}$2`);
+---
+
+<a
+  href={altPath}
+  class="lang-toggle h-9 w-9 grid place-items-center rounded-md border border-border bg-panel text-text transition hover:bg-panel-2 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer shrink-0 font-display text-[11px] font-semibold tabular-nums tracking-tight no-underline hover:no-underline"
+  data-lang-toggle
+  data-next-lang={otherLang}
+  aria-label={t(lang, "toggleLangAria")}
+  title={t(lang, "toggleLangTitle")}
+  hreflang={otherLang}
+  rel="alternate"
+>
+  {otherLabel}
+</a>
+
+<script>
+  // Persist the chosen locale before navigating, so the root redirect honors it
+  // on the next visit. ClientRouter handles the actual navigation.
+  document.addEventListener("click", (e) => {
+    const a = (e.target as HTMLElement).closest<HTMLAnchorElement>("[data-lang-toggle]");
+    if (!a) return;
+    const next = a.dataset.nextLang;
+    if (next === "en" || next === "th") {
+      try { localStorage.setItem("lang", next); } catch {}
+    }
+  });
+</script>

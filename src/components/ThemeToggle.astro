@@ -1,13 +1,17 @@
 ---
 import { Icon } from "astro-icon/components";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
 ---
 
 <button
   type="button"
   class="theme-toggle grid h-9 w-9 place-items-center rounded-md border border-border bg-panel text-text transition hover:bg-panel-2 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer shrink-0"
   data-theme-toggle
-  aria-label="Toggle colour theme"
-  title="Toggle theme"
+  aria-label={t(lang, "toggleThemeAria")}
+  title={t(lang, "toggleThemeTitle")}
 >
   <Icon name="lucide:sun" class="icon-sun h-[18px] w-[18px]" />
   <Icon name="lucide:moon" class="icon-moon h-[18px] w-[18px]" />

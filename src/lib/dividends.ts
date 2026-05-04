@@ -9,9 +9,13 @@ import {
   startOfMonth,
   startOfWeek,
 } from "date-fns";
+import { enUS, th as thLocale } from "date-fns/locale";
 
 import dividends from "../../data/set-dividends.json";
 import companiesData from "../../data/companies.json";
+import { type Lang, DEFAULT_LANG, localePath } from "./i18n";
+
+const locales: Record<Lang, Locale> = { en: enUS, th: thLocale };
 
 export type DividendEvent = {
   symbol: string;
@@ -184,28 +188,28 @@ export function groupEventsByYear(events: DividendEvent[]): Array<{
     .map(([year, events]) => ({ year, events }));
 }
 
-export function makeYearMonth(year: number, month: number): YearMonth {
+export function makeYearMonth(year: number, month: number, lang: Lang = DEFAULT_LANG): YearMonth {
   const anchor = new Date(year, month - 1, 1);
   return {
     year,
     month,
     key: format(anchor, "yyyy-MM"),
-    label: format(anchor, "MMMM yyyy"),
-    path: withBase(`/${format(anchor, "yyyy")}/${format(anchor, "MM")}/`),
+    label: format(anchor, "MMMM yyyy", { locale: locales[lang] }),
+    path: localePath(lang, `/${format(anchor, "yyyy")}/${format(anchor, "MM")}/`),
   };
 }
 
-export function symbolPath(symbol: string): string {
-  return withBase(`/${symbol}/`);
+export function symbolPath(lang: Lang, symbol: string): string {
+  return localePath(lang, `/${symbol}/`);
 }
 
-export function currentYearMonth(now: Date = new Date()): YearMonth {
-  return makeYearMonth(now.getFullYear(), now.getMonth() + 1);
+export function currentYearMonth(now: Date = new Date(), lang: Lang = DEFAULT_LANG): YearMonth {
+  return makeYearMonth(now.getFullYear(), now.getMonth() + 1, lang);
 }
 
-function shiftMonths(ym: YearMonth, delta: number): YearMonth {
+function shiftMonths(ym: YearMonth, delta: number, lang: Lang): YearMonth {
   const shifted = fnsAddMonths(new Date(ym.year, ym.month - 1, 1), delta);
-  return makeYearMonth(shifted.getFullYear(), shifted.getMonth() + 1);
+  return makeYearMonth(shifted.getFullYear(), shifted.getMonth() + 1, lang);
 }
 
 export type MonthListResult = {
@@ -213,8 +217,8 @@ export type MonthListResult = {
   byKey: Map<string, YearMonth>;
 };
 
-export function getMonthList(events: DividendEvent[], now: Date = new Date()): MonthListResult {
-  const today = currentYearMonth(now);
+export function getMonthList(events: DividendEvent[], lang: Lang = DEFAULT_LANG, now: Date = new Date()): MonthListResult {
+  const today = currentYearMonth(now, lang);
   if (events.length === 0) {
     return { months: [today], byKey: new Map([[today.key, today]]) };
   }
@@ -224,9 +228,9 @@ export function getMonthList(events: DividendEvent[], now: Date = new Date()): M
   const [minY, minM] = minKey.split("-").map(Number);
   const [maxY, maxM] = maxKey.split("-").map(Number);
 
-  let first = shiftMonths(makeYearMonth(minY, minM), -PAST_PADDING_MONTHS);
-  let last = shiftMonths(makeYearMonth(maxY, maxM), 1);
-  const futureHorizon = shiftMonths(today, FUTURE_HORIZON_MONTHS);
+  let first = shiftMonths(makeYearMonth(minY, minM, lang), -PAST_PADDING_MONTHS, lang);
+  let last = shiftMonths(makeYearMonth(maxY, maxM, lang), 1, lang);
+  const futureHorizon = shiftMonths(today, FUTURE_HORIZON_MONTHS, lang);
   if (today.key < first.key) first = today;
   if (futureHorizon.key > last.key) last = futureHorizon;
 
@@ -234,7 +238,7 @@ export function getMonthList(events: DividendEvent[], now: Date = new Date()): M
   let cursor = first;
   while (cursor.key <= last.key) {
     months.push(cursor);
-    cursor = shiftMonths(cursor, 1);
+    cursor = shiftMonths(cursor, 1, lang);
   }
   const byKey = new Map(months.map((m) => [m.key, m]));
   return { months, byKey };

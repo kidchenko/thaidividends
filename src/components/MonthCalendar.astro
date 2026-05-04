@@ -1,23 +1,26 @@
 ---
 import type { CalendarEntry, YearMonth } from "../lib/dividends";
 import { monthGridDays, todayIso } from "../lib/dividends";
+import { type Lang, tArr } from "../lib/i18n";
 
 interface Props {
+  lang: Lang;
   ym: YearMonth;
   byDay: Map<string, CalendarEntry[]>;
 }
 
-const { ym, byDay } = Astro.props;
+const { lang, ym, byDay } = Astro.props;
 const days = monthGridDays(ym.year, ym.month);
 const today = todayIso();
-const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const dayLabels = tArr(lang, "weekdaysShort");
+const dayLabelsMin = tArr(lang, "weekdaysMin");
 ---
 
 <div class="grid grid-cols-7 border-t border-l border-border">
-  {dayLabels.map((d) => (
+  {dayLabels.map((d, i) => (
     <div class="bg-bg text-muted text-[10px] uppercase tracking-[0.18em] text-center py-2 px-2 border-r border-b border-border font-semibold">
       <span class="hidden sm:inline">{d}</span>
-      <span class="sm:hidden">{d.charAt(0)}</span>
+      <span class="sm:hidden">{dayLabelsMin[i]}</span>
     </div>
   ))}
   {days.map((d) => {
@@ -76,7 +79,7 @@ const dayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
                   data-op-start={e.operationStart ?? ""}
                   data-op-end={e.operationEnd ?? ""}
                   data-tentative={e.tentative ? "1" : ""}
-                  aria-label={`Open ${isPayment ? "payment" : "ex-dividend"} details for ${e.symbol} on ${d.date}`}
+                  aria-label={`${e.symbol} on ${d.date}`}
                 >
                   <span class="tracking-wide truncate flex-1 min-w-0">{e.symbol}</span>
                   <span class="hidden sm:inline text-muted font-display font-medium tabular-nums shrink-0">

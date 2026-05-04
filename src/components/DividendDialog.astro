@@ -1,11 +1,20 @@
 ---
 import { Icon } from "astro-icon/components";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
 ---
 
 <dialog
   id="dividend-dialog"
   aria-labelledby="dd-title"
-  transition:persist="dividend-dialog"
+  data-lang={lang}
+  data-label-pay={t(lang, "badgePay")}
+  data-label-xd={t(lang, "badgeXd")}
+  data-label-cash-dividend={t(lang, "cashDividend")}
+  data-label-pending={t(lang, "pending")}
+  data-label-tentative={t(lang, "tentativeSuffix")}
   class="m-auto p-0 w-[min(580px,calc(100vw-32px))] border border-border bg-panel text-text shadow-popup backdrop:backdrop-blur-sm backdrop:bg-[var(--backdrop)]"
 >
   <header class="px-7 pt-6 pb-5 border-b border-border">
@@ -17,7 +26,7 @@ import { Icon } from "astro-icon/components";
       <button
         type="button"
         data-close
-        aria-label="Close"
+        aria-label={t(lang, "closeDialog")}
         class="bg-transparent border-0 text-muted hover:text-text -mt-1 -mr-2 w-7 h-7 grid place-items-center cursor-pointer"
       >
         <Icon name="lucide:x" class="h-4 w-4" aria-hidden="true" />
@@ -38,123 +47,144 @@ import { Icon } from "astro-icon/components";
 
   <dl class="grid grid-cols-2 gap-y-5 gap-x-7 px-7 py-6">
     <div>
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Ex-date</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldExDate")}</dt>
       <dd class="m-0 text-[15px] tabular-nums font-display" data-field="exDate"></dd>
     </div>
     <div>
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Record date</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldRecordDate")}</dt>
       <dd class="m-0 text-[15px] tabular-nums font-display" data-field="recordDate"></dd>
     </div>
     <div>
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Payment date</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldPaymentDate")}</dt>
       <dd class="m-0 text-[15px] tabular-nums font-display" data-field="paymentDate"></dd>
     </div>
     <div>
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Type</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldType")}</dt>
       <dd class="m-0 text-[14px]" data-field="dividendType"></dd>
     </div>
     <div class="col-span-2 pt-3 border-t border-border/60">
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Dividend</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldDividend")}</dt>
       <dd class="m-0">
         <span class="font-display text-[2rem] font-semibold leading-none tabular-nums" data-field="amount"></span>
-        <span class="font-display italic text-muted text-[14px] ml-1">/ share</span>
+        <span class="font-display italic text-muted text-[14px] ml-1">{t(lang, "perShare")}</span>
       </dd>
     </div>
     <div>
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Source</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldSource")}</dt>
       <dd class="m-0 text-[13px]" data-field="source"></dd>
     </div>
     <div>
-      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">Operation period</dt>
+      <dt class="text-[10px] text-muted uppercase tracking-[0.18em] font-semibold mb-1">{t(lang, "fldOperationPeriod")}</dt>
       <dd class="m-0 text-[13px] tabular-nums font-display" data-field="operationPeriod"></dd>
     </div>
   </dl>
 
   <footer class="px-7 py-3 border-t border-border text-muted text-[10px] tracking-[0.15em] uppercase text-center">
-    Source · SET Stock Calendar
+    {t(lang, "dialogFooter")}
   </footer>
 </dialog>
 
 <script>
-  import { format, parseISO } from "date-fns";
+  import { fmtDate, isLang, type Lang } from "../lib/i18n";
 
   const BASE = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
-  const dialog = document.getElementById("dividend-dialog") as HTMLDialogElement | null;
-  if (dialog) {
+
+  // Resolve the dialog at event-time (not module-load) so we always reference
+  // the current document's element. The previous module-scoped reference went
+  // stale after ClientRouter swapped the doc.
+  const getDialog = (): HTMLDialogElement | null =>
+    document.getElementById("dividend-dialog") as HTMLDialogElement | null;
+
+  const formatAmount = (n: number): string =>
+    n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+
+  const open = (dialog: HTMLDialogElement, btn: HTMLElement) => {
     const set = (field: string, value: string) => {
       const el = dialog.querySelector(`[data-field="${field}"]`);
       if (el) el.textContent = value;
     };
 
-    const formatAmount = (n: number): string =>
-      n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+    // Read the current locale (set on <html lang> by SSR) so dynamic labels
+    // and date formats match the page's language.
+    const htmlLang = document.documentElement.lang;
+    const lang: Lang = isLang(htmlLang) ? htmlLang : "en";
+    const formatDate = (iso: string): string => fmtDate(iso, "dd MMM yyyy", lang);
+    const labels = dialog.dataset;
+    const labelPay = labels.labelPay ?? "PAY";
+    const labelXd = labels.labelXd ?? "XD";
+    const labelCash = labels.labelCashDividend ?? "Cash Dividend";
+    const labelPending = labels.labelPending ?? "Pending";
+    const labelTentative = labels.labelTentative ?? "tentative";
 
-    const formatDate = (iso: string): string =>
-      iso ? format(parseISO(iso), "dd MMM yyyy") : "—";
+    const d = btn.dataset;
+    const symbol = d.symbol ?? "";
+    const tentative = d.tentative === "1";
+    const amountRaw = d.amount ?? "";
+    const isPayment = d.context === "payment";
 
-    const open = (btn: HTMLElement) => {
-      const d = btn.dataset;
-      const symbol = d.symbol ?? "";
-      const tentative = d.tentative === "1";
-      const amountRaw = d.amount ?? "";
-      const isPayment = d.context === "payment";
+    const badgeEl = dialog.querySelector('[data-field="badge"]') as HTMLElement | null;
+    if (badgeEl) {
+      badgeEl.textContent = isPayment ? labelPay : (d.caType ?? labelXd);
+      badgeEl.classList.toggle("bg-accent", !isPayment);
+      badgeEl.classList.toggle("bg-payment", isPayment);
+    }
 
-      const badgeEl = dialog.querySelector('[data-field="badge"]') as HTMLElement | null;
-      if (badgeEl) {
-        badgeEl.textContent = isPayment ? "PAY" : (d.caType ?? "XD");
-        badgeEl.classList.toggle("bg-accent", !isPayment);
-        badgeEl.classList.toggle("bg-payment", isPayment);
-      }
+    set("symbol", tentative ? `${symbol} · ${labelTentative}` : symbol);
+    set("name", d.name ?? "");
+    const symbolLink = dialog.querySelector<HTMLAnchorElement>('[data-field="symbol-link"]');
+    if (symbolLink && symbol) symbolLink.href = `${BASE}/${lang}/${symbol}/`;
+    set("exDate", formatDate(d.exDate ?? ""));
+    set("recordDate", formatDate(d.recordDate ?? ""));
+    set("paymentDate", formatDate(d.paymentDate ?? ""));
+    set("dividendType", d.dividendType || labelCash);
+    set("source", d.source || "—");
+    set(
+      "operationPeriod",
+      d.opStart && d.opEnd
+        ? `${formatDate(d.opStart)} – ${formatDate(d.opEnd)}`
+        : "—",
+    );
+    set(
+      "amount",
+      amountRaw === ""
+        ? labelPending
+        : `${formatAmount(Number(amountRaw))} ฿`,
+    );
 
-      set("symbol", tentative ? `${symbol} · tentative` : symbol);
-      set("name", d.name ?? "");
-      const symbolLink = dialog.querySelector<HTMLAnchorElement>('[data-field="symbol-link"]');
-      if (symbolLink && symbol) symbolLink.href = `${BASE}/${symbol}/`;
-      set("exDate", formatDate(d.exDate ?? ""));
-      set("recordDate", formatDate(d.recordDate ?? ""));
-      set("paymentDate", formatDate(d.paymentDate ?? ""));
-      set("dividendType", d.dividendType || "Cash Dividend");
-      set("source", d.source || "—");
-      set(
-        "operationPeriod",
-        d.opStart && d.opEnd
-          ? `${formatDate(d.opStart)} – ${formatDate(d.opEnd)}`
-          : "—",
-      );
-      set(
-        "amount",
-        amountRaw === ""
-          ? "Pending"
-          : `${formatAmount(Number(amountRaw))} ฿`,
-      );
+    const amountEl = dialog.querySelector('[data-field="amount"]');
+    if (amountEl) {
+      const isPending = amountRaw === "";
+      amountEl.classList.toggle("italic", isPending);
+      amountEl.classList.toggle("text-muted", isPending);
+      amountEl.classList.toggle("text-accent", !isPending && !isPayment);
+      amountEl.classList.toggle("text-payment", !isPending && isPayment);
+    }
 
-      const amountEl = dialog.querySelector('[data-field="amount"]');
-      if (amountEl) {
-        const isPending = amountRaw === "";
-        amountEl.classList.toggle("italic", isPending);
-        amountEl.classList.toggle("text-muted", isPending);
-        amountEl.classList.toggle("text-accent", !isPending && !isPayment);
-        amountEl.classList.toggle("text-payment", !isPending && isPayment);
-      }
+    dialog.showModal();
+  };
 
-      dialog.showModal();
-    };
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    const trigger = target.closest<HTMLElement>("[data-event]");
+    if (trigger) {
+      const dialog = getDialog();
+      if (dialog) open(dialog, trigger);
+      return;
+    }
+    if (target.closest("[data-close]")) {
+      getDialog()?.close();
+      return;
+    }
+    const dialog = getDialog();
+    if (dialog && target === dialog) dialog.close();
+  });
 
-    document.addEventListener("click", (e) => {
-      const target = e.target as HTMLElement;
-      const trigger = target.closest<HTMLElement>("[data-event]");
-      if (trigger) { open(trigger); return; }
-      if (target.closest("[data-close]")) { dialog.close(); return; }
-      if (target === dialog) dialog.close();
-    });
-
-    // Dialog is `transition:persist`, so it survives navigation. Close it
-    // before any view-transition swap so users don't land on a new page with
-    // a stale modal still open.
-    document.addEventListener("astro:before-swap", () => {
-      if (dialog.open) dialog.close();
-    });
-  }
+  // Close the dialog before any view-transition swap so users don't briefly
+  // land on a new page with a stale modal still open.
+  document.addEventListener("astro:before-swap", () => {
+    const dialog = getDialog();
+    if (dialog?.open) dialog.close();
+  });
 </script>
 
 <style>

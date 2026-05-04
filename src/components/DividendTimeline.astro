@@ -1,12 +1,14 @@
 ---
 import type { DividendEvent } from "../lib/dividends";
 import { todayIso } from "../lib/dividends";
+import { type Lang, t, fmtDate } from "../lib/i18n";
 
 interface Props {
+  lang: Lang;
   events: DividendEvent[];
 }
 
-const { events } = Astro.props;
+const { lang, events } = Astro.props;
 const today = todayIso();
 
 const data = events
@@ -80,30 +82,33 @@ const yearBarW = Math.min(80, chartW / Math.max(yearData.length, 1) / 1.6);
 
 const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
-const formatDate = (iso: string): string =>
-  new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {
-    day: "2-digit", month: "short", year: "numeric", timeZone: "UTC",
-  });
+const formatDate = (iso: string): string => fmtDate(iso, "dd MMM yyyy", lang);
+
+const exPrefix = t(lang, "exPrefix");
+const paysPrefix = t(lang, "paysPrefix");
+const tlPaid = t(lang, "tlPaid");
+const tlUpcoming = t(lang, "tlUpcoming");
+const tlInProgress = t(lang, "tlInProgress");
 ---
 
 {data.length === 0 ? (
-  <p class="text-muted italic text-[13px]">No confirmed amounts to chart yet.</p>
+  <p class="text-muted italic text-[13px]">{t(lang, "tlNoData")}</p>
 ) : (
   <div class="timeline-wrap relative" data-grouping="event">
     <!-- Toggle -->
     <div class="flex items-center gap-3 mb-4">
-      <span class="text-[10px] uppercase tracking-[0.18em] text-muted">Group by</span>
+      <span class="text-[10px] uppercase tracking-[0.18em] text-muted">{t(lang, "tlGroupBy")}</span>
       <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
         <button
           type="button"
           data-grouping-btn="event"
           class="grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer"
-        >Event</button>
+        >{t(lang, "tlGroupEvent")}</button>
         <button
           type="button"
           data-grouping-btn="year"
           class="grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer border-l border-border"
-        >Year</button>
+        >{t(lang, "tlGroupYear")}</button>
       </div>
     </div>
 
@@ -122,7 +127,7 @@ const formatDate = (iso: string): string =>
         {showTodayLine && (
           <g>
             <line x1={xForT(todayTs)} y1={PAD_T - 6} x2={xForT(todayTs)} y2={H - PAD_B} class="stroke-today" stroke-dasharray="3 3" />
-            <text x={xForT(todayTs)} y={PAD_T - 10} text-anchor="middle" class="fill-today" style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;">today</text>
+            <text x={xForT(todayTs)} y={PAD_T - 10} text-anchor="middle" class="fill-today" style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;">{t(lang, "tlToday")}</text>
           </g>
         )}
 
@@ -131,8 +136,8 @@ const formatDate = (iso: string): string =>
           const y = yForA(d.amount, eventMax);
           const h = (H - PAD_B) - y;
           const dateLabel = d.paymentDate
-            ? `Ex ${formatDate(d.exDate)} · Pay ${formatDate(d.paymentDate)}`
-            : `Ex ${formatDate(d.exDate)}`;
+            ? `${exPrefix} ${formatDate(d.exDate)} · ${paysPrefix} ${formatDate(d.paymentDate)}`
+            : `${exPrefix} ${formatDate(d.exDate)}`;
           return (
             <rect
               x={x - eventBarW / 2}
@@ -143,7 +148,7 @@ const formatDate = (iso: string): string =>
               stroke-width="1.5"
               data-tip-date={dateLabel}
               data-tip-amount={`${formatAmount(d.amount)} ฿`}
-              data-tip-meta={d.isUpcoming ? "Upcoming" : "Paid"}
+              data-tip-meta={d.isUpcoming ? tlUpcoming : tlPaid}
             />
           );
         })}
@@ -175,6 +180,8 @@ const formatDate = (iso: string): string =>
           const x = PAD_L + slotW * i + slotW / 2;
           const yy = yForA(y.total, yearMax);
           const h = (H - PAD_B) - yy;
+          const word = t(lang, y.count === 1 ? "eventOne" : "eventMany");
+          const partialSuffix = y.hasUpcoming ? ` · ${tlInProgress}` : "";
           return (
             <g>
               <rect
@@ -186,7 +193,7 @@ const formatDate = (iso: string): string =>
                 stroke-width="1.5"
                 data-tip-date={String(y.year)}
                 data-tip-amount={`${formatAmount(y.total)} ฿`}
-                data-tip-meta={`${y.count} ${y.count === 1 ? "event" : "events"}${y.hasUpcoming ? " · partial" : ""}`}
+                data-tip-meta={`${y.count} ${word}${partialSuffix}`}
               />
               <text x={x} y={H - PAD_B + 20} text-anchor="middle" class="fill-muted" style="font-size: 12px; font-family: var(--font-display); font-style: italic;">{y.year}</text>
             </g>
@@ -210,18 +217,18 @@ const formatDate = (iso: string): string =>
 
     <div data-legend="event" class="legend-row flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
       <span class="inline-flex items-center gap-1.5">
-        <span class="inline-block w-3 h-2 bg-accent"></span> paid
+        <span class="inline-block w-3 h-2 bg-accent"></span> {t(lang, "tlPaid")}
       </span>
       <span class="inline-flex items-center gap-1.5">
-        <span class="inline-block w-3 h-2 border border-accent bg-bg"></span> upcoming
+        <span class="inline-block w-3 h-2 border border-accent bg-bg"></span> {t(lang, "tlUpcoming")}
       </span>
     </div>
     <div data-legend="year" class="legend-row flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
       <span class="inline-flex items-center gap-1.5">
-        <span class="inline-block w-3 h-2 bg-accent"></span> complete year
+        <span class="inline-block w-3 h-2 bg-accent"></span> {t(lang, "tlCompleteYear")}
       </span>
       <span class="inline-flex items-center gap-1.5">
-        <span class="inline-block w-3 h-2 bg-accent-soft border border-accent"></span> in progress
+        <span class="inline-block w-3 h-2 bg-accent-soft border border-accent"></span> {t(lang, "tlInProgress")}
       </span>
     </div>
   </div>

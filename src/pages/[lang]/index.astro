@@ -9,43 +9,36 @@ import {
   getEventsForMonth,
   getNeighbourMonths,
   currentYearMonth,
-  type DividendEvent,
-  type YearMonth,
 } from "../../lib/dividends";
+import { LANGS, isLang, t, type Lang } from "../../lib/i18n";
 
 export async function getStaticPaths() {
-  const events = loadEvents();
-  const { months } = getMonthList(events);
-  return months.map((ym) => ({
-    params: { year: String(ym.year), month: String(ym.month).padStart(2, "0") },
-    props: { ym, events, months },
-  }));
+  return LANGS.map((lang) => ({ params: { lang } }));
 }
 
-interface Props {
-  ym: YearMonth;
-  events: DividendEvent[];
-  months: YearMonth[];
-}
+const lang = (isLang(Astro.params.lang) ? Astro.params.lang : "en") as Lang;
 
-const { ym, events, months } = Astro.props;
+const events = loadEvents();
+const { months, byKey } = getMonthList(events, lang);
+const today = currentYearMonth(new Date(), lang);
+const ym = byKey.get(today.key) ?? months[months.length - 1];
 const { byDay, totalXd, totalPayment } = getEventsForMonth(events, ym);
 const { prev, next } = getNeighbourMonths(months, ym);
-const today = currentYearMonth();
 const isToday = ym.key === today.key;
 const totalAll = events.length;
 const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
 ---
 
-<Layout title={`${ym.label} — Thai Dividends Calendar`}>
+<Layout lang={lang} title={`${ym.label} — ${t(lang, "siteTitle")}`}>
   <PageHeader
+    lang={lang}
     totalXdMonth={totalXd}
     totalPaymentMonth={totalPayment}
     totalAll={totalAll}
     uniqueSymbols={uniqueSymbols}
   />
   <main class="px-3 sm:px-8 pt-6 pb-16 max-w-[1200px] mx-auto">
-    <MonthNav current={ym} prev={prev} next={next} todayPath={today.path} isToday={isToday} />
-    <MonthCalendar ym={ym} byDay={byDay} />
+    <MonthNav lang={lang} current={ym} prev={prev} next={next} todayPath={today.path} isToday={isToday} />
+    <MonthCalendar lang={lang} ym={ym} byDay={byDay} />
   </main>
 </Layout>

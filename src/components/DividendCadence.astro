@@ -1,14 +1,17 @@
 ---
 import type { Cadence } from "../lib/dividends";
 import { todayIso } from "../lib/dividends";
+import { type Lang, t, tArr } from "../lib/i18n";
 
 interface Props {
+  lang: Lang;
   cadence: Cadence;
 }
 
-const { cadence } = Astro.props;
+const { lang, cadence } = Astro.props;
 const today = todayIso();
-const monthAbbr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const monthsAbbr = tArr(lang, "monthsAbbr");
+const monthsFirst = tArr(lang, "monthsFirst");
 
 // Cell intensity: scale 0–1 based on max amount per cell across all cells.
 const maxCellAmount = Math.max(
@@ -18,19 +21,26 @@ const maxCellAmount = Math.max(
 
 const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+
+const buildMeta = (count: number, upcoming: boolean): string => {
+  if (count === 0) return t(lang, "cadenceNoEvent");
+  const word = t(lang, count === 1 ? "eventOne" : "eventMany");
+  const upWord = upcoming ? ` · ${t(lang, "cadenceUpcoming")}` : "";
+  return `${count} ${word}${upWord}`;
+};
 ---
 
 {cadence.years.length === 0 ? (
-  <p class="text-muted italic text-[13px]">No dividend history to plot.</p>
+  <p class="text-muted italic text-[13px]">{t(lang, "cadenceNoHistory")}</p>
 ) : (
   <div class="cadence relative">
     <div class="cadence-scroll -mx-4 sm:mx-0">
     <div class="cadence-grid px-4 sm:px-0">
       <div></div>
-      {monthAbbr.map((m) => (
+      {monthsAbbr.map((m, i) => (
         <div class="cadence-col-label" title={m}>
-          <span class="hidden sm:inline">{m.slice(0, 3)}</span>
-          <span class="sm:hidden">{m.slice(0, 1)}</span>
+          <span class="hidden sm:inline">{m}</span>
+          <span class="sm:hidden">{monthsFirst[i]}</span>
         </div>
       ))}
 
@@ -44,16 +54,14 @@ const formatAmount = (n: number): string =>
             const intensity = has ? Math.min(1, cell!.totalAmount / maxCellAmount) : 0;
             const tier = !has ? 0 : intensity < 0.34 ? 1 : intensity < 0.67 ? 2 : 3;
             const upcoming = has && cell!.events.some((e) => (e.paymentDate ?? e.exDate) >= today);
-            const tipMeta = has
-              ? `${cell!.events.length} ${cell!.events.length === 1 ? "event" : "events"}${upcoming ? " · upcoming" : ""}`
-              : "No event";
+            const tipMeta = buildMeta(has ? cell!.events.length : 0, upcoming);
             const tipAmount = has && cell!.totalAmount > 0
               ? `${formatAmount(cell!.totalAmount)} ฿`
               : "—";
             return (
               <div
                 class={`cadence-cell tier-${tier}`}
-                data-tip-date={`${monthAbbr[i]} ${year}`}
+                data-tip-date={`${monthsAbbr[i]} ${year}`}
                 data-tip-amount={tipAmount}
                 data-tip-meta={tipMeta}
               >
@@ -83,13 +91,13 @@ const formatAmount = (n: number): string =>
 
     <!-- Legend -->
     <div class="flex gap-2 sm:gap-3 items-center text-[10px] tracking-[0.15em] uppercase text-muted mt-4">
-      <span>No dividends</span>
+      <span>{t(lang, "cadenceNoDividends")}</span>
       <span class="inline-flex gap-1">
         <span class="cadence-cell tier-1 legend-cell" aria-hidden="true"></span>
         <span class="cadence-cell tier-2 legend-cell" aria-hidden="true"></span>
         <span class="cadence-cell tier-3 legend-cell" aria-hidden="true"></span>
       </span>
-      <span>More dividends</span>
+      <span>{t(lang, "cadenceMoreDividends")}</span>
     </div>
   </div>
 )}

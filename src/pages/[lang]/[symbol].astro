@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import StockHeader from "../components/StockHeader.astro";
-import DividendTimeline from "../components/DividendTimeline.astro";
-import DividendCadence from "../components/DividendCadence.astro";
+import Layout from "../../layouts/Layout.astro";
+import StockHeader from "../../components/StockHeader.astro";
+import DividendTimeline from "../../components/DividendTimeline.astro";
+import DividendCadence from "../../components/DividendCadence.astro";
 import {
   getAllSymbols,
   getCompany,
@@ -11,15 +11,23 @@ import {
   groupEventsByYear,
   getCadence,
   todayIso,
-  withBase,
   type DividendEvent,
-} from "../lib/dividends";
-import { format, parseISO } from "date-fns";
+} from "../../lib/dividends";
+import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
+import { parseISO } from "date-fns";
 
 export async function getStaticPaths() {
-  return getAllSymbols().map((symbol) => ({ params: { symbol } }));
+  const symbols = getAllSymbols();
+  const out: Array<{ params: { lang: Lang; symbol: string } }> = [];
+  for (const lang of LANGS) {
+    for (const symbol of symbols) {
+      out.push({ params: { lang, symbol } });
+    }
+  }
+  return out;
 }
 
+const lang = (isLang(Astro.params.lang) ? Astro.params.lang : "en") as Lang;
 const { symbol } = Astro.params;
 const company = getCompany(symbol!);
 const events = getEventsForSymbol(symbol!);
@@ -33,7 +41,9 @@ const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
 
 const isFuture = (e: DividendEvent) => (e.paymentDate ?? e.exDate) >= today;
-const formatDateShort = (iso: string): string => format(parseISO(iso), "dd MMM");
+const formatDateShort = (iso: string): string => fmtDate(iso, "dd MMM", lang);
+const formatDateLong = (iso: string): string => fmtDate(iso, "dd MMM yyyy", lang);
+const formatMonthYear = (iso: string): string => fmtDate(iso, "MMM yyyy", lang);
 
 // Trailing 12 months: sum of confirmed amounts whose ex-date sits in the
 // last 365 days. More meaningful than the all-time sum because the tracking
@@ -41,7 +51,7 @@ const formatDateShort = (iso: string): string => format(parseISO(iso), "dd MMM")
 const cutoff = ((): string => {
   const d = parseISO(today);
   d.setUTCFullYear(d.getUTCFullYear() - 1);
-  return format(d, "yyyy-MM-dd");
+  return d.toISOString().slice(0, 10);
 })();
 const ttmAmount = events.reduce(
   (sum, e) => (typeof e.amount === "number" && e.exDate >= cutoff && e.exDate <= today ? sum + e.amount : sum),
@@ -55,14 +65,20 @@ const ttmCount = events.filter(
 //   future ex-date  → "Next ex-date"
 //   pending payment → "Next payment"   (ex passed, cash hasn't paid yet)
 //   else            → "Last paid"
-type Milestone = { label: string; date: string; sub: string | null };
+type Milestone = {
+  labelKey: "nextExDate" | "nextPayment" | "lastPaid";
+  date: string;
+  subPrefixKey: "paysPrefix" | "exPrefix" | null;
+  subDate: string | null;
+};
 const milestone: Milestone | null = (() => {
   const futureEx = [...events].reverse().find((e) => e.exDate >= today);
   if (futureEx) {
     return {
-      label: "Next ex-date",
+      labelKey: "nextExDate",
       date: futureEx.exDate,
-      sub: futureEx.paymentDate ? `pays ${formatDateShort(futureEx.paymentDate)}` : null,
+      subPrefixKey: futureEx.paymentDate ? "paysPrefix" : null,
+      subDate: futureEx.paymentDate,
     };
   }
   const pendingPayment = [...events]
@@ -70,32 +86,34 @@ const milestone: Milestone | null = (() => {
     .find((e) => e.exDate < today && e.paymentDate && e.paymentDate >= today);
   if (pendingPayment && pendingPayment.paymentDate) {
     return {
-      label: "Next payment",
+      labelKey: "nextPayment",
       date: pendingPayment.paymentDate,
-      sub: `ex ${formatDateShort(pendingPayment.exDate)}`,
+      subPrefixKey: "exPrefix",
+      subDate: pendingPayment.exDate,
     };
   }
   const lastPast = events.find((e) => (e.paymentDate ?? e.exDate) < today);
   if (lastPast) {
     return {
-      label: "Last paid",
+      labelKey: "lastPaid",
       date: lastPast.paymentDate ?? lastPast.exDate,
-      sub: lastPast.paymentDate ? `ex ${formatDateShort(lastPast.exDate)}` : null,
+      subPrefixKey: lastPast.paymentDate ? "exPrefix" : null,
+      subDate: lastPast.paymentDate ? lastPast.exDate : null,
     };
   }
   return null;
 })();
 ---
 
-<Layout title={`${symbol} — Thai Dividends Calendar`} description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}>
-  <StockHeader />
+<Layout lang={lang} title={`${symbol} — ${t(lang, "siteTitle")}`} description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}>
+  <StockHeader lang={lang} />
 
   <main class="px-4 sm:px-8 pt-8 sm:pt-12 pb-16 max-w-[960px] mx-auto">
     <!-- Ticker masthead -->
     <section class="mb-10 sm:mb-14">
       <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
         <span class="inline-block h-px w-6 bg-text/40"></span>
-        <span>Ticker · {company?.exchange ?? "SET"}</span>
+        <span>{t(lang, "tickerLabel")} &middot; {company?.exchange ?? "SET"}</span>
       </div>
       <h1 class="m-0 font-display text-[clamp(3rem,8vw,5.5rem)] leading-[0.92] tracking-tight text-text">
         <span class="font-semibold">{symbol}</span>
@@ -112,37 +130,38 @@ const milestone: Milestone | null = (() => {
         <!-- Summary strip -->
         <section class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-12">
           <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Events</div>
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "statEvents")}</div>
             <div class="font-display tabular-nums text-2xl font-medium">{stats.count}</div>
           </div>
           <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Tracked since</div>
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "statTrackedSince")}</div>
             <div class="font-display italic tabular-nums text-base text-text/90">
-              {stats.firstDate ? format(parseISO(stats.firstDate), "MMM yyyy") : "—"}
+              {stats.firstDate ? formatMonthYear(stats.firstDate) : "—"}
             </div>
           </div>
           <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Last 12 months</div>
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "statLast12Months")}</div>
             <div class="font-display tabular-nums text-2xl font-medium text-accent">
               {ttmCount > 0 ? formatAmount(ttmAmount) : "—"}
               {ttmCount > 0 && <span class="text-base text-muted ml-0.5">฿</span>}
             </div>
             {ttmCount > 0 && (
               <div class="font-display italic text-[12px] text-muted mt-1">
-                {ttmCount} {ttmCount === 1 ? "payout" : "payouts"}
+                {ttmCount} {t(lang, ttmCount === 1 ? "payoutOne" : "payoutMany")}
               </div>
             )}
           </div>
           <div class="bg-bg p-4">
             <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
-              {milestone ? milestone.label : "Last paid"}
+              {t(lang, milestone ? milestone.labelKey : "lastPaid")}
             </div>
             <div class="font-display italic tabular-nums text-base text-text/90">
-              {milestone ? format(parseISO(milestone.date), "dd MMM yyyy") : "—"}
+              {milestone ? formatDateLong(milestone.date) : "—"}
             </div>
-            {milestone?.sub && (
+            {milestone?.subDate && (
               <div class="font-display italic text-[12px] text-muted mt-1">
-                {milestone.sub}
+                {milestone.subPrefixKey && (<>{t(lang, milestone.subPrefixKey)}{" "}</>)}
+                {formatDateShort(milestone.subDate)}
               </div>
             )}
           </div>
@@ -154,13 +173,13 @@ const milestone: Milestone | null = (() => {
             <header class="flex items-baseline justify-between mb-4">
               <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
                 <span class="font-medium">{symbol}</span>
-                <span class="italic font-light text-muted ml-2">dividends</span>
+                <span class="italic font-light text-muted ml-2">{t(lang, "sectionDividends")}</span>
               </h2>
               <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-                {confirmedCount} confirmed
+                {confirmedCount} {t(lang, "confirmedSuffix")}
               </span>
             </header>
-            <DividendTimeline events={events} />
+            <DividendTimeline lang={lang} events={events} />
           </section>
         )}
 
@@ -168,14 +187,14 @@ const milestone: Milestone | null = (() => {
           <section class="mb-14">
             <header class="flex items-baseline justify-between mb-4">
               <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-                <span class="italic font-light text-muted">Cadence</span>
-                <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">when this stock pays</span>
+                <span class="italic font-light text-muted">{t(lang, "sectionCadence")}</span>
+                <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionCadenceSub")}</span>
               </h2>
               <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-                {cadence.years.length} {cadence.years.length === 1 ? "year" : "years"}
+                {cadence.years.length} {t(lang, cadence.years.length === 1 ? "yearOne" : "yearMany")}
               </span>
             </header>
-            <DividendCadence cadence={cadence} />
+            <DividendCadence lang={lang} cadence={cadence} />
           </section>
         )}
 
@@ -183,10 +202,12 @@ const milestone: Milestone | null = (() => {
         <section class="mb-14">
           <header class="flex items-baseline justify-between mb-4">
             <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-              <span class="italic font-light text-muted">History</span>
+              <span class="italic font-light text-muted">{t(lang, "sectionHistory")}</span>
             </h2>
             <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-              {events.length} {events.length === 1 ? "event" : "events"} · since {stats.firstDate ? format(parseISO(stats.firstDate), "MMM yyyy") : "—"}
+              {events.length} {t(lang, events.length === 1 ? "eventOne" : "eventMany")}
+              {" · "}
+              {t(lang, "sinceLabel")} {stats.firstDate ? formatMonthYear(stats.firstDate) : "—"}
             </span>
           </header>
 
@@ -208,11 +229,11 @@ const milestone: Milestone | null = (() => {
                       {group.year}
                     </span>
                     <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-muted font-sans">
-                      {group.events.length} {group.events.length === 1 ? "event" : "events"}
+                      {group.events.length} {t(lang, group.events.length === 1 ? "eventOne" : "eventMany")}
                     </span>
                     {hasUpcoming && (
                       <span class="text-[9px] font-bold uppercase tracking-[0.18em] bg-accent text-bg px-1.5 py-0.5">
-                        Upcoming
+                        {t(lang, "badgeUpcoming")}
                       </span>
                     )}
                     <span class="flex-1 border-b border-dotted border-border/70 self-center mx-1"></span>
@@ -233,7 +254,7 @@ const milestone: Milestone | null = (() => {
                           </span>
                           <div class="text-muted text-[12px] flex flex-wrap items-baseline gap-x-3 gap-y-1 min-w-0">
                             {e.tentative && (
-                              <span class="text-accent text-[9px] font-bold uppercase tracking-[0.15em]">Tentative</span>
+                              <span class="text-accent text-[9px] font-bold uppercase tracking-[0.15em]">{t(lang, "badgeTentative")}</span>
                             )}
                             {e.caType !== "XD" && (
                               <span class="text-muted text-[9px] font-bold uppercase tracking-[0.15em] border border-border px-1">
@@ -242,7 +263,7 @@ const milestone: Milestone | null = (() => {
                             )}
                             {e.paymentDate && (
                               <span>
-                                <span class="text-faint">paid</span>{" "}
+                                <span class="text-faint">{t(lang, "paidVerb")}</span>{" "}
                                 <span class="font-display italic text-text/85">{formatDateShort(e.paymentDate)}</span>
                               </span>
                             )}
@@ -275,9 +296,9 @@ const milestone: Milestone | null = (() => {
       </>
     ) : (
       <section class="py-12 text-center">
-        <p class="text-muted text-[15px]">No dividend records on file for {symbol}.</p>
-        <a href={withBase("/")} class="inline-block mt-4 text-accent text-[13px] hover:underline">
-          ← Back to calendar
+        <p class="text-muted text-[15px]">{t(lang, "noRecordsBefore")} {symbol}{t(lang, "noRecordsAfter")}</p>
+        <a href={localePath(lang, "/")} class="inline-block mt-4 text-accent text-[13px] hover:underline">
+          {t(lang, "backToCalendar")}
         </a>
       </section>
     )}

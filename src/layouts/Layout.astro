@@ -3,26 +3,29 @@ import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import DividendDialog from "../components/DividendDialog.astro";
 import { withBase } from "../lib/dividends";
+import { type Lang, t, STORAGE_KEY } from "../lib/i18n";
 
 interface Props {
+  lang: Lang;
   title: string;
   description?: string;
 }
 
-const { title, description = "Ex-dividend calendar for SET50 stocks" } = Astro.props;
+const { lang, title, description } = Astro.props;
+const desc = description ?? t(lang, "siteDescription");
 const faviconHref = withBase("/favicon.svg");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
+    <meta name="description" content={desc} />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
     <title>{title}</title>
     <ClientRouter />
-    <script is:inline>
+    <script is:inline define:vars={{ STORAGE_KEY, lang }}>
       // 1. FOUC-free initial paint: read localStorage / OS preference and set
       //    the html attributes that drive the theme + filter state.
       // 2. Astro ClientRouter syncs <html> attributes from the SSR doc on each
@@ -47,6 +50,8 @@ const faviconHref = withBase("/favicon.svg");
             if (localStorage.getItem("filter-payment") === "0") html.dataset.hidePayment = "1";
             else delete html.dataset.hidePayment;
           } catch (e) {}
+          // Save the SSR-rendered locale so the root redirect remembers it.
+          try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
         }
         applyState();
 
@@ -55,6 +60,11 @@ const faviconHref = withBase("/favicon.svg");
           if (html.dataset.theme) incoming.dataset.theme = html.dataset.theme;
           if (html.dataset.hideXd) incoming.dataset.hideXd = html.dataset.hideXd;
           if (html.dataset.hidePayment) incoming.dataset.hidePayment = html.dataset.hidePayment;
+          // Persist the locale of the incoming doc so future redirects honor it.
+          try {
+            var nextLang = incoming.lang === "th" ? "th" : "en";
+            localStorage.setItem(STORAGE_KEY, nextLang);
+          } catch (err) {}
         });
       })();
     </script>
@@ -63,8 +73,8 @@ const faviconHref = withBase("/favicon.svg");
     <slot />
     <footer class="px-8 py-6 text-muted text-[11px] border-t border-border text-center tracking-[0.15em] uppercase">
       <span class="font-display italic normal-case tracking-normal text-[13px] mr-1.5">fin</span>
-      Static site · Astro &amp; Patchright · Source: SET
+      {t(lang, "footerNote")}
     </footer>
-    <DividendDialog />
+    <DividendDialog lang={lang} />
   </body>
 </html>

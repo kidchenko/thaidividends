@@ -1,36 +1,37 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import MonthCalendar from "../components/MonthCalendar.astro";
-import MonthNav from "../components/MonthNav.astro";
-import PageHeader from "../components/PageHeader.astro";
-import {
-  loadEvents,
-  getMonthList,
-  getEventsForMonth,
-  getNeighbourMonths,
-  currentYearMonth,
-} from "../lib/dividends";
-
-const events = loadEvents();
-const { months, byKey } = getMonthList(events);
-const today = currentYearMonth();
-const ym = byKey.get(today.key) ?? months[months.length - 1];
-const { byDay, totalXd, totalPayment } = getEventsForMonth(events, ym);
-const { prev, next } = getNeighbourMonths(months, ym);
-const isToday = ym.key === today.key;
-const totalAll = events.length;
-const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
+import { withBase } from "../lib/dividends";
+const enHref = withBase("/en/");
+const thHref = withBase("/th/");
+const faviconHref = withBase("/favicon.svg");
 ---
 
-<Layout title={`${ym.label} — Thai Dividends Calendar`}>
-  <PageHeader
-    totalXdMonth={totalXd}
-    totalPaymentMonth={totalPayment}
-    totalAll={totalAll}
-    uniqueSymbols={uniqueSymbols}
-  />
-  <main class="px-3 sm:px-8 pt-6 pb-16 max-w-[1200px] mx-auto">
-    <MonthNav current={ym} prev={prev} next={next} todayPath={today.path} isToday={isToday} />
-    <MonthCalendar ym={ym} byDay={byDay} />
-  </main>
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thai Dividends Calendar</title>
+    <link rel="icon" type="image/svg+xml" href={faviconHref} />
+    <meta http-equiv="refresh" content={`0;url=${enHref}`} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="th" href={thHref} />
+    <link rel="alternate" hreflang="x-default" href={enHref} />
+    <script is:inline define:vars={{ enHref, thHref }}>
+      (function () {
+        var stored = null;
+        try { stored = localStorage.getItem("lang"); } catch (e) {}
+        var lang = stored === "th" || stored === "en"
+          ? stored
+          : ((navigator.language || "").toLowerCase().startsWith("th") ? "th" : "en");
+        var target = lang === "th" ? thHref : enHref;
+        location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>
+      Redirecting to <a href={enHref}>English</a> /
+      <a href={thHref}>ภาษาไทย</a>…
+    </p>
+  </body>
+</html>
