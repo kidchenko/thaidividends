@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Thai Dividends">
+  <style>
+    .ink { fill: #1a1410; }
+    .accent { fill: #c46b2a; }
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #f3e8d5; }
+      .accent { fill: #e6924a; }
+    }
+  </style>
+  <rect class="ink" x="4"  y="6"  width="10" height="5" rx="2.5" fill-opacity="0.35"/>
+  <rect class="ink" x="4"  y="14" width="16" height="5" rx="2.5" fill-opacity="0.6"/>
+  <rect class="accent" x="4" y="22" width="24" height="5" rx="2.5"/>
+</svg>

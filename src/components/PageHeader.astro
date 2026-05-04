@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import ThemeToggle from "./ThemeToggle.astro";
+import { withBase } from "../lib/dividends";
 
 interface Props {
   totalXdMonth: number;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const { totalXdMonth, totalPaymentMonth, totalAll, uniqueSymbols } = Astro.props;
+const logoHref = withBase("/favicon.svg");
 
 const pillBase =
   "filter-pill inline-flex items-baseline gap-2 px-2.5 py-1 text-[12px] cursor-pointer transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
@@ -21,14 +23,17 @@ const pillBase =
   class="header-grid px-4 sm:px-8 pt-6 sm:pt-10 pb-5 sm:pb-6 border-b-2 border-text/90"
 >
   <div class="area-title min-w-0 max-w-xl">
+    <div class="flex items-center gap-3 sm:gap-4 mb-3">
+      <img src={logoHref} alt="" aria-hidden="true" class="shrink-0 h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20" />
+      <h1 class="m-0 font-display text-[clamp(2rem,4vw,3.25rem)] leading-[0.95] tracking-tight text-text">
+        <span class="italic font-light">Thai Dividends</span>
+        <span class="block font-semibold">Calendar</span>
+      </h1>
+    </div>
     <div class="flex items-center gap-3 text-[10px] tracking-[0.22em] uppercase text-text/80 mb-2">
       <span class="inline-block h-px w-6 bg-text/60"></span>
       <span>Vol. 01 · The Daily Ledger</span>
     </div>
-    <h1 class="m-0 font-display text-[clamp(2rem,4vw,3.25rem)] leading-[0.95] tracking-tight text-text">
-      <span class="italic font-light">Thai Dividends</span>
-      <span class="block font-semibold">Calendar</span>
-    </h1>
     <p class="mt-3 text-text/85 text-[13px] max-w-md">
       Ex-dividend &amp; payment dates for SET-listed stocks. Sourced direct from the SET stock calendar.
     </p>

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import DividendDialog from "../components/DividendDialog.astro";
+import { withBase } from "../lib/dividends";
 
 interface Props {
   title: string;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const { title, description = "Ex-dividend calendar for SET50 stocks" } = Astro.props;
+const faviconHref = withBase("/favicon.svg");
 ---
 
 <!doctype html>
@@ -17,6 +19,7 @@ const { title, description = "Ex-dividend calendar for SET50 stocks" } = Astro.p
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={faviconHref} />
     <title>{title}</title>
     <ClientRouter />
     <script is:inline>
