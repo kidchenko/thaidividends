@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MonthCalendar from "../components/MonthCalendar.astro";
+import MonthNav from "../components/MonthNav.astro";
+import PageHeader from "../components/PageHeader.astro";
+import {
+  loadEvents,
+  getMonthList,
+  getEventsForMonth,
+  getNeighbourMonths,
+  currentYearMonth,
+} from "../lib/dividends";
+
+const events = loadEvents();
+const { months, byKey } = getMonthList(events);
+const today = currentYearMonth();
+const ym = byKey.get(today.key) ?? months[months.length - 1];
+const { byDay, totalXd, totalPayment } = getEventsForMonth(events, ym);
+const { prev, next } = getNeighbourMonths(months, ym);
+const isToday = ym.key === today.key;
+const totalAll = events.length;
+const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
+---
+
+<Layout title={`${ym.label} — Thai Dividends Calendar`}>
+  <PageHeader
+    totalXdMonth={totalXd}
+    totalPaymentMonth={totalPayment}
+    totalAll={totalAll}
+    uniqueSymbols={uniqueSymbols}
+  />
+  <main class="px-3 sm:px-8 pt-6 pb-16 max-w-[1200px] mx-auto">
+    <MonthNav current={ym} prev={prev} next={next} todayPath={today.path} isToday={isToday} />
+    <MonthCalendar ym={ym} byDay={byDay} />
+  </main>
+</Layout>

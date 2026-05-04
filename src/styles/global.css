@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* Display: Fraunces — variable serif with optical sizes + slant axis. */
+@import "@fontsource-variable/fraunces/standard.css";
+@import "@fontsource-variable/fraunces/standard-italic.css";
+/* Body: Geist — modern, neutral but distinctive sans by Vercel. */
+@import "@fontsource-variable/geist/wght.css";
+
+/* ---- Theme palettes ---- */
+/* Editorial / paper aesthetic. Warm cream + deep ink, saffron accent. */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: oklch(98.4% 0.012 80);            /* warm cream paper */
+  --panel: oklch(96.5% 0.014 80);         /* slightly warmer card */
+  --panel-2: oklch(94% 0.016 78);
+  --border: oklch(86% 0.018 78);
+  --text: oklch(20% 0.025 260);           /* deep ink, faint cool */
+  --muted: oklch(45% 0.022 260);
+  --faint: oklch(62% 0.018 260);          /* out-of-month days, etc */
+  --accent: oklch(56% 0.165 55);          /* deep saffron */
+  --accent-soft: oklch(56% 0.165 55 / 0.10);
+  --accent-strong: oklch(56% 0.165 55 / 0.18);
+  --today: oklch(45% 0.18 28);            /* darker terracotta — distinct from accent */
+  --today-soft: oklch(45% 0.18 28 / 0.08);
+  --weekend: oklch(96% 0.012 75);
+  --payment: oklch(48% 0.10 230);         /* refined ink-blue */
+  --payment-soft: oklch(48% 0.10 230 / 0.10);
+  --payment-strong: oklch(48% 0.10 230 / 0.18);
+  --backdrop: oklch(15% 0.02 80 / 0.30);
+  --shadow: 0 8px 32px oklch(20% 0.03 80 / 0.10);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: oklch(15% 0.012 60);              /* warm dark — espresso, not blue-black */
+  --panel: oklch(19% 0.013 60);
+  --panel-2: oklch(23% 0.014 60);
+  --border: oklch(32% 0.016 60);          /* slightly lighter so grid lines read */
+  --text: oklch(94% 0.014 80);            /* warm cream text */
+  --muted: oklch(72% 0.022 70);           /* bumped up for legibility on dark */
+  --faint: oklch(46% 0.018 70);           /* even-lower-tier; for out-of-month, etc */
+  --accent: oklch(78% 0.155 60);          /* lighter saffron for dark bg */
+  --accent-soft: oklch(78% 0.155 60 / 0.14);
+  --accent-strong: oklch(78% 0.155 60 / 0.24);
+  --today: oklch(72% 0.18 30);            /* warm terracotta */
+  --today-soft: oklch(72% 0.18 30 / 0.10);
+  --weekend: oklch(17% 0.012 60);
+  --payment: oklch(72% 0.13 230);         /* refined cool blue */
+  --payment-soft: oklch(72% 0.13 230 / 0.13);
+  --payment-strong: oklch(72% 0.13 230 / 0.22);
+  --backdrop: oklch(8% 0.015 60 / 0.55);
+  --shadow: 0 12px 40px oklch(0% 0 0 / 0.45);
+}
+
+/* ---- Tailwind theme tokens ---- */
+@theme {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-strong: var(--accent-strong);
+  --color-faint: var(--faint);
+  --color-today: var(--today);
+  --color-today-soft: var(--today-soft);
+  --color-weekend: var(--weekend);
+  --color-payment: var(--payment);
+  --color-payment-soft: var(--payment-soft);
+  --color-payment-strong: var(--payment-strong);
+
+  --font-display: "Fraunces Variable", "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", monospace;
+
+  --shadow-popup: var(--shadow);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  font-feature-settings: "ss01", "cv11";  /* Geist alt forms — subtle distinctiveness */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Filter rules — hide calendar cards when corresponding pill is toggled off. */
+:root[data-hide-xd="1"] [data-event][data-context="xd"] { display: none; }
+:root[data-hide-payment="1"] [data-event][data-context="payment"] { display: none; }
+[data-event].match-hidden { display: none; }
+
+/* Theme transition: only colour properties, only during the toggle window.
+   Avoids animating hover states or first-paint flash. */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    fill 220ms ease,
+    stroke 220ms ease,
+    box-shadow 220ms ease !important;
+  transition-delay: 0s !important;
+}
+
+/* View Transitions: month-to-month nav. Cross-fade with subtle slide on the
+   calendar grid; header stays. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: fade-slide-out 180ms ease-in both;
+}
+::view-transition-new(root) {
+  animation: fade-slide-in 240ms ease-out both;
+}
+
+@keyframes fade-slide-out {
+  to { opacity: 0; transform: translateY(-6px); }
+}
+@keyframes fade-slide-in {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transitioning,
+  .theme-transitioning *,
+  .theme-transitioning *::before,
+  .theme-transitioning *::after {
+    transition: none !important;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}

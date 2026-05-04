@@ -1,0 +1,28 @@
+{
+  "name": "thaidividends",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "fetch": "tsx poc/set-fetch.ts"
+  },
+  "devDependencies": {
+    "@fontsource-variable/fraunces": "^5.2.9",
+    "@fontsource-variable/geist": "^5.2.8",
+    "@types/node": "^22.10.0",
+    "patchright": "^1.59.4",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.105",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.2.1",
+    "astro-icon": "^1.1.5",
+    "date-fns": "^4.1.0",
+    "tailwindcss": "^4.2.4"
+  }
+}

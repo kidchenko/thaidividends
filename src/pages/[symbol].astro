@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StockHeader from "../components/StockHeader.astro";
+import DividendTimeline from "../components/DividendTimeline.astro";
+import DividendCadence from "../components/DividendCadence.astro";
+import {
+  getAllSymbols,
+  getCompany,
+  getEventsForSymbol,
+  getSymbolStats,
+  groupEventsByYear,
+  getCadence,
+  formatExDate,
+  todayIso,
+  withBase,
+  type DividendEvent,
+} from "../lib/dividends";
+import { format, parseISO } from "date-fns";
+
+export async function getStaticPaths() {
+  return getAllSymbols().map((symbol) => ({ params: { symbol } }));
+}
+
+const { symbol } = Astro.params;
+const company = getCompany(symbol!);
+const events = getEventsForSymbol(symbol!);
+const stats = getSymbolStats(events);
+const yearGroups = groupEventsByYear(events);
+const cadence = getCadence(events);
+const today = todayIso();
+const confirmedCount = events.filter((e) => typeof e.amount === "number").length;
+
+const formatAmount = (n: number): string =>
+  n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+
+const formatDateLong = (iso: string): string =>
+  format(parseISO(iso), "EEE dd MMM yyyy");
+
+const formatPeriod = (start: string | null, end: string | null): string | null => {
+  if (!start || !end) return null;
+  return `${format(parseISO(start), "dd MMM")} – ${format(parseISO(end), "dd MMM yyyy")}`;
+};
+
+const isFuture = (e: DividendEvent) => e.exDate >= today;
+---
+
+<Layout title={`${symbol} — Thai Dividends Calendar`} description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}>
+  <StockHeader />
+
+  <main class="px-4 sm:px-8 pt-8 sm:pt-12 pb-16 max-w-[960px] mx-auto">
+    <!-- Ticker masthead -->
+    <section class="mb-10 sm:mb-14">
+      <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
+        <span class="inline-block h-px w-6 bg-text/40"></span>
+        <span>Ticker · {company?.exchange ?? "SET"}</span>
+      </div>
+      <h1 class="m-0 font-display text-[clamp(3rem,8vw,5.5rem)] leading-[0.92] tracking-tight text-text">
+        <span class="font-semibold">{symbol}</span>
+      </h1>
+      {company && (
+        <p class="mt-3 font-display italic text-[clamp(1.1rem,2vw,1.5rem)] text-muted leading-tight max-w-2xl">
+          {company.name}
+        </p>
+      )}
+    </section>
+
+    {events.length > 0 ? (
+      <>
+        <!-- Summary strip -->
+        <section class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-12">
+          <div class="bg-bg p-4">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Events</div>
+            <div class="font-display tabular-nums text-2xl font-medium">{stats.count}</div>
+          </div>
+          <div class="bg-bg p-4">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Tracked since</div>
+            <div class="font-display italic tabular-nums text-base text-text/90">
+              {stats.firstDate ? format(parseISO(stats.firstDate), "MMM yyyy") : "—"}
+            </div>
+          </div>
+          <div class="bg-bg p-4">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">Total / share</div>
+            <div class="font-display tabular-nums text-2xl font-medium text-accent">
+              {formatAmount(stats.totalAmount)} <span class="text-base text-muted">฿</span>
+            </div>
+          </div>
+          <div class="bg-bg p-4">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
+              {stats.upcoming ? "Next ex-date" : "Last paid"}
+            </div>
+            <div class="font-display italic tabular-nums text-base text-text/90">
+              {(() => {
+                const ev = stats.upcoming ?? stats.lastPaid;
+                return ev ? format(parseISO(ev.exDate), "dd MMM yyyy") : "—";
+              })()}
+            </div>
+          </div>
+        </section>
+
+        <!-- Visualizations -->
+        {confirmedCount >= 2 && (
+          <section class="mb-14">
+            <header class="flex items-baseline justify-between mb-4">
+              <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+                <span class="italic font-light text-muted">Amounts over time</span>
+              </h2>
+              <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
+                {confirmedCount} confirmed
+              </span>
+            </header>
+            <DividendTimeline events={events} />
+          </section>
+        )}
+
+        {cadence.years.length >= 1 && (
+          <section class="mb-14">
+            <header class="flex items-baseline justify-between mb-4">
+              <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+                <span class="italic font-light text-muted">Cadence</span>
+                <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">when this stock pays</span>
+              </h2>
+              <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
+                {cadence.years.length} {cadence.years.length === 1 ? "year" : "years"}
+              </span>
+            </header>
+            <DividendCadence cadence={cadence} />
+          </section>
+        )}
+
+        <!-- Dividend list, grouped by year -->
+        {yearGroups.map((group) => (
+          <section class="mb-12">
+            <h2 class="font-display text-[clamp(1.5rem,3vw,2.25rem)] tracking-tight mb-5 flex items-baseline gap-4">
+              <span class="italic font-light text-muted">Year</span>
+              <span class="font-medium tabular-nums">{group.year}</span>
+              <span class="flex-1 border-b border-border ml-2"></span>
+              <span class="text-[11px] tracking-[0.15em] uppercase text-muted font-sans">
+                {group.events.length} {group.events.length === 1 ? "event" : "events"}
+              </span>
+            </h2>
+            <ul class="m-0 p-0 list-none flex flex-col">
+              {group.events.map((e) => {
+                const upcoming = isFuture(e);
+                const period = formatPeriod(e.operationStart, e.operationEnd);
+                return (
+                  <li class={`event-row group grid grid-cols-[1fr_auto] gap-4 py-5 border-t border-border ${
+                    upcoming ? "border-l-2 border-l-accent pl-4 -ml-4" : ""
+                  }`}>
+                    <div>
+                      <div class="flex items-baseline gap-2 flex-wrap mb-1.5">
+                        <span class="font-display text-[18px] sm:text-xl tabular-nums font-medium">
+                          {formatDateLong(e.exDate)}
+                        </span>
+                        {upcoming && (
+                          <span class="inline-block px-1.5 py-0.5 text-[9px] font-bold tracking-[0.18em] uppercase bg-accent text-bg">
+                            Upcoming
+                          </span>
+                        )}
+                        {e.tentative && (
+                          <span class="inline-block px-1.5 py-0.5 text-[9px] font-bold tracking-[0.18em] uppercase border border-accent text-accent">
+                            Tentative
+                          </span>
+                        )}
+                        {e.caType !== "XD" && (
+                          <span class="inline-block px-1.5 py-0.5 text-[9px] font-bold tracking-[0.18em] uppercase border border-muted text-muted">
+                            {e.caType}
+                          </span>
+                        )}
+                      </div>
+                      <div class="text-[12px] sm:text-[13px] text-muted flex flex-wrap gap-x-3 gap-y-1">
+                        <span>{e.dividendType}</span>
+                        {e.paymentDate && (
+                          <span>
+                            <span class="text-faint">paid</span>{" "}
+                            <span class="font-display italic text-text/85">{formatExDate(e.paymentDate)}</span>
+                          </span>
+                        )}
+                        {e.recordDate && (
+                          <span>
+                            <span class="text-faint">record</span>{" "}
+                            <span class="font-display italic text-text/85">{formatExDate(e.recordDate)}</span>
+                          </span>
+                        )}
+                        {e.sourceOfDividend && <span>{e.sourceOfDividend}</span>}
+                        {period && <span class="text-faint">{period}</span>}
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class={`font-display text-[clamp(1.5rem,3vw,2rem)] tabular-nums leading-none ${
+                        e.amount === null ? "text-muted italic" : "font-semibold text-text"
+                      }`}>
+                        {e.amount === null ? "—" : formatAmount(e.amount)}
+                      </div>
+                      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mt-1">
+                        ฿ / share
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        ))}
+      </>
+    ) : (
+      <section class="py-12 text-center">
+        <p class="text-muted text-[15px]">No dividend records on file for {symbol}.</p>
+        <a href={withBase("/")} class="inline-block mt-4 text-accent text-[13px] hover:underline">
+          ← Back to calendar
+        </a>
+      </section>
+    )}
+  </main>
+</Layout>

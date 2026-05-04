@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import DividendDialog from "../components/DividendDialog.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Ex-dividend calendar for SET50 stocks" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <ClientRouter />
+    <script is:inline>
+      // 1. FOUC-free initial paint: read localStorage / OS preference and set
+      //    the html attributes that drive the theme + filter state.
+      // 2. Astro ClientRouter syncs <html> attributes from the SSR doc on each
+      //    navigation, which would wipe these client-only attrs. The
+      //    `astro:before-swap` listener copies them onto the incoming doc so
+      //    they survive the swap with no flash.
+      (function () {
+        var html = document.documentElement;
+        function applyState() {
+          try {
+            var stored = localStorage.getItem("theme");
+            var theme = stored === "light" || stored === "dark"
+              ? stored
+              : (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+            html.dataset.theme = theme;
+          } catch (e) {
+            html.dataset.theme = "dark";
+          }
+          try {
+            if (localStorage.getItem("filter-xd") === "0") html.dataset.hideXd = "1";
+            else delete html.dataset.hideXd;
+            if (localStorage.getItem("filter-payment") === "0") html.dataset.hidePayment = "1";
+            else delete html.dataset.hidePayment;
+          } catch (e) {}
+        }
+        applyState();
+
+        document.addEventListener("astro:before-swap", function (e) {
+          var incoming = e.newDocument.documentElement;
+          if (html.dataset.theme) incoming.dataset.theme = html.dataset.theme;
+          if (html.dataset.hideXd) incoming.dataset.hideXd = html.dataset.hideXd;
+          if (html.dataset.hidePayment) incoming.dataset.hidePayment = html.dataset.hidePayment;
+        });
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-bg text-text font-sans">
+    <slot />
+    <footer class="px-8 py-6 text-muted text-[11px] border-t border-border text-center tracking-[0.15em] uppercase">
+      <span class="font-display italic normal-case tracking-normal text-[13px] mr-1.5">fin</span>
+      Static site · Astro &amp; Patchright · Source: SET
+    </footer>
+    <DividendDialog />
+  </body>
+</html>

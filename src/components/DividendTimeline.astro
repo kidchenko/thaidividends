@@ -1,0 +1,301 @@
+---
+import type { DividendEvent } from "../lib/dividends";
+import { todayIso } from "../lib/dividends";
+
+interface Props {
+  events: DividendEvent[];
+}
+
+const { events } = Astro.props;
+const today = todayIso();
+
+const data = events
+  .filter((e) => typeof e.amount === "number")
+  .map((e) => ({
+    exDate: e.exDate,
+    amount: e.amount as number,
+    timestamp: new Date(e.exDate + "T00:00:00Z").getTime(),
+    isUpcoming: e.exDate >= today,
+    tentative: e.tentative,
+  }))
+  .sort((a, b) => a.timestamp - b.timestamp);
+
+// Per-year aggregation
+const yearMap = new Map<number, { total: number; count: number; hasUpcoming: boolean }>();
+for (const d of data) {
+  const y = new Date(d.exDate + "T00:00:00Z").getUTCFullYear();
+  const cur = yearMap.get(y) ?? { total: 0, count: 0, hasUpcoming: false };
+  cur.total += d.amount;
+  cur.count += 1;
+  cur.hasUpcoming = cur.hasUpcoming || d.isUpcoming;
+  yearMap.set(y, cur);
+}
+const yearData = [...yearMap.entries()]
+  .sort((a, b) => a[0] - b[0])
+  .map(([year, v]) => ({ year, ...v }));
+
+// SVG geometry
+const W = 800;
+const H = 220;
+const PAD_T = 22;
+const PAD_R = 18;
+const PAD_B = 30;
+const PAD_L = 50;
+const chartW = W - PAD_L - PAD_R;
+const chartH = H - PAD_T - PAD_B;
+
+// ---- Per-event chart ----
+const eventMax = Math.max(...data.map((d) => d.amount), 0.01);
+const tMin = data.length > 0 ? data[0].timestamp : 0;
+const tMaxRaw = data.length > 0 ? data[data.length - 1].timestamp : 1;
+const span = Math.max(tMaxRaw - tMin, 86_400_000);
+const padding = span * 0.05;
+const tMinPadded = tMin - padding;
+const tMaxPadded = tMaxRaw + padding;
+const tRange = tMaxPadded - tMinPadded;
+const eventBarW = Math.min(28, Math.max(12, chartW / Math.max(data.length, 1) / 1.4));
+const xForT = (t: number): number => PAD_L + ((t - tMinPadded) / tRange) * chartW;
+const yForA = (a: number, max: number): number => PAD_T + (1 - a / max) * chartH;
+
+// Year labels (every year that falls inside the padded range)
+const yearsInRange = (() => {
+  if (data.length === 0) return [];
+  const out: number[] = [];
+  const startYear = new Date(tMinPadded).getUTCFullYear();
+  const endYear = new Date(tMaxPadded).getUTCFullYear();
+  for (let y = startYear; y <= endYear; y++) out.push(y);
+  return out;
+})();
+
+const todayTs = Date.parse(today + "T00:00:00Z");
+const showTodayLine = todayTs >= tMinPadded && todayTs <= tMaxPadded;
+
+// ---- Per-year chart ----
+const yearMax = Math.max(...yearData.map((d) => d.total), 0.01);
+const yearBarW = Math.min(80, chartW / Math.max(yearData.length, 1) / 1.6);
+
+const formatAmount = (n: number): string =>
+  n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+const formatDate = (iso: string): string =>
+  new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", {
+    day: "2-digit", month: "short", year: "numeric", timeZone: "UTC",
+  });
+---
+
+{data.length === 0 ? (
+  <p class="text-muted italic text-[13px]">No confirmed amounts to chart yet.</p>
+) : (
+  <div class="timeline-wrap relative" data-grouping="event">
+    <!-- Toggle -->
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-[10px] uppercase tracking-[0.18em] text-muted">Group by</span>
+      <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+        <button
+          type="button"
+          data-grouping-btn="event"
+          class="grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer"
+        >Event</button>
+        <button
+          type="button"
+          data-grouping-btn="year"
+          class="grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer border-l border-border"
+        >Year</button>
+      </div>
+    </div>
+
+    <!-- Per-event chart -->
+    <div data-chart="event" class="chart-pane relative">
+      <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Dividend amounts per event">
+        <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+        <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+
+        <text
+          x={PAD_L - 8} y={PAD_T + 4}
+          text-anchor="end" class="fill-muted"
+          style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+        >{formatAmount(eventMax)} ฿</text>
+
+        {showTodayLine && (
+          <g>
+            <line x1={xForT(todayTs)} y1={PAD_T - 6} x2={xForT(todayTs)} y2={H - PAD_B} class="stroke-today" stroke-dasharray="3 3" />
+            <text x={xForT(todayTs)} y={PAD_T - 10} text-anchor="middle" class="fill-today" style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;">today</text>
+          </g>
+        )}
+
+        {data.map((d) => {
+          const x = xForT(d.timestamp);
+          const y = yForA(d.amount, eventMax);
+          const h = (H - PAD_B) - y;
+          return (
+            <rect
+              x={x - eventBarW / 2}
+              y={y}
+              width={eventBarW}
+              height={Math.max(h, 1)}
+              class={`tl-bar ${d.isUpcoming ? "fill-bg stroke-accent" : "fill-accent stroke-accent"}`}
+              stroke-width="1.5"
+              data-tip-date={formatDate(d.exDate)}
+              data-tip-amount={`${formatAmount(d.amount)} ฿`}
+              data-tip-meta={d.isUpcoming ? "Upcoming" : "Paid"}
+            />
+          );
+        })}
+
+        {yearsInRange.map((year) => {
+          const ts = Date.UTC(year, 6, 1);
+          const x = xForT(Math.max(tMinPadded, Math.min(tMaxPadded, ts)));
+          return (
+            <text x={x} y={H - PAD_B + 20} text-anchor="middle" class="fill-muted" style="font-size: 12px; font-family: var(--font-display); font-style: italic;">{year}</text>
+          );
+        })}
+      </svg>
+    </div>
+
+    <!-- Per-year chart -->
+    <div data-chart="year" class="chart-pane relative hidden">
+      <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Dividend amounts aggregated by year">
+        <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+        <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+
+        <text
+          x={PAD_L - 8} y={PAD_T + 4}
+          text-anchor="end" class="fill-muted"
+          style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+        >{formatAmount(yearMax)} ฿</text>
+
+        {yearData.map((y, i) => {
+          const slotW = chartW / yearData.length;
+          const x = PAD_L + slotW * i + slotW / 2;
+          const yy = yForA(y.total, yearMax);
+          const h = (H - PAD_B) - yy;
+          return (
+            <g>
+              <rect
+                x={x - yearBarW / 2}
+                y={yy}
+                width={yearBarW}
+                height={Math.max(h, 1)}
+                class={`tl-bar ${y.hasUpcoming ? "fill-accent-soft stroke-accent" : "fill-accent stroke-accent"}`}
+                stroke-width="1.5"
+                data-tip-date={String(y.year)}
+                data-tip-amount={`${formatAmount(y.total)} ฿`}
+                data-tip-meta={`${y.count} ${y.count === 1 ? "event" : "events"}${y.hasUpcoming ? " · partial" : ""}`}
+              />
+              <text x={x} y={H - PAD_B + 20} text-anchor="middle" class="fill-muted" style="font-size: 12px; font-family: var(--font-display); font-style: italic;">{y.year}</text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+
+    <!-- Tooltip (positioned by JS on hover) -->
+    <div
+      data-tooltip
+      role="tooltip"
+      class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+             bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+             whitespace-nowrap border border-text rounded-sm"
+    >
+      <div data-tip-slot="amount" class="font-display font-semibold text-[13px] tabular-nums"></div>
+      <div data-tip-slot="date" class="opacity-80 mt-0.5"></div>
+      <div data-tip-slot="meta" class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-1"></div>
+    </div>
+
+    <div class="flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3 h-2 bg-accent"></span> paid
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3 h-2 border border-accent bg-bg"></span> upcoming
+      </span>
+    </div>
+  </div>
+)}
+
+<script>
+  // Grouping toggle + tooltip behaviour. Delegated so it survives any
+  // re-render and works for multiple charts on a page.
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-grouping-btn]");
+    if (!btn) return;
+    const wrap = btn.closest<HTMLElement>(".timeline-wrap");
+    if (!wrap) return;
+    wrap.dataset.grouping = btn.dataset.groupingBtn ?? "event";
+  });
+
+  const positionTooltip = (
+    bar: SVGRectElement,
+    tooltip: HTMLElement,
+    wrap: HTMLElement,
+  ) => {
+    const wrapRect = wrap.getBoundingClientRect();
+    const barRect = bar.getBoundingClientRect();
+    const x = barRect.left - wrapRect.left + barRect.width / 2;
+    const y = barRect.top - wrapRect.top - 8;
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
+  };
+
+  const showTooltip = (bar: SVGRectElement) => {
+    const wrap = bar.closest<HTMLElement>(".timeline-wrap");
+    if (!wrap) return;
+    const tooltip = wrap.querySelector<HTMLElement>("[data-tooltip]");
+    if (!tooltip) return;
+    const setSlot = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    setSlot("amount", bar.dataset.tipAmount ?? "");
+    setSlot("date", bar.dataset.tipDate ?? "");
+    setSlot("meta", bar.dataset.tipMeta ?? "");
+    tooltip.classList.remove("hidden");
+    positionTooltip(bar, tooltip, wrap);
+  };
+
+  const hideTooltip = (bar: SVGRectElement) => {
+    const wrap = bar.closest<HTMLElement>(".timeline-wrap");
+    const tooltip = wrap?.querySelector<HTMLElement>("[data-tooltip]");
+    tooltip?.classList.add("hidden");
+  };
+
+  // Delegated mouseover/out so we don't have to bind per bar
+  document.addEventListener("mouseover", (e) => {
+    const bar = (e.target as HTMLElement).closest<SVGRectElement>(".tl-bar");
+    if (bar) showTooltip(bar as unknown as SVGRectElement);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const bar = (e.target as HTMLElement).closest<SVGRectElement>(".tl-bar");
+    if (bar) hideTooltip(bar as unknown as SVGRectElement);
+  });
+  // Touch: tap a bar to show, tap elsewhere to hide
+  document.addEventListener("click", (e) => {
+    const bar = (e.target as HTMLElement).closest<SVGRectElement>(".tl-bar");
+    if (bar) {
+      e.preventDefault();
+      showTooltip(bar as unknown as SVGRectElement);
+      return;
+    }
+    document.querySelectorAll<HTMLElement>("[data-tooltip]").forEach((t) => t.classList.add("hidden"));
+  });
+</script>
+
+<style>
+  /* Toggle states */
+  .timeline-wrap[data-grouping="event"] [data-grouping-btn="event"],
+  .timeline-wrap[data-grouping="year"] [data-grouping-btn="year"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .timeline-wrap[data-grouping="event"] [data-grouping-btn="year"],
+  .timeline-wrap[data-grouping="year"] [data-grouping-btn="event"] {
+    background: transparent;
+    color: var(--muted);
+  }
+  /* Show only the active chart pane */
+  .timeline-wrap[data-grouping="event"] [data-chart="year"],
+  .timeline-wrap[data-grouping="year"] [data-chart="event"] {
+    display: none;
+  }
+  .tl-bar { cursor: pointer; transition: filter 100ms ease; }
+  .tl-bar:hover { filter: brightness(1.08); }
+</style>

@@ -1,0 +1,128 @@
+---
+import type { Cadence } from "../lib/dividends";
+
+interface Props {
+  cadence: Cadence;
+}
+
+const { cadence } = Astro.props;
+const monthAbbr = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+// Cell intensity: scale 0–1 based on max amount per cell across all cells.
+const maxCellAmount = Math.max(
+  ...[...cadence.cells.values()].map((c) => c.totalAmount),
+  0.01,
+);
+---
+
+{cadence.years.length === 0 ? (
+  <p class="text-muted italic text-[13px]">No dividend history to plot.</p>
+) : (
+  <div class="cadence">
+    <div class="cadence-grid">
+      <div></div>
+      {monthAbbr.map((m) => (
+        <div class="cadence-col-label" title={m}>
+          <span class="hidden sm:inline">{m.slice(0, 3)}</span>
+          <span class="sm:hidden">{m.slice(0, 1)}</span>
+        </div>
+      ))}
+
+      {cadence.years.map((year) => (
+        <Fragment>
+          <div class="cadence-row-label">{year}</div>
+          {Array.from({ length: 12 }, (_, i) => {
+            const m = i + 1;
+            const cell = cadence.cells.get(`${year}-${m}`);
+            const has = !!cell && cell.events.length > 0;
+            const intensity = has ? Math.min(1, cell!.totalAmount / maxCellAmount) : 0;
+            // 3 visual tiers so empty months don't all look identical at a glance.
+            const tier = !has ? 0 : intensity < 0.34 ? 1 : intensity < 0.67 ? 2 : 3;
+            const title = has
+              ? `${monthAbbr[i]} ${year} · ${cell!.events.length} event${cell!.events.length === 1 ? "" : "s"}${cell!.totalAmount > 0 ? ` · ${cell!.totalAmount.toFixed(2)} ฿` : ""}`
+              : `${monthAbbr[i]} ${year} · no event`;
+            return (
+              <div class={`cadence-cell tier-${tier}`} title={title}>
+                {has && cell!.events.length > 1 && (
+                  <span class="cadence-count">{cell!.events.length}</span>
+                )}
+              </div>
+            );
+          })}
+        </Fragment>
+      ))}
+    </div>
+
+    <!-- Legend -->
+    <div class="flex gap-3 items-center text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
+      <span>none</span>
+      <span class="inline-flex gap-px">
+        <span class="cadence-cell tier-0 legend-cell"></span>
+        <span class="cadence-cell tier-1 legend-cell"></span>
+        <span class="cadence-cell tier-2 legend-cell"></span>
+        <span class="cadence-cell tier-3 legend-cell"></span>
+      </span>
+      <span>more / larger</span>
+    </div>
+  </div>
+)}
+
+<style>
+  .cadence-grid {
+    display: grid;
+    grid-template-columns: minmax(36px, auto) repeat(12, minmax(0, 1fr));
+    gap: 3px;
+    align-items: center;
+  }
+  .cadence-col-label {
+    text-align: center;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding-bottom: 4px;
+    font-family: var(--font-sans);
+  }
+  .cadence-row-label {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-feature-settings: "tnum";
+    font-size: 13px;
+    color: var(--muted);
+    padding-right: 8px;
+    text-align: right;
+  }
+  .cadence-cell {
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--border);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    transition: transform 80ms ease;
+  }
+  .cadence-cell:hover {
+    transform: scale(1.08);
+  }
+  .cadence-cell.tier-0 { background: transparent; }
+  .cadence-cell.tier-1 { background: var(--accent-soft); border-color: var(--accent-soft); }
+  .cadence-cell.tier-2 { background: var(--accent-strong); border-color: var(--accent-strong); }
+  .cadence-cell.tier-3 { background: var(--accent); border-color: var(--accent); }
+
+  .cadence-count {
+    font-size: 9px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--bg);
+    line-height: 1;
+  }
+  .cadence-cell.tier-0 .cadence-count,
+  .cadence-cell.tier-1 .cadence-count {
+    color: var(--accent);
+  }
+
+  .legend-cell {
+    width: 14px;
+    height: 14px;
+    aspect-ratio: 1 / 1;
+  }
+</style>

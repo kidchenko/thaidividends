@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+import type { YearMonth } from "../lib/dividends";
+
+interface Props {
+  current: YearMonth;
+  prev: YearMonth | null;
+  next: YearMonth | null;
+  todayPath: string;
+  isToday: boolean;
+}
+
+const { current, prev, next, todayPath, isToday } = Astro.props;
+
+// Split label so we can style year smaller / lighter than month name.
+const [monthName, year] = current.label.split(" ");
+---
+
+<nav class="grid grid-cols-[1fr_auto_1fr] items-end gap-6 mb-8 pb-4 border-b border-border">
+  <a
+    class="arrow group inline-flex items-center gap-2 text-muted hover:text-text text-[13px] no-underline hover:no-underline transition-colors aria-disabled:opacity-30 aria-disabled:pointer-events-none"
+    href={prev ? prev.path : "#"}
+    aria-disabled={!prev}
+    aria-label="Previous month"
+  >
+    <Icon name="lucide:chevron-left" class="h-4 w-4" aria-hidden="true" />
+    <span class="font-display italic">{prev ? prev.label : "—"}</span>
+  </a>
+
+  <div class="text-center">
+    <h2 class="m-0 font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-none tracking-tight">
+      <span class="italic font-light">{monthName}</span>
+      <span class="font-medium text-muted ml-1">{year}</span>
+    </h2>
+    {!isToday && (
+      <a class="inline-block mt-2 text-[11px] tracking-[0.15em] uppercase text-muted hover:text-accent transition-colors" href={todayPath}>
+        Jump to today →
+      </a>
+    )}
+    {isToday && (
+      <span class="inline-block mt-2 text-[11px] tracking-[0.15em] uppercase text-accent">
+        ◆ Currently
+      </span>
+    )}
+  </div>
+
+  <a
+    class="arrow group justify-self-end inline-flex items-center gap-2 text-muted hover:text-text text-[13px] no-underline hover:no-underline transition-colors aria-disabled:opacity-30 aria-disabled:pointer-events-none"
+    href={next ? next.path : "#"}
+    aria-disabled={!next}
+    aria-label="Next month"
+  >
+    <span class="font-display italic">{next ? next.label : "—"}</span>
+    <Icon name="lucide:chevron-right" class="h-4 w-4" aria-hidden="true" />
+  </a>
+</nav>

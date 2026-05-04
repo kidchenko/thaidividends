@@ -1,0 +1,330 @@
+import {
+  addMonths as fnsAddMonths,
+  eachDayOfInterval,
+  endOfWeek,
+  format,
+  getDay,
+  isSameMonth,
+  parseISO,
+  startOfMonth,
+  startOfWeek,
+} from "date-fns";
+
+import dividends from "../../data/set-dividends.json";
+import companiesData from "../../data/companies.json";
+
+export type DividendEvent = {
+  symbol: string;
+  name: string;
+  exDate: string;                  // YYYY-MM-DD
+  recordDate: string | null;
+  paymentDate: string | null;
+  amount: number | null;           // null when amount is unknown / pending
+  currency: string;                // "Baht"
+  dividendType: string;            // "Cash Dividend"
+  caType: string;                  // "XD" | "XD(ST)"
+  sourceOfDividend: string | null; // "Net Profit" | "Retained Earnings" | ...
+  operationStart: string | null;
+  operationEnd: string | null;
+  tentative: boolean;              // SET marked as tentative or amount missing
+  remark: string | null;
+};
+
+export type Company = {
+  symbol: string;
+  name: string;
+  currency: string;
+};
+
+export type YearMonth = {
+  year: number;
+  month: number; // 1-12
+  key: string;   // YYYY-MM
+  label: string; // "May 2026"
+  path: string;  // /2026/05/
+};
+
+const PAST_PADDING_MONTHS = 1;
+const FUTURE_HORIZON_MONTHS = 12;
+
+const BASE = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+
+/** Prefix any absolute path with the configured site base. */
+export function withBase(path: string): string {
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${BASE}${p}`;
+}
+
+const COMPANY_BY_SYMBOL: Map<string, Company> = new Map(
+  (companiesData as Company[]).map((c) => [c.symbol, c]),
+);
+
+export function getCompany(symbol: string): Company | null {
+  return COMPANY_BY_SYMBOL.get(symbol) ?? null;
+}
+
+export function getCompanyName(symbol: string): string {
+  return COMPANY_BY_SYMBOL.get(symbol)?.name ?? symbol;
+}
+
+export function loadEvents(): DividendEvent[] {
+  return (dividends as DividendEvent[]).slice().sort(
+    (a, b) => a.exDate.localeCompare(b.exDate) || a.symbol.localeCompare(b.symbol),
+  );
+}
+
+export function getEventsForSymbol(symbol: string): DividendEvent[] {
+  return (dividends as DividendEvent[])
+    .filter((e) => e.symbol === symbol)
+    .sort((a, b) => b.exDate.localeCompare(a.exDate)); // newest first
+}
+
+export function getAllSymbols(): string[] {
+  return (companiesData as Company[]).map((c) => c.symbol);
+}
+
+export type SymbolStats = {
+  count: number;
+  firstDate: string | null;
+  lastDate: string | null;
+  totalAmount: number;       // sum of confirmed amounts
+  confirmedCount: number;    // events with non-null amount
+  upcoming: DividendEvent | null;  // next future event by ex-date
+  lastPaid: DividendEvent | null;  // most recent past event
+};
+
+export function getSymbolStats(events: DividendEvent[], today: string = todayIso()): SymbolStats {
+  if (events.length === 0) {
+    return {
+      count: 0, firstDate: null, lastDate: null,
+      totalAmount: 0, confirmedCount: 0,
+      upcoming: null, lastPaid: null,
+    };
+  }
+  // events come newest-first
+  const dates = events.map((e) => e.exDate);
+  const lastDate = dates[0];
+  const firstDate = dates[dates.length - 1];
+  let totalAmount = 0;
+  let confirmedCount = 0;
+  for (const e of events) {
+    if (typeof e.amount === "number") {
+      totalAmount += e.amount;
+      confirmedCount += 1;
+    }
+  }
+  // Upcoming = nearest future (ex-date >= today)
+  const future = events.filter((e) => e.exDate >= today);
+  const upcoming = future.length > 0 ? future[future.length - 1] : null; // closest future
+  // Last paid = nearest past (ex-date < today)
+  const past = events.filter((e) => e.exDate < today);
+  const lastPaid = past.length > 0 ? past[0] : null; // newest past (events sorted desc)
+  return {
+    count: events.length,
+    firstDate, lastDate,
+    totalAmount, confirmedCount,
+    upcoming, lastPaid,
+  };
+}
+
+export type CadenceCell = {
+  year: number;
+  month: number; // 1-12
+  events: DividendEvent[];
+  totalAmount: number; // sum of confirmed amounts in cell
+};
+
+export type Cadence = {
+  years: number[];                       // chronological asc
+  cells: Map<string, CadenceCell>;       // key `${year}-${month}`
+  monthFrequency: number[];              // length 12: how many years had >=1 event
+};
+
+export function getCadence(events: DividendEvent[]): Cadence {
+  if (events.length === 0) {
+    return { years: [], cells: new Map(), monthFrequency: new Array(12).fill(0) };
+  }
+  const years = [...new Set(events.map((e) => Number(e.exDate.slice(0, 4))))].sort((a, b) => a - b);
+  const cells = new Map<string, CadenceCell>();
+  for (const e of events) {
+    const y = Number(e.exDate.slice(0, 4));
+    const m = Number(e.exDate.slice(5, 7));
+    const key = `${y}-${m}`;
+    const cell = cells.get(key) ?? { year: y, month: m, events: [], totalAmount: 0 };
+    cell.events.push(e);
+    if (typeof e.amount === "number") cell.totalAmount += e.amount;
+    cells.set(key, cell);
+  }
+  // For each month 1..12, count distinct years with at least one event
+  const monthFrequency = new Array(12).fill(0);
+  for (let m = 1; m <= 12; m++) {
+    const yearsWith = new Set<number>();
+    for (const cell of cells.values()) {
+      if (cell.month === m) yearsWith.add(cell.year);
+    }
+    monthFrequency[m - 1] = yearsWith.size;
+  }
+  return { years, cells, monthFrequency };
+}
+
+export function groupEventsByYear(events: DividendEvent[]): Array<{
+  year: number;
+  events: DividendEvent[];
+}> {
+  const map = new Map<number, DividendEvent[]>();
+  for (const e of events) {
+    const y = Number(e.exDate.slice(0, 4));
+    const list = map.get(y) ?? [];
+    list.push(e);
+    map.set(y, list);
+  }
+  return [...map.entries()]
+    .sort((a, b) => b[0] - a[0]) // newest year first
+    .map(([year, events]) => ({ year, events }));
+}
+
+export function makeYearMonth(year: number, month: number): YearMonth {
+  const anchor = new Date(year, month - 1, 1);
+  return {
+    year,
+    month,
+    key: format(anchor, "yyyy-MM"),
+    label: format(anchor, "MMMM yyyy"),
+    path: withBase(`/${format(anchor, "yyyy")}/${format(anchor, "MM")}/`),
+  };
+}
+
+export function symbolPath(symbol: string): string {
+  return withBase(`/${symbol}/`);
+}
+
+export function currentYearMonth(now: Date = new Date()): YearMonth {
+  return makeYearMonth(now.getFullYear(), now.getMonth() + 1);
+}
+
+function shiftMonths(ym: YearMonth, delta: number): YearMonth {
+  const shifted = fnsAddMonths(new Date(ym.year, ym.month - 1, 1), delta);
+  return makeYearMonth(shifted.getFullYear(), shifted.getMonth() + 1);
+}
+
+export type MonthListResult = {
+  months: YearMonth[];
+  byKey: Map<string, YearMonth>;
+};
+
+export function getMonthList(events: DividendEvent[], now: Date = new Date()): MonthListResult {
+  const today = currentYearMonth(now);
+  if (events.length === 0) {
+    return { months: [today], byKey: new Map([[today.key, today]]) };
+  }
+  const dataKeys = events.map((e) => e.exDate.slice(0, 7));
+  const minKey = dataKeys.reduce((a, b) => (a < b ? a : b));
+  const maxKey = dataKeys.reduce((a, b) => (a > b ? a : b));
+  const [minY, minM] = minKey.split("-").map(Number);
+  const [maxY, maxM] = maxKey.split("-").map(Number);
+
+  let first = shiftMonths(makeYearMonth(minY, minM), -PAST_PADDING_MONTHS);
+  let last = shiftMonths(makeYearMonth(maxY, maxM), 1);
+  const futureHorizon = shiftMonths(today, FUTURE_HORIZON_MONTHS);
+  if (today.key < first.key) first = today;
+  if (futureHorizon.key > last.key) last = futureHorizon;
+
+  const months: YearMonth[] = [];
+  let cursor = first;
+  while (cursor.key <= last.key) {
+    months.push(cursor);
+    cursor = shiftMonths(cursor, 1);
+  }
+  const byKey = new Map(months.map((m) => [m.key, m]));
+  return { months, byKey };
+}
+
+export type EntryKind = "xd" | "payment";
+
+export type CalendarEntry = {
+  kind: EntryKind;
+  event: DividendEvent;
+};
+
+export function getEventsForMonth(events: DividendEvent[], ym: YearMonth): {
+  byDay: Map<string, CalendarEntry[]>;
+  totalXd: number;
+  totalPayment: number;
+} {
+  const byDay = new Map<string, CalendarEntry[]>();
+  let totalXd = 0;
+  let totalPayment = 0;
+
+  const push = (date: string, entry: CalendarEntry) => {
+    const list = byDay.get(date) ?? [];
+    list.push(entry);
+    byDay.set(date, list);
+  };
+
+  for (const e of events) {
+    if (e.exDate.startsWith(ym.key)) {
+      push(e.exDate, { kind: "xd", event: e });
+      totalXd += 1;
+    }
+    if (e.paymentDate?.startsWith(ym.key)) {
+      push(e.paymentDate, { kind: "payment", event: e });
+      totalPayment += 1;
+    }
+  }
+
+  // Sort each day's entries: XD first (chronologically the cause), then payment.
+  for (const list of byDay.values()) {
+    list.sort((a, b) => {
+      if (a.kind !== b.kind) return a.kind === "xd" ? -1 : 1;
+      return a.event.symbol.localeCompare(b.event.symbol);
+    });
+  }
+
+  return { byDay, totalXd, totalPayment };
+}
+
+export function getNeighbourMonths(months: YearMonth[], current: YearMonth): {
+  prev: YearMonth | null;
+  next: YearMonth | null;
+} {
+  const idx = months.findIndex((m) => m.key === current.key);
+  return {
+    prev: idx > 0 ? months[idx - 1] : null,
+    next: idx >= 0 && idx < months.length - 1 ? months[idx + 1] : null,
+  };
+}
+
+export type CalendarCell = {
+  date: string; // YYYY-MM-DD
+  day: number;
+  inMonth: boolean;
+  weekday: number; // 0=Sun
+};
+
+export function monthGridDays(year: number, month: number): CalendarCell[] {
+  const first = new Date(year, month - 1, 1);
+  const gridStart = startOfWeek(startOfMonth(first), { weekStartsOn: 0 });
+  const gridEnd = endOfWeek(addDaysFromStart(gridStart, 41), { weekStartsOn: 0 });
+  return eachDayOfInterval({ start: gridStart, end: gridEnd })
+    .slice(0, 42)
+    .map((d) => ({
+      date: format(d, "yyyy-MM-dd"),
+      day: d.getDate(),
+      inMonth: isSameMonth(d, first),
+      weekday: getDay(d),
+    }));
+}
+
+function addDaysFromStart(start: Date, days: number): Date {
+  const d = new Date(start);
+  d.setDate(d.getDate() + days);
+  return d;
+}
+
+export function todayIso(now: Date = new Date()): string {
+  return format(now, "yyyy-MM-dd");
+}
+
+export function formatExDate(iso: string): string {
+  return format(parseISO(iso), "dd MMM yyyy");
+}

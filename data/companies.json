@@ -1,0 +1,4352 @@
+[
+  {
+    "symbol": "1DIV",
+    "name": "ThaiDEX SET High Dividend ETF",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "2S",
+    "name": "2S METAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "3BBIF",
+    "name": "3BB INTERNET INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "88TH",
+    "name": "88(Thailand) Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "A5",
+    "name": "ASSET FIVE GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AAI",
+    "name": "Asian Alliance International Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AAPL01",
+    "name": "Depositary Receipt on AAPL Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AAPL03",
+    "name": "Depositary Receipt on AAPL Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AAPL19",
+    "name": "Depositary Receipt on AAPL Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AAPL80",
+    "name": "Depositary Receipt on AAPL Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ABBV19",
+    "name": "Depositary Receipt on ABBV Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ABFTH",
+    "name": "THE ABF THAILAND BOND INDEX FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ACE",
+    "name": "ABSOLUTE CLEAN ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ACG",
+    "name": "AUTOCORP HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ADB",
+    "name": "APPLIED DB PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ADD",
+    "name": "ADDTECH HUB PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ADVANC",
+    "name": "ADVANCED INFO SERVICE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ADVANT23",
+    "name": "Depositary Receipt on ADVANT Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ADVICE",
+    "name": "Advice IT Infinite Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AEONTS",
+    "name": "AEON THANA SINSAP (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AH",
+    "name": "AAPICO HITECH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AHC",
+    "name": "AIKCHOL HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AI",
+    "name": "ASIAN INSULATORS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AIA19",
+    "name": "Depositary Receipt on AIA Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AIA23",
+    "name": "Depositary Receipt on AIA Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AIE",
+    "name": "AI ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AIMIRT",
+    "name": "AIM INDUSTRIAL GROWTH FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AIT",
+    "name": "ADVANCED INFORMATION TECHNOLOGY PUBLIC CO.,LTD.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AKP",
+    "name": "AKKHIE PRAKARN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AKR",
+    "name": "EKARAT ENGINEERING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ALLA",
+    "name": "ALLA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ALLY",
+    "name": "ALLY FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ALUCON",
+    "name": "ALUCON PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMA",
+    "name": "AMA MARINE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMARC",
+    "name": "ASIA MEDICAL AND AGRICULTURAL LABORATORY AND RESEARCH CENTER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMARIN",
+    "name": "AMARIN CORPORATIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMATA",
+    "name": "AMATA CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMATAR",
+    "name": "AMATA SUMMIT GROWTH FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMATAV",
+    "name": "AMATA VN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMC",
+    "name": "ASIA METAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AMGN06",
+    "name": "Depositary Receipt on AMGN Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ANI",
+    "name": "Asia Network International Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ANTA13",
+    "name": "Depositary Receipt on ANTA Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AOT",
+    "name": "AIRPORTS OF THAILAND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AP",
+    "name": "AP (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "APCO",
+    "name": "ASIAN PHYTOCEUTICALS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "APO",
+    "name": "Asian Palm Oil Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "APP",
+    "name": "APPLICAD PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "APURE",
+    "name": "AGRIPURE HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ARIP",
+    "name": "ARIP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ARROW",
+    "name": "ARROW SYNDICATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AS",
+    "name": "ASPHERE INNOVATIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASEFA",
+    "name": "ASEFA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASIA",
+    "name": "ASIA HOTEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASIAN",
+    "name": "ASIAN SEA CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASIMAR",
+    "name": "ASIAN MARINE SERVICES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASK",
+    "name": "ASIA SERMKIJ LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASML01",
+    "name": "Depositary Receipt on ASML Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASP",
+    "name": "ASIA PLUS GROUP HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ASW",
+    "name": "ASSETWISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ATLAS",
+    "name": "Atlas Energy Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ATP30",
+    "name": "ATP30 PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AU",
+    "name": "AFTER YOU PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AUCT",
+    "name": "UNION AUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AURA",
+    "name": "Aurora Design Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AVGO80",
+    "name": "Depositary Receipt on AVGO Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AWC",
+    "name": "ASSET WORLD CORP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AXP06",
+    "name": "Depositary Receipt on AXP Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AXTRART",
+    "name": "Axtra Future City Freehold and Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "AYUD",
+    "name": "ALLIANZ AYUDHYA CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "B-WORK",
+    "name": "BUALUANG OFFICE LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BA",
+    "name": "BANGKOK AIRWAYS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BABA01",
+    "name": "Depositary Receipt on BABA Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BABA13",
+    "name": "Depositary Receipt on BABA Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BABA80",
+    "name": "Depositary Receipt on BABA Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BAC03",
+    "name": "Depositary Receipt on BAC Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BAFS",
+    "name": "BANGKOK AVIATION FUEL SERVICES PCL.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BAM",
+    "name": "BANGKOK COMMERCIAL ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BANPU",
+    "name": "BANPU PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BAREIT",
+    "name": "BA Airport Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BAY",
+    "name": "BANK OF AYUDHYA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BBGI",
+    "name": "BBGI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BBIK",
+    "name": "BLUEBIK GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BBL",
+    "name": "BANGKOK BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BC",
+    "name": "BOUTIQUE CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BCH",
+    "name": "BANGKOK CHAIN HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BCP",
+    "name": "BANGCHAK CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BCPG",
+    "name": "BCPG PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BCT",
+    "name": "BIRLA CARBON (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BDMS",
+    "name": "BANGKOK DUSIT MEDICAL SERVICES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BDX06",
+    "name": "Depositary Receipt on BDX Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BE8",
+    "name": "BERYL 8 PLUS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BEC",
+    "name": "BEC WORLD PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BEM",
+    "name": "BANGKOK EXPRESSWAY AND METRO  PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BGC",
+    "name": "BG CONTAINER GLASS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BGRIM",
+    "name": "B.GRIMM POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BH",
+    "name": "BUMRUNGRAD HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BH-P",
+    "name": "Preferred Shares of BUMRUNGRAD HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BIG",
+    "name": "BIG CAMERA CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BIS",
+    "name": "Bioscience Animal Health Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BIZ",
+    "name": "BUSINESS ALIGNMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BJC",
+    "name": "BERLI JUCKER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BJCHI",
+    "name": "BJC HEAVY INDUSTRIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKA",
+    "name": "Bangkok Asset Intergroup Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKD",
+    "name": "BANGKOK DEC-CON PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKGI",
+    "name": "Bangkok Genomics Innovation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKIH",
+    "name": "BKI HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKNG03",
+    "name": "Depositary Receipt on BKNG Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BKNG80",
+    "name": "Depositary Receipt on BKNG Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BLA",
+    "name": "BANGKOK LIFE ASSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BLAND",
+    "name": "BANGKOK LAND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BLC",
+    "name": "Bangkok Lab and Cosmetic Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BLK06",
+    "name": "Depositary Receipt on BLK Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BM",
+    "name": "BANGKOK SHEET METAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BOFFICE",
+    "name": "BHIRAJ OFFICE LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BOL",
+    "name": "BUSINESS ONLINE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BONDAS19",
+    "name": "Depositary Receipt on BONDAS ETF Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BPP",
+    "name": "BANPU POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BPS",
+    "name": "BPS Technology Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BR",
+    "name": "BANGKOK RANCH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BRI",
+    "name": "BRITANIA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BRR",
+    "name": "BURIRAM SUGAR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BRRGIF",
+    "name": "BURIRAM SUGAR GROUP POWER PLANT INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BTC",
+    "name": "THE BROOKER GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BTG",
+    "name": "BETAGRO PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BTNC",
+    "name": "BOUTIQUE NEWCITY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BUI",
+    "name": "BANGKOK UNION INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BVG",
+    "name": "BlueVenture Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BWG",
+    "name": "BETTER WORLD GREEN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BYDCOM01",
+    "name": "Depositary Receipt on BYDCOM Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "BYDCOM80",
+    "name": "Depositary Receipt on BYDCOM Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CATL01",
+    "name": "Depositary Receipt on CATL Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CATL23",
+    "name": "Depositary Receipt on CATL Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CATL80",
+    "name": "Depositary Receipt on CATL Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CBG",
+    "name": "CARABAO GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CCET",
+    "name": "CAL-COMP ELECTRONICS (THAILAND) PUBLIC CO., LTD.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CCP",
+    "name": "CHONBURI CONCRETE PRODUCT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CENTEL",
+    "name": "CENTRAL PLAZA HOTEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CEYE",
+    "name": "Chamni's Eye Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CFARM",
+    "name": "CHUWIT FARM (2019) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CH",
+    "name": "Chin Huay Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHAO",
+    "name": "CHAOSUA FOODS INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHARAN",
+    "name": "CHARAN INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHASE",
+    "name": "Chase Asia Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHAYO",
+    "name": "CHAYO GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHG",
+    "name": "CHULARAT HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHHONGQ19",
+    "name": "Depositary Receipt on CHHONGQ Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CHMOBILE19",
+    "name": "Depositary Receipt on CHMOBILE Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CIMBT",
+    "name": "CIMB THAI BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CIVIL",
+    "name": "CIVIL ENGINEERING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CK",
+    "name": "CH. KARNCHANG PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CKP",
+    "name": "CK POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CM",
+    "name": "CHIANGMAI FROZEN FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CMAN",
+    "name": "CHEMEMAN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CMBANK23",
+    "name": "Depositary Receipt on CMBANK Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CME03",
+    "name": "Depositary Receipt on CME Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CMR",
+    "name": "CHIANG MAI RAM MEDICAL BUSINESS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CN01",
+    "name": "Depositary Receipt on CAM CSI300 ETF Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CNT",
+    "name": "CHRISTIANI & NIELSEN (THAI) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CNTECH01",
+    "name": "Depositary Receipt on CAM HSTECH ETF Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "COCOCO",
+    "name": "Thai Coconut Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "COLOR",
+    "name": "SALEE COLOUR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "COM7",
+    "name": "COM7 PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "COSTCO19",
+    "name": "Depositary Receipt on COSTCO Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPALL",
+    "name": "CP ALL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPAXT",
+    "name": "CP AXTRA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPF",
+    "name": "CHAROEN POKPHAND FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPH",
+    "name": "CASTLE PEAK HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPI",
+    "name": "CHUMPORN PALM OIL INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPN",
+    "name": "CENTRAL PATTANA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPNCG",
+    "name": "CPN COMMERCIAL GROWTH LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPNREIT",
+    "name": "CPN RETAIL GROWTH LEASEHOLD REIT",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPR",
+    "name": "CPR GOMU INDUSTRIAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPT",
+    "name": "CPT DRIVES AND POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPTREIT",
+    "name": "C.P. Tower Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CPW",
+    "name": "COPPERWIRED PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CRC",
+    "name": "CENTRAL RETAIL CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CREDIT",
+    "name": "THAI CREDIT BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CRM01",
+    "name": "Depositary Receipt on CRM Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CRM06",
+    "name": "Depositary Receipt on CRM Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CRM80",
+    "name": "Depositary Receipt on CRM Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CSC",
+    "name": "CROWN SEAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CSC-P",
+    "name": "Preferred Shares of CROWN SEAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CSCO06",
+    "name": "Depositary Receipt on CSCO Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CSR",
+    "name": "CITY SPORTS AND RECREATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CSS",
+    "name": "COMMUNICATION AND SYSTEM SOLUTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "CTW",
+    "name": "CHAROONG THAI WIRE & CABLE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "D",
+    "name": "DENTAL CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DBS19",
+    "name": "Depositary Receipt on DBS Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DCC",
+    "name": "DYNASTY CERAMIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DCON",
+    "name": "DCON PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DDD",
+    "name": "DO DAY DREAM PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DELL19",
+    "name": "Depositary Receipt on DELL Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DELTA",
+    "name": "DELTA ELECTRONICS (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DEXON",
+    "name": "DEXON Technology Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DIF",
+    "name": "DIGITAL TELECOMMUNICATIONS INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DISNEY19",
+    "name": "Depositary Receipt on DISNEY Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DITTO",
+    "name": "DITTO (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DMT",
+    "name": "DON MUANG TOLLWAY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DOD",
+    "name": "DOD BIOTECH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DOHOME",
+    "name": "DOHOME PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DREIT",
+    "name": "DUSIT THANI FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DRT",
+    "name": "DIAMOND BUILDING PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DTCENT",
+    "name": "D.T.C. Enterprise Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "DTCI",
+    "name": "D.T.C. INDUSTRIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EASON",
+    "name": "EASON & CO PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EAST",
+    "name": "EASTERN COMMERCIAL LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EASTW",
+    "name": "EASTERN WATER RESOURCES DEVELOPMENT AND MANAGEMENT PCL.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EGATIF",
+    "name": "NORTH BANGKOK POWER PLANT BLOCK 1 INFRASTRUCTURE FUND, ELECTRICITY GENERATING AUTHORITY OF THAILAND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EGCO",
+    "name": "ELECTRICITY GENERATING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EKH",
+    "name": "EKACHAI MEDICAL CARE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ENGY",
+    "name": "MTRACK ENERGY ETF FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EPG",
+    "name": "EASTERN POLYMER GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ERW",
+    "name": "THE ERAWAN GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ESTAR",
+    "name": "EASTERN STAR REAL ESTATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ESTEE80",
+    "name": "Depositary Receipt on ESTEE Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ETC",
+    "name": "EARTH TECH ENVIRONMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EURO",
+    "name": "Euro Creations Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "EXPE06",
+    "name": "Depositary Receipt on EXPE Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "F&D",
+    "name": "FOOD AND DRINKS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FANUC23",
+    "name": "Depositary Receipt on FANUC Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FCX23",
+    "name": "Depositary Receipt on FCX Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FE",
+    "name": "FAR EAST FAME LINE DDB PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FERRARI80",
+    "name": "Depositary Receipt on FERRARI Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FLOYD",
+    "name": "FLOYD PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FM",
+    "name": "FOOD MOMENTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FMT",
+    "name": "FINE METAL TECHNOLOGIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FORTH",
+    "name": "FORTH CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FPI",
+    "name": "FORTUNE PARTS INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FPT",
+    "name": "FRASERS PROPERTY (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FPTVN11",
+    "name": "Depositary Receipt on FPTVN Issued by KS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FPTVN19",
+    "name": "Depositary Receipt on FPTVN Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FSMART",
+    "name": "FORTH SMART SERVICE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FTE",
+    "name": "FIRETRADE ENGINEERING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FTI",
+    "name": "Function International Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FTREIT",
+    "name": "FRASERS PROPERTY THAILAND INDUSTRIAL FREEHOLD & LEASEHOLD REIT",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "FUTURERT",
+    "name": "Future City Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GABLE",
+    "name": "G-Able Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GAHREIT",
+    "name": "GRANDE HOSPITALITY REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GBX",
+    "name": "GLOBLEX HOLDING MANAGEMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GC",
+    "name": "GLOBAL CONNECTIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GFC",
+    "name": "Genesis Fertility Center Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GFPT",
+    "name": "GFPT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GGC",
+    "name": "GLOBAL GREEN CHEMICALS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GIGA23",
+    "name": "Depositary Receipt on GIGA Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GLAND",
+    "name": "GRAND CANAL LAND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GLOBAL",
+    "name": "SIAM GLOBAL HOUSE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GOOG80",
+    "name": "Depositary Receipt on GOOG Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GOOGL01",
+    "name": "Depositary Receipt on GOOGL Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GOOGL03",
+    "name": "Depositary Receipt on GOOGL Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GPI",
+    "name": "GRAND PRIX INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GPSC",
+    "name": "GLOBAL POWER SYNERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GROREIT",
+    "name": "GRANDE ROYAL ORCHID HOSPITALITY REAL ESTATE INVESTMENT TRUST WITH BUY-BACK CONDITION",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GSUS06",
+    "name": "Depositary Receipt on GSUS Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GTB",
+    "name": "GETABEC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GULF",
+    "name": "GULF DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GULFI",
+    "name": "GULF ENERGY DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GUNKUL",
+    "name": "GUNKUL ENGINEERING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GVREIT",
+    "name": "GOLDEN VENTURES LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "GYT",
+    "name": "GOODYEAR (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HAIERS19",
+    "name": "Depositary Receipt on HAIERS Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HANA",
+    "name": "HANA MICROELECTRONICS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HANSOH19",
+    "name": "Depositary Receipt on HANSOH Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HARN",
+    "name": "HARN ENGINEERING SOLUTIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HENG",
+    "name": "HENG LEASING AND CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HERMES80",
+    "name": "Depositary Receipt on HERMES Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HFT",
+    "name": "HWA FONG RUBBER (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HK01",
+    "name": "Depositary Receipt on TRAHK ETF Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HK13",
+    "name": "Depositary Receipt on TRAHK ETF Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HKCE01",
+    "name": "Depositary Receipt on HSCEI ETF Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HKEX23",
+    "name": "Depositary Receipt on HKEX Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HL",
+    "name": "HEALTHLEAD PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HMPRO",
+    "name": "HOME PRODUCT CENTER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HONDA19",
+    "name": "Depositary Receipt on HONDA Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HPF",
+    "name": "HEMARAJ INDUSTRIAL PROPERTY AND LEASEHOLD FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HPG19",
+    "name": "Depositary Receipt on HPG Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HPT",
+    "name": "HOME POTTERY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HSHD23",
+    "name": "Depositary Receipt on HSHD ETF Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HTC",
+    "name": "HAAD THIP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HTECH",
+    "name": "HALCYON TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HUMAN",
+    "name": "HUMANICA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "HYDROGEN",
+    "name": "Hydrogen Freehold and Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "I2",
+    "name": "I2 Enterprise Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IBM06",
+    "name": "Depositary Receipt on IBM Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ICBC06",
+    "name": "Depositary Receipt on ICBC Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ICBC19",
+    "name": "Depositary Receipt on ICBC Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ICC",
+    "name": "I.C.C. INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ICHI",
+    "name": "ICHITAN GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ICN",
+    "name": "INFORMATION AND COMMUNICATION NETWORKS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IDG",
+    "name": "INDIGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IFS",
+    "name": "IFS CAPITAL (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IHL",
+    "name": "INTERHIDES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "III",
+    "name": "TRIPLE I LOGISTICS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ILINK",
+    "name": "INTERLINK COMMUNICATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ILM",
+    "name": "INDEX LIVING MALL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IMPACT",
+    "name": "IMPACT GROWTH REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IND",
+    "name": "INDEX INTERNATIONAL GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INET",
+    "name": "INTERNET THAILAND PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INETREIT",
+    "name": "INET FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INGRS",
+    "name": "INGRESS INDUSTRIAL (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INOX",
+    "name": "POSCO-THAINOX PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INSET",
+    "name": "INFRASET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INSURE",
+    "name": "INDARA INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "INTUCH",
+    "name": "INTOUCH HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IP",
+    "name": "INTER PHARMA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IRC",
+    "name": "INOUE RUBBER (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IROYAL",
+    "name": "Interroyal Engineering Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IRPC",
+    "name": "IRPC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ISSARA",
+    "name": "ISSARA REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IT",
+    "name": "IT CITY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ITC",
+    "name": "i-Tail Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ITNS",
+    "name": "INTERNATIONAL NETWORK SYSTEM PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ITOCHU19",
+    "name": "Depositary Receipt on ITOCHU Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ITTHI",
+    "name": "ITTHIRIT NICE CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IVF",
+    "name": "INSPIRE IVF Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "IVL",
+    "name": "INDORAMA VENTURES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JAK",
+    "name": "JAKPAISAN ESTATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JAPAN13",
+    "name": "Depositary Receipt on CAM JAPAN HDG ETF Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JCT",
+    "name": "JACK CHIA INDUSTRIES (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JD80",
+    "name": "Depositary Receipt on JD Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JDF",
+    "name": "JD Food Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JEPI19",
+    "name": "Depositary Receipt on JEPI ETF Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JMART",
+    "name": "JAYMART GROUP HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JMT",
+    "name": "JMT NETWORK SERVICES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JNJ03",
+    "name": "Depositary Receipt on JNJ Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JPARK",
+    "name": "JENKONGKLAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JPMUS06",
+    "name": "Depositary Receipt on JPMUS Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JPMUS19",
+    "name": "Depositary Receipt on JPMUS Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JR",
+    "name": "J.R.W. UTILITY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JSP",
+    "name": "JSP PHARMACEUTICAL MANUFACTURING (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "JUBILE",
+    "name": "JUBILEE ENTERPRISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "K",
+    "name": "KINGSMEN C.M.T.I. PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KAMART",
+    "name": "KARMARTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KBANK",
+    "name": "KASIKORNBANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KBS",
+    "name": "KHONBURI SUGAR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KBSPIF",
+    "name": "KHONBURI SUGAR POWER PLANT INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KCAR",
+    "name": "KRUNGTHAI CAR RENT AND LEASE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KCC",
+    "name": "Knight Club Capital Holding Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KCE",
+    "name": "KCE ELECTRONICS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KCG",
+    "name": "KCG CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KDH",
+    "name": "THONBURI MEDICAL CENTRE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KEYENCE23",
+    "name": "Depositary Receipt on KEYENCE Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KGI",
+    "name": "KGI SECURITIES (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KIAT",
+    "name": "KIATTANA TRANSPORT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KISS",
+    "name": "ROJUKISS INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KJL",
+    "name": "KIJCHAROEN ENGINEERING ELECTRIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KK",
+    "name": "K&K SUPERSTORE SOUTHERN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KKP",
+    "name": "KIATNAKIN PHATRA BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KLINIQ",
+    "name": "The Klinique Medical Clinic Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KO80",
+    "name": "Depositary Receipt on KO Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KOOL",
+    "name": "CL VENTURE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KPNREIT",
+    "name": "KPN Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KSL",
+    "name": "KHON KAEN SUGAR INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KTB",
+    "name": "KRUNG THAI BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KTB-P",
+    "name": "Preferred Shares of KRUNG THAI BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KTBSTMR",
+    "name": "KTBST MIXED FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KTC",
+    "name": "KRUNGTHAI CARD PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KTIS",
+    "name": "KASET THAI INTERNATIONAL SUGAR CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KTMS",
+    "name": "KT Medical Service Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KUAISH01",
+    "name": "Depositary Receipt on KUAISH Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KUAISH23",
+    "name": "Depositary Receipt on KUAISH Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KUAISH80",
+    "name": "Depositary Receipt on KUAISH Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KUMWEL",
+    "name": "KUMWELL CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KUN",
+    "name": "VILLA KUNALAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KWC",
+    "name": "KRUNGDHEP SOPHON PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KWM",
+    "name": "K. W. METAL WORK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "KYE",
+    "name": "KANG YONG ELECTRIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "L&E",
+    "name": "LIGHTING & EQUIPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LALIN",
+    "name": "LALIN PROPERTY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LANNA",
+    "name": "THE LANNA RESOURCES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LEE",
+    "name": "LEE FEED MILL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LENOVO13",
+    "name": "Depositary Receipt on LENOVO Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LEO",
+    "name": "LEO GLOBAL LOGISTICS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LH",
+    "name": "LAND AND HOUSES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LHFG",
+    "name": "LH FINANCIAL GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LHHOTEL",
+    "name": "LH HOTEL LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LHK",
+    "name": "LOHAKIT METAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LHRREIT",
+    "name": "Land and Houses Residential FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LHSC",
+    "name": "LH SHOPPING CENTERS LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LLY80",
+    "name": "Depositary Receipt on LLY Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LOREAL80",
+    "name": "Depositary Receipt on LOREAL Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LOXLEY",
+    "name": "LOXLEY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LPGOLD13",
+    "name": "Depositary Receipt on LAOPU Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LPH",
+    "name": "LADPRAO GENERAL HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LPN",
+    "name": "L.P.N. DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LRH",
+    "name": "LAGUNA RESORTS & HOTELS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LST",
+    "name": "LAM SOON (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LTMH",
+    "name": "LTMH Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LUXF",
+    "name": "LUXURY REAL ESTATE INVESTMENT FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "LVMH01",
+    "name": "Depositary Receipt on LVMH Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "M",
+    "name": "MK RESTAURANT GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "M-CHAI",
+    "name": "MAHACHAI HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "M-STOR",
+    "name": "MFC-STRATEGIC STORAGE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MA80",
+    "name": "Depositary Receipt on MA Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MAGURO",
+    "name": "Maguro Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MAJOR",
+    "name": "MAJOR CINEPLEX GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MALEE",
+    "name": "MALEE GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MANRIN",
+    "name": "THE MANDARIN HOTEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MASTEC",
+    "name": "Masstec Link Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MASTER",
+    "name": "Master Style Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MATI",
+    "name": "MATICHON PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MBAX",
+    "name": "MULTIBAX PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MBK",
+    "name": "MBK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MC",
+    "name": "MC GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MCA",
+    "name": "Market Connections Asia Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MCS",
+    "name": "M.C.S.STEEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MEB",
+    "name": "MEB Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MEDEZE",
+    "name": "Medeze Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MEGA",
+    "name": "MEGA LIFESCIENCES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MENA",
+    "name": "MENA TRANSPORT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "META01",
+    "name": "Depositary Receipt on META Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "META06",
+    "name": "Depositary Receipt on META Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "META80",
+    "name": "Depositary Receipt on META Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "METCO",
+    "name": "MURAMOTO ELECTRON (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MFC",
+    "name": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MFEC",
+    "name": "MFEC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MGC",
+    "name": "Millennium Group Corporation (Asia) Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MGI",
+    "name": "Miss Grand International Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MGT",
+    "name": "MEGACHEM (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MICRO",
+    "name": "MICRO LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MICRON01",
+    "name": "Depositary Receipt on MICRON Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MICRON03",
+    "name": "Depositary Receipt on MICRON Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MICRON19",
+    "name": "Depositary Receipt on MICRON Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MICRON80",
+    "name": "Depositary Receipt on MICRON Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MII",
+    "name": "MFC Industrial Investment Freehold and Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MINT",
+    "name": "MINOR INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MIPF",
+    "name": "MILLIONAIRE PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MITSIB",
+    "name": "MITSIB LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MITSU19",
+    "name": "Depositary Receipt on MITSU Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MJLF",
+    "name": "MAJOR CINEPLEX LIFESTYLE LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MMM",
+    "name": "MMM Capital Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MNIT",
+    "name": "MFC-NICHADA THANI PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MNIT2",
+    "name": "NICHADA THANI PROPERTY FUND 2",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MNRF",
+    "name": "MULTI-NATIONAL RESIDENCE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MNSO80",
+    "name": "Depositary Receipt on MNSO Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MODERN",
+    "name": "MODERNFORM GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MOONG",
+    "name": "MOONG PATTANA INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MOSHI",
+    "name": "Moshi Moshi Retail Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MOTHER",
+    "name": "Mother Marketing Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MPJ",
+    "name": "MPJ Logistics Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MRDIYT",
+    "name": "MR. D.I.Y. HOLDING (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MRVL06",
+    "name": "Depositary Receipt on MRVL Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MRVL23",
+    "name": "Depositary Receipt on MRVL Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MRVL80",
+    "name": "Depositary Receipt on MRVL Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MS06",
+    "name": "Depositary Receipt on MS Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MSC",
+    "name": "METRO SYSTEMS CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MSFT01",
+    "name": "Depositary Receipt on MSFT Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MSFT03",
+    "name": "Depositary Receipt on MSFT Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MSFT06",
+    "name": "Depositary Receipt on MSFT Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MSFT19",
+    "name": "Depositary Receipt on MSFT Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MSFT80",
+    "name": "Depositary Receipt on MSFT Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MST",
+    "name": "MAYBANK SECURITIES (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MTC",
+    "name": "MUANGTHAI CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MTI",
+    "name": "MUANG THAI INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MTW",
+    "name": "MAKE TO WIN HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MUFG19",
+    "name": "Depositary Receipt on MUFG Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MUFG23",
+    "name": "Depositary Receipt on MUFG Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "MWG19",
+    "name": "Depositary Receipt on MWG Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NAM",
+    "name": "NAMWIWAT MEDICAL CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NAT",
+    "name": "NAT ABSOLUTE TECHNOLOGIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NC",
+    "name": "NEWCITY (BANGKOK) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NCAP",
+    "name": "NEXT CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NCP",
+    "name": "Nice Call Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NDAQ06",
+    "name": "Depositary Receipt on NDAQ Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NDR",
+    "name": "N.D. RUBBER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NDX01",
+    "name": "Depositary Receipt on CAM NASDAQ 100 ETF Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NEM06",
+    "name": "Depositary Receipt on NEM Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NEO",
+    "name": "Neo Corporate Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NER",
+    "name": "NORTH EAST RUBBER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NETBAY",
+    "name": "NETBAY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NETEASE80",
+    "name": "Depositary Receipt on NTES Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NEW",
+    "name": "WATTANA KARNPAET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NIKE80",
+    "name": "Depositary Receipt on NIKE Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NINTENDO19",
+    "name": "Depositary Receipt on NINTENDO Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NINTENDO23",
+    "name": "Depositary Receipt on NINTENDO Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NKT",
+    "name": "Nakornthon Hospital Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NL",
+    "name": "NL Development Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NNCL",
+    "name": "NAVANAKORN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NOBLE",
+    "name": "NOBLE DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NONGFU80",
+    "name": "Depositary Receipt on NONGFU Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NOVOB80",
+    "name": "Depositary Receipt on NOVOB Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NPK",
+    "name": "NEW PLUS KNITTING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NSL",
+    "name": "NSL FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NTF",
+    "name": "NTF INTERGROUP (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NTL",
+    "name": "NGERN TID LOR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NTSC",
+    "name": "Nutrition SC Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NTV",
+    "name": "NONTHAVEJ HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NUT",
+    "name": "NUTRITION PROFESS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NVDA01",
+    "name": "Depositary Receipt on NVDA Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NVDA03",
+    "name": "Depositary Receipt on NVDA Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NVDA06",
+    "name": "Depositary Receipt on NVDA Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NVDA19",
+    "name": "Depositary Receipt on NVDA Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NVDA80",
+    "name": "Depositary Receipt on NVDA Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "NYT",
+    "name": "NAMYONG TERMINAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OCC",
+    "name": "O.C.C. PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OKJ",
+    "name": "Pluk Phak Praw Rak Mae Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ONEE",
+    "name": "THE ONE ENTERPRISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ONSENS",
+    "name": "Onsen Retreat and Spa Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OR",
+    "name": "PTT OIL AND RETAIL BUSINESS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ORCL01",
+    "name": "Depositary Receipt on ORCL Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ORCL06",
+    "name": "Depositary Receipt on ORCL Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ORCL19",
+    "name": "Depositary Receipt on ORCL Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ORI",
+    "name": "ORIGIN PROPERTY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ORN",
+    "name": "ORNSIRIN HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "OSP",
+    "name": "OSOTSPA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PACO",
+    "name": "PRESIDENT AUTOMOBILE INDUSTRIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PAF",
+    "name": "PAN ASIA FOOTWEAR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PANEL",
+    "name": "PanelesMatic Solutions Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PAP",
+    "name": "PACIFIC PIPE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PATO",
+    "name": "PATO CHEMICAL INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PB",
+    "name": "PRESIDENT BAKERY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PCC",
+    "name": "Precise Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PCE",
+    "name": "PETCHSRIVICHAI ENTERPRISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PCSGH",
+    "name": "P.C.S. MACHINE GROUP HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PDG",
+    "name": "PRODIGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PDJ",
+    "name": "PRANDA JEWELRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PEACE",
+    "name": "PEACE & LIVING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PEP80",
+    "name": "Depositary Receipt on PEP Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PETROCN80",
+    "name": "Depositary Receipt on PETROCN Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PFIZER19",
+    "name": "Depositary Receipt on PFIZER Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PG",
+    "name": "PEOPLE'S GARMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PHG",
+    "name": "Patrangsit Healthcare Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PHOL",
+    "name": "PHOL DHANYA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PICO",
+    "name": "PICO (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PIMO",
+    "name": "PIONEER MOTOR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PIN",
+    "name": "PINTHONG INDUSTRIAL PARK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PINGAN01",
+    "name": "Depositary Receipt on PINGAN Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PINGAN80",
+    "name": "Depositary Receipt on PINGAN Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PIS",
+    "name": "Pro Inside Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PJW",
+    "name": "PANJAWATTANA PLASTIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PL",
+    "name": "PHATRA LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PLANB",
+    "name": "PLAN B MEDIA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PLAT",
+    "name": "THE PLATINUM GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PLT",
+    "name": "Pilatus Marine Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PLUS",
+    "name": "Royal Plus Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PM",
+    "name": "PREMIER MARKETING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PMC",
+    "name": "PMC Label Materials Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PMTA",
+    "name": "PM THORESEN ASIA HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "POLY",
+    "name": "Polynet Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "POPF",
+    "name": "PRIME OFFICE LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "POPMART80",
+    "name": "Depositary Receipt on POPMART Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PPM",
+    "name": "PORN PROM METAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PQS",
+    "name": "Premier Quality Starch Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PR9",
+    "name": "PRARAM 9 HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRAKIT",
+    "name": "PRAKIT HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRAPAT",
+    "name": "PEERAPAT TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PREB",
+    "name": "PRE-BUILT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRG",
+    "name": "PRG CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRI",
+    "name": "Primo Service Solutions Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRINC",
+    "name": "PRINCIPAL CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRM",
+    "name": "PRIMA MARINE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PROSPECT",
+    "name": "PROSPECT LOGISTICS AND INDUSTRIAL FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PROUD",
+    "name": "PROUD REAL ESTATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PRTR",
+    "name": "PRTR Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PSH",
+    "name": "PRUKSA HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PSL",
+    "name": "PRECIOUS SHIPPING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PSP",
+    "name": "P.S.P.Specialties Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PT",
+    "name": "PREMIER TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTC",
+    "name": "PREMIER TANK CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTG",
+    "name": "PTG ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTL",
+    "name": "POLYPLEX (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTT",
+    "name": "PTT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTTEP",
+    "name": "PTT EXPLORATION AND PRODUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PTTGC",
+    "name": "PTT GLOBAL CHEMICAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PYLON",
+    "name": "PYLON PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "PYPL06",
+    "name": "Depositary Receipt on PYPL Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "Q-CON",
+    "name": "QUALITY CONSTRUCTION PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QCOM06",
+    "name": "Depositary Receipt on QCOM Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QH",
+    "name": "QUALITY HOUSES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QHBREIT",
+    "name": "Quality Houses Business Complex Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QHHRREIT",
+    "name": "Quality Houses Hotel and Residence Freehold and Leasehold Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QLT",
+    "name": "QUALITECH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QQQM19",
+    "name": "Depositary Receipt on INVESCO NDAQ100 ETF Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "QTC",
+    "name": "QTC ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RAM",
+    "name": "RAMKHAMHAENG HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RATCH",
+    "name": "RATCH GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RBF",
+    "name": "R&B FOOD SUPPLY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RCL",
+    "name": "REGIONAL CONTAINER LINES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "READY",
+    "name": "READYPLANET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RJH",
+    "name": "RAJTHANEE HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ROCK",
+    "name": "ROCKWORTH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ROCTEC",
+    "name": "ROCTEC GLOBAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ROJNA",
+    "name": "ROJANA INDUSTRIAL PARK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RPC",
+    "name": "RPCG PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RPH",
+    "name": "RATCHAPHRUEK HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "RSP",
+    "name": "RICH SPORT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "S",
+    "name": "SINGHA ESTATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "S&J",
+    "name": "S & J INTERNATIONAL ENTERPRISES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "S11",
+    "name": "S 11 GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SA",
+    "name": "SIAMESE ASSET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAAM",
+    "name": "SAAM DEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SABINA",
+    "name": "SABINA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAF",
+    "name": "S.A.F. SPECIAL STEEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAFE",
+    "name": "Safe Fertility Group Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAK",
+    "name": "SAKSIAM LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SALEE",
+    "name": "SALEE INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAMART",
+    "name": "SAMART CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAMCO",
+    "name": "SAMMAKORN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAMTEL",
+    "name": "SAMART TELCOMS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SANKO",
+    "name": "SANKO DIECASTING (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SANOFI80",
+    "name": "Depositary Receipt on SANOFI Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SANRIO23",
+    "name": "Depositary Receipt on SANRIO Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SANRIO80",
+    "name": "Depositary Receipt on SANRIO Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAPPE",
+    "name": "SAPPE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAT",
+    "name": "SOMBOON ADVANCE TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAUCE",
+    "name": "THAITHEPAROS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAV",
+    "name": "Samart Aviation Solutions Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SAWAD",
+    "name": "SRISAWAD CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SBUX80",
+    "name": "Depositary Receipt on SBUX Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SC",
+    "name": "SC ASSET CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCAP",
+    "name": "SRISAWAD CAPITAL 1969 PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCB",
+    "name": "SCB X PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCC",
+    "name": "THE SIAM CEMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCCC",
+    "name": "SIAM CITY CEMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCG",
+    "name": "RATCH PATHANA ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCGD",
+    "name": "SCG DECOR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCGP",
+    "name": "SCG PACKAGING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCL",
+    "name": "S.C.L. Motor Part Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SCP",
+    "name": "SOUTHERN CONCRETE PILE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SE",
+    "name": "SIAMEAST SOLUTIONS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SEAFCO",
+    "name": "SEAFCO PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SEAOIL",
+    "name": "SEA OIL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SECURE",
+    "name": "NFORCE SECURE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SEI",
+    "name": "SEI MEDICAL PUBLIC CO., LTD.",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SELIC",
+    "name": "SELIC CORP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SEMB19",
+    "name": "Depositary Receipt on SEMB Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SENA",
+    "name": "SENADEVELOPMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SENX",
+    "name": "SEN X PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SFLEX",
+    "name": "STARFLEX PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SFT",
+    "name": "SHRINKFLEX (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SGP",
+    "name": "SIAMGAS AND PETROCHEMICALS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SGX19",
+    "name": "Depositary Receipt on SGX Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SHANG",
+    "name": "SHANGRI-LA HOTEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SHR",
+    "name": "S HOTELS AND RESORTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIA19",
+    "name": "Depositary Receipt on SIA Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SICT",
+    "name": "SILICON CRAFT TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIMAT",
+    "name": "SIMAT TECHNOLOGIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SINGTEL80",
+    "name": "Depositary Receipt on SINGTEL Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SINO",
+    "name": "Sino Logistics Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SINOBIO19",
+    "name": "Depositary Receipt on SINOBIO Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIRI",
+    "name": "SANSIRI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIRIPRT",
+    "name": "Siripinyo Real Estate Investment Trust",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SIS",
+    "name": "SIS DISTRIBUTION (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SISB",
+    "name": "SISB PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SITHAI",
+    "name": "SRITHAI SUPERWARE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SJWD",
+    "name": "SCGJWD LOGISTICS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SK",
+    "name": "SIRAKORN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SKN",
+    "name": "S.KIJCHAI ENTERPRISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SKR",
+    "name": "SIKARIN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SKY",
+    "name": "SKY ICT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMART",
+    "name": "SMART CONCRETE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMD100",
+    "name": "SMD RISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMFG19",
+    "name": "Depositary Receipt on SMFG Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMIT",
+    "name": "SAHAMIT MACHINERY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMO",
+    "name": "SMOTHONG GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMPC",
+    "name": "SAHAMITR PRESSURE CONTAINER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SMT",
+    "name": "STARS MICROELECTRONICS (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SNNP",
+    "name": "SRINANAPORN MARKETING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SNP",
+    "name": "S & P SYNDICATE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SNPS",
+    "name": "Specialty Natural Products Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SO",
+    "name": "SIAMRAJATHANEE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SOFTBANK23",
+    "name": "Depositary Receipt on SOFTBANK Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SONIC",
+    "name": "SONIC INTERFREIGHT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SONY80",
+    "name": "Depositary Receipt on SONY Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SORKON",
+    "name": "S. KHONKAEN FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SP500US19",
+    "name": "Depositary Receipt on SP500US ETF Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SP500US80",
+    "name": "Depositary Receipt on SP500US ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPA",
+    "name": "SIAM WELLNESS GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPALI",
+    "name": "SUPALAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPBOND80",
+    "name": "Depositary Receipt on SPBOND ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPC",
+    "name": "SAHA PATHANAPIBUL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPCG",
+    "name": "SPCG PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPCOM80",
+    "name": "Depositary Receipt on SPCOM ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPENGY80",
+    "name": "Depositary Receipt on SPENGY ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPFIN80",
+    "name": "Depositary Receipt on SPFIN ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPG",
+    "name": "THE SIAM PAN GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPHLTH80",
+    "name": "Depositary Receipt on SPHLTH ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPI",
+    "name": "SAHA PATHANA INTER-HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPRC",
+    "name": "STAR PETROLEUM REFINING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPREME",
+    "name": "Supreme Distribution Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPRIME",
+    "name": "S PRIME GROWTH LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPTECH80",
+    "name": "Depositary Receipt on SPTECH ETF Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SPVI",
+    "name": "S P V I PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SRICHA",
+    "name": "SRIRACHA CONSTRUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SRIPANWA",
+    "name": "SRI PANWA HOSPITALITY REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SRS",
+    "name": "SIRISOFT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSF",
+    "name": "SURAPON FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSP",
+    "name": "SERMSANG POWER CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSPF",
+    "name": "SALA @ SATHORN PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSSC",
+    "name": "SIAM STEEL SERVICE CENTER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SSTRT",
+    "name": "SUB SRI THAI REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STA",
+    "name": "SRI TRANG AGRO-INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STANLY",
+    "name": "THAI STANLEY ELECTRIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STARM",
+    "name": "STAR MONEY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STC",
+    "name": "STC CONCRETE PRODUCT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STECH",
+    "name": "SIAM TECHNIC CONCRETE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STECON",
+    "name": "STECON GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STEG19",
+    "name": "Depositary Receipt on STEG Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STGT",
+    "name": "SRI TRANG GLOVES (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STI",
+    "name": "STONEHENGE INTER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STP",
+    "name": "SAHATHAI PRINTING & PACKAGING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "STX",
+    "name": "Stone One Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUC",
+    "name": "SAHA-UNION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUN",
+    "name": "SUNSWEET PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUNNY19",
+    "name": "Depositary Receipt on SUNNY Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUNNY80",
+    "name": "Depositary Receipt on SUNNY Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUPEREIF",
+    "name": "SUPER ENERGY POWER PLANT INFRASTRUCTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUSCO",
+    "name": "SUSCO PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SUTHA",
+    "name": "GOLDEN LIME PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SVI",
+    "name": "SVI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SVOA",
+    "name": "SVOA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SVT",
+    "name": "SUN VENDING TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SWC",
+    "name": "SHERWOOD CORPORATION (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SYMC",
+    "name": "SYMPHONY COMMUNICATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SYNEX",
+    "name": "SYNNEX (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "SYNTEC",
+    "name": "SYNTEC CONSTRUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TACC",
+    "name": "T.A.C. CONSUMER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TAIWAN19",
+    "name": "Depositary Receipt on YT TAIWAN50 ETF Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TAIWANAI13",
+    "name": "Depositary Receipt on KGI TAIWAN AI 50 ETF Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TAIWANHD13",
+    "name": "Depositary Receipt on KGI TAIWAN HD 30 ETF Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TAN",
+    "name": "Tanachira Retail Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TASCO",
+    "name": "TIPCO ASPHALT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TATG",
+    "name": "THAI AUTO TOOLS AND DIE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TBN",
+    "name": "TBN Corporation Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TC",
+    "name": "TROPICAL CANNING (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCAP",
+    "name": "THANACHART CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCAP-P",
+    "name": "Preferred Shares of THANACHART CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TCOAT",
+    "name": "THAI COATING INDUSTRIAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TDEX",
+    "name": "THAIDEX SET50 EXCHANGE TRADED FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TEAM",
+    "name": "TEAM PRECISION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TEAMG",
+    "name": "TEAM CONSULTING ENGINEERING AND MANAGEMENT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TEGH",
+    "name": "Thai Eastern Group Holdings Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TEKA",
+    "name": "TEKA CONSTRUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TEL23",
+    "name": "Depositary Receipt on TEL Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TEL80",
+    "name": "Depositary Receipt on TEL Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TENCENT01",
+    "name": "Depositary Receipt on TENCENT Issued by BLS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TENCENT06",
+    "name": "Depositary Receipt on TENCENT Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TENCENT13",
+    "name": "Depositary Receipt on TENCENT Issued by KGI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TENCENT19",
+    "name": "Depositary Receipt on TENCENT Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TENCENT80",
+    "name": "Depositary Receipt on TENCENT Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TERA",
+    "name": "Terabyte Plus Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TFFIF",
+    "name": "THAILAND FUTURE FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TFG",
+    "name": "THAIFOODS GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TFM",
+    "name": "THAI UNION FEEDMILL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TFMAMA",
+    "name": "THAI PRESIDENT FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TGE",
+    "name": "THACHANG GREEN ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TGH",
+    "name": "THAI GROUP HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THAI",
+    "name": "THAI AIRWAYS INTERNATIONAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THAIBEV19",
+    "name": "Depositary Receipt on THAIBEV Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THANA",
+    "name": "THANASIRI GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THANI",
+    "name": "RATCHTHANI LEASING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THG",
+    "name": "THONBURI HEALTHCARE GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "THIP",
+    "name": "THANTAWAN INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIDLOR",
+    "name": "TIDLOR HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIF1",
+    "name": "THAI INDUSTRIAL FUND 1",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIPCO",
+    "name": "TIPCO FOODS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TIPH",
+    "name": "DHIPAYA GROUP HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TISCO",
+    "name": "TISCO FINANCIAL GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TISCO-P",
+    "name": "Preferred Shares of TISCO FINANCIAL GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TITLE",
+    "name": "RHOM BHO PROPERTY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TK",
+    "name": "THITIKORN PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TKC",
+    "name": "TURNKEY COMMUNICATION SERVICES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TKN",
+    "name": "TAOKAENOI FOOD & MARKETING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TKS",
+    "name": "T.K.S. TECHNOLOGIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TLI",
+    "name": "THAI LIFE INSURANCE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TMAN",
+    "name": "T.Man Pharmaceutical Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TMD",
+    "name": "THAI METAL DRUM MANUFACTURING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TME23",
+    "name": "Depositary Receipt on TME Issued by INVX",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TMI",
+    "name": "TEERA-MONGKOL INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TMILL",
+    "name": "T S FLOUR MILL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TMT",
+    "name": "TMT STEEL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TMW",
+    "name": "THAI MITSUWA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNH",
+    "name": "THAI NAKARIN HOSPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNL",
+    "name": "THANULUX PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNP",
+    "name": "THANAPIRIYA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TNR",
+    "name": "THAI NIPPON RUBBER INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TOA",
+    "name": "TOA PAINT (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TOG",
+    "name": "THAI OPTICAL GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TOP",
+    "name": "THAI OIL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TOPP",
+    "name": "THAI O.P.P. PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TOYOTA80",
+    "name": "Depositary Receipt on TOYOTA Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPAC",
+    "name": "THAI PLASPAC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPBI",
+    "name": "TPBI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPCH",
+    "name": "TPC POWER HOLDING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPCS",
+    "name": "TPCS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPIPL",
+    "name": "TPI POLENE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPIPP",
+    "name": "TPI POLENE POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPLAS",
+    "name": "THAI PLASTIC INDUSTRIAL (1994) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPP",
+    "name": "THAI PACKAGING & PRINTING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPRIME",
+    "name": "THAILAND PRIME PROPERTY FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TPS",
+    "name": "THE PRACTICAL SOLUTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TQM",
+    "name": "TQM ALPHA PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TQR",
+    "name": "TQR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TR",
+    "name": "THAI RAYON PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRIPCOM80",
+    "name": "Depositary Receipt on TRIPCOM Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRP",
+    "name": "Aesthetic Connect Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRT",
+    "name": "TIRATHAI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRU",
+    "name": "THAI RUNG UNION CAR PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRUBB",
+    "name": "THAI RUBBER LATEX GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRUE",
+    "name": "TRUE CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TRVUS06",
+    "name": "Depositary Receipt on TRVUS Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TSC",
+    "name": "THAI STEEL CABLE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TSTE",
+    "name": "TSTE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TSTH",
+    "name": "TATA STEEL (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTA",
+    "name": "THORESEN THAI AGENCIES PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTB",
+    "name": "TMBTHANACHART BANK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTI",
+    "name": "THAI TEXTILE INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTLPF",
+    "name": "TALAAD THAI LEASEHOLD PROPERTY FUND",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTT",
+    "name": "TORAY TEXTILES (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TTW",
+    "name": "TTW PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TU",
+    "name": "THAI UNION GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TVH",
+    "name": "THAIVIVAT HOLDINGS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TVO",
+    "name": "THAI VEGETABLE OIL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TWP",
+    "name": "THAI WIRE PRODUCTS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "TWPC",
+    "name": "THAI WAH PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UAC",
+    "name": "UAC GLOBAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UBA",
+    "name": "Utility Business Alliance Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UBE",
+    "name": "UBON BIO ETHANOL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UEC",
+    "name": "UNIMIT ENGINEERING PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UKEM",
+    "name": "UNION PETROCHEMICAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UMI",
+    "name": "THE UNION MOSAIC INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UNH19",
+    "name": "Depositary Receipt on UNH Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UNIQ",
+    "name": "UNIQUE ENGINEERING AND CONSTRUCTION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UNIQLO80",
+    "name": "Depositary Receipt on UNIQLO Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UNIX",
+    "name": "Unique Plastic Industry Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UOB19",
+    "name": "Depositary Receipt on UOB Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UOBKH",
+    "name": "UOB KAY HIAN SECURITIES (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UP",
+    "name": "UNION PLASTIC PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UPF",
+    "name": "UNION PIONEER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UPOIC",
+    "name": "UNITED PALM OIL INDUSTRY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "USTR24",
+    "name": "Depositary Receipt on USTR ETF Issued by FSS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UTP",
+    "name": "UNITED PAPER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "UVAN",
+    "name": "UNIVANICH PALM OIL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VAYU1",
+    "name": "VAYUPAK FUND 1 CLASS A",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VCB11",
+    "name": "Depositary Receipt on VCB Issued by KS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VCB19",
+    "name": "Depositary Receipt on VCB Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VCOM",
+    "name": "VINTCOM TECHNOLOGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VENTURE19",
+    "name": "Depositary Receipt on VENTURE Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VGI",
+    "name": "VGI PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VIBHA",
+    "name": "VIBHAVADI MEDICAL CENTER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VIH",
+    "name": "SRIVICHAIVEJVIVAT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VISA06",
+    "name": "Depositary Receipt on VISA Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VISA80",
+    "name": "Depositary Receipt on VISA Issued by KTB",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VL",
+    "name": "V.L. ENTERPRISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VNG",
+    "name": "VANACHAI GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VNM19",
+    "name": "Depositary Receipt on VNM Issued by YUANTA",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VRANDA",
+    "name": "VERANDA RESORT PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "VT03",
+    "name": "Depositary Receipt on VT ETF Issued by PI",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WACOAL",
+    "name": "THAI WACOAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WARRIX",
+    "name": "Warrix Sport Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WASH",
+    "name": "Laundry You Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WHA",
+    "name": "WHA CORPORATION PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WHABT",
+    "name": "WHA BUSINESS COMPLEX FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WHAIR",
+    "name": "WHA INDUSTRIAL LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WHART",
+    "name": "WHA PREMIUM GROWTH FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WHAUP",
+    "name": "WHA UTILITIES AND POWER PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WICE",
+    "name": "WICE LOGISTICS PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WIIK",
+    "name": "WIIK PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WINDOW",
+    "name": "Window Asia Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WINMED",
+    "name": "WINNERGY MEDICAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WINNER",
+    "name": "WINNER GROUP ENTERPRISE PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WMT06",
+    "name": "Depositary Receipt on WMT Issued by KKPS",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WP",
+    "name": "WP ENERGY PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "WPH",
+    "name": "WATTANAPAT HOSPITAL TRANG PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "XO",
+    "name": "EXOTIC FOOD PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "XPG",
+    "name": "XSPRING CAPITAL PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "YONG",
+    "name": "Yong Concrete Public Company Limited",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "YUASA",
+    "name": "YUASA BATTERY (THAILAND) PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ZEN",
+    "name": "ZEN CORPORATION GROUP PUBLIC COMPANY LIMITED",
+    "currency": "Baht"
+  },
+  {
+    "symbol": "ZJINNO80",
+    "name": "Depositary Receipt on ZJINNO Issued by KTB",
+    "currency": "Baht"
+  }
+]

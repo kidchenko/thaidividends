@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+  type="button"
+  class="theme-toggle grid h-9 w-9 place-items-center rounded-md border border-border bg-panel text-text transition hover:bg-panel-2 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer shrink-0"
+  data-theme-toggle
+  aria-label="Toggle colour theme"
+  title="Toggle theme"
+>
+  <Icon name="lucide:sun" class="icon-sun h-[18px] w-[18px]" />
+  <Icon name="lucide:moon" class="icon-moon h-[18px] w-[18px]" />
+</button>
+
+<script>
+  const STORAGE_KEY = "theme";
+
+  const TRANSITION_MS = 240;
+  let transitionTimer: number | null = null;
+
+  const apply = (theme: "light" | "dark", animated: boolean) => {
+    const html = document.documentElement;
+    if (animated) {
+      html.classList.add("theme-transitioning");
+      if (transitionTimer) window.clearTimeout(transitionTimer);
+      transitionTimer = window.setTimeout(() => {
+        html.classList.remove("theme-transitioning");
+        transitionTimer = null;
+      }, TRANSITION_MS);
+    }
+    html.dataset.theme = theme;
+  };
+  const current = (): "light" | "dark" =>
+    document.documentElement.dataset.theme === "light" ? "light" : "dark";
+
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest("[data-theme-toggle]")) return;
+    const next = current() === "dark" ? "light" : "dark";
+    apply(next, true);
+    try { localStorage.setItem(STORAGE_KEY, next); } catch {}
+  });
+
+  const mql = window.matchMedia("(prefers-color-scheme: light)");
+  mql.addEventListener("change", (e) => {
+    let stored: string | null = null;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch {}
+    if (!stored) apply(e.matches ? "light" : "dark", true);
+  });
+</script>
+
+<style>
+  .icon-sun, .icon-moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: inline; }
+</style>
