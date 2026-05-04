@@ -1,0 +1,56 @@
+---
+import { type Lang, t, localePath } from "../lib/i18n";
+import { yearPath } from "../lib/dividends";
+
+interface Props {
+  lang: Lang;
+  active: "calendar" | "annual" | null;
+  annualYear: number;
+}
+
+const { lang, active, annualYear } = Astro.props;
+
+const items = [
+  {
+    key: "calendar" as const,
+    href: localePath(lang, "/"),
+    label: t(lang, "navCalendar"),
+  },
+  {
+    key: "annual" as const,
+    href: yearPath(lang, annualYear),
+    label: t(lang, "navAnnual"),
+  },
+];
+---
+
+<nav class="main-nav flex items-center gap-1 px-4 sm:px-8 py-2 border-b border-border bg-bg text-[11px] tracking-[0.18em] uppercase">
+  {items.map((item) => {
+    const isActive = active === item.key;
+    return (
+      <a
+        href={item.href}
+        aria-current={isActive ? "page" : undefined}
+        class={`main-nav-item relative px-3 py-1.5 no-underline transition-colors ${
+          isActive
+            ? "text-text font-semibold"
+            : "text-muted hover:text-text"
+        }`}
+      >
+        {item.label}
+      </a>
+    );
+  })}
+</nav>
+
+<style>
+  .main-nav-item[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: -2px;
+    height: 2px;
+    background: var(--accent);
+  }
+</style>

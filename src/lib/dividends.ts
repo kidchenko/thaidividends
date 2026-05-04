@@ -203,6 +203,60 @@ export function symbolPath(lang: Lang, symbol: string): string {
   return localePath(lang, `/${symbol}/`);
 }
 
+export function yearPath(lang: Lang, year: number): string {
+  return localePath(lang, `/year/${year}/`);
+}
+
+export function getPaymentYears(events: DividendEvent[]): number[] {
+  const years = new Set<number>();
+  for (const e of events) {
+    if (e.paymentDate) years.add(Number(e.paymentDate.slice(0, 4)));
+  }
+  return [...years].sort((a, b) => a - b);
+}
+
+export type YearAggregateRow = {
+  symbol: string;
+  name: string;
+  totalAmount: number;     // sum of confirmed amounts paid in the year
+  count: number;           // total payments (incl. pending)
+  pendingCount: number;    // payments scheduled but with null amount
+};
+
+export type YearAggregate = {
+  year: number;
+  rows: YearAggregateRow[];   // sorted by totalAmount desc, then symbol asc
+  totalAmount: number;
+  totalCount: number;
+  pendingCount: number;
+};
+
+export function getYearAggregate(events: DividendEvent[], year: number): YearAggregate {
+  const yearStr = String(year);
+  const bySymbol = new Map<string, YearAggregateRow>();
+  for (const e of events) {
+    if (!e.paymentDate || e.paymentDate.slice(0, 4) !== yearStr) continue;
+    const row = bySymbol.get(e.symbol) ?? {
+      symbol: e.symbol,
+      name: e.name,
+      totalAmount: 0,
+      count: 0,
+      pendingCount: 0,
+    };
+    row.count += 1;
+    if (typeof e.amount === "number") row.totalAmount += e.amount;
+    else row.pendingCount += 1;
+    bySymbol.set(e.symbol, row);
+  }
+  const rows = [...bySymbol.values()].sort(
+    (a, b) => b.totalAmount - a.totalAmount || a.symbol.localeCompare(b.symbol),
+  );
+  const totalAmount = rows.reduce((s, r) => s + r.totalAmount, 0);
+  const totalCount = rows.reduce((s, r) => s + r.count, 0);
+  const pendingCount = rows.reduce((s, r) => s + r.pendingCount, 0);
+  return { year, rows, totalAmount, totalCount, pendingCount };
+}
+
 export function currentYearMonth(now: Date = new Date(), lang: Lang = DEFAULT_LANG): YearMonth {
   return makeYearMonth(now.getFullYear(), now.getMonth() + 1, lang);
 }

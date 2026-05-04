@@ -1,0 +1,342 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../../../layouts/Layout.astro";
+import MainNav from "../../../components/MainNav.astro";
+import StockHeader from "../../../components/StockHeader.astro";
+import YearNav from "../../../components/YearNav.astro";
+import {
+  loadEvents,
+  getPaymentYears,
+  getYearAggregate,
+  symbolPath,
+  type DividendEvent,
+} from "../../../lib/dividends";
+import { LANGS, isLang, t, type Lang } from "../../../lib/i18n";
+
+export async function getStaticPaths() {
+  const events = loadEvents();
+  const years = getPaymentYears(events);
+  const out: Array<{
+    params: { lang: Lang; year: string };
+    props: { lang: Lang; year: number; events: DividendEvent[]; years: number[] };
+  }> = [];
+  for (const lang of LANGS) {
+    for (const year of years) {
+      out.push({
+        params: { lang, year: String(year) },
+        props: { lang, year, events, years },
+      });
+    }
+  }
+  return out;
+}
+
+interface Props {
+  lang: Lang;
+  year: number;
+  events: DividendEvent[];
+  years: number[];
+}
+
+const { lang, year, events, years } = Astro.props;
+const aggregate = getYearAggregate(events, year);
+const idx = years.findIndex((y) => y === year);
+const prevYear = idx > 0 ? years[idx - 1] : null;
+const nextYear = idx >= 0 && idx < years.length - 1 ? years[idx + 1] : null;
+
+const formatAmount = (n: number): string =>
+  n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+
+const paymentsLabel = (n: number): string =>
+  n === 1 ? t(lang, "paymentsCountSingular") : t(lang, "paymentsCountSuffix");
+---
+
+<Layout lang={lang} title={`${year} — ${t(lang, "annualTitle")} — ${t(lang, "siteTitle")}`}>
+  <MainNav lang={lang} active="annual" annualYear={year} />
+  <StockHeader lang={lang} />
+  <main class="px-3 sm:px-8 pt-6 sm:pt-12 pb-16 max-w-[760px] mx-auto">
+    <!-- Masthead -->
+    <section class="mb-6 sm:mb-10">
+      <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
+        <span class="inline-block h-px w-6 bg-text/40"></span>
+        <span>{t(lang, "annualTitle")}</span>
+      </div>
+      <h1 class="m-0 font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.92] tracking-tight text-text">
+        <span class="font-semibold tabular-nums">{year}</span>
+      </h1>
+    </section>
+
+    <YearNav lang={lang} current={year} prev={prevYear} next={nextYear} />
+
+    {aggregate.rows.length === 0 ? (
+      <p class="text-muted italic text-[15px] py-12 text-center">{t(lang, "annualEmpty")}</p>
+    ) : (
+      <>
+        <!-- Year totals strip -->
+        <section class="grid grid-cols-2 sm:grid-cols-3 gap-px bg-border border border-border mb-6 sm:mb-8">
+          <div class="bg-bg p-3 sm:p-4 min-w-0">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1 truncate">{t(lang, "annualTotalLabel")}</div>
+            <div class="font-display tabular-nums text-xl sm:text-2xl font-medium text-accent truncate">
+              {formatAmount(aggregate.totalAmount)}
+              <span class="text-sm sm:text-base text-muted ml-0.5">฿</span>
+            </div>
+          </div>
+          <div class="bg-bg p-3 sm:p-4 min-w-0">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1 truncate">{t(lang, "tickers")}</div>
+            <div class="font-display tabular-nums text-xl sm:text-2xl font-medium">{aggregate.rows.length}</div>
+          </div>
+          <div class="bg-bg p-3 sm:p-4 col-span-2 sm:col-span-1 min-w-0">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1 truncate">{paymentsLabel(aggregate.totalCount)}</div>
+            <div class="font-display tabular-nums text-xl sm:text-2xl font-medium">
+              {aggregate.totalCount}
+              {aggregate.pendingCount > 0 && (
+                <span class="font-display italic text-[12px] text-muted ml-2 normal-case tracking-normal">
+                  {aggregate.pendingCount} {t(lang, "annualPendingLabel")}
+                </span>
+              )}
+            </div>
+          </div>
+        </section>
+
+        <!-- Controls: search + sort toggle -->
+        <div class="ranking-controls flex flex-wrap items-center gap-x-6 gap-y-3 mb-5" data-grouping="value">
+          <form role="search" class="relative flex-1 min-w-[220px]" onsubmit="return false">
+            <Icon
+              name="lucide:search"
+              class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted pointer-events-none"
+              aria-hidden="true"
+            />
+            <input
+              type="search"
+              data-ranking-search
+              placeholder={t(lang, "searchPlaceholder")}
+              aria-label={t(lang, "searchAria")}
+              autocomplete="off"
+              class="w-full h-9 rounded-none border-0 border-b border-text/30 bg-transparent pl-9 pr-9 text-sm text-text placeholder:text-muted focus:outline-none focus:border-text"
+            />
+            <button
+              type="button"
+              data-ranking-search-clear
+              aria-label={t(lang, "clearSearch")}
+              class="absolute right-1 top-1/2 -translate-y-1/2 hidden h-7 w-7 place-items-center rounded text-muted hover:text-text cursor-pointer"
+            >
+              <Icon name="lucide:x" class="h-4 w-4" aria-hidden="true" />
+            </button>
+          </form>
+
+          <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-muted">
+            <span>{t(lang, "sortLabel")}</span>
+            <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden text-[12px] tracking-normal normal-case">
+              <button
+                type="button"
+                data-sort-btn="value"
+                class="sort-btn px-3 py-1 font-sans transition-colors cursor-pointer inline-flex items-baseline gap-1"
+              >
+                <span>{t(lang, "sortValue")}</span>
+                <span data-sort-arrow class="sort-arrow tabular-nums"></span>
+              </button>
+              <button
+                type="button"
+                data-sort-btn="ticker"
+                class="sort-btn px-3 py-1 font-sans transition-colors cursor-pointer border-l border-border inline-flex items-baseline gap-1"
+              >
+                <span>{t(lang, "sortTicker")}</span>
+                <span data-sort-arrow class="sort-arrow tabular-nums"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ranking list -->
+        <ol class="ranking-list m-0 p-0 list-none border-t border-border" data-sort="value">
+          {aggregate.rows.map((row, i) => {
+            const rank = i + 1;
+            const hasAmount = row.totalAmount > 0;
+            return (
+              <li
+                class="border-b border-border"
+                data-row
+                data-symbol={row.symbol.toLowerCase()}
+                data-name={row.name.toLowerCase()}
+                data-amount={row.totalAmount}
+                data-rank-value={rank}
+              >
+                <a
+                  href={symbolPath(lang, row.symbol)}
+                  class="grid grid-cols-[1.75rem_minmax(0,1fr)_auto] sm:grid-cols-[2.25rem_minmax(0,1fr)_auto] items-baseline gap-2.5 sm:gap-4 py-3 px-1 hover:bg-panel/40 transition-colors no-underline hover:no-underline group"
+                >
+                  <span class={`rank-cell font-display tabular-nums text-sm ${rank <= 3 ? "text-accent font-medium" : "text-muted"}`}>
+                    {rank}
+                  </span>
+                  <div class="min-w-0">
+                    <div class="flex items-baseline gap-2 min-w-0">
+                      <span class="font-display font-medium text-text group-hover:text-accent transition-colors shrink-0">{row.symbol}</span>
+                      <span class="hidden sm:inline-block sm:flex-1 sm:min-w-0 sm:truncate text-muted text-[12px]">{row.name}</span>
+                      {row.count > 1 && (
+                        <span class="text-[10px] tracking-[0.15em] uppercase text-faint font-sans shrink-0">
+                          ×{row.count}
+                        </span>
+                      )}
+                      {row.pendingCount > 0 && (
+                        <span class="text-[9px] font-bold uppercase tracking-[0.18em] text-accent shrink-0">
+                          {row.pendingCount} {t(lang, "annualPendingLabel")}
+                        </span>
+                      )}
+                    </div>
+                    <div class="sm:hidden text-muted text-[11px] truncate mt-0.5">{row.name}</div>
+                  </div>
+                  <span class={`font-display tabular-nums leading-none text-[14px] sm:text-base whitespace-nowrap shrink-0 ${
+                    hasAmount ? "font-semibold text-text" : "text-muted italic"
+                  }`}>
+                    {hasAmount ? formatAmount(row.totalAmount) : "—"}
+                    <span class="text-muted text-[10px] ml-0.5">฿</span>
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      </>
+    )}
+  </main>
+</Layout>
+
+<script>
+  // Ranking sort + search. State lives at module scope so it survives
+  // navigation; init() re-binds DOM references on each `astro:page-load`.
+
+  type SortMode = "value" | "ticker";
+  type SortDir = "asc" | "desc";
+
+  // Clicking an inactive sort button switches to that mode at its default
+  // direction; clicking the already-active mode flips the direction.
+  const DEFAULT_DIR: Record<SortMode, SortDir> = {
+    value: "desc",   // highest payouts first
+    ticker: "asc",   // A → Z
+  };
+
+  let list: HTMLOListElement | null = null;
+  let searchInput: HTMLInputElement | null = null;
+  let clearBtn: HTMLButtonElement | null = null;
+  let query = "";
+  let sortMode: SortMode = "value";
+  let sortDir: SortDir = "desc";
+
+  const applySort = () => {
+    if (!list) return;
+    list.dataset.sort = sortMode;
+    list.dataset.sortDir = sortDir;
+    const dirSign = sortDir === "asc" ? 1 : -1;
+    const rows = Array.from(list.children) as HTMLLIElement[];
+    rows.sort((a, b) => {
+      if (sortMode === "ticker") {
+        const cmp = (a.dataset.symbol ?? "").localeCompare(b.dataset.symbol ?? "");
+        return cmp * dirSign;
+      }
+      const av = Number(a.dataset.amount ?? "0");
+      const bv = Number(b.dataset.amount ?? "0");
+      const cmp = (av - bv) * dirSign;
+      if (cmp !== 0) return cmp;
+      // Stable tiebreaker: alphabetical symbol (always ascending) so equal
+      // amounts don't visibly jiggle when flipping direction.
+      return (a.dataset.symbol ?? "").localeCompare(b.dataset.symbol ?? "");
+    });
+    for (const row of rows) list.appendChild(row);
+    syncSortButtons();
+  };
+
+  const syncSortButtons = () => {
+    document.querySelectorAll<HTMLButtonElement>("[data-sort-btn]").forEach((btn) => {
+      const active = btn.dataset.sortBtn === sortMode;
+      btn.dataset.active = active ? "1" : "0";
+      const arrow = btn.querySelector<HTMLElement>("[data-sort-arrow]");
+      if (arrow) arrow.textContent = active ? (sortDir === "asc" ? "↑" : "↓") : "";
+    });
+  };
+
+  const applyFilter = (q: string) => {
+    query = q.trim().toLowerCase();
+    if (clearBtn) {
+      clearBtn.classList.toggle("hidden", query.length === 0);
+      clearBtn.classList.toggle("grid", query.length > 0);
+    }
+    if (!list) return;
+    list.querySelectorAll<HTMLLIElement>("[data-row]").forEach((row) => {
+      const sym = row.dataset.symbol ?? "";
+      const name = row.dataset.name ?? "";
+      const matches = !query || sym.includes(query) || name.includes(query);
+      row.classList.toggle("match-hidden", !matches);
+    });
+  };
+
+  const init = () => {
+    list = document.querySelector<HTMLOListElement>(".ranking-list");
+    searchInput = document.querySelector<HTMLInputElement>("[data-ranking-search]");
+    clearBtn = document.querySelector<HTMLButtonElement>("[data-ranking-search-clear]");
+    if (!list) return;
+    if (searchInput && query) searchInput.value = query;
+    applySort();
+    applyFilter(query);
+  };
+
+  document.addEventListener("input", (e) => {
+    const target = e.target as HTMLElement;
+    if (target.matches("[data-ranking-search]")) {
+      applyFilter((target as HTMLInputElement).value);
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (target.closest("[data-ranking-search-clear]")) {
+      if (searchInput) searchInput.value = "";
+      applyFilter("");
+      searchInput?.focus();
+      return;
+    }
+    const sortBtn = target.closest<HTMLButtonElement>("[data-sort-btn]");
+    if (sortBtn) {
+      const mode = sortBtn.dataset.sortBtn as SortMode | undefined;
+      if (mode !== "value" && mode !== "ticker") return;
+      if (mode === sortMode) {
+        sortDir = sortDir === "asc" ? "desc" : "asc";
+      } else {
+        sortMode = mode;
+        sortDir = DEFAULT_DIR[mode];
+      }
+      applySort();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.activeElement === searchInput) {
+      if (searchInput && searchInput.value) {
+        searchInput.value = "";
+        applyFilter("");
+      } else {
+        searchInput?.blur();
+      }
+    }
+  });
+
+  document.addEventListener("astro:page-load", init);
+</script>
+
+<style>
+  /* Hide rows that don't match the search query */
+  [data-row].match-hidden { display: none; }
+
+  /* When sorted by ticker, the rank number no longer reflects payout order;
+     hide it to avoid implying a meaningless ranking. */
+  .ranking-list[data-sort="ticker"] .rank-cell { visibility: hidden; }
+
+  /* Sort toggle active states */
+  [data-sort-btn][data-active="1"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  [data-sort-btn][data-active="0"] {
+    background: transparent;
+    color: var(--muted);
+  }
+</style>

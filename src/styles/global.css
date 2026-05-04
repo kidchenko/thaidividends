@@ -96,6 +96,15 @@ html, body {
 :root[data-hide-payment="1"] [data-event][data-context="payment"] { display: none; }
 [data-event].match-hidden { display: none; }
 
+/* Suppress the browser's native clear/decoration UI on <input type="search">
+   so our custom clear button isn't paired with a duplicate native X. */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
 /* Theme transition: only colour properties, only during the toggle window.
    Avoids animating hover states or first-paint flash. */
 .theme-transitioning,

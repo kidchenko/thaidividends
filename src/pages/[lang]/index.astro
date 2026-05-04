@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import MainNav from "../../components/MainNav.astro";
 import MonthCalendar from "../../components/MonthCalendar.astro";
 import MonthNav from "../../components/MonthNav.astro";
 import PageHeader from "../../components/PageHeader.astro";
@@ -30,6 +31,7 @@ const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
 ---
 
 <Layout lang={lang} title={`${ym.label} — ${t(lang, "siteTitle")}`}>
+  <MainNav lang={lang} active="calendar" annualYear={ym.year} />
   <PageHeader
     lang={lang}
     totalXdMonth={totalXd}

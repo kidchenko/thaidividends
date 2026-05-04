@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import MainNav from "../../components/MainNav.astro";
 import StockHeader from "../../components/StockHeader.astro";
 import DividendTimeline from "../../components/DividendTimeline.astro";
 import DividendCadence from "../../components/DividendCadence.astro";
@@ -35,6 +36,7 @@ const stats = getSymbolStats(events);
 const yearGroups = groupEventsByYear(events);
 const cadence = getCadence(events);
 const today = todayIso();
+const todayYear = new Date().getFullYear();
 const confirmedCount = events.filter((e) => typeof e.amount === "number").length;
 
 const formatAmount = (n: number): string =>
@@ -106,6 +108,7 @@ const milestone: Milestone | null = (() => {
 ---
 
 <Layout lang={lang} title={`${symbol} — ${t(lang, "siteTitle")}`} description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}>
+  <MainNav lang={lang} active={null} annualYear={todayYear} />
   <StockHeader lang={lang} />
 
   <main class="px-4 sm:px-8 pt-8 sm:pt-12 pb-16 max-w-[960px] mx-auto">

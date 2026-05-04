@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+import { type Lang, t } from "../lib/i18n";
+import { yearPath } from "../lib/dividends";
+
+interface Props {
+  lang: Lang;
+  current: number;
+  prev: number | null;
+  next: number | null;
+}
+
+const { lang, current, prev, next } = Astro.props;
+---
+
+<nav class="grid grid-cols-[1fr_auto_1fr] items-end gap-3 sm:gap-6 mb-8 pb-4 border-b border-border">
+  <a
+    class="arrow group inline-flex items-center gap-1.5 sm:gap-2 text-muted hover:text-text text-[12px] sm:text-[13px] no-underline hover:no-underline transition-colors aria-disabled:opacity-30 aria-disabled:pointer-events-none"
+    href={prev ? yearPath(lang, prev) : "#"}
+    aria-disabled={!prev}
+    aria-label={t(lang, "prevYearAria")}
+  >
+    <Icon name="lucide:chevron-left" class="h-4 w-4 shrink-0" aria-hidden="true" />
+    <span class="font-display italic tabular-nums">{prev ?? "—"}</span>
+  </a>
+
+  <div class="text-center">
+    <h2 class="m-0 font-display text-[clamp(1.75rem,3vw,2.25rem)] leading-none tracking-tight">
+      <span class="font-medium tabular-nums">{current}</span>
+    </h2>
+    <span class="hidden sm:inline-block mt-2 text-[11px] tracking-[0.15em] uppercase text-muted">
+      {t(lang, "annualSubtitle")}
+    </span>
+  </div>
+
+  <a
+    class="arrow group justify-self-end inline-flex items-center gap-1.5 sm:gap-2 text-muted hover:text-text text-[12px] sm:text-[13px] no-underline hover:no-underline transition-colors aria-disabled:opacity-30 aria-disabled:pointer-events-none"
+    href={next ? yearPath(lang, next) : "#"}
+    aria-disabled={!next}
+    aria-label={t(lang, "nextYearAria")}
+  >
+    <span class="font-display italic tabular-nums">{next ?? "—"}</span>
+    <Icon name="lucide:chevron-right" class="h-4 w-4 shrink-0" aria-hidden="true" />
+  </a>
+</nav>
