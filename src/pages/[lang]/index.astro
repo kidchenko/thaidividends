@@ -10,6 +10,7 @@ import {
   getEventsForMonth,
   getNeighbourMonths,
   currentYearMonth,
+  absoluteUrl,
 } from "../../lib/dividends";
 import { LANGS, isLang, t, type Lang } from "../../lib/i18n";
 
@@ -28,6 +29,7 @@ const { prev, next } = getNeighbourMonths(months, ym);
 const isToday = ym.key === today.key;
 const totalAll = events.length;
 const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
+const allFeedUrl = absoluteUrl(Astro.site, "/calendar.ics");
 ---
 
 <Layout lang={lang} title={`${ym.label} — ${t(lang, "siteTitle")}`}>
@@ -38,6 +40,7 @@ const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
     totalPaymentMonth={totalPayment}
     totalAll={totalAll}
     uniqueSymbols={uniqueSymbols}
+    feedUrl={allFeedUrl}
   />
   <main class="px-3 sm:px-8 pt-6 pb-16 max-w-[1200px] mx-auto">
     <MonthNav lang={lang} current={ym} prev={prev} next={next} todayPath={today.path} isToday={isToday} />

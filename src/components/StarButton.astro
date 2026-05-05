@@ -1,0 +1,182 @@
+---
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  symbol: string;
+  variant?: "default" | "compact" | "row";
+}
+
+const { lang, symbol, variant = "default" } = Astro.props;
+
+// Lucide star path — inlined directly so we can control fill from scoped CSS.
+// (astro-icon renders icons via <symbol>+<use>, which puts the path in a
+// shadow tree where outside CSS can't reach it.)
+const STAR_PATH =
+  "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.12 2.12 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.12 2.12 0 0 0 1.597-1.16z";
+---
+
+<button
+  type="button"
+  class={`star-btn variant-${variant}`}
+  data-star-btn
+  data-symbol={symbol}
+  aria-pressed="false"
+  aria-label={t(lang, "starAria")}
+  title={t(lang, "starTitle")}
+>
+  <svg
+    class="star-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d={STAR_PATH} />
+  </svg>
+  {variant === "default" && (
+    <span class="star-label" data-star-label-on>{t(lang, "starredLabel")}</span>
+  )}
+  {variant === "default" && (
+    <span class="star-label" data-star-label-off>{t(lang, "starLabel")}</span>
+  )}
+</button>
+
+<style>
+  .star-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--muted);
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    user-select: none;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .star-btn:hover {
+    color: var(--accent);
+    border-color: var(--text);
+  }
+  .star-btn[aria-pressed="true"] {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .star-icon {
+    width: 13px;
+    height: 13px;
+    transform-origin: center;
+  }
+  .star-icon path {
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: fill 0.18s;
+  }
+  .star-btn[aria-pressed="true"] .star-icon path {
+    fill: currentColor;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .star-icon { transition: none; }
+  }
+
+  /* Default: shows label that swaps based on state. */
+  .variant-default [data-star-label-on] { display: none; }
+  .variant-default [data-star-label-off] { display: inline; }
+  .variant-default[aria-pressed="true"] [data-star-label-on] { display: inline; }
+  .variant-default[aria-pressed="true"] [data-star-label-off] { display: none; }
+
+  /* Compact: icon only, square button. */
+  .variant-compact {
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+  }
+  .variant-compact .star-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Row: tight, borderless, used inline within list rows. */
+  .variant-row {
+    padding: 6px;
+    border: 0;
+    width: 32px;
+    height: 32px;
+  }
+  .variant-row .star-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .variant-row:hover {
+    border-color: transparent;
+    background: var(--panel);
+  }
+  .variant-row[aria-pressed="true"] {
+    border-color: transparent;
+  }
+</style>
+
+<script>
+  import { readWatchlist, toggleStar, onWatchlistChange } from "../lib/watchlist";
+
+  function paintAll() {
+    const starred = readWatchlist();
+    document.querySelectorAll<HTMLButtonElement>("[data-star-btn]").forEach((btn) => {
+      const sym = btn.dataset.symbol ?? "";
+      btn.setAttribute("aria-pressed", starred.has(sym) ? "true" : "false");
+    });
+  }
+
+  function paintOne(symbol: string, starred: boolean) {
+    document
+      .querySelectorAll<HTMLButtonElement>(`[data-star-btn][data-symbol="${CSS.escape(symbol)}"]`)
+      .forEach((btn) => {
+        btn.setAttribute("aria-pressed", starred ? "true" : "false");
+      });
+  }
+
+  // Repaint on initial load and after every ClientRouter navigation.
+  document.addEventListener("astro:page-load", paintAll);
+  paintAll();
+
+  // Single delegated click handler — prevents the row link (if any) from
+  // navigating when the user clicks the star.
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement | null)?.closest<HTMLButtonElement>("[data-star-btn]");
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const symbol = btn.dataset.symbol;
+    if (!symbol) return;
+    toggleStar(symbol);
+    pop(btn);
+  });
+
+  // Web Animations API gives us a fresh animation on every call — no class
+  // toggling or reflow tricks needed, works on rapid repeat clicks.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function pop(btn: HTMLElement) {
+    if (reduceMotion.matches) return;
+    const icon = btn.querySelector<SVGElement | HTMLElement>(".star-icon");
+    if (!icon) return;
+    icon.animate(
+      [
+        { transform: "scale(1) rotate(0deg)" },
+        { transform: "scale(1.45) rotate(14deg)", offset: 0.3 },
+        { transform: "scale(0.9) rotate(-6deg)", offset: 0.55 },
+        { transform: "scale(1.08) rotate(2deg)", offset: 0.8 },
+        { transform: "scale(1) rotate(0deg)" },
+      ],
+      { duration: 420, easing: "cubic-bezier(0.34, 1.56, 0.64, 1)" },
+    );
+  }
+
+  onWatchlistChange((change) => paintOne(change.symbol, change.starred));
+</script>

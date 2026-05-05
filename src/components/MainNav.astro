@@ -4,7 +4,7 @@ import { yearPath } from "../lib/dividends";
 
 interface Props {
   lang: Lang;
-  active: "calendar" | "annual" | null;
+  active: "calendar" | "annual" | "stocks" | "watchlist" | null;
   annualYear: number;
 }
 
@@ -20,6 +20,16 @@ const items = [
     key: "annual" as const,
     href: yearPath(lang, annualYear),
     label: t(lang, "navAnnual"),
+  },
+  {
+    key: "stocks" as const,
+    href: localePath(lang, "/stocks/"),
+    label: t(lang, "navStocks"),
+  },
+  {
+    key: "watchlist" as const,
+    href: localePath(lang, "/watchlist/"),
+    label: t(lang, "navWatchlist"),
   },
 ];
 ---

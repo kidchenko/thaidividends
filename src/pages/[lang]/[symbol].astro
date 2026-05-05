@@ -4,6 +4,8 @@ import MainNav from "../../components/MainNav.astro";
 import StockHeader from "../../components/StockHeader.astro";
 import DividendTimeline from "../../components/DividendTimeline.astro";
 import DividendCadence from "../../components/DividendCadence.astro";
+import CalendarSubscribe from "../../components/CalendarSubscribe.astro";
+import StarButton from "../../components/StarButton.astro";
 import {
   getAllSymbols,
   getCompany,
@@ -12,6 +14,7 @@ import {
   groupEventsByYear,
   getCadence,
   todayIso,
+  absoluteUrl,
   type DividendEvent,
 } from "../../lib/dividends";
 import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
@@ -38,6 +41,8 @@ const cadence = getCadence(events);
 const today = todayIso();
 const todayYear = new Date().getFullYear();
 const confirmedCount = events.filter((e) => typeof e.amount === "number").length;
+const symbolFeedUrl = absoluteUrl(Astro.site, `/calendar/${symbol}.ics`);
+const hasFeed = events.length > 0;
 
 const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
@@ -114,9 +119,17 @@ const milestone: Milestone | null = (() => {
   <main class="px-4 sm:px-8 pt-8 sm:pt-12 pb-16 max-w-[960px] mx-auto">
     <!-- Ticker masthead -->
     <section class="mb-10 sm:mb-14">
-      <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
-        <span class="inline-block h-px w-6 bg-text/40"></span>
-        <span>{t(lang, "tickerLabel")} &middot; {company?.exchange ?? "SET"}</span>
+      <div class="flex items-center justify-between gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
+        <div class="flex items-baseline gap-3 min-w-0">
+          <span class="inline-block h-px w-6 bg-text/40 shrink-0"></span>
+          <span class="truncate">{t(lang, "tickerLabel")} &middot; {company?.exchange ?? "SET"}</span>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <StarButton lang={lang} symbol={symbol!} variant="default" />
+          {hasFeed && (
+            <CalendarSubscribe lang={lang} feedUrl={symbolFeedUrl} align="right" variant="compact" />
+          )}
+        </div>
       </div>
       <h1 class="m-0 font-display text-[clamp(3rem,8vw,5.5rem)] leading-[0.92] tracking-tight text-text">
         <span class="font-semibold">{symbol}</span>

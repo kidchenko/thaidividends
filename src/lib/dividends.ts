@@ -38,6 +38,13 @@ export type Company = {
   symbol: string;
   name: string;
   currency: string;
+  // Sector classification from SET (poc/set-sectors.ts). Optional because
+  // ~9% of historical entries are delisted and unmatched in SET's current list.
+  market?: string;          // "SET" | "mai"
+  securityType?: string;    // "S" stock, "P" preferred, "L" ETF, "X" DR, etc.
+  industry?: string;        // "AGRO"|"CONSUMP"|"FINCIAL"|"INDUS"|"PROPCON"|"RESOURC"|"SERVICE"|"TECH"
+  sector?: string;          // sector slug e.g. "BANK", "ENERG", "PF&REIT"
+  isIFF?: boolean;          // Infrastructure Fund flag
 };
 
 export type YearMonth = {
@@ -57,6 +64,13 @@ const BASE = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
 export function withBase(path: string): string {
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${BASE}${p}`;
+}
+
+/** Build an absolute URL for a static asset under this site. */
+export function absoluteUrl(site: URL | undefined, path: string): string {
+  const origin = (site?.toString() ?? "https://kidchenko.github.io/").replace(/\/$/, "");
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${origin}${BASE}${p}`;
 }
 
 const COMPANY_BY_SYMBOL: Map<string, Company> = new Map(
@@ -85,6 +99,32 @@ export function getEventsForSymbol(symbol: string): DividendEvent[] {
 
 export function getAllSymbols(): string[] {
   return (companiesData as Company[]).map((c) => c.symbol);
+}
+
+export type StockListing = {
+  symbol: string;
+  name: string;
+  eventCount: number;
+  industry: string | null;
+  sector: string | null;
+  securityType: string | null;
+  isIFF: boolean;
+};
+
+export function getStockListings(): StockListing[] {
+  const counts = new Map<string, number>();
+  for (const e of dividends as DividendEvent[]) {
+    counts.set(e.symbol, (counts.get(e.symbol) ?? 0) + 1);
+  }
+  return (companiesData as Company[]).map((c) => ({
+    symbol: c.symbol,
+    name: c.name,
+    eventCount: counts.get(c.symbol) ?? 0,
+    industry: c.industry ?? null,
+    sector: c.sector ?? null,
+    securityType: c.securityType ?? null,
+    isIFF: Boolean(c.isIFF),
+  }));
 }
 
 export type SymbolStats = {
@@ -340,6 +380,53 @@ export function getEventsForMonth(events: DividendEvent[], ym: YearMonth): {
   }
 
   return { byDay, totalXd, totalPayment };
+}
+
+export type UpcomingDay = {
+  date: string;            // YYYY-MM-DD
+  entries: CalendarEntry[];
+};
+
+/** Most recent past payment per symbol (paymentDate strictly before `today`). */
+export function getLastPaidPerSymbol(
+  events: DividendEvent[],
+  today: string = todayIso(),
+): Map<string, DividendEvent> {
+  const map = new Map<string, DividendEvent>();
+  for (const e of events) {
+    if (!e.paymentDate || e.paymentDate >= today) continue;
+    const existing = map.get(e.symbol);
+    if (!existing || (existing.paymentDate ?? "") < e.paymentDate) {
+      map.set(e.symbol, e);
+    }
+  }
+  return map;
+}
+
+/** All upcoming XD + payment events from `today` onwards, grouped by date asc. */
+export function getUpcomingDays(events: DividendEvent[], today: string = todayIso()): UpcomingDay[] {
+  const byDay = new Map<string, CalendarEntry[]>();
+  for (const e of events) {
+    if (e.exDate >= today) {
+      const list = byDay.get(e.exDate) ?? [];
+      list.push({ kind: "xd", event: e });
+      byDay.set(e.exDate, list);
+    }
+    if (e.paymentDate && e.paymentDate >= today) {
+      const list = byDay.get(e.paymentDate) ?? [];
+      list.push({ kind: "payment", event: e });
+      byDay.set(e.paymentDate, list);
+    }
+  }
+  for (const list of byDay.values()) {
+    list.sort((a, b) => {
+      if (a.kind !== b.kind) return a.kind === "xd" ? -1 : 1;
+      return a.event.symbol.localeCompare(b.event.symbol);
+    });
+  }
+  return [...byDay.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, entries]) => ({ date, entries }));
 }
 
 export function getNeighbourMonths(months: YearMonth[], current: YearMonth): {

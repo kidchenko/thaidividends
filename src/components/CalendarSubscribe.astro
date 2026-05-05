@@ -1,0 +1,259 @@
+---
+import { Icon } from "astro-icon/components";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  feedUrl: string;            // absolute https URL of the .ics file
+  align?: "left" | "right";
+  variant?: "default" | "compact";
+}
+
+const { lang, feedUrl, align = "right", variant = "default" } = Astro.props;
+
+// Apple Calendar / Outlook understand `webcal://`. Google Calendar accepts the
+// `cid` deep-link with the regular https URL.
+const webcalUrl = feedUrl.replace(/^https?:\/\//, "webcal://");
+const googleUrl = `https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(feedUrl)}`;
+---
+
+<details class={`cal-sub variant-${variant}`} data-cal-sub>
+  <summary
+    class="cal-sub-trigger"
+    aria-label={t(lang, "subscribeAria")}
+    title={t(lang, "subscribeAria")}
+  >
+    <Icon name="lucide:calendar-plus" class="cal-sub-icon" aria-hidden="true" />
+    <span>{t(lang, "subscribe")}</span>
+  </summary>
+
+  <div class={`cal-sub-menu cal-sub-${align}`} role="menu">
+    <p class="cal-sub-title">{t(lang, "subscribeTitle")}</p>
+    <p class="cal-sub-sub">{t(lang, "subscribeSubtitle")}</p>
+
+    <a
+      href={googleUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cal-sub-action"
+      role="menuitem"
+    >
+      <Icon name="lucide:external-link" class="cal-sub-action-icon" aria-hidden="true" />
+      <span>{t(lang, "subscribeGoogle")}</span>
+    </a>
+
+    <a href={webcalUrl} class="cal-sub-action" role="menuitem">
+      <Icon name="lucide:calendar" class="cal-sub-action-icon" aria-hidden="true" />
+      <span>{t(lang, "subscribeApple")}</span>
+    </a>
+
+    <button
+      type="button"
+      class="cal-sub-action"
+      data-copy={feedUrl}
+      data-label-copy={t(lang, "subscribeCopy")}
+      data-label-copied={t(lang, "subscribeCopied")}
+      data-label-failed={t(lang, "subscribeCopyFailed")}
+      role="menuitem"
+    >
+      <Icon name="lucide:link" class="cal-sub-action-icon" aria-hidden="true" />
+      <span data-copy-label>{t(lang, "subscribeCopy")}</span>
+    </button>
+
+    <input
+      type="url"
+      readonly
+      value={feedUrl}
+      class="cal-sub-url"
+      aria-label={t(lang, "subscribeUrlAria")}
+      onclick="this.select()"
+    />
+
+    <p class="cal-sub-hint">{t(lang, "subscribeHint")}</p>
+  </div>
+</details>
+
+<style>
+  .cal-sub {
+    position: relative;
+    display: inline-block;
+  }
+  .cal-sub-trigger {
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    user-select: none;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .cal-sub-trigger::-webkit-details-marker {
+    display: none;
+  }
+  .cal-sub-trigger:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+  .cal-sub[open] .cal-sub-trigger {
+    color: var(--bg);
+    background: var(--text);
+    border-color: var(--text);
+  }
+  .cal-sub-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .variant-compact .cal-sub-trigger {
+    padding: 3px 8px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+  .variant-compact .cal-sub-icon {
+    width: 11px;
+    height: 11px;
+  }
+
+  .cal-sub-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    z-index: 30;
+    min-width: 260px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 14px;
+    box-shadow: var(--shadow-popup, 0 8px 32px -8px rgba(0, 0, 0, 0.35));
+  }
+  .cal-sub-right {
+    right: 0;
+  }
+  .cal-sub-left {
+    left: 0;
+  }
+
+  .cal-sub-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 15px;
+    margin: 0 0 2px;
+    color: var(--text);
+  }
+  .cal-sub-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  .cal-sub-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .cal-sub-action:hover {
+    background: var(--panel);
+    border-color: var(--text);
+    color: var(--text);
+    text-decoration: none;
+  }
+  .cal-sub-action-icon {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    color: var(--muted);
+  }
+  .cal-sub-action:hover .cal-sub-action-icon {
+    color: var(--accent);
+  }
+
+  .cal-sub-url {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px 8px;
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 10px;
+    color: var(--muted);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-sizing: border-box;
+  }
+  .cal-sub-url:focus {
+    outline: 1px solid var(--accent);
+    color: var(--text);
+  }
+
+  .cal-sub-hint {
+    font-size: 10px;
+    color: var(--faint);
+    font-style: italic;
+    margin: 8px 0 0;
+    line-height: 1.4;
+  }
+</style>
+
+<script>
+  // Click-to-copy with transient label swap; outside-click closes any open popover.
+
+  function bindCopy(btn: HTMLButtonElement) {
+    if (btn.dataset.bound === "1") return;
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const url = btn.dataset.copy;
+      const label = btn.querySelector<HTMLElement>("[data-copy-label]");
+      if (!url || !label) return;
+      const labelCopy = btn.dataset.labelCopy ?? "Copy feed URL";
+      const labelCopied = btn.dataset.labelCopied ?? "Copied!";
+      const labelFailed = btn.dataset.labelFailed ?? "Copy failed";
+      try {
+        await navigator.clipboard.writeText(url);
+        label.textContent = labelCopied;
+      } catch {
+        label.textContent = labelFailed;
+      }
+      window.setTimeout(() => {
+        label.textContent = labelCopy;
+      }, 1600);
+    });
+  }
+
+  function init() {
+    document.querySelectorAll<HTMLButtonElement>("[data-cal-sub] [data-copy]").forEach(bindCopy);
+  }
+
+  document.addEventListener("astro:page-load", init);
+  init();
+
+  document.addEventListener("click", (e) => {
+    const target = e.target as Node;
+    document.querySelectorAll<HTMLDetailsElement>("[data-cal-sub]").forEach((d) => {
+      if (d.open && !d.contains(target)) d.open = false;
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    document.querySelectorAll<HTMLDetailsElement>("[data-cal-sub]").forEach((d) => {
+      if (d.open) d.open = false;
+    });
+  });
+</script>

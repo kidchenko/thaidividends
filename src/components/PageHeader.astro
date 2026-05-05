@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import ThemeToggle from "./ThemeToggle.astro";
 import LangToggle from "./LangToggle.astro";
+import CalendarSubscribe from "./CalendarSubscribe.astro";
 import { withBase } from "../lib/dividends";
 import { type Lang, t } from "../lib/i18n";
 
@@ -11,9 +12,10 @@ interface Props {
   totalPaymentMonth: number;
   totalAll: number;
   uniqueSymbols: number;
+  feedUrl?: string;
 }
 
-const { lang, totalXdMonth, totalPaymentMonth, totalAll, uniqueSymbols } = Astro.props;
+const { lang, totalXdMonth, totalPaymentMonth, totalAll, uniqueSymbols, feedUrl } = Astro.props;
 const logoHref = withBase("/favicon.svg");
 
 const pillBase =
@@ -90,6 +92,11 @@ const pillBase =
       {t(lang, "tickers")}
     </span>
     <span data-empty-hint class="hidden text-muted italic ml-2">{t(lang, "noMatches")}</span>
+    {feedUrl && (
+      <span class="ml-auto">
+        <CalendarSubscribe lang={lang} feedUrl={feedUrl} align="right" variant="compact" />
+      </span>
+    )}
   </div>
 </header>
 

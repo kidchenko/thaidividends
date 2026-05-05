@@ -1,0 +1,409 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../../../layouts/Layout.astro";
+import MainNav from "../../../components/MainNav.astro";
+import StockHeader from "../../../components/StockHeader.astro";
+import StarButton from "../../../components/StarButton.astro";
+import { getStockListings, symbolPath, type StockListing } from "../../../lib/dividends";
+import {
+  getFilterTag,
+  FILTER_TAGS,
+  INDUSTRIES,
+  type FilterTag,
+} from "../../../lib/categories";
+import { LANGS, isLang, t, type Lang } from "../../../lib/i18n";
+
+export async function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = (isLang(Astro.params.lang) ? Astro.params.lang : "en") as Lang;
+
+const listings = getStockListings();
+const todayYear = new Date().getFullYear();
+
+// Resolve each row's filter tag once, then tally counts so the pills can show
+// "(N)" without doing a runtime pass.
+const tagBySymbol = new Map<string, FilterTag>();
+const tagCounts = new Map<FilterTag, number>();
+for (const tag of FILTER_TAGS) tagCounts.set(tag, 0);
+
+for (const row of listings) {
+  const tag = getFilterTag({
+    symbol: row.symbol,
+    name: row.name,
+    currency: "Baht",
+    industry: row.industry ?? undefined,
+    sector: row.sector ?? undefined,
+    securityType: row.securityType ?? undefined,
+    isIFF: row.isIFF,
+  });
+  tagBySymbol.set(row.symbol, tag);
+  tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+}
+
+const TAG_LABEL_KEY: Record<FilterTag, string> = {
+  FINCIAL: "industryFINCIAL",
+  PROPCON: "industryPROPCON",
+  RESOURC: "industryRESOURC",
+  SERVICE: "industrySERVICE",
+  TECH: "industryTECH",
+  INDUS: "industryINDUS",
+  AGRO: "industryAGRO",
+  CONSUMP: "industryCONSUMP",
+  reit: "tagReit",
+  etf: "tagEtf",
+  dr: "tagDr",
+  _none: "filterAll",
+};
+---
+
+<Layout lang={lang} title={`${t(lang, "stocksTitle")} — ${t(lang, "siteTitle")}`}>
+  <MainNav lang={lang} active="stocks" annualYear={todayYear} />
+  <StockHeader lang={lang} />
+  <main class="px-3 sm:px-8 pt-6 sm:pt-12 pb-16 max-w-[760px] mx-auto">
+    <!-- Masthead -->
+    <section class="mb-6 sm:mb-10">
+      <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
+        <span class="inline-block h-px w-6 bg-text/40"></span>
+        <span>{t(lang, "stocksTitle")}</span>
+      </div>
+      <h1 class="m-0 font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.92] tracking-tight text-text">
+        <span class="font-semibold tabular-nums">{listings.length.toLocaleString()}</span>
+        <span class="italic font-light text-muted text-[clamp(1.5rem,4vw,2.25rem)] ml-2">{t(lang, "tickers")}</span>
+      </h1>
+      <p class="mt-3 text-text/85 text-[13px] max-w-md">
+        {t(lang, "stocksSubtitle")}
+      </p>
+    </section>
+
+    <!-- Controls: search + sort toggle -->
+    <div class="ranking-controls flex flex-wrap items-center gap-x-6 gap-y-3 mb-5">
+      <form role="search" class="relative flex-1 min-w-[220px]" onsubmit="return false">
+        <Icon
+          name="lucide:search"
+          class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted pointer-events-none"
+          aria-hidden="true"
+        />
+        <input
+          type="search"
+          data-stocks-search
+          placeholder={t(lang, "searchPlaceholder")}
+          aria-label={t(lang, "searchAria")}
+          autocomplete="off"
+          class="w-full h-9 rounded-none border-0 border-b border-text/30 bg-transparent pl-9 pr-9 text-sm text-text placeholder:text-muted focus:outline-none focus:border-text"
+        />
+        <button
+          type="button"
+          data-stocks-search-clear
+          aria-label={t(lang, "clearSearch")}
+          class="absolute right-1 top-1/2 -translate-y-1/2 hidden h-7 w-7 place-items-center rounded text-muted hover:text-text cursor-pointer"
+        >
+          <Icon name="lucide:x" class="h-4 w-4" aria-hidden="true" />
+        </button>
+      </form>
+
+      <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-muted">
+        <span>{t(lang, "sortLabel")}</span>
+        <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden text-[12px] tracking-normal normal-case">
+          <button
+            type="button"
+            data-sort-btn="symbol"
+            class="sort-btn px-3 py-1 font-sans transition-colors cursor-pointer inline-flex items-baseline gap-1"
+          >
+            <span>{t(lang, "sortTicker")}</span>
+            <span data-sort-arrow class="sort-arrow tabular-nums"></span>
+          </button>
+          <button
+            type="button"
+            data-sort-btn="events"
+            class="sort-btn px-3 py-1 font-sans transition-colors cursor-pointer border-l border-border inline-flex items-baseline gap-1"
+          >
+            <span>{t(lang, "sortEvents")}</span>
+            <span data-sort-arrow class="sort-arrow tabular-nums"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single filter row: industries + REITs/ETFs/DRs as peers. Mutually
+         exclusive — clicking "All" resets, clicking another tag replaces. -->
+    <div class="filter-row flex flex-wrap gap-1.5 mt-2 mb-5">
+      <button
+        type="button"
+        class="filter-pill"
+        data-filter-tag="all"
+        aria-pressed="true"
+      >
+        <span>{t(lang, "filterAll")}</span>
+        <span class="filter-count tabular-nums">{listings.length}</span>
+      </button>
+      {FILTER_TAGS.map((tag) => {
+        const n = tagCounts.get(tag) ?? 0;
+        if (n === 0) return null;
+        return (
+          <button
+            type="button"
+            class="filter-pill"
+            data-filter-tag={tag}
+            aria-pressed="false"
+          >
+            <span>{t(lang, TAG_LABEL_KEY[tag])}</span>
+            <span class="filter-count tabular-nums">{n}</span>
+          </button>
+        );
+      })}
+    </div>
+
+    <p data-stocks-empty class="hidden text-muted italic text-[14px] py-12 text-center">
+      {t(lang, "stocksEmpty")}
+    </p>
+
+    <ol class="stocks-list m-0 p-0 list-none border-t border-border" data-sort="symbol">
+      {listings.map((row) => (
+        <li
+          class="border-b border-border flex items-stretch"
+          data-row
+          data-symbol={row.symbol.toLowerCase()}
+          data-name={row.name.toLowerCase()}
+          data-events={row.eventCount}
+          data-tag={tagBySymbol.get(row.symbol)}
+        >
+          <a
+            href={symbolPath(lang, row.symbol)}
+            class="flex-1 grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-2.5 sm:gap-4 py-3 px-1 hover:bg-panel/40 transition-colors no-underline hover:no-underline group"
+          >
+            <div class="min-w-0">
+              <div class="flex items-baseline gap-2 min-w-0">
+                <span class="font-display font-medium text-text group-hover:text-accent transition-colors shrink-0">{row.symbol}</span>
+                <span class="hidden sm:inline-block sm:flex-1 sm:min-w-0 sm:truncate text-muted text-[12px]">{row.name}</span>
+              </div>
+              <div class="sm:hidden text-muted text-[11px] truncate mt-0.5">{row.name}</div>
+            </div>
+            <span class={`font-display tabular-nums leading-none text-[13px] sm:text-sm whitespace-nowrap shrink-0 ${
+              row.eventCount > 0 ? "text-muted" : "text-faint italic"
+            }`}>
+              {row.eventCount > 0 ? row.eventCount : "—"}
+              <span class="text-faint text-[10px] ml-1">{t(lang, row.eventCount === 1 ? "eventOne" : "eventMany")}</span>
+            </span>
+          </a>
+          <span class="flex items-center pl-1 sm:pl-2 pr-0.5 sm:pr-1">
+            <StarButton lang={lang} symbol={row.symbol} variant="row" />
+          </span>
+        </li>
+      ))}
+    </ol>
+  </main>
+</Layout>
+
+<script>
+  // Stocks directory: search + sort. Patterns mirror the annual ranking page.
+  // State at module scope so it survives ClientRouter navigation; init() runs
+  // on each `astro:page-load` to re-bind DOM and re-apply.
+
+  type SortMode = "symbol" | "events";
+  type SortDir = "asc" | "desc";
+
+  const DEFAULT_DIR: Record<SortMode, SortDir> = {
+    symbol: "asc",
+    events: "desc",
+  };
+
+  let list: HTMLOListElement | null = null;
+  let searchInput: HTMLInputElement | null = null;
+  let clearBtn: HTMLButtonElement | null = null;
+  let emptyHint: HTMLElement | null = null;
+  let query = "";
+  let sortMode: SortMode = "symbol";
+  let sortDir: SortDir = "asc";
+
+  // Filter state — single dimension, defaults to "all". Persisted so the
+  // selection survives reloads while exploring.
+  let tagFilter: string = "all";
+  const STORAGE_TAG = "stocks-filter-tag";
+
+  try {
+    tagFilter = localStorage.getItem(STORAGE_TAG) ?? "all";
+  } catch {
+    tagFilter = "all";
+  }
+
+  const applySort = () => {
+    if (!list) return;
+    list.dataset.sort = sortMode;
+    list.dataset.sortDir = sortDir;
+    const dirSign = sortDir === "asc" ? 1 : -1;
+    const rows = Array.from(list.children) as HTMLLIElement[];
+    rows.sort((a, b) => {
+      if (sortMode === "events") {
+        const av = Number(a.dataset.events ?? "0");
+        const bv = Number(b.dataset.events ?? "0");
+        const cmp = (av - bv) * dirSign;
+        if (cmp !== 0) return cmp;
+        return (a.dataset.symbol ?? "").localeCompare(b.dataset.symbol ?? "");
+      }
+      const cmp = (a.dataset.symbol ?? "").localeCompare(b.dataset.symbol ?? "");
+      return cmp * dirSign;
+    });
+    for (const row of rows) list.appendChild(row);
+    syncSortButtons();
+  };
+
+  const syncSortButtons = () => {
+    document.querySelectorAll<HTMLButtonElement>("[data-sort-btn]").forEach((btn) => {
+      const active = btn.dataset.sortBtn === sortMode;
+      btn.dataset.active = active ? "1" : "0";
+      const arrow = btn.querySelector<HTMLElement>("[data-sort-arrow]");
+      if (arrow) arrow.textContent = active ? (sortDir === "asc" ? "↑" : "↓") : "";
+    });
+  };
+
+  // Recompute row visibility against (search query × tag filter).
+  const recompute = () => {
+    if (clearBtn) {
+      clearBtn.classList.toggle("hidden", query.length === 0);
+      clearBtn.classList.toggle("grid", query.length > 0);
+    }
+    if (!list) return;
+    let visible = 0;
+    list.querySelectorAll<HTMLLIElement>("[data-row]").forEach((row) => {
+      const sym = row.dataset.symbol ?? "";
+      const name = row.dataset.name ?? "";
+      const tag = row.dataset.tag ?? "";
+      const queryMatch = !query || sym.includes(query) || name.includes(query);
+      const tagMatch = tagFilter === "all" || tag === tagFilter;
+      const matches = queryMatch && tagMatch;
+      row.classList.toggle("match-hidden", !matches);
+      if (matches) visible++;
+    });
+    if (emptyHint) emptyHint.classList.toggle("hidden", visible > 0);
+  };
+
+  const setQuery = (q: string) => {
+    query = q.trim().toLowerCase();
+    recompute();
+  };
+
+  const syncFilterPills = () => {
+    document.querySelectorAll<HTMLButtonElement>("[data-filter-tag]").forEach((btn) => {
+      btn.setAttribute("aria-pressed", btn.dataset.filterTag === tagFilter ? "true" : "false");
+    });
+  };
+
+  const setTagFilter = (next: string) => {
+    tagFilter = next;
+    try { localStorage.setItem(STORAGE_TAG, next); } catch {}
+    syncFilterPills();
+    recompute();
+  };
+
+  const init = () => {
+    list = document.querySelector<HTMLOListElement>(".stocks-list");
+    searchInput = document.querySelector<HTMLInputElement>("[data-stocks-search]");
+    clearBtn = document.querySelector<HTMLButtonElement>("[data-stocks-search-clear]");
+    emptyHint = document.querySelector<HTMLElement>("[data-stocks-empty]");
+    if (!list) return;
+    if (searchInput && query) searchInput.value = query;
+    applySort();
+    syncFilterPills();
+    recompute();
+  };
+
+  document.addEventListener("input", (e) => {
+    const target = e.target as HTMLElement;
+    if (target.matches("[data-stocks-search]")) {
+      setQuery((target as HTMLInputElement).value);
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (target.closest("[data-stocks-search-clear]")) {
+      if (searchInput) searchInput.value = "";
+      setQuery("");
+      searchInput?.focus();
+      return;
+    }
+    const tagBtn = target.closest<HTMLButtonElement>("[data-filter-tag]");
+    if (tagBtn?.dataset.filterTag) {
+      setTagFilter(tagBtn.dataset.filterTag);
+      return;
+    }
+    const sortBtn = target.closest<HTMLButtonElement>("[data-sort-btn]");
+    if (sortBtn) {
+      const mode = sortBtn.dataset.sortBtn as SortMode | undefined;
+      if (mode !== "symbol" && mode !== "events") return;
+      if (mode === sortMode) {
+        sortDir = sortDir === "asc" ? "desc" : "asc";
+      } else {
+        sortMode = mode;
+        sortDir = DEFAULT_DIR[mode];
+      }
+      applySort();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.activeElement === searchInput) {
+      if (searchInput && searchInput.value) {
+        searchInput.value = "";
+        setQuery("");
+      } else {
+        searchInput?.blur();
+      }
+    }
+  });
+
+  document.addEventListener("astro:page-load", init);
+</script>
+
+<style>
+  /* Hide rows that don't match the search query */
+  [data-row].match-hidden { display: none; }
+
+  /* Sort toggle active states */
+  [data-sort-btn][data-active="1"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  [data-sort-btn][data-active="0"] {
+    background: transparent;
+    color: var(--muted);
+  }
+
+  /* Filter pills — single-select chips for instrument type and industry. */
+  .filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.4;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .filter-pill:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+  .filter-pill[aria-pressed="true"] {
+    color: var(--bg);
+    background: var(--text);
+    border-color: var(--text);
+  }
+  .filter-pill[aria-pressed="true"] .filter-count {
+    color: var(--bg);
+    opacity: 0.6;
+  }
+  .filter-count {
+    font-size: 10px;
+    color: var(--faint);
+    font-variant-numeric: tabular-nums;
+  }
+</style>
