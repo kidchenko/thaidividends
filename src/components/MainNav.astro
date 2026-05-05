@@ -1,4 +1,6 @@
 ---
+import LangToggle from "./LangToggle.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 import { type Lang, t, localePath } from "../lib/i18n";
 import { yearPath } from "../lib/dividends";
 
@@ -34,23 +36,29 @@ const items = [
 ];
 ---
 
-<nav class="main-nav flex items-center gap-1 px-4 sm:px-8 py-2 border-b border-border bg-bg text-[11px] tracking-[0.18em] uppercase">
-  {items.map((item) => {
-    const isActive = active === item.key;
-    return (
-      <a
-        href={item.href}
-        aria-current={isActive ? "page" : undefined}
-        class={`main-nav-item relative px-3 py-1.5 no-underline transition-colors ${
-          isActive
-            ? "text-text font-semibold"
-            : "text-muted hover:text-text"
-        }`}
-      >
-        {item.label}
-      </a>
-    );
-  })}
+<nav class="main-nav flex items-center justify-between gap-3 px-4 sm:px-8 py-2 border-b border-border bg-bg text-[11px] tracking-[0.18em] uppercase">
+  <div class="flex flex-wrap items-center gap-1">
+    {items.map((item) => {
+      const isActive = active === item.key;
+      return (
+        <a
+          href={item.href}
+          aria-current={isActive ? "page" : undefined}
+          class={`main-nav-item relative px-3 py-1.5 no-underline transition-colors ${
+            isActive
+              ? "text-text font-semibold"
+              : "text-muted hover:text-text"
+          }`}
+        >
+          {item.label}
+        </a>
+      );
+    })}
+  </div>
+  <div class="flex items-center gap-2 shrink-0">
+    <LangToggle lang={lang} />
+    <ThemeToggle lang={lang} />
+  </div>
 </nav>
 
 <style>

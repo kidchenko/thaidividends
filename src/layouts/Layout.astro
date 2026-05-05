@@ -2,18 +2,22 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import DividendDialog from "../components/DividendDialog.astro";
-import { withBase } from "../lib/dividends";
+import { withBase, absoluteUrl } from "../lib/dividends";
 import { type Lang, t, STORAGE_KEY } from "../lib/i18n";
 
 interface Props {
   lang: Lang;
   title: string;
   description?: string;
+  /** Path under the site root (e.g. "/og/PTT.png"). Defaults to the generic card. */
+  ogImagePath?: string;
 }
 
-const { lang, title, description } = Astro.props;
+const { lang, title, description, ogImagePath = "/og.png" } = Astro.props;
 const desc = description ?? t(lang, "siteDescription");
 const faviconHref = withBase("/favicon.svg");
+const ogImageUrl = absoluteUrl(Astro.site, ogImagePath);
+const canonicalUrl = absoluteUrl(Astro.site, Astro.url.pathname);
 ---
 
 <!doctype html>
@@ -23,7 +27,22 @@ const faviconHref = withBase("/favicon.svg");
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={desc} />
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
+    <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title>
+
+    <!-- Open Graph / social share -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={lang === "th" ? "th_TH" : "en_US"} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <ClientRouter />
     <script is:inline define:vars={{ STORAGE_KEY, lang }}>
       // 1. FOUC-free initial paint: read localStorage / OS preference and set

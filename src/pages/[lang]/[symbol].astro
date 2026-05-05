@@ -112,7 +112,12 @@ const milestone: Milestone | null = (() => {
 })();
 ---
 
-<Layout lang={lang} title={`${symbol} — ${t(lang, "siteTitle")}`} description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}>
+<Layout
+  lang={lang}
+  title={`${symbol} — ${t(lang, "siteTitle")}`}
+  description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}
+  ogImagePath={`/og/${encodeURIComponent(symbol!)}.png`}
+>
   <MainNav lang={lang} active={null} annualYear={todayYear} />
   <StockHeader lang={lang} />
 

@@ -1,7 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import ThemeToggle from "./ThemeToggle.astro";
-import LangToggle from "./LangToggle.astro";
 import { withBase } from "../lib/dividends";
 import { type Lang, t, localePath } from "../lib/i18n";
 
@@ -9,7 +7,7 @@ interface Props { lang: Lang; }
 const { lang } = Astro.props;
 ---
 
-<header class="px-4 sm:px-8 pt-6 sm:pt-7 pb-4 border-b border-border flex items-center justify-between gap-4">
+<header class="px-4 sm:px-8 pt-6 sm:pt-7 pb-4 border-b border-border flex items-center gap-4">
   <a
     href={localePath(lang, "/")}
     class="inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-muted hover:text-text transition-colors"
@@ -19,8 +17,4 @@ const { lang } = Astro.props;
     <span class="font-display italic normal-case tracking-normal text-[13px]">{t(lang, "stockBack")}</span>
     <span class="hidden sm:inline">&middot; {t(lang, "stockBackCalendar")}</span>
   </a>
-  <div class="inline-flex items-center gap-2">
-    <LangToggle lang={lang} />
-    <ThemeToggle lang={lang} />
-  </div>
 </header>

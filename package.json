@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:og": "BUILD_OG=1 astro build",
     "preview": "astro preview",
     "fetch": "tsx poc/set-fetch.ts"
   },
@@ -18,11 +19,15 @@
     "typescript": "^5.7.0"
   },
   "dependencies": {
+    "@fontsource/fraunces": "^5.2.9",
+    "@fontsource/geist-sans": "^5.2.5",
     "@iconify-json/lucide": "^1.2.105",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.2.1",
     "astro-icon": "^1.1.5",
     "date-fns": "^4.1.0",
+    "satori": "^0.26.0",
     "tailwindcss": "^4.2.4"
   }
 }

@@ -1,8 +1,12 @@
 ---
-import { withBase } from "../lib/dividends";
+import { withBase, absoluteUrl } from "../lib/dividends";
 const enHref = withBase("/en/");
 const thHref = withBase("/th/");
 const faviconHref = withBase("/favicon.svg");
+const ogImageUrl = absoluteUrl(Astro.site, "/og.png");
+const canonicalUrl = absoluteUrl(Astro.site, "/");
+const title = "Thai Dividends Calendar";
+const description = "Ex-dividend & payment dates for SET-listed stocks.";
 ---
 
 <!doctype html>
@@ -10,12 +14,28 @@ const faviconHref = withBase("/favicon.svg");
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Thai Dividends Calendar</title>
+    <meta name="description" content={description} />
+    <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href={faviconHref} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta http-equiv="refresh" content={`0;url=${enHref}`} />
     <link rel="alternate" hreflang="en" href={enHref} />
     <link rel="alternate" hreflang="th" href={thHref} />
     <link rel="alternate" hreflang="x-default" href={enHref} />
+
+    <!-- Open Graph / social share -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <script is:inline define:vars={{ enHref, thHref }}>
       (function () {
         var stored = null;
