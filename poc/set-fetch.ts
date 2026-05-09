@@ -1,16 +1,18 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { setTimeout as sleep } from "node:timers/promises";
 import { chromium, type BrowserContext, type Page } from "patchright";
 
-// Date range to fetch. Past covered for "what already paid"; future covered so
-// announced dividends show up in the calendar before they happen.
-const START = { year: 2016, month: 1 };
-const END = (() => {
-  const now = new Date();
-  const horizon = new Date(now);
-  horizon.setUTCMonth(horizon.getUTCMonth() + 12);
-  return { year: horizon.getUTCFullYear(), month: horizon.getUTCMonth() + 1 };
-})();
+const ARGS = process.argv.slice(2);
+const FULL_BACKFILL = ARGS.includes("--full");
+
+// Incremental window: past slack catches late tentative→confirmed updates;
+// future slack covers what companies have announced ahead.
+const PAST_LOOKBACK_MONTHS = 2;
+const FUTURE_LOOKAHEAD_MONTHS = 6;
+const FULL_BACKFILL_START = { year: 2016, month: 1 };
+const FULL_BACKFILL_FUTURE_HORIZON = 12;
+
+const EXISTING_PATH = "data/set-dividends.json";
 
 const PAGE_URL = "https://www.set.or.th/en/market/stock-calendar/x-calendar";
 const NAV_TIMEOUT_MS = 45_000;
@@ -159,8 +161,90 @@ async function fetchMonth(page: Page, year: number, month: number): Promise<Divi
   return raws.map(normalize).filter((e): e is DividendEvent => e !== null);
 }
 
+function shiftMonths(y: number, m: number, delta: number): { year: number; month: number } {
+  const total = y * 12 + (m - 1) + delta;
+  return { year: Math.floor(total / 12), month: (total % 12) + 1 };
+}
+
+function compareYM(a: { year: number; month: number }, b: { year: number; month: number }): number {
+  return a.year !== b.year ? a.year - b.year : a.month - b.month;
+}
+
+function eventKey(e: DividendEvent): string {
+  return `${e.symbol}|${e.exDate}|${e.caType}`;
+}
+
+function eventsEqual(a: DividendEvent, b: DividendEvent): boolean {
+  return (
+    a.name === b.name &&
+    a.exDate === b.exDate &&
+    a.recordDate === b.recordDate &&
+    a.paymentDate === b.paymentDate &&
+    a.amount === b.amount &&
+    a.currency === b.currency &&
+    a.dividendType === b.dividendType &&
+    a.caType === b.caType &&
+    a.sourceOfDividend === b.sourceOfDividend &&
+    a.operationStart === b.operationStart &&
+    a.operationEnd === b.operationEnd &&
+    a.tentative === b.tentative &&
+    a.remark === b.remark
+  );
+}
+
+async function loadExisting(): Promise<DividendEvent[] | null> {
+  try {
+    const raw = await readFile(EXISTING_PATH, "utf8");
+    return JSON.parse(raw) as DividendEvent[];
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw err;
+  }
+}
+
+function computeWindow(
+  existing: DividendEvent[],
+): { start: { year: number; month: number }; end: { year: number; month: number } } {
+  const now = new Date();
+  const nowYM = { year: now.getFullYear(), month: now.getMonth() + 1 };
+  const start = shiftMonths(nowYM.year, nowYM.month, -PAST_LOOKBACK_MONTHS);
+  const futureFloor = shiftMonths(nowYM.year, nowYM.month, FUTURE_LOOKAHEAD_MONTHS);
+  const todayIso = `${nowYM.year}-${String(nowYM.month).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  let endCandidate = futureFloor;
+  for (const e of existing) {
+    if (e.exDate < todayIso) continue;
+    const [y, m] = e.exDate.split("-").map(Number);
+    const evtPlus1 = shiftMonths(y, m, 1);
+    if (compareYM(evtPlus1, endCandidate) > 0) endCandidate = evtPlus1;
+  }
+  return { start, end: endCandidate };
+}
+
 async function main() {
   await mkdir("data", { recursive: true });
+
+  const existing = await loadExisting();
+  let start: { year: number; month: number };
+  let end: { year: number; month: number };
+
+  if (FULL_BACKFILL) {
+    start = FULL_BACKFILL_START;
+    const now = new Date();
+    end = shiftMonths(now.getFullYear(), now.getMonth() + 1, FULL_BACKFILL_FUTURE_HORIZON);
+    console.log(`Mode: FULL backfill — fetching ${ymKey(start.year, start.month)} → ${ymKey(end.year, end.month)}`);
+  } else {
+    if (!existing) {
+      console.error(
+        `No existing ${EXISTING_PATH} found. Run with --full to backfill from ${FULL_BACKFILL_START.year}.`,
+      );
+      process.exit(1);
+    }
+    ({ start, end } = computeWindow(existing));
+    console.log(
+      `Mode: incremental — fetching ${ymKey(start.year, start.month)} → ${ymKey(end.year, end.month)} (existing: ${existing.length} events)`,
+    );
+  }
+
   const browser = await chromium.launch({ headless: true });
   const ctx: BrowserContext = await browser.newContext({
     viewport: { width: 1366, height: 900 },
@@ -173,12 +257,13 @@ async function main() {
   await bootstrapPage(page);
   console.log("Bootstrap OK; calling API directly for each month.\n");
 
-  const all: DividendEvent[] = [];
+  const fetched: DividendEvent[] = [];
+  const successfulMonths = new Set<string>();
   const failures: Array<{ key: string; error: string }> = [];
 
-  let cursor = { year: START.year, month: START.month };
+  let cursor = { year: start.year, month: start.month };
   const totalMonths =
-    (END.year - START.year) * 12 + (END.month - START.month) + 1;
+    (end.year - start.year) * 12 + (end.month - start.month) + 1;
   let i = 0;
 
   while (true) {
@@ -188,33 +273,50 @@ async function main() {
     try {
       const events = await fetchMonth(page, cursor.year, cursor.month);
       console.log(`${events.length} XD events`);
-      all.push(...events);
+      fetched.push(...events);
+      successfulMonths.add(key);
     } catch (err) {
       const msg = (err as Error).message;
       console.log(`FAIL — ${msg}`);
       failures.push({ key, error: msg });
     }
-    if (cursor.year === END.year && cursor.month === END.month) break;
+    if (cursor.year === end.year && cursor.month === end.month) break;
     cursor = nextMonth(cursor.year, cursor.month);
     await sleep(DELAY_BETWEEN_MONTHS_MS);
   }
 
   await browser.close();
 
-  // Dedupe (Y/M boundaries can occasionally repeat) by (symbol, exDate, caType).
-  const seen = new Set<string>();
-  const deduped: DividendEvent[] = [];
-  for (const e of all) {
-    const k = `${e.symbol}|${e.exDate}|${e.caType}`;
-    if (seen.has(k)) continue;
-    seen.add(k);
-    deduped.push(e);
-  }
-  deduped.sort(
+  // Merge: keep existing events untouched outside successful months;
+  // for months that fetched successfully, replace with fresh data.
+  const baseline = FULL_BACKFILL ? [] : (existing ?? []);
+  const kept = baseline.filter((e) => !successfulMonths.has(e.exDate.slice(0, 7)));
+  const merged = [...kept, ...fetched];
+
+  // Dedupe by (symbol, exDate, caType) — fresh wins over kept on collision
+  // (defensive; shouldn't happen given the filter above).
+  const byKey = new Map<string, DividendEvent>();
+  for (const e of merged) byKey.set(eventKey(e), e);
+  const deduped = [...byKey.values()].sort(
     (a, b) => a.exDate.localeCompare(b.exDate) || a.symbol.localeCompare(b.symbol),
   );
 
-  // Build a companies lookup from the events themselves.
+  // Diff vs existing for the run summary.
+  const existingByKey = new Map<string, DividendEvent>(
+    (existing ?? []).map((e) => [eventKey(e), e]),
+  );
+  let added = 0;
+  let updated = 0;
+  for (const e of deduped) {
+    const prev = existingByKey.get(eventKey(e));
+    if (!prev) added++;
+    else if (!eventsEqual(prev, e)) updated++;
+  }
+  const newKeys = new Set(deduped.map(eventKey));
+  let removed = 0;
+  for (const k of existingByKey.keys()) if (!newKeys.has(k)) removed++;
+
+  // Build a companies lookup from the merged events.
   const companyMap = new Map<string, Company>();
   for (const e of deduped) {
     if (!companyMap.has(e.symbol)) {
@@ -228,25 +330,24 @@ async function main() {
   await writeFile("data/set-dividends.json", JSON.stringify(deduped, null, 2));
   await writeFile("data/companies.json", JSON.stringify(companies, null, 2));
 
-  const byYear = deduped.reduce<Record<string, number>>((acc, e) => {
-    const y = e.exDate.slice(0, 4);
-    acc[y] = (acc[y] ?? 0) + 1;
-    return acc;
-  }, {});
-
   console.log();
-  console.log(`Months fetched:        ${totalMonths - failures.length}/${totalMonths}`);
+  console.log(`Months fetched:        ${successfulMonths.size}/${totalMonths}`);
   console.log(`Failures:              ${failures.length}`);
+  console.log(`Diff vs existing:      +${added} added · ~${updated} updated · -${removed} removed`);
   console.log(`Total XD events:       ${deduped.length}`);
   console.log(`Unique tickers:        ${companies.length}`);
   console.log(`With payment date:     ${deduped.filter((e) => e.paymentDate).length}`);
   console.log(`Tentative amounts:     ${deduped.filter((e) => e.tentative).length}`);
-  for (const [y, n] of Object.entries(byYear).sort()) {
-    console.log(`  ${y}: ${n}`);
-  }
   console.log();
   console.log("Wrote → data/set-dividends.json");
   console.log("Wrote → data/companies.json");
+
+  if (failures.length > 0) {
+    console.log();
+    console.log("Failed months (existing data preserved for these):");
+    for (const f of failures) console.log(`  ${f.key}: ${f.error}`);
+    process.exit(1);
+  }
 }
 
 main().catch((err) => {

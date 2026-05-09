@@ -8,7 +8,8 @@
     "build": "astro build",
     "build:og": "BUILD_OG=1 astro build",
     "preview": "astro preview",
-    "fetch": "tsx poc/set-fetch.ts"
+    "fetch": "tsx poc/set-fetch.ts",
+    "fetch:full": "tsx poc/set-fetch.ts --full"
   },
   "devDependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",
