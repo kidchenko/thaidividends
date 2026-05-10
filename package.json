@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "fetch": "tsx poc/set-fetch.ts",
     "fetch:full": "tsx poc/set-fetch.ts --full",
-    "fetch:fundamentals": "tsx poc/yahoo-fundamentals.ts"
+    "fetch:fundamentals": "tsx poc/yahoo-fundamentals.ts",
+    "fetch:prices": "tsx poc/yahoo-prices.ts"
   },
   "devDependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",

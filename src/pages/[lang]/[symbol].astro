@@ -26,6 +26,7 @@ import {
   type DividendEvent,
 } from "../../lib/dividends";
 import { getDividendQuality, getEarningsVsDividends, getEpsHistory, getEpsVsDps, getFundamentals, getRevenueProfit, getValuationHistory, hasAnyQualityData } from "../../lib/fundamentals";
+import { getPrice, computeCurrentYield, computeCurrentPE } from "../../lib/prices";
 import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
 import { parseISO } from "date-fns";
 
@@ -47,6 +48,31 @@ const events = getEventsForSymbol(symbol!);
 const stats = getSymbolStats(events);
 const yearGroups = groupEventsByYear(events);
 const cadence = getCadence(events);
+
+// 5y / 10y range filtering for Dividends tab visualisations. The pre-2018 PTT
+// data shows the problem: huge pre-split values dominate axes & averages.
+// Default to 5y; 10y is the wider option.
+const today_for_range = new Date();
+const cutoff5yDate = new Date(today_for_range);
+cutoff5yDate.setFullYear(cutoff5yDate.getFullYear() - 5);
+const cutoff5yIso = cutoff5yDate.toISOString().slice(0, 10);
+const cutoff10yDate = new Date(today_for_range);
+cutoff10yDate.setFullYear(cutoff10yDate.getFullYear() - 10);
+const cutoff10yIso = cutoff10yDate.toISOString().slice(0, 10);
+
+const events5y = events.filter((e) => e.exDate >= cutoff5yIso);
+const events10y = events.filter((e) => e.exDate >= cutoff10yIso);
+const cadence5y = getCadence(events5y);
+const cadence10y = getCadence(events10y);
+const yearGroups5y = groupEventsByYear(events5y);
+const yearGroups10y = groupEventsByYear(events10y);
+const confirmedCount5y = events5y.filter((e) => typeof e.amount === "number").length;
+const confirmedCount10y = events10y.filter((e) => typeof e.amount === "number").length;
+const stats5y = getSymbolStats(events5y);
+const stats10y = getSymbolStats(events10y);
+
+// Hide the toggle when both windows show essentially the same data.
+const showRangeToggle = events10y.length > events5y.length;
 const quality = getDividendQuality(symbol!);
 const divGrowth = getDividendCAGR(events);
 const showQuality = hasAnyQualityData(quality) || divGrowth !== null;
@@ -59,6 +85,7 @@ const hasEpsDps = epsDpsRows.length >= 2 && epsDpsRows.some((r) => r.eps !== nul
 const valuationHistory = getValuationHistory(symbol!, events);
 const hasValuation = valuationHistory.annual.length >= 2 || valuationHistory.quarterly.length >= 3;
 const profile = getFundamentals(symbol!)?.profile ?? null;
+const priceSnapshot = getPrice(symbol!);
 const hasRevenueChart = revenueData.annual.length >= 2 || revenueData.quarterly.length >= 3;
 const hasEarningsChart = earningsData.annual.length >= 2 || earningsData.quarterly.length >= 3;
 const hasFinancials = hasRevenueChart || hasEarningsChart;
@@ -89,6 +116,20 @@ const ttmAmount = events.reduce(
   (sum, e) => (typeof e.amount === "number" && e.exDate >= cutoff && e.exDate <= today ? sum + e.amount : sum),
   0,
 );
+const currentYield = computeCurrentYield(ttmAmount, priceSnapshot);
+// Latest TTM EPS: prefer the most recent quarterly row, fall back to annual.
+const latestTtmEps = (() => {
+  for (let i = valuationHistory.quarterly.length - 1; i >= 0; i--) {
+    const r = valuationHistory.quarterly[i];
+    if (r.eps !== null && r.eps > 0) return r.eps;
+  }
+  for (let i = valuationHistory.annual.length - 1; i >= 0; i--) {
+    const r = valuationHistory.annual[i];
+    if (r.eps !== null && r.eps > 0) return r.eps;
+  }
+  return null;
+})();
+const currentPE = computeCurrentPE(latestTtmEps, priceSnapshot);
 const ttmCount = events.filter(
   (e) => typeof e.amount === "number" && e.exDate >= cutoff && e.exDate <= today,
 ).length;
@@ -169,6 +210,31 @@ const milestone: Milestone | null = (() => {
           {company.name}
         </p>
       )}
+      {priceSnapshot && (
+        <div class="mt-4 flex items-baseline flex-wrap gap-x-4 gap-y-1 text-[13px]">
+          <span class="font-display tabular-nums text-[clamp(1.1rem,2vw,1.4rem)] font-medium text-text">
+            {priceSnapshot.close.toFixed(2)}
+            <span class="text-muted text-[12px] ml-0.5">฿</span>
+          </span>
+          <span class={`font-display tabular-nums text-[13px] ${
+            priceSnapshot.changePercent > 0 ? "text-payment"
+            : priceSnapshot.changePercent < 0 ? "text-accent"
+            : "text-muted"
+          }`}>
+            {priceSnapshot.change >= 0 ? "+" : ""}{priceSnapshot.change.toFixed(2)}
+            {" "}
+            ({priceSnapshot.changePercent >= 0 ? "+" : ""}{priceSnapshot.changePercent.toFixed(2)}%)
+          </span>
+          {currentYield !== null && (
+            <span class="font-display tabular-nums text-[13px] text-payment">
+              · {t(lang, "priceYieldLabel")} {(currentYield * 100).toFixed(2)}%
+            </span>
+          )}
+          <span class="font-display italic text-[12px] text-muted">
+            · {t(lang, "priceAsOf")} {formatDateLong(priceSnapshot.asOfDate)}
+          </span>
+        </div>
+      )}
     </section>
 
     <CompanyAbout lang={lang} company={company} profile={profile} />
@@ -247,34 +313,66 @@ const milestone: Milestone | null = (() => {
           )}
 
           <div role="tabpanel" id="tabpanel-dividends" data-tab-panel="dividends">
-            {confirmedCount >= 2 && (
-              <section class="mb-14">
-                <header class="flex items-baseline justify-between mb-4">
+            {(confirmedCount5y >= 2 || confirmedCount10y >= 2) && (
+              <div class="symbol-range mb-14" data-symbol-range="5y">
+                <header class="flex items-baseline justify-between mb-4 gap-3 flex-wrap">
                   <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
                     <span class="font-medium">{symbol}</span>
                     <span class="italic font-light text-muted ml-2">{t(lang, "sectionDividends")}</span>
                   </h2>
-                  <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-                    {confirmedCount} {t(lang, "confirmedSuffix")}
-                  </span>
+                  {showRangeToggle && (
+                    <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+                      <button
+                        type="button"
+                        data-symbol-range-btn="5y"
+                        class="symbol-range-btn px-3 py-1 text-[11px] tracking-[0.1em] uppercase font-sans transition-colors cursor-pointer"
+                      >{t(lang, "range5y")}</button>
+                      <button
+                        type="button"
+                        data-symbol-range-btn="10y"
+                        class="symbol-range-btn px-3 py-1 text-[11px] tracking-[0.1em] uppercase font-sans transition-colors cursor-pointer border-l border-border"
+                      >{t(lang, "range10y")}</button>
+                    </div>
+                  )}
                 </header>
-                <DividendTimeline lang={lang} events={events} />
-              </section>
+                <div data-symbol-range-pane="5y">
+                  {confirmedCount5y >= 2 && <DividendTimeline lang={lang} events={events5y} />}
+                </div>
+                <div data-symbol-range-pane="10y">
+                  {confirmedCount10y >= 2 && <DividendTimeline lang={lang} events={events10y} />}
+                </div>
+              </div>
             )}
 
-            {cadence.years.length >= 1 && (
-              <section class="mb-14">
-                <header class="flex items-baseline justify-between mb-4">
+            {(cadence5y.years.length >= 1 || cadence10y.years.length >= 1) && (
+              <div class="symbol-range mb-14" data-symbol-range="5y">
+                <header class="flex items-baseline justify-between mb-4 gap-3 flex-wrap">
                   <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
                     <span class="italic font-light text-muted">{t(lang, "sectionCadence")}</span>
                     <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionCadenceSub")}</span>
                   </h2>
-                  <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-                    {cadence.years.length} {t(lang, cadence.years.length === 1 ? "yearOne" : "yearMany")}
-                  </span>
+                  {showRangeToggle && (
+                    <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+                      <button
+                        type="button"
+                        data-symbol-range-btn="5y"
+                        class="symbol-range-btn px-3 py-1 text-[11px] tracking-[0.1em] uppercase font-sans transition-colors cursor-pointer"
+                      >{t(lang, "range5y")}</button>
+                      <button
+                        type="button"
+                        data-symbol-range-btn="10y"
+                        class="symbol-range-btn px-3 py-1 text-[11px] tracking-[0.1em] uppercase font-sans transition-colors cursor-pointer border-l border-border"
+                      >{t(lang, "range10y")}</button>
+                    </div>
+                  )}
                 </header>
-                <DividendCadence lang={lang} cadence={cadence} />
-              </section>
+                <div data-symbol-range-pane="5y">
+                  {cadence5y.years.length >= 1 && <DividendCadence lang={lang} cadence={cadence5y} />}
+                </div>
+                <div data-symbol-range-pane="10y">
+                  {cadence10y.years.length >= 1 && <DividendCadence lang={lang} cadence={cadence10y} />}
+                </div>
+              </div>
             )}
 
             <!-- Dividend history, grouped by year (recent open, older collapsed) -->
@@ -383,7 +481,7 @@ const milestone: Milestone | null = (() => {
 
               {hasEpsHistory && <EpsHistory lang={lang} history={epsHistory} />}
               {hasEpsDps && <EpsVsDividends lang={lang} rows={epsDpsRows} />}
-              {hasValuation && <ValuationHistory lang={lang} history={valuationHistory} />}
+              {hasValuation && <ValuationHistory lang={lang} history={valuationHistory} currentYield={currentYield} currentPE={currentPE} />}
             </div>
           )}
 
@@ -424,6 +522,23 @@ const milestone: Milestone | null = (() => {
             outline: 2px solid var(--accent);
             outline-offset: -2px;
           }
+
+          /* 5y / 10y range toggle */
+          .symbol-range [data-symbol-range-pane] { display: none; }
+          .symbol-range[data-symbol-range="5y"] [data-symbol-range-pane="5y"],
+          .symbol-range[data-symbol-range="10y"] [data-symbol-range-pane="10y"] {
+            display: block;
+          }
+          .symbol-range[data-symbol-range="5y"] [data-symbol-range-btn="5y"],
+          .symbol-range[data-symbol-range="10y"] [data-symbol-range-btn="10y"] {
+            background: var(--text);
+            color: var(--bg);
+          }
+          .symbol-range[data-symbol-range="5y"] [data-symbol-range-btn="10y"],
+          .symbol-range[data-symbol-range="10y"] [data-symbol-range-btn="5y"] {
+            background: transparent;
+            color: var(--muted);
+          }
         </style>
 
         <script>
@@ -439,6 +554,14 @@ const milestone: Milestone | null = (() => {
             wrap.querySelectorAll<HTMLElement>("[data-tab-trigger]").forEach((t) => {
               t.setAttribute("aria-selected", String(t.dataset.tabTrigger === target));
             });
+          });
+          // 5y / 10y range toggle for Timeline + Cadence
+          document.addEventListener("click", (e) => {
+            const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-symbol-range-btn]");
+            if (!btn) return;
+            const wrap = btn.closest<HTMLElement>(".symbol-range");
+            if (!wrap) return;
+            wrap.dataset.symbolRange = btn.dataset.symbolRangeBtn ?? "5y";
           });
           // Keyboard nav: arrow keys move focus + activate within the tablist.
           document.addEventListener("keydown", (e) => {

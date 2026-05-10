@@ -1,0 +1,21 @@
+{
+  "controls": [
+    "<button> \"SET\" .btn dropdown-toggle",
+    "<button> \"EN\" .btn dropdown-toggle",
+    "<button> \"EN\" .btn dropdown-toggle",
+    "<a> \"Overview\" .btn shadow-none mt-3 mx-auto mx-md-0 but",
+    "<a> \"Overview\" .btn shadow-none mt-3 mx-auto mx-md-0 but",
+    "<a> \"Overview\" .btn shadow-none mt-3 mx-auto mx-md-0 but",
+    "<a> \"Overview\" .btn shadow-none mt-3 mx-auto mx-md-0 but",
+    "<a> \"Overview\" .btn shadow-none mt-3 mx-auto mx-md-0 but",
+    "<a> \"Overview\" .btn shadow-none mt-3 mx-auto mx-md-0 but",
+    "<a> \"Back to home page\" .bth-eng text-center heading1-font-family",
+    "<button> \"Back to top\n   \n    TOP\" .btn button-gotop heading-font-family d-f",
+    "<button> \"SET Group Websites\" .accordion-button bg-transparent heading-",
+    "<button> \"Links\" .accordion-button bg-transparent heading-",
+    "<button> \"Sitemap\" .accordion-button bg-transparent heading-",
+    "<button> \"Accept\" .btn btn-submit-pdpa btn-sm btn-outline-p"
+  ],
+  "yearOptions": [],
+  "clickedQuarter": false
+}

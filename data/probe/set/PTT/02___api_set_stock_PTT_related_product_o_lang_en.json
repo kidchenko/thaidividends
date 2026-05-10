@@ -1,0 +1,37 @@
+{
+  "symbol": "PTT",
+  "type": "O",
+  "name": "Others",
+  "relatedProducts": [
+    {
+      "symbol": "PTT",
+      "sign": "",
+      "prior": 35.75,
+      "last": 36.5,
+      "change": 0.75,
+      "percentChange": 2.097902,
+      "totalVolume": 115043954,
+      "totalValue": 4161979406,
+      "oi": null,
+      "securityType": "S",
+      "exercisePrice": null,
+      "exerciseRatio": null,
+      "maturityDate": null
+    },
+    {
+      "symbol": "PTT-F",
+      "sign": "",
+      "prior": 36.25,
+      "last": null,
+      "change": null,
+      "percentChange": null,
+      "totalVolume": null,
+      "totalValue": null,
+      "oi": null,
+      "securityType": "F",
+      "exercisePrice": null,
+      "exerciseRatio": null,
+      "maturityDate": null
+    }
+  ]
+}

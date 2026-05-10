@@ -11,6 +11,8 @@ import {
   symbolPath,
   type DividendEvent,
 } from "../../../lib/dividends";
+import { getFundamentals } from "../../../lib/fundamentals";
+import { getPrice } from "../../../lib/prices";
 import { LANGS, isLang, t, type Lang } from "../../../lib/i18n";
 
 export async function getStaticPaths() {
@@ -46,6 +48,61 @@ const nextYear = idx >= 0 && idx < years.length - 1 ? years[idx + 1] : null;
 
 const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+
+// Build a yield per row by joining (year dividend total, split history, close).
+// Pre-split SET dividends must be scaled to match split-adjusted Yahoo prices,
+// so we apply cumulative split factor between each event's ex-date and the
+// reference close date.
+const todayYear = new Date().getFullYear();
+const todayIsoNow = new Date().toISOString().slice(0, 10);
+
+const yearEvents = events.filter((e) => e.exDate.startsWith(String(year)));
+const eventsBySymbol = new Map<string, DividendEvent[]>();
+for (const e of yearEvents) {
+  const list = eventsBySymbol.get(e.symbol) ?? [];
+  list.push(e);
+  eventsBySymbol.set(e.symbol, list);
+}
+
+const enrichedRows = aggregate.rows.map((row) => {
+  const f = getFundamentals(row.symbol);
+  const splits = f?.splits ?? [];
+
+  // Pick reference close: year-end (past) or current price (now/future).
+  let close: number | null = null;
+  let asOfIso: string;
+  if (year < todayYear) {
+    const yearEnd = f?.priceQuarterEnds?.find((p) => p.date === `${year}-12-31`);
+    close = yearEnd?.close ?? null;
+    asOfIso = `${year}-12-31`;
+  } else {
+    const live = getPrice(row.symbol);
+    close = live?.close ?? null;
+    asOfIso = live?.asOfDate ?? todayIsoNow;
+  }
+
+  if (close === null || close <= 0) return { ...row, yld: null };
+
+  const factorBetween = (fromIso: string): number => {
+    let factor = 1;
+    for (const s of splits) {
+      if (s.date > fromIso && s.date <= asOfIso) {
+        factor *= s.numerator / s.denominator;
+      }
+    }
+    return factor;
+  };
+
+  const symbolEvents = eventsBySymbol.get(row.symbol) ?? [];
+  const adjustedTotal = symbolEvents.reduce((sum, e) => {
+    if (typeof e.amount !== "number") return sum;
+    return sum + e.amount / factorBetween(e.exDate);
+  }, 0);
+
+  return { ...row, yld: adjustedTotal / close };
+});
+
+const fmtPct = (n: number): string => `${(n * 100).toFixed(2)}%`;
 
 const paymentsLabel = (n: number): string =>
   n === 1 ? t(lang, "paymentsCountSingular") : t(lang, "paymentsCountSuffix");
@@ -137,6 +194,14 @@ const paymentsLabel = (n: number): string =>
               </button>
               <button
                 type="button"
+                data-sort-btn="yield"
+                class="sort-btn px-3 py-1 font-sans transition-colors cursor-pointer border-l border-border inline-flex items-baseline gap-1"
+              >
+                <span>{t(lang, "sortYield")}</span>
+                <span data-sort-arrow class="sort-arrow tabular-nums"></span>
+              </button>
+              <button
+                type="button"
                 data-sort-btn="ticker"
                 class="sort-btn px-3 py-1 font-sans transition-colors cursor-pointer border-l border-border inline-flex items-baseline gap-1"
               >
@@ -149,7 +214,7 @@ const paymentsLabel = (n: number): string =>
 
         <!-- Ranking list -->
         <ol class="ranking-list m-0 p-0 list-none border-t border-border" data-sort="value">
-          {aggregate.rows.map((row, i) => {
+          {enrichedRows.map((row, i) => {
             const rank = i + 1;
             const hasAmount = row.totalAmount > 0;
             return (
@@ -159,6 +224,7 @@ const paymentsLabel = (n: number): string =>
                 data-symbol={row.symbol.toLowerCase()}
                 data-name={row.name.toLowerCase()}
                 data-amount={row.totalAmount}
+                data-yield={row.yld ?? -1}
                 data-rank-value={rank}
               >
                 <a
@@ -185,12 +251,20 @@ const paymentsLabel = (n: number): string =>
                     </div>
                     <div class="sm:hidden text-muted text-[11px] truncate mt-0.5">{row.name}</div>
                   </div>
-                  <span class={`font-display tabular-nums leading-none text-[14px] sm:text-base whitespace-nowrap shrink-0 ${
-                    hasAmount ? "font-semibold text-text" : "text-muted italic"
-                  }`}>
-                    {hasAmount ? formatAmount(row.totalAmount) : "—"}
-                    <span class="text-muted text-[10px] ml-0.5">฿</span>
-                  </span>
+                  <div class="text-right shrink-0">
+                    <div class={`font-display tabular-nums leading-none text-[14px] sm:text-base whitespace-nowrap ${
+                      hasAmount ? "font-semibold text-text" : "text-muted italic"
+                    }`}>
+                      {hasAmount ? formatAmount(row.totalAmount) : "—"}
+                      <span class="text-muted text-[10px] ml-0.5">฿</span>
+                    </div>
+                    <div class="font-display italic tabular-nums text-[11px] text-muted mt-0.5 leading-none">
+                      {row.yld !== null && row.yld > 0 ? fmtPct(row.yld) : "—"}
+                      {row.yld !== null && row.yld > 0 && (
+                        <span class="text-faint not-italic ml-0.5">{t(lang, "annualYieldLabel")}</span>
+                      )}
+                    </div>
+                  </div>
                 </a>
               </li>
             );
@@ -205,13 +279,14 @@ const paymentsLabel = (n: number): string =>
   // Ranking sort + search. State lives at module scope so it survives
   // navigation; init() re-binds DOM references on each `astro:page-load`.
 
-  type SortMode = "value" | "ticker";
+  type SortMode = "value" | "yield" | "ticker";
   type SortDir = "asc" | "desc";
 
   // Clicking an inactive sort button switches to that mode at its default
   // direction; clicking the already-active mode flips the direction.
   const DEFAULT_DIR: Record<SortMode, SortDir> = {
     value: "desc",   // highest payouts first
+    yield: "desc",   // highest yields first
     ticker: "asc",   // A → Z
   };
 
@@ -232,6 +307,17 @@ const paymentsLabel = (n: number): string =>
       if (sortMode === "ticker") {
         const cmp = (a.dataset.symbol ?? "").localeCompare(b.dataset.symbol ?? "");
         return cmp * dirSign;
+      }
+      // Stocks without a yield (no price data) sort to the bottom regardless
+      // of direction so they don't pollute the top of "best yield" rankings.
+      if (sortMode === "yield") {
+        const av = Number(a.dataset.yield ?? "-1");
+        const bv = Number(b.dataset.yield ?? "-1");
+        const aMissing = av < 0, bMissing = bv < 0;
+        if (aMissing !== bMissing) return aMissing ? 1 : -1;
+        const cmp = (av - bv) * dirSign;
+        if (cmp !== 0) return cmp;
+        return (a.dataset.symbol ?? "").localeCompare(b.dataset.symbol ?? "");
       }
       const av = Number(a.dataset.amount ?? "0");
       const bv = Number(b.dataset.amount ?? "0");
@@ -297,7 +383,7 @@ const paymentsLabel = (n: number): string =>
     const sortBtn = target.closest<HTMLButtonElement>("[data-sort-btn]");
     if (sortBtn) {
       const mode = sortBtn.dataset.sortBtn as SortMode | undefined;
-      if (mode !== "value" && mode !== "ticker") return;
+      if (mode !== "value" && mode !== "yield" && mode !== "ticker") return;
       if (mode === sortMode) {
         sortDir = sortDir === "asc" ? "desc" : "asc";
       } else {
@@ -327,8 +413,10 @@ const paymentsLabel = (n: number): string =>
   [data-row].match-hidden { display: none; }
 
   /* When sorted by ticker, the rank number no longer reflects payout order;
-     hide it to avoid implying a meaningless ranking. */
-  .ranking-list[data-sort="ticker"] .rank-cell { visibility: hidden; }
+     hide it to avoid implying a meaningless ranking. Same for yield rank
+     since "yield #1" doesn't carry the same weight as "biggest payer #1". */
+  .ranking-list[data-sort="ticker"] .rank-cell,
+  .ranking-list[data-sort="yield"] .rank-cell { visibility: hidden; }
 
   /* Sort toggle active states */
   [data-sort-btn][data-active="1"] {

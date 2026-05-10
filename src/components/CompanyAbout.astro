@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import type { Company } from "../lib/dividends";
 import type { CompanyProfile } from "../lib/fundamentals";
-import { type Lang, t } from "../lib/i18n";
+import { type Lang, t, localePath } from "../lib/i18n";
 
 interface Props {
   lang: Lang;
@@ -12,20 +12,53 @@ interface Props {
 
 const { lang, company, profile } = Astro.props;
 
-// Truncation: show ~ first sentence(s) up to ~280 chars; expand for full.
+// Truncation: show first ~280 chars; expand for full.
 const SHORT_LIMIT = 280;
 const description = profile?.description ?? null;
 const isTruncated = description !== null && description.length > SHORT_LIMIT;
 const shortDescription = isTruncated
   ? (() => {
       const slice = description!.slice(0, SHORT_LIMIT);
-      // try to break at last sentence boundary, else last space
       const lastDot = slice.lastIndexOf(". ");
       const lastSpace = slice.lastIndexOf(" ");
       const cut = lastDot > 100 ? lastDot + 1 : (lastSpace > 100 ? lastSpace : SHORT_LIMIT);
       return description!.slice(0, cut).trim() + "…";
     })()
   : description;
+
+// Yahoo's longBusinessSummary is one run-on paragraph. Split it into readable
+// chunks: group 2 sentences per paragraph (or 3 when sentences are very short).
+function splitIntoParagraphs(text: string): string[] {
+  const sentences = text
+    .split(/(?<=[.!?])\s+(?=[A-Z])/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (sentences.length <= 2) return [text];
+  const paragraphs: string[] = [];
+  let buf: string[] = [];
+  let bufLen = 0;
+  for (const s of sentences) {
+    buf.push(s);
+    bufLen += s.length;
+    // Break paragraph after ~280-380 chars OR after 3 sentences, whichever comes first.
+    if (bufLen >= 280 || buf.length >= 3) {
+      paragraphs.push(buf.join(" "));
+      buf = [];
+      bufLen = 0;
+    }
+  }
+  if (buf.length > 0) {
+    // If trailing buffer is just one short sentence, append to last paragraph.
+    if (buf.length === 1 && bufLen < 80 && paragraphs.length > 0) {
+      paragraphs[paragraphs.length - 1] += " " + buf.join(" ");
+    } else {
+      paragraphs.push(buf.join(" "));
+    }
+  }
+  return paragraphs;
+}
+
+const fullParagraphs = description ? splitIntoParagraphs(description) : [];
 
 const industryLabel = company?.industry ? t(lang, `industry${company.industry}`) : null;
 const sectorLabel = company?.sector ? t(lang, `sector${company.sector}`) : null;
@@ -43,10 +76,13 @@ const hasAnyContent =
       </h2>
       {(industryLabel || sectorLabel) && (
         <div class="flex flex-wrap gap-1.5 justify-end">
-          {industryLabel && (
-            <span class="inline-block text-[10px] uppercase tracking-[0.15em] text-muted border border-border px-2 py-0.5">
+          {industryLabel && company?.industry && (
+            <a
+              href={`${localePath(lang, "/stocks/")}?category=${encodeURIComponent(company.industry)}`}
+              class="inline-block text-[10px] uppercase tracking-[0.15em] text-muted border border-border px-2 py-0.5 no-underline hover:no-underline hover:text-text hover:border-text transition-colors"
+            >
               {industryLabel}
-            </span>
+            </a>
           )}
           {sectorLabel && sectorLabel !== industryLabel && (
             <span class="inline-block text-[10px] uppercase tracking-[0.15em] text-muted border border-border px-2 py-0.5">
@@ -58,30 +94,40 @@ const hasAnyContent =
     </div>
 
     {description && (
-      <div class="company-about" data-expanded="false">
-        <p data-about-short class="m-0 text-[14px] sm:text-[15px] leading-relaxed text-text/85">
-          {shortDescription}
-          {isTruncated && (
-            <>
-              {" "}
-              <button
-                type="button"
-                data-about-toggle
-                class="inline text-accent text-[13px] font-sans hover:underline cursor-pointer bg-transparent border-0 p-0"
-              >{t(lang, "aboutShowMore")}</button>
-            </>
-          )}
-        </p>
-        {isTruncated && (
-          <p data-about-full class="m-0 text-[14px] sm:text-[15px] leading-relaxed text-text/85">
-            {description}
-            {" "}
-            <button
-              type="button"
-              data-about-toggle
-              class="inline text-accent text-[13px] font-sans hover:underline cursor-pointer bg-transparent border-0 p-0"
-            >{t(lang, "aboutShowLess")}</button>
+      <div class="company-about max-w-[65ch]" data-expanded="false">
+        <div data-about-short>
+          <p class="m-0 text-[14px] sm:text-[15px] leading-relaxed text-text/85">
+            {shortDescription}
+            {isTruncated && (
+              <>
+                {" "}
+                <button
+                  type="button"
+                  data-about-toggle
+                  class="inline text-accent text-[13px] font-sans hover:underline cursor-pointer bg-transparent border-0 p-0"
+                >{t(lang, "aboutShowMore")}</button>
+              </>
+            )}
           </p>
+        </div>
+        {isTruncated && (
+          <div data-about-full class="flex flex-col gap-3 sm:gap-4">
+            {fullParagraphs.map((p, i) => (
+              <p class="m-0 text-[14px] sm:text-[15px] leading-relaxed text-text/85">
+                {p}
+                {i === fullParagraphs.length - 1 && (
+                  <>
+                    {" "}
+                    <button
+                      type="button"
+                      data-about-toggle
+                      class="inline text-accent text-[13px] font-sans hover:underline cursor-pointer bg-transparent border-0 p-0"
+                    >{t(lang, "aboutShowLess")}</button>
+                  </>
+                )}
+              </p>
+            ))}
+          </div>
         )}
       </div>
     )}

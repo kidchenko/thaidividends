@@ -293,11 +293,34 @@ const TAG_LABEL_KEY: Record<FilterTag, string> = {
   const setTagFilter = (next: string) => {
     tagFilter = next;
     try { localStorage.setItem(STORAGE_TAG, next); } catch {}
+    // Reflect filter in the URL so links are shareable. Default "all" clears
+    // the query param to keep clean URLs.
+    try {
+      const url = new URL(window.location.href);
+      if (next === "all") {
+        url.searchParams.delete("category");
+      } else {
+        url.searchParams.set("category", next);
+      }
+      window.history.replaceState({}, "", url);
+    } catch {}
     syncFilterPills();
     recompute();
   };
 
   const init = () => {
+    // URL ?category= takes priority over localStorage so deep-links from
+    // stock detail pages (industry pill → /stocks/?category=TECH) land
+    // pre-filtered.
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const urlCategory = params.get("category");
+      if (urlCategory) {
+        tagFilter = urlCategory;
+        try { localStorage.setItem(STORAGE_TAG, urlCategory); } catch {}
+      }
+    } catch {}
+
     list = document.querySelector<HTMLOListElement>(".stocks-list");
     searchInput = document.querySelector<HTMLInputElement>("[data-stocks-search]");
     clearBtn = document.querySelector<HTMLButtonElement>("[data-stocks-search-clear]");

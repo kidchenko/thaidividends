@@ -34,6 +34,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Fetch latest prices
+        run: npm run fetch:prices
+        continue-on-error: true
+
       - name: Build (with OG cards)
         run: npm run build:og
 

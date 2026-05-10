@@ -1,0 +1,11 @@
+{
+  "url": "/api/set/stock/PTT/financial-statement/highlight-data?lang=en",
+  "status": 404,
+  "body": {
+    "timestamp": "2026-05-10T04:03:12.781+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "",
+    "path": "/api/stock/PTT/financial-statement/highlight-data"
+  }
+}
