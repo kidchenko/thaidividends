@@ -4,6 +4,13 @@ import MainNav from "../../components/MainNav.astro";
 import StockHeader from "../../components/StockHeader.astro";
 import DividendTimeline from "../../components/DividendTimeline.astro";
 import DividendCadence from "../../components/DividendCadence.astro";
+import DividendQuality from "../../components/DividendQuality.astro";
+import CompanyAbout from "../../components/CompanyAbout.astro";
+import RevenueProfit from "../../components/RevenueProfit.astro";
+import EarningsDividends from "../../components/EarningsDividends.astro";
+import EpsHistory from "../../components/EpsHistory.astro";
+import EpsVsDividends from "../../components/EpsVsDividends.astro";
+import ValuationHistory from "../../components/ValuationHistory.astro";
 import CalendarSubscribe from "../../components/CalendarSubscribe.astro";
 import StarButton from "../../components/StarButton.astro";
 import {
@@ -13,10 +20,12 @@ import {
   getSymbolStats,
   groupEventsByYear,
   getCadence,
+  getDividendCAGR,
   todayIso,
   absoluteUrl,
   type DividendEvent,
 } from "../../lib/dividends";
+import { getDividendQuality, getEarningsVsDividends, getEpsHistory, getEpsVsDps, getFundamentals, getRevenueProfit, getValuationHistory, hasAnyQualityData } from "../../lib/fundamentals";
 import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
 import { parseISO } from "date-fns";
 
@@ -38,6 +47,22 @@ const events = getEventsForSymbol(symbol!);
 const stats = getSymbolStats(events);
 const yearGroups = groupEventsByYear(events);
 const cadence = getCadence(events);
+const quality = getDividendQuality(symbol!);
+const divGrowth = getDividendCAGR(events);
+const showQuality = hasAnyQualityData(quality) || divGrowth !== null;
+const earningsData = getEarningsVsDividends(symbol!);
+const revenueData = getRevenueProfit(symbol!);
+const epsHistory = getEpsHistory(symbol!);
+const epsDpsRows = getEpsVsDps(symbol!, events);
+const hasEpsHistory = epsHistory.annual.length >= 2 || epsHistory.quarterly.length >= 3;
+const hasEpsDps = epsDpsRows.length >= 2 && epsDpsRows.some((r) => r.eps !== null);
+const valuationHistory = getValuationHistory(symbol!, events);
+const hasValuation = valuationHistory.annual.length >= 2 || valuationHistory.quarterly.length >= 3;
+const profile = getFundamentals(symbol!)?.profile ?? null;
+const hasRevenueChart = revenueData.annual.length >= 2 || revenueData.quarterly.length >= 3;
+const hasEarningsChart = earningsData.annual.length >= 2 || earningsData.quarterly.length >= 3;
+const hasFinancials = hasRevenueChart || hasEarningsChart;
+const tabCount = 1 + (showQuality ? 1 : 0) + (hasFinancials ? 1 : 0);
 const today = todayIso();
 const todayYear = new Date().getFullYear();
 const confirmedCount = events.filter((e) => typeof e.amount === "number").length;
@@ -146,6 +171,8 @@ const milestone: Milestone | null = (() => {
       )}
     </section>
 
+    <CompanyAbout lang={lang} company={company} profile={profile} />
+
     {events.length > 0 ? (
       <>
         <!-- Summary strip -->
@@ -188,39 +215,70 @@ const milestone: Milestone | null = (() => {
           </div>
         </section>
 
-        <!-- Visualizations -->
-        {confirmedCount >= 2 && (
-          <section class="mb-14">
-            <header class="flex items-baseline justify-between mb-4">
-              <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-                <span class="font-medium">{symbol}</span>
-                <span class="italic font-light text-muted ml-2">{t(lang, "sectionDividends")}</span>
-              </h2>
-              <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-                {confirmedCount} {t(lang, "confirmedSuffix")}
-              </span>
-            </header>
-            <DividendTimeline lang={lang} events={events} />
-          </section>
-        )}
+        <div class="stock-tabs" data-active="dividends">
+          {tabCount > 1 && (
+            <nav role="tablist" aria-label="Stock sections" class="stock-tabnav flex gap-1 mb-10 -mx-4 sm:mx-0 px-4 sm:px-0 border-b border-border overflow-x-auto">
+              <button
+                role="tab" type="button"
+                data-tab-trigger="dividends"
+                aria-selected="true"
+                aria-controls="tabpanel-dividends"
+                class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
+              >{t(lang, "tabDividends")}</button>
+              {showQuality && (
+                <button
+                  role="tab" type="button"
+                  data-tab-trigger="quality"
+                  aria-selected="false"
+                  aria-controls="tabpanel-quality"
+                  class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
+                >{t(lang, "tabEarnings")}</button>
+              )}
+              {hasFinancials && (
+                <button
+                  role="tab" type="button"
+                  data-tab-trigger="financials"
+                  aria-selected="false"
+                  aria-controls="tabpanel-financials"
+                  class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
+                >{t(lang, "tabFinancials")}</button>
+              )}
+            </nav>
+          )}
 
-        {cadence.years.length >= 1 && (
-          <section class="mb-14">
-            <header class="flex items-baseline justify-between mb-4">
-              <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-                <span class="italic font-light text-muted">{t(lang, "sectionCadence")}</span>
-                <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionCadenceSub")}</span>
-              </h2>
-              <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
-                {cadence.years.length} {t(lang, cadence.years.length === 1 ? "yearOne" : "yearMany")}
-              </span>
-            </header>
-            <DividendCadence lang={lang} cadence={cadence} />
-          </section>
-        )}
+          <div role="tabpanel" id="tabpanel-dividends" data-tab-panel="dividends">
+            {confirmedCount >= 2 && (
+              <section class="mb-14">
+                <header class="flex items-baseline justify-between mb-4">
+                  <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+                    <span class="font-medium">{symbol}</span>
+                    <span class="italic font-light text-muted ml-2">{t(lang, "sectionDividends")}</span>
+                  </h2>
+                  <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
+                    {confirmedCount} {t(lang, "confirmedSuffix")}
+                  </span>
+                </header>
+                <DividendTimeline lang={lang} events={events} />
+              </section>
+            )}
 
-        <!-- Dividend history, grouped by year (recent open, older collapsed) -->
-        <section class="mb-14">
+            {cadence.years.length >= 1 && (
+              <section class="mb-14">
+                <header class="flex items-baseline justify-between mb-4">
+                  <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+                    <span class="italic font-light text-muted">{t(lang, "sectionCadence")}</span>
+                    <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionCadenceSub")}</span>
+                  </h2>
+                  <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
+                    {cadence.years.length} {t(lang, cadence.years.length === 1 ? "yearOne" : "yearMany")}
+                  </span>
+                </header>
+                <DividendCadence lang={lang} cadence={cadence} />
+              </section>
+            )}
+
+            <!-- Dividend history, grouped by year (recent open, older collapsed) -->
+            <section class="mb-14">
           <header class="flex items-baseline justify-between mb-4">
             <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
               <span class="italic font-light text-muted">{t(lang, "sectionHistory")}</span>
@@ -309,11 +367,97 @@ const milestone: Milestone | null = (() => {
           </div>
         </section>
 
+          </div>
+
+          {showQuality && (
+            <div role="tabpanel" id="tabpanel-quality" data-tab-panel="quality">
+              <section class="mb-12">
+                <header class="flex items-baseline justify-between mb-4">
+                  <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+                    <span class="italic font-light text-muted">{t(lang, "sectionQuality")}</span>
+                    <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionQualitySub")}</span>
+                  </h2>
+                </header>
+                <DividendQuality lang={lang} quality={quality ?? { payoutRatio: null, fcfCoverage: null, fcfCoverageYear: null, debtToEquity: null, trailingEps: null, epsHistory: [] }} divGrowth={divGrowth} />
+              </section>
+
+              {hasEpsHistory && <EpsHistory lang={lang} history={epsHistory} />}
+              {hasEpsDps && <EpsVsDividends lang={lang} rows={epsDpsRows} />}
+              {hasValuation && <ValuationHistory lang={lang} history={valuationHistory} />}
+            </div>
+          )}
+
+          {hasFinancials && (
+            <div role="tabpanel" id="tabpanel-financials" data-tab-panel="financials">
+              {hasRevenueChart && (
+                <RevenueProfit lang={lang} data={revenueData} />
+              )}
+              {hasEarningsChart && (
+                <EarningsDividends lang={lang} data={earningsData} />
+              )}
+            </div>
+          )}
+        </div>
+
         <style>
           /* Hide native disclosure marker — we use our own chevron */
           .year-summary::-webkit-details-marker { display: none; }
           .year-summary { list-style: none; }
+
+          /* Tabs: only render the active panel; switch via data-active attr */
+          .stock-tabs [role="tabpanel"] { display: none; }
+          .stock-tabs[data-active="dividends"] [data-tab-panel="dividends"],
+          .stock-tabs[data-active="quality"] [data-tab-panel="quality"],
+          .stock-tabs[data-active="financials"] [data-tab-panel="financials"] {
+            display: block;
+          }
+
+          .stock-tabnav .tab-trigger { color: var(--muted); }
+          .stock-tabnav .tab-trigger:hover { color: var(--text); }
+          .stock-tabs[data-active="dividends"] [data-tab-trigger="dividends"],
+          .stock-tabs[data-active="quality"] [data-tab-trigger="quality"],
+          .stock-tabs[data-active="financials"] [data-tab-trigger="financials"] {
+            color: var(--text);
+            border-bottom-color: var(--accent);
+          }
+          .stock-tabnav .tab-trigger:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: -2px;
+          }
         </style>
+
+        <script>
+          // Tab switching for the stock page. Delegated so it survives any
+          // re-render and works regardless of which tabs are present.
+          document.addEventListener("click", (e) => {
+            const trigger = (e.target as HTMLElement).closest<HTMLElement>("[data-tab-trigger]");
+            if (!trigger) return;
+            const wrap = trigger.closest<HTMLElement>(".stock-tabs");
+            if (!wrap) return;
+            const target = trigger.dataset.tabTrigger ?? "dividends";
+            wrap.dataset.active = target;
+            wrap.querySelectorAll<HTMLElement>("[data-tab-trigger]").forEach((t) => {
+              t.setAttribute("aria-selected", String(t.dataset.tabTrigger === target));
+            });
+          });
+          // Keyboard nav: arrow keys move focus + activate within the tablist.
+          document.addEventListener("keydown", (e) => {
+            const target = e.target as HTMLElement | null;
+            if (!target) return;
+            const trigger = target.closest<HTMLElement>("[data-tab-trigger]");
+            if (!trigger) return;
+            if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+            const tabs = Array.from(
+              (trigger.closest<HTMLElement>(".stock-tabnav")?.querySelectorAll<HTMLElement>("[data-tab-trigger]")) ?? [],
+            );
+            const idx = tabs.indexOf(trigger);
+            if (idx < 0) return;
+            const next = e.key === "ArrowRight" ? tabs[(idx + 1) % tabs.length] : tabs[(idx - 1 + tabs.length) % tabs.length];
+            next.focus();
+            next.click();
+            e.preventDefault();
+          });
+        </script>
       </>
     ) : (
       <section class="py-12 text-center">

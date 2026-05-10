@@ -1,0 +1,238 @@
+---
+import type { EpsDpsRow } from "../lib/fundamentals";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  rows: EpsDpsRow[];
+}
+
+const { lang, rows } = Astro.props;
+
+const fmtEps = (n: number): string => n.toFixed(2);
+const fmtPct = (n: number): string => `${(n * 100).toFixed(0)}%`;
+
+// Geometry — matches the other charts.
+const W = 800;
+const H = 240;
+const PAD_T = 22;
+const PAD_R = 18;
+const PAD_B = 44;
+const PAD_L = 56;
+const chartW = W - PAD_L - PAD_R;
+const chartH = H - PAD_T - PAD_B;
+
+const epsValues = rows.map((r) => r.eps).filter((e): e is number => e !== null);
+const dpsValues = rows.map((r) => r.dps);
+const allValues = [...epsValues, ...dpsValues, 0];
+const yMaxRaw = Math.max(...allValues, 0.01);
+const yMax = yMaxRaw * 1.12;
+
+const slotW = chartW / Math.max(rows.length, 1);
+const xCenter = (i: number): number => PAD_L + slotW * i + slotW / 2;
+const yFor = (v: number): number => PAD_T + (1 - v / yMax) * chartH;
+
+// Build the EPS line, skipping null years (broken segments).
+type Segment = Array<{ x: number; y: number; eps: number }>;
+const epsSegments: Segment[] = [];
+let current: Segment = [];
+rows.forEach((r, i) => {
+  if (r.eps === null) {
+    if (current.length > 0) epsSegments.push(current);
+    current = [];
+  } else {
+    current.push({ x: xCenter(i), y: yFor(r.eps), eps: r.eps });
+  }
+});
+if (current.length > 0) epsSegments.push(current);
+
+const dpsPoints = rows.map((r, i) => ({ x: xCenter(i), y: yFor(r.dps), dps: r.dps }));
+const dpsPath = dpsPoints.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+
+// Headlines
+const latest = rows[rows.length - 1];
+const latestEps = latest?.eps ?? null;
+const latestDps = latest?.dps ?? null;
+const latestPayout = latest?.payoutPerShare ?? null;
+const epsCagr = (() => {
+  const withEps = rows.filter((r) => r.eps !== null && r.eps > 0) as Array<EpsDpsRow & { eps: number }>;
+  if (withEps.length < 2) return null;
+  const first = withEps[0];
+  const last = withEps[withEps.length - 1];
+  const span = last.year - first.year;
+  if (span < 1) return null;
+  return Math.pow(last.eps / first.eps, 1 / span) - 1;
+})();
+const dpsCagr = (() => {
+  const withDps = rows.filter((r) => r.dps > 0);
+  if (withDps.length < 2) return null;
+  const first = withDps[0];
+  const last = withDps[withDps.length - 1];
+  const span = last.year - first.year;
+  if (span < 1) return null;
+  return Math.pow(last.dps / first.dps, 1 / span) - 1;
+})();
+
+const fmtSignedPct = (n: number): string =>
+  `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`;
+---
+
+<section class="mb-14">
+  <header class="flex items-baseline justify-between mb-4">
+    <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+      <span class="italic font-light text-muted">{t(lang, "epsDpsSection")}</span>
+      <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "epsDpsSectionSub")}</span>
+    </h2>
+  </header>
+
+  <!-- Headlines -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-6">
+    <div class="bg-bg p-3">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsLatestEps")}</div>
+      <div class="font-display tabular-nums text-xl font-medium text-accent">
+        {latestEps !== null ? `${fmtEps(latestEps)} ฿` : "—"}
+      </div>
+      <div class="font-display italic text-[12px] text-muted mt-1">
+        {epsCagr !== null ? `${fmtSignedPct(epsCagr)} ${t(lang, "epsDpsCagr")}` : t(lang, "qualityNoData")}
+      </div>
+    </div>
+    <div class="bg-bg p-3">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsLatestDps")}</div>
+      <div class="font-display tabular-nums text-xl font-medium text-payment">
+        {latestDps !== null && latestDps > 0 ? `${fmtEps(latestDps)} ฿` : "—"}
+      </div>
+      <div class="font-display italic text-[12px] text-muted mt-1">
+        {dpsCagr !== null ? `${fmtSignedPct(dpsCagr)} ${t(lang, "epsDpsCagr")}` : t(lang, "qualityNoData")}
+      </div>
+    </div>
+    <div class="bg-bg p-3">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsPayout")}</div>
+      <div class={`font-display tabular-nums text-xl font-medium ${
+        latestPayout === null ? "text-muted"
+        : latestPayout < 0.6 ? "text-payment"
+        : latestPayout < 0.9 ? "text-text"
+        : "text-accent"
+      }`}>
+        {latestPayout !== null ? fmtPct(latestPayout) : "—"}
+      </div>
+      <div class="font-display italic text-[12px] text-muted mt-1">
+        {latest ? `${latest.year} · ${t(lang, "epsDpsPerShare")}` : ""}
+      </div>
+    </div>
+    <div class="bg-bg p-3">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsRetained")}</div>
+      <div class="font-display tabular-nums text-xl font-medium text-text">
+        {latest && latestEps !== null ? `${fmtEps(latestEps - (latestDps ?? 0))} ฿` : "—"}
+      </div>
+      <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "epsDpsRetainedHint")}</div>
+    </div>
+  </div>
+
+  <div class="epsdps-wrap relative">
+    <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="EPS vs dividend per share by year">
+      <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+      <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+
+      <text
+        x={PAD_L - 8} y={PAD_T + 4}
+        text-anchor="end" class="fill-muted"
+        style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+      >{fmtEps(yMax)} ฿</text>
+
+      <!-- EPS line(s) -->
+      {epsSegments.map((seg) => {
+        const path = seg.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+        return (
+          <path d={path} fill="none" class="stroke-accent" stroke-width="2" stroke-linejoin="round" />
+        );
+      })}
+      {epsSegments.flat().map((p) => (
+        <circle cx={p.x} cy={p.y} r="3.5" class="fill-accent stroke-accent" stroke-width="1.5" />
+      ))}
+
+      <!-- DPS line -->
+      {rows.length >= 2 && (
+        <path d={dpsPath} fill="none" class="stroke-payment" stroke-width="2" stroke-linejoin="round" stroke-dasharray="0" />
+      )}
+      {dpsPoints.map((p) => (
+        <circle cx={p.x} cy={p.y} r="3" class="fill-bg stroke-payment" stroke-width="1.5" />
+      ))}
+
+      <!-- Year labels -->
+      {rows.map((r, i) => (
+        <text x={xCenter(i)} y={H - PAD_B + 18} text-anchor="middle" class="fill-muted"
+          style="font-size: 12px; font-family: var(--font-display); font-style: italic;">
+          {r.year}
+        </text>
+      ))}
+
+      <!-- Hover targets per year -->
+      {rows.map((r, i) => (
+        <g class="epsdps-bar"
+          data-tip-year={r.year}
+          data-tip-eps={r.eps !== null ? `${fmtEps(r.eps)} ฿` : "—"}
+          data-tip-dps={r.dps > 0 ? `${fmtEps(r.dps)} ฿` : "—"}
+          data-tip-payout={r.payoutPerShare !== null ? fmtPct(r.payoutPerShare) : "—"}
+        >
+          <rect x={xCenter(i) - slotW / 2} y={PAD_T} width={slotW} height={chartH} fill="transparent" />
+        </g>
+      ))}
+    </svg>
+
+    <!-- Tooltip -->
+    <div
+      data-epsdps-tooltip
+      role="tooltip"
+      class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+             bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+             whitespace-nowrap border border-text rounded-sm"
+    >
+      <div data-tip-slot="year" class="font-display font-semibold text-[13px] tabular-nums"></div>
+      <div class="opacity-90 mt-1"><span class="opacity-70">{t(lang, "epsDpsTipEps")}:</span> <span data-tip-slot="eps"></span></div>
+      <div class="opacity-90"><span class="opacity-70">{t(lang, "epsDpsTipDps")}:</span> <span data-tip-slot="dps"></span></div>
+      <div class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-1"><span data-tip-slot="payout"></span> {t(lang, "epsDpsTipPayout")}</div>
+    </div>
+
+    <div class="flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3 h-2 bg-accent"></span> {t(lang, "epsDpsLegendEps")}
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-3 h-2 border-2 border-payment bg-bg"></span> {t(lang, "epsDpsLegendDps")}
+      </span>
+    </div>
+  </div>
+</section>
+
+<script>
+  const showEpsDpsTip = (g: SVGGElement) => {
+    const wrap = g.closest<HTMLElement>(".epsdps-wrap");
+    if (!wrap) return;
+    const tooltip = wrap.querySelector<HTMLElement>("[data-epsdps-tooltip]");
+    if (!tooltip) return;
+    const set = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    set("year", g.dataset.tipYear ?? "");
+    set("eps", g.dataset.tipEps ?? "");
+    set("dps", g.dataset.tipDps ?? "");
+    set("payout", g.dataset.tipPayout ?? "");
+    tooltip.classList.remove("hidden");
+    const wrapRect = wrap.getBoundingClientRect();
+    const gRect = (g as unknown as SVGGraphicsElement).getBoundingClientRect();
+    tooltip.style.left = `${gRect.left - wrapRect.left + gRect.width / 2}px`;
+    tooltip.style.top = `${gRect.top - wrapRect.top + 20}px`;
+  };
+  const hideEpsDpsTip = (g: SVGGElement) => {
+    g.closest<HTMLElement>(".epsdps-wrap")?.querySelector<HTMLElement>("[data-epsdps-tooltip]")?.classList.add("hidden");
+  };
+  document.addEventListener("mouseover", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".epsdps-bar");
+    if (g) showEpsDpsTip(g);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".epsdps-bar");
+    if (g) hideEpsDpsTip(g);
+  });
+</script>

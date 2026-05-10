@@ -1,0 +1,127 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Company } from "../lib/dividends";
+import type { CompanyProfile } from "../lib/fundamentals";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  company: Company | null;
+  profile: CompanyProfile | null;
+}
+
+const { lang, company, profile } = Astro.props;
+
+// Truncation: show ~ first sentence(s) up to ~280 chars; expand for full.
+const SHORT_LIMIT = 280;
+const description = profile?.description ?? null;
+const isTruncated = description !== null && description.length > SHORT_LIMIT;
+const shortDescription = isTruncated
+  ? (() => {
+      const slice = description!.slice(0, SHORT_LIMIT);
+      // try to break at last sentence boundary, else last space
+      const lastDot = slice.lastIndexOf(". ");
+      const lastSpace = slice.lastIndexOf(" ");
+      const cut = lastDot > 100 ? lastDot + 1 : (lastSpace > 100 ? lastSpace : SHORT_LIMIT);
+      return description!.slice(0, cut).trim() + "…";
+    })()
+  : description;
+
+const industryLabel = company?.industry ? t(lang, `industry${company.industry}`) : null;
+const sectorLabel = company?.sector ? t(lang, `sector${company.sector}`) : null;
+
+// Hide section entirely if we have nothing to show.
+const hasAnyContent =
+  industryLabel || sectorLabel || description || profile?.website;
+---
+
+{hasAnyContent && (
+  <section class="mb-10 sm:mb-12 border-y border-border py-5 sm:py-6">
+    <div class="flex items-baseline justify-between gap-3 mb-3">
+      <h2 class="m-0 font-display italic text-[clamp(0.95rem,1.5vw,1.05rem)] text-muted tracking-tight">
+        {t(lang, "aboutSection")}
+      </h2>
+      {(industryLabel || sectorLabel) && (
+        <div class="flex flex-wrap gap-1.5 justify-end">
+          {industryLabel && (
+            <span class="inline-block text-[10px] uppercase tracking-[0.15em] text-muted border border-border px-2 py-0.5">
+              {industryLabel}
+            </span>
+          )}
+          {sectorLabel && sectorLabel !== industryLabel && (
+            <span class="inline-block text-[10px] uppercase tracking-[0.15em] text-muted border border-border px-2 py-0.5">
+              {sectorLabel}
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+
+    {description && (
+      <div class="company-about" data-expanded="false">
+        <p data-about-short class="m-0 text-[14px] sm:text-[15px] leading-relaxed text-text/85">
+          {shortDescription}
+          {isTruncated && (
+            <>
+              {" "}
+              <button
+                type="button"
+                data-about-toggle
+                class="inline text-accent text-[13px] font-sans hover:underline cursor-pointer bg-transparent border-0 p-0"
+              >{t(lang, "aboutShowMore")}</button>
+            </>
+          )}
+        </p>
+        {isTruncated && (
+          <p data-about-full class="m-0 text-[14px] sm:text-[15px] leading-relaxed text-text/85">
+            {description}
+            {" "}
+            <button
+              type="button"
+              data-about-toggle
+              class="inline text-accent text-[13px] font-sans hover:underline cursor-pointer bg-transparent border-0 p-0"
+            >{t(lang, "aboutShowLess")}</button>
+          </p>
+        )}
+      </div>
+    )}
+
+    {(profile?.website || profile?.fullTimeEmployees) && (
+      <div class="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-[12px] text-muted">
+        {profile?.website && (
+          <a
+            href={profile.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 hover:text-accent transition-colors"
+          >
+            <Icon name="lucide:external-link" class="h-3 w-3" aria-hidden="true" />
+            <span>{t(lang, "aboutWebsite")}</span>
+          </a>
+        )}
+        {profile?.fullTimeEmployees && (
+          <span class="font-display italic tabular-nums">
+            {profile.fullTimeEmployees.toLocaleString()} {t(lang, "aboutEmployees")}
+          </span>
+        )}
+      </div>
+    )}
+  </section>
+)}
+
+<script>
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-about-toggle]");
+    if (!btn) return;
+    const wrap = btn.closest<HTMLElement>(".company-about");
+    if (!wrap) return;
+    wrap.dataset.expanded = wrap.dataset.expanded === "true" ? "false" : "true";
+  });
+</script>
+
+<style>
+  .company-about[data-expanded="false"] [data-about-full],
+  .company-about[data-expanded="true"] [data-about-short] {
+    display: none;
+  }
+</style>

@@ -471,6 +471,35 @@ export function todayIso(now: Date = new Date()): string {
   return format(now, "yyyy-MM-dd");
 }
 
+/**
+ * Compound annual dividend growth between the earliest and latest *complete*
+ * year in the event list. Skips the current year (incomplete) and any years
+ * with zero confirmed amount. Needs ≥3 complete years to return a result.
+ */
+export function getDividendCAGR(
+  events: DividendEvent[],
+  now: Date = new Date(),
+): { startYear: number; endYear: number; rate: number } | null {
+  const currentYear = now.getFullYear();
+  const byYear = new Map<number, number>();
+  for (const e of events) {
+    if (typeof e.amount !== "number") continue;
+    const y = Number(e.exDate.slice(0, 4));
+    if (y >= currentYear) continue;
+    byYear.set(y, (byYear.get(y) ?? 0) + e.amount);
+  }
+  const years = [...byYear.keys()].filter((y) => (byYear.get(y) ?? 0) > 0).sort();
+  if (years.length < 3) return null;
+  const startYear = years[Math.max(0, years.length - 4)]; // 3-year window if available
+  const endYear = years[years.length - 1];
+  const startVal = byYear.get(startYear)!;
+  const endVal = byYear.get(endYear)!;
+  const span = endYear - startYear;
+  if (span < 1 || startVal <= 0) return null;
+  const rate = Math.pow(endVal / startVal, 1 / span) - 1;
+  return { startYear, endYear, rate };
+}
+
 export function formatExDate(iso: string): string {
   return format(parseISO(iso), "dd MMM yyyy");
 }

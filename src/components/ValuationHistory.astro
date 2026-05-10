@@ -1,0 +1,321 @@
+---
+import type { ValuationHistory, ValuationRow } from "../lib/fundamentals";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  history: ValuationHistory;
+}
+
+const { lang, history } = Astro.props;
+
+const fmtPct = (n: number): string => `${(n * 100).toFixed(2)}%`;
+const fmtPe = (n: number): string => n.toFixed(1);
+
+const showAnnual = history.annual.length >= 2;
+const showQuarterly = history.quarterly.length >= 3;
+const initialGrouping = showAnnual ? "year" : "quarter";
+
+// --- Headline stats ---
+// "Latest yield" = most recent period with a real yield. Yield only needs
+// dividend events + close, so it's almost always defined for the latest annual.
+const latestYieldRow =
+  [...history.annual].reverse().find((r) => r.yld > 0) ??
+  [...history.quarterly].reverse().find((r) => r.yld > 0) ??
+  null;
+// "Latest P/E" = most recent period with a non-null P/E. Annual lags by months
+// (FY EPS isn't filed until ~Q1 of next year), so prefer the most recent
+// period with data — usually a quarterly TTM row.
+const latestPeAnnual = [...history.annual].reverse().find((r) => r.pe !== null && r.pe > 0);
+const latestPeQuarterly = [...history.quarterly].reverse().find((r) => r.pe !== null && r.pe > 0);
+const latestPeRow =
+  latestPeQuarterly && latestPeAnnual
+    ? (latestPeQuarterly.date > latestPeAnnual.date ? latestPeQuarterly : latestPeAnnual)
+    : (latestPeQuarterly ?? latestPeAnnual ?? null);
+const latest = latestYieldRow;
+
+// Use annual for the "range" so we get a 10-year window even if we toggle.
+const yields = history.annual.map((r) => r.yld).filter((v) => v > 0);
+const yieldMin = yields.length > 0 ? Math.min(...yields) : 0;
+const yieldMax = yields.length > 0 ? Math.max(...yields) : 0;
+
+const pes = history.annual.map((r) => r.pe).filter((v): v is number => v !== null && v > 0);
+const peMin = pes.length > 0 ? Math.min(...pes) : 0;
+const peMax = pes.length > 0 ? Math.max(...pes) : 0;
+
+// Where does the latest yield sit in the historical range? 0..1.
+const latestYieldPosition = (() => {
+  if (!latest || yields.length < 2) return null;
+  const range = yieldMax - yieldMin;
+  if (range <= 0) return null;
+  return (latest.yld - yieldMin) / range;
+})();
+
+const positionLabel = (pos: number): string => {
+  if (pos < 0.25) return t(lang, "valLow");
+  if (pos < 0.75) return t(lang, "valTypical");
+  return t(lang, "valHigh");
+};
+
+// --- Chart geometry ---
+const W = 800;
+const H = 220;
+const PAD_T = 24;
+const PAD_R = 18;
+const PAD_B = 36;
+const PAD_L = 56;
+const chartW = W - PAD_L - PAD_R;
+const chartH = H - PAD_T - PAD_B;
+
+type Point = { x: number; y: number; r: ValuationRow };
+
+function layoutPoints(rows: ValuationRow[]) {
+  const ys = rows.map((r) => r.yld);
+  const yMin = Math.min(...ys, 0);
+  const yMaxRaw = Math.max(...ys, 0.01);
+  const padPct = (yMaxRaw - yMin) * 0.15 || 0.005;
+  const yMax = yMaxRaw + padPct;
+  const slotW = chartW / Math.max(rows.length - 1, 1);
+  const xFor = (i: number): number =>
+    rows.length === 1 ? PAD_L + chartW / 2 : PAD_L + slotW * i;
+  const yFor = (v: number): number =>
+    PAD_T + (1 - (v - yMin) / Math.max(yMax - yMin, 1e-9)) * chartH;
+  const points: Point[] = rows.map((r, i) => ({ x: xFor(i), y: yFor(r.yld), r }));
+  return { points, yMin, yMax, yFor };
+}
+
+const annualLayout = showAnnual ? layoutPoints(history.annual) : null;
+const quarterlyLayout = showQuarterly ? layoutPoints(history.quarterly) : null;
+
+type Pane = { kind: "year" | "quarter"; layout: NonNullable<typeof annualLayout>; rows: ValuationRow[] };
+const panes: Pane[] = [];
+if (annualLayout) panes.push({ kind: "year", layout: annualLayout, rows: history.annual });
+if (quarterlyLayout) panes.push({ kind: "quarter", layout: quarterlyLayout, rows: history.quarterly });
+
+const linePath = (pts: Point[]): string =>
+  pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+---
+
+{(showAnnual || showQuarterly) && latest && (
+  <section class="mb-14">
+    <header class="flex items-baseline justify-between mb-4">
+      <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+        <span class="italic font-light text-muted">{t(lang, "valSection")}</span>
+        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "valSectionSub")}</span>
+      </h2>
+    </header>
+
+    <!-- Headline tiles -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-6">
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "valLatestYield")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-payment">
+          {latest.yld > 0 ? fmtPct(latest.yld) : "—"}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">
+          {latestYieldPosition !== null ? positionLabel(latestYieldPosition) : latest.period}
+        </div>
+      </div>
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "valYieldRange")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-text">
+          {yields.length > 0 ? `${fmtPct(yieldMin)} – ${fmtPct(yieldMax)}` : "—"}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">
+          {history.annual.length > 0 ? `${history.annual[0].year}–${history.annual[history.annual.length - 1].year}` : ""}
+        </div>
+      </div>
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "valLatestPe")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-text">
+          {latestPeRow && latestPeRow.pe !== null ? fmtPe(latestPeRow.pe) : "—"}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">
+          {latestPeRow ? latestPeRow.period : "—"}
+        </div>
+      </div>
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "valPeRange")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-text">
+          {pes.length > 0 ? `${fmtPe(peMin)} – ${fmtPe(peMax)}` : "—"}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "valPeRangeHint")}</div>
+      </div>
+    </div>
+
+    <div class="val-wrap relative" data-val-grouping={initialGrouping}>
+      {showAnnual && showQuarterly && (
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-[10px] uppercase tracking-[0.18em] text-muted">{t(lang, "tlGroupBy")}</span>
+          <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+            <button
+              type="button"
+              data-val-grouping-btn="quarter"
+              class="val-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer"
+            >{t(lang, "epsGroupQuarter")}</button>
+            <button
+              type="button"
+              data-val-grouping-btn="year"
+              class="val-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer border-l border-border"
+            >{t(lang, "tlGroupYear")}</button>
+          </div>
+        </div>
+      )}
+
+      <!-- Yield over time (line chart) -->
+      {panes.map(({ kind, layout, rows }) => (
+        <div data-val-pane={kind} class="val-pane">
+          <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Yield over time">
+            <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+            <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+
+            <text
+              x={PAD_L - 8} y={PAD_T + 4}
+              text-anchor="end" class="fill-muted"
+              style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+            >{fmtPct(layout.yMax)}</text>
+            <text
+              x={PAD_L - 8} y={H - PAD_B + 4}
+              text-anchor="end" class="fill-muted"
+              style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+            >{fmtPct(layout.yMin)}</text>
+
+            <!-- Average line -->
+            {(() => {
+              const avg = rows.reduce((s, r) => s + r.yld, 0) / rows.length;
+              const avgY = layout.yFor(avg);
+              return (
+                <g>
+                  <line x1={PAD_L} y1={avgY} x2={W - PAD_R} y2={avgY} class="stroke-muted" stroke-dasharray="4 4" stroke-width="1" />
+                </g>
+              );
+            })()}
+
+            <!-- Connecting line -->
+            <path d={linePath(layout.points)} fill="none" class="stroke-payment" stroke-width="2" stroke-linejoin="round" />
+
+            <!-- Hover targets + dots -->
+            {layout.points.map((p) => (
+              <g class="val-pt"
+                data-tip-period={p.r.period}
+                data-tip-yield={p.r.yld > 0 ? fmtPct(p.r.yld) : "—"}
+                data-tip-pe={p.r.pe !== null && p.r.pe > 0 ? fmtPe(p.r.pe) : "—"}
+                data-tip-close={p.r.close.toFixed(2)}
+              >
+                <circle cx={p.x} cy={p.y} r="4" class="fill-payment stroke-payment" stroke-width="1.5" />
+              </g>
+            ))}
+
+            <!-- X-axis labels (sparse for quarterly) -->
+            {layout.points.map((p, i) => {
+              const showLabel = kind === "year"
+                || i === 0
+                || i === layout.points.length - 1
+                || i % Math.ceil(layout.points.length / 6) === 0;
+              if (!showLabel) return null;
+              return (
+                <text x={p.x} y={H - PAD_B + 18} text-anchor="middle" class="fill-muted"
+                  style="font-size: 11px; font-family: var(--font-display); font-style: italic;">
+                  {kind === "year" ? p.r.year : `Q${p.r.quarter}'${String(p.r.year).slice(-2)}`}
+                </text>
+              );
+            })}
+
+            <!-- Avg label -->
+            {(() => {
+              const avg = rows.reduce((s, r) => s + r.yld, 0) / rows.length;
+              const avgY = layout.yFor(avg);
+              return (
+                <g>
+                  <rect x={W - PAD_R - 96} y={avgY - 14} width="96" height="12" class="fill-bg" opacity="0.85" />
+                  <text x={W - PAD_R} y={avgY - 4} text-anchor="end" class="fill-muted"
+                    style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
+                    {t(lang, "tlAvg")} · {fmtPct(avg)}
+                  </text>
+                </g>
+              );
+            })()}
+          </svg>
+        </div>
+      ))}
+
+      <!-- Tooltip -->
+      <div
+        data-val-tooltip
+        role="tooltip"
+        class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+               bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+               whitespace-nowrap border border-text rounded-sm"
+      >
+        <div data-tip-slot="period" class="font-display font-semibold text-[13px] tabular-nums"></div>
+        <div class="opacity-90 mt-1"><span class="opacity-70">{t(lang, "valTipYield")}:</span> <span data-tip-slot="yield"></span></div>
+        <div class="opacity-90"><span class="opacity-70">{t(lang, "valTipPe")}:</span> <span data-tip-slot="pe"></span></div>
+        <div class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-1"><span data-tip-slot="close"></span> {t(lang, "valTipClose")}</div>
+      </div>
+    </div>
+  </section>
+)}
+
+<script>
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-val-grouping-btn]");
+    if (!btn) return;
+    const wrap = btn.closest<HTMLElement>(".val-wrap");
+    if (!wrap) return;
+    wrap.dataset.valGrouping = btn.dataset.valGroupingBtn ?? "year";
+  });
+
+  const showValTip = (g: SVGGElement) => {
+    const wrap = g.closest<HTMLElement>(".val-wrap");
+    if (!wrap) return;
+    const tooltip = wrap.querySelector<HTMLElement>("[data-val-tooltip]");
+    if (!tooltip) return;
+    const set = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    set("period", g.dataset.tipPeriod ?? "");
+    set("yield", g.dataset.tipYield ?? "");
+    set("pe", g.dataset.tipPe ?? "");
+    set("close", `${g.dataset.tipClose ?? ""} ฿`);
+    tooltip.classList.remove("hidden");
+    const wrapRect = wrap.getBoundingClientRect();
+    const gRect = (g as unknown as SVGGraphicsElement).getBoundingClientRect();
+    tooltip.style.left = `${gRect.left - wrapRect.left + gRect.width / 2}px`;
+    tooltip.style.top = `${gRect.top - wrapRect.top - 8}px`;
+  };
+  const hideValTip = (g: SVGGElement) => {
+    g.closest<HTMLElement>(".val-wrap")?.querySelector<HTMLElement>("[data-val-tooltip]")?.classList.add("hidden");
+  };
+  document.addEventListener("mouseover", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".val-pt");
+    if (g) showValTip(g);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".val-pt");
+    if (g) hideValTip(g);
+  });
+</script>
+
+<style>
+  .val-pt { cursor: pointer; transition: filter 100ms ease; }
+  .val-pt:hover { filter: brightness(1.2); }
+  .val-pt:hover circle { r: 5.5; }
+
+  /* Toggle states */
+  .val-wrap[data-val-grouping="year"] [data-val-grouping-btn="year"],
+  .val-wrap[data-val-grouping="quarter"] [data-val-grouping-btn="quarter"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .val-wrap[data-val-grouping="year"] [data-val-grouping-btn="quarter"],
+  .val-wrap[data-val-grouping="quarter"] [data-val-grouping-btn="year"] {
+    background: transparent;
+    color: var(--muted);
+  }
+  /* Show only the active pane */
+  .val-wrap[data-val-grouping="year"] [data-val-pane="quarter"],
+  .val-wrap[data-val-grouping="quarter"] [data-val-pane="year"] {
+    display: none;
+  }
+</style>

@@ -9,7 +9,8 @@
     "build:og": "BUILD_OG=1 astro build",
     "preview": "astro preview",
     "fetch": "tsx poc/set-fetch.ts",
-    "fetch:full": "tsx poc/set-fetch.ts --full"
+    "fetch:full": "tsx poc/set-fetch.ts --full",
+    "fetch:fundamentals": "tsx poc/yahoo-fundamentals.ts"
   },
   "devDependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",
@@ -17,7 +18,8 @@
     "@types/node": "^22.10.0",
     "patchright": "^1.59.4",
     "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "yahoo-finance2": "^3.14.0"
   },
   "dependencies": {
     "@fontsource/fraunces": "^5.2.9",

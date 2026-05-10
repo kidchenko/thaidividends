@@ -1,0 +1,398 @@
+---
+import type { EpsHistory, EpsPoint } from "../lib/fundamentals";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  history: EpsHistory;
+}
+
+const { lang, history } = Astro.props;
+
+// Default grouping: year (broader view); fall back to quarter only if there's
+// no annual history at all.
+const initialGrouping = history.annual.length >= 2 ? "year" : "quarter";
+
+// --- Geometry ----
+const W = 800;
+const H = 240;
+const PAD_T = 22;
+const PAD_R = 18;
+const PAD_B = 44;
+const PAD_L = 56;
+const chartW = W - PAD_L - PAD_R;
+const chartH = H - PAD_T - PAD_B;
+
+const fmtEps = (n: number): string => n.toFixed(2);
+const fmtSignedPct = (n: number): string =>
+  `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`;
+
+type LayoutPoint = EpsPoint & { x: number; y: number; cx: number };
+
+function layout(points: EpsPoint[]): {
+  laid: LayoutPoint[];
+  yMin: number;
+  yMax: number;
+  yZero: number;
+  avg: number;
+  pathPositive: string;
+  pathNegative: string;
+} {
+  if (points.length === 0) {
+    return {
+      laid: [],
+      yMin: 0, yMax: 0, yZero: PAD_T + chartH,
+      avg: 0,
+      pathPositive: "", pathNegative: "",
+    };
+  }
+  const epsValues = points.map((p) => p.eps);
+  const rawMin = Math.min(...epsValues, 0);
+  const rawMax = Math.max(...epsValues, 0.01);
+  // pad range slightly so end-points don't kiss the chart edge
+  const span = rawMax - rawMin || Math.abs(rawMax) || 1;
+  const pad = span * 0.1;
+  const yMin = rawMin === 0 ? 0 : rawMin - pad;
+  const yMax = rawMax + pad;
+  const yScale = chartH / (yMax - yMin);
+  const yFor = (v: number): number => PAD_T + (yMax - v) * yScale;
+  const yZero = yFor(0);
+
+  const slotW = chartW / points.length;
+  const barW = Math.min(60, slotW * 0.55);
+  const laid: LayoutPoint[] = points.map((p, i) => {
+    const cx = PAD_L + slotW * i + slotW / 2;
+    const y = yFor(p.eps);
+    return { ...p, x: cx - barW / 2, y, cx };
+  });
+
+  const avg = epsValues.reduce((a, b) => a + b, 0) / epsValues.length;
+  return {
+    laid,
+    yMin, yMax, yZero,
+    avg,
+    pathPositive: "", pathNegative: "",
+  };
+}
+
+const quarterly = layout(history.quarterly);
+const annual = layout(history.annual);
+
+const slotWQ = chartW / Math.max(history.quarterly.length, 1);
+const slotWY = chartW / Math.max(history.annual.length, 1);
+const barWQ = Math.min(60, slotWQ * 0.55);
+const barWY = Math.min(72, slotWY * 0.55);
+
+// Headline stats
+const annualEps = history.annual;
+const latestAnnual = annualEps[annualEps.length - 1] ?? null;
+const firstAnnual = annualEps[0] ?? null;
+const cagr =
+  annualEps.length >= 2 && firstAnnual && latestAnnual && firstAnnual.eps > 0
+    ? Math.pow(latestAnnual.eps / firstAnnual.eps, 1 / (annualEps.length - 1)) - 1
+    : null;
+
+const minEps = annualEps.length > 0 ? Math.min(...annualEps.map((p) => p.eps)) : 0;
+const maxEps = annualEps.length > 0 ? Math.max(...annualEps.map((p) => p.eps)) : 0;
+
+// Y-axis label = max value
+const showQuarterly = history.quarterly.length >= 2;
+const showAnnual = history.annual.length >= 2;
+---
+
+{(showQuarterly || showAnnual) && (
+  <section class="mb-14">
+    <header class="flex items-baseline justify-between mb-4">
+      <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+        <span class="italic font-light text-muted">{t(lang, "epsSection")}</span>
+        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "epsSectionSub")}</span>
+      </h2>
+    </header>
+
+    <!-- Headline stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-6">
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsLatest")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-text">
+          {latestAnnual ? `${fmtEps(latestAnnual.eps)} ฿` : "—"}
+        </div>
+        {latestAnnual && (
+          <div class="font-display italic text-[12px] text-muted mt-1">{latestAnnual.year}</div>
+        )}
+      </div>
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsRange")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-text">
+          {annualEps.length > 0 ? `${fmtEps(minEps)} – ${fmtEps(maxEps)}` : "—"}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">฿ / share</div>
+      </div>
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsCagr")}</div>
+        <div class={`font-display tabular-nums text-xl font-medium ${
+          cagr === null ? "text-muted" : cagr > 0 ? "text-payment" : cagr < 0 ? "text-accent" : "text-text"
+        }`}>
+          {cagr !== null ? fmtSignedPct(cagr) : "—"}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">
+          {firstAnnual && latestAnnual
+            ? `${firstAnnual.year}–${latestAnnual.year}`
+            : t(lang, "qualityNoData")}
+        </div>
+      </div>
+      <div class="bg-bg p-3">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsCoverage")}</div>
+        <div class="font-display tabular-nums text-xl font-medium text-text">
+          {history.annual.length} {t(lang, "epsAnnualUnit")}
+        </div>
+        <div class="font-display italic text-[12px] text-muted mt-1">
+          {history.quarterly.length} {t(lang, "epsQuarterlyUnit")}
+        </div>
+      </div>
+    </div>
+
+    <div class="eps-wrap relative" data-eps-grouping={initialGrouping}>
+      <!-- Toggle -->
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-[10px] uppercase tracking-[0.18em] text-muted">{t(lang, "tlGroupBy")}</span>
+        <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+          <button
+            type="button"
+            data-eps-grouping-btn="quarter"
+            disabled={!showQuarterly}
+            class="eps-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+          >{t(lang, "epsGroupQuarter")}</button>
+          <button
+            type="button"
+            data-eps-grouping-btn="year"
+            disabled={!showAnnual}
+            class="eps-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer border-l border-border disabled:opacity-40 disabled:cursor-not-allowed"
+          >{t(lang, "epsGroupYear")}</button>
+        </div>
+      </div>
+
+      <!-- Quarterly chart -->
+      {showQuarterly && (
+        <div data-eps-pane="quarter" class="eps-pane">
+          <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Quarterly EPS history">
+            <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+            <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+            <text
+              x={PAD_L - 8} y={PAD_T + 4}
+              text-anchor="end" class="fill-muted"
+              style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+            >{fmtEps(quarterly.yMax)} ฿</text>
+
+            <!-- Zero line if range crosses zero -->
+            {quarterly.yMin < 0 && (
+              <line x1={PAD_L} y1={quarterly.yZero} x2={W - PAD_R} y2={quarterly.yZero} class="stroke-border" />
+            )}
+
+            <!-- Average line -->
+            {quarterly.laid.length > 1 && (() => {
+              const avgY = PAD_T + (quarterly.yMax - quarterly.avg) * (chartH / (quarterly.yMax - quarterly.yMin));
+              return (
+                <line x1={PAD_L} y1={avgY} x2={W - PAD_R} y2={avgY} class="stroke-muted" stroke-dasharray="4 4" stroke-width="1" />
+              );
+            })()}
+
+            {quarterly.laid.map((p) => {
+              const baseY = quarterly.yZero;
+              const top = Math.min(p.y, baseY);
+              const h = Math.abs(p.y - baseY);
+              return (
+                <g class="eps-bar"
+                  data-tip-label={p.label}
+                  data-tip-eps={`${fmtEps(p.eps)} ฿`}
+                >
+                  <rect
+                    x={p.x} y={top}
+                    width={barWQ} height={Math.max(h, 1)}
+                    class={p.eps >= 0 ? "fill-accent stroke-accent" : "fill-bg stroke-accent"}
+                    stroke-width="1.5"
+                  />
+                </g>
+              );
+            })}
+
+            <!-- X-axis labels: every other quarter to avoid crowding -->
+            {quarterly.laid.map((p, i) => (
+              i % 2 === 0 || i === quarterly.laid.length - 1 ? (
+                <text x={p.cx} y={H - PAD_B + 18} text-anchor="middle" class="fill-muted"
+                  style="font-size: 10px; font-family: var(--font-display); font-style: italic;">
+                  {p.label}
+                </text>
+              ) : null
+            ))}
+
+            <!-- Avg label -->
+            {quarterly.laid.length > 1 && (() => {
+              const avgY = PAD_T + (quarterly.yMax - quarterly.avg) * (chartH / (quarterly.yMax - quarterly.yMin));
+              return (
+                <g>
+                  <rect x={W - PAD_R - 86} y={avgY - 14} width="86" height="12" class="fill-bg" opacity="0.85" />
+                  <text x={W - PAD_R} y={avgY - 4} text-anchor="end" class="fill-muted"
+                    style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
+                    {t(lang, "tlAvg")} · {fmtEps(quarterly.avg)} ฿
+                  </text>
+                </g>
+              );
+            })()}
+          </svg>
+        </div>
+      )}
+
+      <!-- Annual chart -->
+      {showAnnual && (
+        <div data-eps-pane="year" class="eps-pane">
+          <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Annual EPS history">
+            <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+            <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+            <text
+              x={PAD_L - 8} y={PAD_T + 4}
+              text-anchor="end" class="fill-muted"
+              style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+            >{fmtEps(annual.yMax)} ฿</text>
+
+            {annual.yMin < 0 && (
+              <line x1={PAD_L} y1={annual.yZero} x2={W - PAD_R} y2={annual.yZero} class="stroke-border" />
+            )}
+
+            {annual.laid.length > 1 && (() => {
+              const avgY = PAD_T + (annual.yMax - annual.avg) * (chartH / (annual.yMax - annual.yMin));
+              return (
+                <line x1={PAD_L} y1={avgY} x2={W - PAD_R} y2={avgY} class="stroke-muted" stroke-dasharray="4 4" stroke-width="1" />
+              );
+            })()}
+
+            {annual.laid.map((p, i) => {
+              const baseY = annual.yZero;
+              const top = Math.min(p.y, baseY);
+              const h = Math.abs(p.y - baseY);
+              const prev = i > 0 ? annual.laid[i - 1] : null;
+              const yoy = prev && prev.eps > 0 ? (p.eps - prev.eps) / prev.eps : null;
+              return (
+                <g class="eps-bar"
+                  data-tip-label={p.label}
+                  data-tip-eps={`${fmtEps(p.eps)} ฿`}
+                >
+                  <rect
+                    x={p.x} y={top}
+                    width={barWY} height={Math.max(h, 1)}
+                    class={p.eps >= 0 ? "fill-accent stroke-accent" : "fill-bg stroke-accent"}
+                    stroke-width="1.5"
+                  />
+                  <text x={p.cx} y={top - 6} text-anchor="middle"
+                    class={p.eps >= 0 ? "fill-text" : "fill-today"}
+                    style="font-size: 11px; font-family: var(--font-display); font-weight: 500;">
+                    {fmtEps(p.eps)}
+                  </text>
+                  {yoy !== null && (
+                    <text x={p.cx} y={top - 22} text-anchor="middle"
+                      class={yoy >= 0 ? "fill-payment" : "fill-accent"}
+                      style="font-size: 10px; font-family: var(--font-display); font-style: italic;">
+                      {fmtSignedPct(yoy)}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+
+            {annual.laid.map((p) => (
+              <text x={p.cx} y={H - PAD_B + 18} text-anchor="middle" class="fill-muted"
+                style="font-size: 12px; font-family: var(--font-display); font-style: italic;">
+                {p.label}
+              </text>
+            ))}
+
+            {annual.laid.length > 1 && (() => {
+              const avgY = PAD_T + (annual.yMax - annual.avg) * (chartH / (annual.yMax - annual.yMin));
+              return (
+                <g>
+                  <rect x={W - PAD_R - 86} y={avgY - 14} width="86" height="12" class="fill-bg" opacity="0.85" />
+                  <text x={W - PAD_R} y={avgY - 4} text-anchor="end" class="fill-muted"
+                    style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
+                    {t(lang, "tlAvg")} · {fmtEps(annual.avg)} ฿
+                  </text>
+                </g>
+              );
+            })()}
+          </svg>
+        </div>
+      )}
+
+      <!-- Tooltip -->
+      <div
+        data-eps-tooltip
+        role="tooltip"
+        class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+               bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+               whitespace-nowrap border border-text rounded-sm"
+      >
+        <div data-tip-slot="label" class="font-display font-semibold text-[13px] tabular-nums"></div>
+        <div class="opacity-90 mt-0.5"><span data-tip-slot="eps"></span></div>
+      </div>
+    </div>
+  </section>
+)}
+
+<script>
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-eps-grouping-btn]");
+    if (!btn) return;
+    if ((btn as HTMLButtonElement).disabled) return;
+    const wrap = btn.closest<HTMLElement>(".eps-wrap");
+    if (!wrap) return;
+    wrap.dataset.epsGrouping = btn.dataset.epsGroupingBtn ?? "year";
+  });
+
+  const showEpsTip = (g: SVGGElement) => {
+    const wrap = g.closest<HTMLElement>(".eps-wrap");
+    if (!wrap) return;
+    const tooltip = wrap.querySelector<HTMLElement>("[data-eps-tooltip]");
+    if (!tooltip) return;
+    const set = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    set("label", g.dataset.tipLabel ?? "");
+    set("eps", g.dataset.tipEps ?? "");
+    tooltip.classList.remove("hidden");
+    const wrapRect = wrap.getBoundingClientRect();
+    const gRect = (g as unknown as SVGGraphicsElement).getBoundingClientRect();
+    tooltip.style.left = `${gRect.left - wrapRect.left + gRect.width / 2}px`;
+    tooltip.style.top = `${gRect.top - wrapRect.top - 8}px`;
+  };
+  const hideEpsTip = (g: SVGGElement) => {
+    g.closest<HTMLElement>(".eps-wrap")?.querySelector<HTMLElement>("[data-eps-tooltip]")?.classList.add("hidden");
+  };
+  document.addEventListener("mouseover", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".eps-bar");
+    if (g) showEpsTip(g);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".eps-bar");
+    if (g) hideEpsTip(g);
+  });
+</script>
+
+<style>
+  /* Toggle states */
+  .eps-wrap[data-eps-grouping="quarter"] [data-eps-grouping-btn="quarter"],
+  .eps-wrap[data-eps-grouping="year"] [data-eps-grouping-btn="year"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .eps-wrap[data-eps-grouping="quarter"] [data-eps-grouping-btn="year"],
+  .eps-wrap[data-eps-grouping="year"] [data-eps-grouping-btn="quarter"] {
+    background: transparent;
+    color: var(--muted);
+  }
+  /* Show only the active pane */
+  .eps-wrap[data-eps-grouping="quarter"] [data-eps-pane="year"],
+  .eps-wrap[data-eps-grouping="year"] [data-eps-pane="quarter"] {
+    display: none;
+  }
+  .eps-bar { cursor: pointer; transition: filter 100ms ease; }
+  .eps-bar:hover { filter: brightness(1.06); }
+</style>

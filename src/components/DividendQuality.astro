@@ -1,0 +1,174 @@
+---
+import type { DividendQuality } from "../lib/fundamentals";
+import { type Lang, t, fmtDate } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  quality: DividendQuality;
+  divGrowth: { startYear: number; endYear: number; rate: number } | null;
+}
+
+const { lang, quality, divGrowth } = Astro.props;
+
+const fmtPct = (n: number): string => `${(n * 100).toFixed(1)}%`;
+const fmtCoverage = (n: number): string => `${n.toFixed(2)}×`;
+const fmtSignedPct = (n: number): string =>
+  `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`;
+const fmtDe = (n: number): string => `${n.toFixed(0)}%`;
+
+// Tone classification.
+// Payout: <60% healthy, 60–85% normal, 85–100% tight, >100% over-payout
+const payoutTone =
+  quality.payoutRatio === null
+    ? "muted"
+    : quality.payoutRatio < 0.6
+    ? "ok"
+    : quality.payoutRatio < 0.85
+    ? "neutral"
+    : quality.payoutRatio < 1.0
+    ? "warn"
+    : "danger";
+
+// Coverage: ≥1.5× healthy, 1–1.5× tight, <1× under-covered
+const coverageTone =
+  quality.fcfCoverage === null
+    ? "muted"
+    : quality.fcfCoverage >= 1.5
+    ? "ok"
+    : quality.fcfCoverage >= 1.0
+    ? "neutral"
+    : "warn";
+
+const growthTone =
+  divGrowth === null
+    ? "muted"
+    : divGrowth.rate > 0
+    ? "ok"
+    : divGrowth.rate < 0
+    ? "warn"
+    : "neutral";
+
+// Debt-to-equity (Yahoo reports as a percentage).
+// <50% low, 50–100% moderate, 100–200% elevated, >200% high
+const deTone =
+  quality.debtToEquity === null
+    ? "muted"
+    : quality.debtToEquity < 50
+    ? "ok"
+    : quality.debtToEquity < 100
+    ? "neutral"
+    : quality.debtToEquity < 200
+    ? "warn"
+    : "danger";
+
+const toneClass = (tone: string): string => {
+  switch (tone) {
+    case "ok": return "text-payment";
+    case "warn": return "text-accent";
+    case "danger": return "text-accent";
+    case "muted": return "text-muted";
+    default: return "text-text";
+  }
+};
+
+const fcfYearLabel = quality.fcfCoverageYear
+  ? fmtDate(quality.fcfCoverageYear, "yyyy", lang)
+  : null;
+
+---
+
+<div class="mb-12">
+  <section class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border">
+    <!-- Payout ratio -->
+    <div class="bg-bg p-4">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
+        {t(lang, "qualityPayoutLabel")}
+      </div>
+      {quality.payoutRatio !== null ? (
+        <>
+          <div class={`font-display tabular-nums text-2xl font-medium ${toneClass(payoutTone)}`}>
+            {fmtPct(quality.payoutRatio)}
+          </div>
+          <div class="font-display italic text-[12px] text-muted mt-1">
+            {t(lang, "qualityPayoutHint")}
+          </div>
+        </>
+      ) : (
+        <>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "qualityNoData")}</div>
+        </>
+      )}
+    </div>
+
+    <!-- FCF coverage -->
+    <div class="bg-bg p-4">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
+        {t(lang, "qualityCoverageLabel")}
+      </div>
+      {quality.fcfCoverage !== null ? (
+        <>
+          <div class={`font-display tabular-nums text-2xl font-medium ${toneClass(coverageTone)}`}>
+            {fmtCoverage(quality.fcfCoverage)}
+          </div>
+          <div class="font-display italic text-[12px] text-muted mt-1">
+            {t(lang, "qualityCoverageHint")}
+            {fcfYearLabel && <span class="text-faint"> · {fcfYearLabel}</span>}
+          </div>
+        </>
+      ) : (
+        <>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "qualityNoData")}</div>
+        </>
+      )}
+    </div>
+
+    <!-- Dividend growth -->
+    <div class="bg-bg p-4">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
+        {t(lang, "qualityGrowthLabel")}
+      </div>
+      {divGrowth !== null ? (
+        <>
+          <div class={`font-display tabular-nums text-2xl font-medium ${toneClass(growthTone)}`}>
+            {fmtSignedPct(divGrowth.rate)}
+          </div>
+          <div class="font-display italic text-[12px] text-muted mt-1">
+            {divGrowth.startYear}–{divGrowth.endYear} · {t(lang, "qualityGrowthHint")}
+          </div>
+        </>
+      ) : (
+        <>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display italic text-[12px] text-muted mt-1">
+            {t(lang, "qualityGrowthInsufficient")}
+          </div>
+        </>
+      )}
+    </div>
+
+    <!-- Debt to equity -->
+    <div class="bg-bg p-4">
+      <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
+        {t(lang, "qualityDebtLabel")}
+      </div>
+      {quality.debtToEquity !== null ? (
+        <>
+          <div class={`font-display tabular-nums text-2xl font-medium ${toneClass(deTone)}`}>
+            {fmtDe(quality.debtToEquity)}
+          </div>
+          <div class="font-display italic text-[12px] text-muted mt-1">
+            {t(lang, "qualityDebtHint")}
+          </div>
+        </>
+      ) : (
+        <>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "qualityNoData")}</div>
+        </>
+      )}
+    </div>
+  </section>
+
+</div>

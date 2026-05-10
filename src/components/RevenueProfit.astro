@@ -1,0 +1,236 @@
+---
+import type { RevenueProfitData, RevenueProfitRow } from "../lib/fundamentals";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  data: RevenueProfitData;
+}
+
+const { lang, data } = Astro.props;
+
+const fmtCompact = (n: number): string => {
+  const abs = Math.abs(n);
+  const sign = n < 0 ? "-" : "";
+  if (abs >= 1e12) return `${sign}${(abs / 1e12).toFixed(2)}T`;
+  if (abs >= 1e9) return `${sign}${(abs / 1e9).toFixed(2)}B`;
+  if (abs >= 1e6) return `${sign}${(abs / 1e6).toFixed(1)}M`;
+  if (abs >= 1e3) return `${sign}${(abs / 1e3).toFixed(1)}K`;
+  return n.toFixed(0);
+};
+const fmtSignedPct = (n: number): string =>
+  `${n >= 0 ? "" : "-"}${(Math.abs(n) * 100).toFixed(0)}%`;
+
+const W = 800;
+const H = 240;
+const PAD_T = 18;
+const PAD_R = 18;
+const PAD_B = 44;
+const PAD_L = 56;
+const chartW = W - PAD_L - PAD_R;
+const chartH = H - PAD_T - PAD_B;
+
+const showAnnual = data.annual.length >= 2;
+const showQuarterly = data.quarterly.length >= 3;
+const initialGrouping = showAnnual ? "year" : "quarter";
+
+type Pane = { kind: "year" | "quarter"; rows: RevenueProfitRow[] };
+const panes: Pane[] = [];
+if (showAnnual) panes.push({ kind: "year", rows: data.annual });
+if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
+---
+
+{(showAnnual || showQuarterly) && (
+  <section class="mb-14">
+    <header class="flex items-baseline justify-between mb-4">
+      <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+        <span class="italic font-light text-muted">{t(lang, "sectionRevenue")}</span>
+        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionRevenueSub")}</span>
+      </h2>
+    </header>
+
+    <div class="rp-wrap relative" data-rp-grouping={initialGrouping}>
+      {showAnnual && showQuarterly && (
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-[10px] uppercase tracking-[0.18em] text-muted">{t(lang, "tlGroupBy")}</span>
+          <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+            <button
+              type="button"
+              data-rp-grouping-btn="quarter"
+              class="rp-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer"
+            >{t(lang, "epsGroupQuarter")}</button>
+            <button
+              type="button"
+              data-rp-grouping-btn="year"
+              class="rp-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer border-l border-border"
+            >{t(lang, "tlGroupYear")}</button>
+          </div>
+        </div>
+      )}
+
+      {panes.map(({ kind, rows }) => {
+        const yMax = Math.max(...rows.map((r) => r.revenue), 1);
+        const slotW = chartW / Math.max(rows.length, 1);
+        const barW = Math.min(kind === "year" ? 72 : 50, slotW * 0.55);
+        const yFor = (v: number): number => PAD_T + (1 - v / yMax) * chartH;
+        const xCenter = (i: number): number => PAD_L + slotW * i + slotW / 2;
+        return (
+          <div data-rp-pane={kind} class="rp-pane">
+            <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Revenue and net income">
+              <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
+              <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
+              <text
+                x={PAD_L - 8} y={PAD_T + 4}
+                text-anchor="end" class="fill-muted"
+                style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+              >{fmtCompact(yMax)} ฿</text>
+
+              {rows.map((r, i) => {
+                const x = xCenter(i);
+                const yRevenue = yFor(r.revenue);
+                const yProfit = yFor(Math.max(r.netIncome, 0));
+                const revenueH = (H - PAD_B) - yRevenue;
+                const profitH = (H - PAD_B) - yProfit;
+                const isLoss = r.netIncome < 0;
+                return (
+                  <g
+                    class="rp-bar"
+                    data-tip-period={r.period}
+                    data-tip-revenue={`${fmtCompact(r.revenue)} ฿`}
+                    data-tip-income={`${fmtCompact(r.netIncome)} ฿`}
+                    data-tip-margin={fmtSignedPct(r.netMargin)}
+                  >
+                    <rect
+                      x={x - barW / 2}
+                      y={yRevenue}
+                      width={barW}
+                      height={Math.max(revenueH, 1)}
+                      class="fill-accent-soft stroke-accent"
+                      stroke-width="1.5"
+                    />
+                    {!isLoss && (
+                      <rect
+                        x={x - barW / 2}
+                        y={yProfit}
+                        width={barW}
+                        height={Math.max(profitH, 1)}
+                        class="fill-accent stroke-accent"
+                        stroke-width="1.5"
+                      />
+                    )}
+                    <text
+                      x={x} y={yRevenue - 6}
+                      text-anchor="middle"
+                      class={isLoss ? "fill-today" : "fill-text"}
+                      style="font-size: 11px; font-family: var(--font-display); font-weight: 500;"
+                    >{fmtSignedPct(r.netMargin)}</text>
+                    <text
+                      x={x} y={H - PAD_B + 18}
+                      text-anchor="middle"
+                      class="fill-muted"
+                      style="font-size: 12px; font-family: var(--font-display); font-style: italic;"
+                    >{kind === "year" ? r.year : `Q${r.quarter} ${String(r.year).slice(-2)}`}</text>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
+        );
+      })}
+
+      <div
+        data-rp-tooltip
+        role="tooltip"
+        class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+               bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+               whitespace-nowrap border border-text rounded-sm"
+      >
+        <div data-tip-slot="period" class="font-display font-semibold text-[13px] tabular-nums"></div>
+        <div class="opacity-90 mt-1"><span class="opacity-70">{t(lang, "rpTipRevenue")}:</span> <span data-tip-slot="revenue"></span></div>
+        <div class="opacity-90"><span class="opacity-70">{t(lang, "rpTipIncome")}:</span> <span data-tip-slot="income"></span></div>
+        <div class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-1"><span data-tip-slot="margin"></span> {t(lang, "rpTipMargin")}</div>
+      </div>
+
+      <div class="flex gap-4 text-[10px] tracking-[0.15em] uppercase text-muted mt-3">
+        <span class="inline-flex items-center gap-1.5">
+          <span class="inline-block w-3 h-2 bg-accent-soft border border-accent"></span> {t(lang, "rpLegendRevenue")}
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <span class="inline-block w-3 h-2 bg-accent"></span> {t(lang, "rpLegendIncome")}
+        </span>
+      </div>
+    </div>
+  </section>
+)}
+
+<script>
+  document.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-rp-grouping-btn]");
+    if (!btn) return;
+    const wrap = btn.closest<HTMLElement>(".rp-wrap");
+    if (!wrap) return;
+    wrap.dataset.rpGrouping = btn.dataset.rpGroupingBtn ?? "year";
+  });
+
+  const showRpTip = (g: SVGGElement) => {
+    const wrap = g.closest<HTMLElement>(".rp-wrap");
+    if (!wrap) return;
+    const tooltip = wrap.querySelector<HTMLElement>("[data-rp-tooltip]");
+    if (!tooltip) return;
+    const set = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    set("period", g.dataset.tipPeriod ?? "");
+    set("revenue", g.dataset.tipRevenue ?? "");
+    set("income", g.dataset.tipIncome ?? "");
+    set("margin", g.dataset.tipMargin ?? "");
+    tooltip.classList.remove("hidden");
+    const wrapRect = wrap.getBoundingClientRect();
+    const gRect = (g as unknown as SVGGraphicsElement).getBoundingClientRect();
+    tooltip.style.left = `${gRect.left - wrapRect.left + gRect.width / 2}px`;
+    tooltip.style.top = `${gRect.top - wrapRect.top - 8}px`;
+  };
+  const hideRpTip = (g: SVGGElement) => {
+    g.closest<HTMLElement>(".rp-wrap")?.querySelector<HTMLElement>("[data-rp-tooltip]")?.classList.add("hidden");
+  };
+  document.addEventListener("mouseover", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".rp-bar");
+    if (g) showRpTip(g);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".rp-bar");
+    if (g) hideRpTip(g);
+  });
+  document.addEventListener("click", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".rp-bar");
+    if (g) {
+      e.preventDefault();
+      showRpTip(g);
+      return;
+    }
+    document.querySelectorAll<HTMLElement>("[data-rp-tooltip]").forEach((t) => t.classList.add("hidden"));
+  });
+</script>
+
+<style>
+  .rp-bar { cursor: pointer; transition: filter 100ms ease; }
+  .rp-bar:hover { filter: brightness(1.06); }
+
+  /* Toggle states */
+  .rp-wrap[data-rp-grouping="year"] [data-rp-grouping-btn="year"],
+  .rp-wrap[data-rp-grouping="quarter"] [data-rp-grouping-btn="quarter"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .rp-wrap[data-rp-grouping="year"] [data-rp-grouping-btn="quarter"],
+  .rp-wrap[data-rp-grouping="quarter"] [data-rp-grouping-btn="year"] {
+    background: transparent;
+    color: var(--muted);
+  }
+  /* Show only the active pane */
+  .rp-wrap[data-rp-grouping="year"] [data-rp-pane="quarter"],
+  .rp-wrap[data-rp-grouping="quarter"] [data-rp-pane="year"] {
+    display: none;
+  }
+</style>

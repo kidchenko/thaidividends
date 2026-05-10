@@ -76,9 +76,18 @@ const yearsInRange = (() => {
 const todayTs = Date.parse(today + "T00:00:00Z");
 const showTodayLine = todayTs >= tMinPadded && todayTs <= tMaxPadded;
 
+// Average dividend across all confirmed amounts (paid + announced upcoming).
+// Useful as a "what's typical" baseline against which any single bar reads.
+const eventAvg = data.length > 0
+  ? data.reduce((s, d) => s + d.amount, 0) / data.length
+  : 0;
+
 // ---- Per-year chart ----
 const yearMax = Math.max(...yearData.map((d) => d.total), 0.01);
 const yearBarW = Math.min(80, chartW / Math.max(yearData.length, 1) / 1.6);
+const yearAvg = yearData.length > 0
+  ? yearData.reduce((s, y) => s + y.total, 0) / yearData.length
+  : 0;
 
 const formatAmount = (n: number): string =>
   n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
@@ -131,6 +140,14 @@ const tlInProgress = t(lang, "tlInProgress");
           </g>
         )}
 
+        {eventAvg > 0 && (
+          <line
+            x1={PAD_L} y1={yForA(eventAvg, eventMax)}
+            x2={W - PAD_R} y2={yForA(eventAvg, eventMax)}
+            class="stroke-muted" stroke-dasharray="4 4" stroke-width="1"
+          />
+        )}
+
         {data.map((d) => {
           const x = xForT(d.timestamp);
           const y = yForA(d.amount, eventMax);
@@ -160,6 +177,21 @@ const tlInProgress = t(lang, "tlInProgress");
             <text x={x} y={H - PAD_B + 20} text-anchor="middle" class="fill-muted" style="font-size: 12px; font-family: var(--font-display); font-style: italic;">{year}</text>
           );
         })}
+
+        {eventAvg > 0 && (
+          <g class="tl-avg-label">
+            <rect
+              x={W - PAD_R - 86} y={yForA(eventAvg, eventMax) - 14}
+              width="86" height="12"
+              class="fill-bg" opacity="0.85"
+            />
+            <text
+              x={W - PAD_R} y={yForA(eventAvg, eventMax) - 4}
+              text-anchor="end" class="fill-muted"
+              style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;"
+            >{t(lang, "tlAvg")} · {formatAmount(eventAvg)} ฿</text>
+          </g>
+        )}
       </svg>
     </div>
 
@@ -174,6 +206,14 @@ const tlInProgress = t(lang, "tlInProgress");
           text-anchor="end" class="fill-muted"
           style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
         >{formatAmount(yearMax)} ฿</text>
+
+        {yearAvg > 0 && (
+          <line
+            x1={PAD_L} y1={yForA(yearAvg, yearMax)}
+            x2={W - PAD_R} y2={yForA(yearAvg, yearMax)}
+            class="stroke-muted" stroke-dasharray="4 4" stroke-width="1"
+          />
+        )}
 
         {yearData.map((y, i) => {
           const slotW = chartW / yearData.length;
@@ -199,6 +239,21 @@ const tlInProgress = t(lang, "tlInProgress");
             </g>
           );
         })}
+
+        {yearAvg > 0 && (
+          <g class="tl-avg-label">
+            <rect
+              x={W - PAD_R - 86} y={yForA(yearAvg, yearMax) - 14}
+              width="86" height="12"
+              class="fill-bg" opacity="0.85"
+            />
+            <text
+              x={W - PAD_R} y={yForA(yearAvg, yearMax) - 4}
+              text-anchor="end" class="fill-muted"
+              style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;"
+            >{t(lang, "tlAvg")} · {formatAmount(yearAvg)} ฿</text>
+          </g>
+        )}
       </svg>
     </div>
 
