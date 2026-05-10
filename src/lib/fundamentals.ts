@@ -1,4 +1,5 @@
 import fundamentalsData from "../../data/fundamentals.json";
+import { getSetAnnualByYear } from "./set-stats";
 
 export type AnnualIncome = {
   fiscalYearEnd: string;
@@ -359,8 +360,10 @@ export type ValuationRow = {
   close: number;
   eps: number | null;      // annual EPS or TTM EPS
   dps: number;             // annual DPS or TTM DPS
-  pe: number | null;       // close / eps when eps > 0
-  yld: number;             // dps / close
+  pe: number | null;       // close / eps when eps > 0 (SET official when available for annual)
+  yld: number;             // dps / close (SET official when available for annual)
+  payoutRatio: number | null; // SET-reported annual payout ratio when available
+  source: "yahoo" | "set";    // origin of pe/yld for this row
 };
 
 export type ValuationHistory = {
@@ -418,6 +421,10 @@ export function getValuationHistory(
     const y = Number(e.exDate.slice(0, 4));
     dpsByYear.set(y, (dpsByYear.get(y) ?? 0) + adj);
   }
+  // SET trading-stat overlay — official year-end PE / yield / payout ratio for
+  // the last few fiscal years. Where present we trust SET over our computed
+  // values (it uses the published EPS that may differ from Yahoo's reporting).
+  const setByYear = getSetAnnualByYear(symbol);
   const yearEnds = f.priceQuarterEnds
     .filter((p) => p.date.endsWith("-12-31"))
     .sort((a, b) => a.date.localeCompare(b.date));
@@ -425,15 +432,23 @@ export function getValuationHistory(
     const year = Number(p.date.slice(0, 4));
     const eps = epsByYear.get(year) ?? null;
     const dps = dpsByYear.get(year) ?? 0;
+    const computedPe = eps !== null && eps > 0 ? p.close / eps : null;
+    const computedYld = p.close > 0 ? dps / p.close : 0;
+    const setRow = setByYear.get(year);
+    const useSet = setRow && (setRow.pe !== null || setRow.dividendYield !== null);
     return {
       period: String(year),
       date: p.date,
       year,
-      close: p.close,
+      close: setRow?.close ?? p.close,
       eps,
       dps,
-      pe: eps !== null && eps > 0 ? p.close / eps : null,
-      yld: p.close > 0 ? dps / p.close : 0,
+      pe: useSet ? (setRow!.pe ?? computedPe) : computedPe,
+      yld: useSet && setRow!.dividendYield !== null
+        ? setRow!.dividendYield / 100
+        : computedYld,
+      payoutRatio: setRow?.dividendPayoutRatio ?? null,
+      source: useSet ? "set" : "yahoo",
     };
   });
 
@@ -488,6 +503,8 @@ export function getValuationHistory(
       dps,
       pe: eps !== null && eps > 0 ? p.close / eps : null,
       yld: p.close > 0 ? dps / p.close : 0,
+      payoutRatio: null,
+      source: "yahoo",
     };
   });
 
