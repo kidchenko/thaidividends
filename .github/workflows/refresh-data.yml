@@ -37,6 +37,10 @@ jobs:
       - name: Fetch SET data
         run: npm run fetch
 
+      - name: Fetch SET trading-stat (year-end PE / yield / payout)
+        run: npm run fetch:set-stats
+        continue-on-error: true
+
       - name: Commit data changes (if any)
         id: commit
         run: |
