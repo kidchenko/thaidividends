@@ -1,0 +1,538 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MainNav from "../../components/MainNav.astro";
+import StockHeader from "../../components/StockHeader.astro";
+import { LANGS, isLang, t, type Lang } from "../../lib/i18n";
+
+export async function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const lang = (isLang(Astro.params.lang) ? Astro.params.lang : "en") as Lang;
+const todayYear = new Date().getFullYear();
+
+const manifestUrl = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/compare-data.json`;
+
+// Server-rendered row labels. The client only handles state + value formatting -
+// the static markup carries the metric names so screenreaders still see them.
+const METRIC_ROWS: Array<{ key: string; labelKey: string }> = [
+  { key: "price", labelKey: "cmpPrice" },
+  { key: "yld", labelKey: "indYield" },
+  { key: "pe", labelKey: "indPe" },
+  { key: "pay", labelKey: "indPayout" },
+  { key: "ttm", labelKey: "cmpTtm" },
+  { key: "r12", labelKey: "indReturn12m" },
+  { key: "fcf", labelKey: "indFcfCoverage" },
+  { key: "de", labelKey: "indDebtEquity" },
+  { key: "eps", labelKey: "indEpsGrowth" },
+  { key: "rev", labelKey: "indRevenueGrowth" },
+  { key: "st", labelKey: "indDividendStreak" },
+];
+---
+
+<Layout
+  lang={lang}
+  title={`${t(lang, "compareTitle")} - ${t(lang, "siteTitle")}`}
+  description={t(lang, "compareSubtitle")}
+>
+  <MainNav lang={lang} active="compare" annualYear={todayYear} />
+  <StockHeader lang={lang} />
+
+  <main class="px-4 sm:px-8 pt-8 sm:pt-12 pb-16 max-w-[960px] mx-auto">
+    <section class="mb-10 sm:mb-12">
+      <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
+        <span class="inline-block h-px w-6 bg-text/40"></span>
+        <span>{t(lang, "compareKicker")}</span>
+      </div>
+      <h1 class="m-0 font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.92] tracking-tight text-text">
+        <span class="font-semibold">{t(lang, "compareTitle")}</span>
+      </h1>
+      <p class="mt-3 text-text/85 text-[13px] max-w-md">
+        {t(lang, "compareSubtitle")}
+      </p>
+    </section>
+
+    <!-- Picker -->
+    <section
+      class="compare-picker mb-10"
+      data-compare-root
+      data-manifest-url={manifestUrl}
+      data-max-slots="4"
+      data-label-empty={t(lang, "cmpEmptyTitle")}
+      data-label-empty-body={t(lang, "cmpEmptyBody")}
+      data-label-loading={t(lang, "cmpLoading")}
+      data-label-error={t(lang, "cmpError")}
+      data-label-unknown={t(lang, "cmpUnknownSymbol")}
+      data-label-full={t(lang, "cmpSlotsFull")}
+      data-label-dup={t(lang, "cmpDuplicate")}
+    >
+      <header class="flex items-baseline gap-2 mb-3">
+        <h2 class="m-0 font-display italic text-[clamp(0.95rem,1.5vw,1.05rem)] text-muted tracking-tight">
+          {t(lang, "cmpPickerTitle")}
+        </h2>
+        <span class="text-[10px] uppercase tracking-[0.15em] text-faint">
+          <span data-slot-count>0</span>/<span>4</span>
+        </span>
+      </header>
+
+      <!-- Selected chips -->
+      <ul data-chip-list class="m-0 p-0 list-none flex flex-wrap items-center gap-2 mb-3 min-h-[28px]"></ul>
+
+      <!-- Input row -->
+      <form data-compare-form class="flex flex-wrap items-stretch gap-2 relative">
+        <div class="relative flex-1 min-w-[180px]">
+          <input
+            type="text"
+            data-compare-input
+            placeholder={t(lang, "cmpInputPlaceholder")}
+            autocomplete="off"
+            spellcheck={false}
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded="false"
+            aria-controls="cmp-suggestions"
+            class="w-full h-9 rounded-none border-0 border-b border-text/30 bg-transparent px-2 text-sm text-text placeholder:text-muted focus:outline-none focus:border-text font-display tracking-tight"
+          />
+          <div
+            id="cmp-suggestions"
+            data-compare-suggestions
+            role="listbox"
+            class="hidden absolute top-full left-0 right-0 z-20 bg-bg border border-border max-h-[280px] overflow-y-auto shadow-lg"
+          ></div>
+        </div>
+        <button
+          type="submit"
+          class="h-9 px-4 text-[11px] uppercase tracking-[0.18em] font-sans border border-text bg-text text-bg hover:bg-bg hover:text-text transition-colors cursor-pointer"
+        >{t(lang, "cmpAdd")}</button>
+        <button
+          type="button"
+          data-compare-clear
+          class="h-9 px-3 text-[11px] uppercase tracking-[0.18em] font-sans border border-border text-muted hover:text-text hover:border-text transition-colors cursor-pointer"
+        >{t(lang, "cmpClear")}</button>
+      </form>
+
+      <p data-compare-hint class="mt-2 text-[11px] text-faint min-h-[1em]"></p>
+    </section>
+
+    <!-- Empty state -->
+    <section data-compare-empty class="border border-border bg-panel/40 p-8 sm:p-12 text-center">
+      <h2 class="m-0 font-display italic text-[clamp(1.25rem,3vw,1.75rem)] text-text mb-2">
+        {t(lang, "cmpEmptyTitle")}
+      </h2>
+      <p class="text-muted text-[13px] max-w-sm mx-auto m-0">
+        {t(lang, "cmpEmptyBody")}
+      </p>
+    </section>
+
+    <!-- Loading / error states -->
+    <section data-compare-loading class="hidden text-center py-12 text-muted text-[13px] italic">
+      {t(lang, "cmpLoading")}
+    </section>
+    <section data-compare-error class="hidden text-center py-12 text-accent text-[13px]">
+      {t(lang, "cmpError")}
+    </section>
+
+    <!-- Comparison table -->
+    <section data-compare-table-wrap class="hidden overflow-x-auto">
+      <table data-compare-table class="w-full border-collapse text-[13px]">
+        <thead>
+          <tr data-compare-header>
+            <th class="text-left py-3 pr-4 text-[10px] uppercase tracking-[0.18em] text-muted font-sans font-normal border-b border-border">
+              {t(lang, "cmpMetricColumn")}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {METRIC_ROWS.map((m) => (
+            <tr data-metric-row={m.key} class="border-b border-border/60">
+              <th class="text-left py-3 pr-4 text-[12px] font-sans font-normal text-text/85 align-baseline whitespace-nowrap">
+                {t(lang, m.labelKey)}
+              </th>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <p class="text-faint text-[11px] mt-6 italic font-display">
+      {t(lang, "cmpFootnote")}
+    </p>
+  </main>
+</Layout>
+
+<script>
+  type CompareEntry = {
+    s: string; n: string;
+    sec: string | null; ind: string | null;
+    price: number | null;
+    pe: number | null; yld: number | null; pay: number | null;
+    ttm: number | null; r12: number | null;
+    fcf: number | null; de: number | null;
+    eps: number | null; rev: number | null;
+    st: number | null;
+  };
+  type Manifest = { generatedAt: string; entries: CompareEntry[] };
+
+  // Lower-is-better metrics. The rest (where it makes sense to mark a winner)
+  // are higher-is-better. Payout, TTM, and price are intentionally left
+  // unranked - context-dependent.
+  const LOWER_BETTER = new Set(["pe", "de"]);
+  const HIGHER_BETTER = new Set(["yld", "r12", "fcf", "eps", "rev", "st"]);
+
+  const fmt = {
+    price: (n: number) => `${n.toFixed(2)} ฿`,
+    pe: (n: number) => `${n.toFixed(1)}×`,
+    yld: (n: number) => `${(n * 100).toFixed(2)}%`,
+    pay: (n: number) => `${(n * 100).toFixed(0)}%`,
+    ttm: (n: number) => `${n.toFixed(2)} ฿`,
+    r12: (n: number) => `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`,
+    fcf: (n: number) => `${n.toFixed(2)}×`,
+    de: (n: number) => `${n.toFixed(0)}%`,
+    eps: (n: number) => `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`,
+    rev: (n: number) => `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`,
+    st: (n: number) => `${n}`,
+  } as Record<string, (n: number) => string>;
+
+  const root = document.querySelector<HTMLElement>("[data-compare-root]");
+  if (root) {
+    const manifestUrl = root.dataset.manifestUrl!;
+    const maxSlots = Number(root.dataset.maxSlots ?? "4");
+    const labels = {
+      unknown: root.dataset.labelUnknown ?? "Unknown symbol",
+      full: root.dataset.labelFull ?? "Maximum reached",
+      dup: root.dataset.labelDup ?? "Already added",
+    };
+
+    const chipList = root.querySelector<HTMLUListElement>("[data-chip-list]")!;
+    const slotCount = root.querySelector<HTMLElement>("[data-slot-count]")!;
+    const suggestionsEl = root.querySelector<HTMLElement>("[data-compare-suggestions]")!;
+    const form = root.querySelector<HTMLFormElement>("[data-compare-form]")!;
+    const input = root.querySelector<HTMLInputElement>("[data-compare-input]")!;
+    const clearBtn = root.querySelector<HTMLButtonElement>("[data-compare-clear]")!;
+    const hint = root.querySelector<HTMLElement>("[data-compare-hint]")!;
+    const emptyEl = document.querySelector<HTMLElement>("[data-compare-empty]")!;
+    const loadingEl = document.querySelector<HTMLElement>("[data-compare-loading]")!;
+    const errorEl = document.querySelector<HTMLElement>("[data-compare-error]")!;
+    const tableWrap = document.querySelector<HTMLElement>("[data-compare-table-wrap]")!;
+    const headerRow = document.querySelector<HTMLElement>("[data-compare-header]")!;
+
+    let manifest: Manifest | null = null;
+    let byKey: Map<string, CompareEntry> = new Map();
+    let selected: string[] = [];
+
+    const setHint = (msg: string) => { hint.textContent = msg; };
+
+    const readUrlSymbols = (): string[] => {
+      const params = new URLSearchParams(window.location.search);
+      const raw = params.get("symbols") ?? "";
+      return raw
+        .split(",")
+        .map((s) => s.trim().toUpperCase())
+        .filter(Boolean)
+        .slice(0, maxSlots);
+    };
+
+    const writeUrl = () => {
+      // Build the query string by hand so the comma in "?symbols=BBL,KBANK"
+      // stays literal. URLSearchParams.set() percent-encodes it to %2C.
+      const params = new URLSearchParams(window.location.search);
+      params.delete("symbols");
+      const other = params.toString();
+      const parts: string[] = [];
+      if (selected.length > 0) parts.push(`symbols=${selected.join(",")}`);
+      if (other) parts.push(other);
+      const qs = parts.length > 0 ? `?${parts.join("&")}` : "";
+      const url = `${window.location.pathname}${qs}${window.location.hash}`;
+      window.history.replaceState(null, "", url);
+    };
+
+    const renderChips = () => {
+      chipList.innerHTML = "";
+      for (const sym of selected) {
+        const entry = byKey.get(sym);
+        const li = document.createElement("li");
+        li.className = "inline-flex items-baseline gap-2 border border-text/70 bg-text text-bg px-2.5 py-1 text-[12px] font-display tabular-nums";
+        const label = document.createElement("span");
+        label.className = "font-medium";
+        label.textContent = entry?.s ?? sym;
+        li.appendChild(label);
+        if (entry) {
+          const sub = document.createElement("span");
+          sub.className = "text-[10px] uppercase tracking-[0.12em] opacity-70";
+          sub.textContent = entry.sec ?? entry.ind ?? "";
+          if (sub.textContent) li.appendChild(sub);
+        }
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "ml-1 text-[14px] leading-none opacity-80 hover:opacity-100 cursor-pointer";
+        btn.setAttribute("aria-label", `Remove ${sym}`);
+        btn.textContent = "×";
+        btn.addEventListener("click", () => removeSymbol(sym));
+        li.appendChild(btn);
+        chipList.appendChild(li);
+      }
+      slotCount.textContent = String(selected.length);
+    };
+
+    const winnerFor = (key: string, values: Array<{ sym: string; v: number | null }>): string | null => {
+      const real = values.filter((x) => x.v !== null) as Array<{ sym: string; v: number }>;
+      if (real.length < 2) return null;
+      if (LOWER_BETTER.has(key)) {
+        return real.reduce((a, b) => (b.v < a.v ? b : a)).sym;
+      }
+      if (HIGHER_BETTER.has(key)) {
+        return real.reduce((a, b) => (b.v > a.v ? b : a)).sym;
+      }
+      return null;
+    };
+
+    const renderTable = () => {
+      // Header columns: drop all previous symbol headers (keep the leading th),
+      // then append a th per selected symbol.
+      const existingHeads = headerRow.querySelectorAll("th[data-symbol]");
+      existingHeads.forEach((el) => el.remove());
+      for (const sym of selected) {
+        const entry = byKey.get(sym);
+        const th = document.createElement("th");
+        th.dataset.symbol = sym;
+        th.className = "text-left py-3 px-3 border-b border-border align-baseline";
+        const link = document.createElement("a");
+        // Relative path: ../SYMBOL/ resolves under /<lang>/compare/ because
+        // Astro's base prefix is already in the URL.
+        link.href = `../${sym}/`;
+        link.className = "sym-link group inline-flex flex-col gap-0.5 no-underline hover:no-underline";
+        // Lucide "arrow-up-right" inline so the JS-built header doesn't depend
+        // on the Astro Icon component.
+        link.innerHTML = `
+          <span class="inline-flex items-baseline gap-1.5">
+            <span class="font-display font-semibold text-text text-[14px] tracking-tight group-hover:text-accent transition-colors">${sym}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-muted group-hover:text-accent transition-colors translate-y-px" aria-hidden="true">
+              <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+            </svg>
+          </span>
+          <span class="block text-[10px] uppercase tracking-[0.12em] text-muted">${entry?.sec ?? entry?.ind ?? ""}</span>
+        `;
+        th.appendChild(link);
+        headerRow.appendChild(th);
+      }
+
+      // Body rows: for each metric, drop previous td cells and rebuild.
+      for (const row of document.querySelectorAll<HTMLTableRowElement>("[data-metric-row]")) {
+        row.querySelectorAll("td[data-symbol]").forEach((el) => el.remove());
+        const key = row.dataset.metricRow!;
+        const values = selected.map((sym) => {
+          const entry = byKey.get(sym);
+          const v = entry ? (entry as unknown as Record<string, number | null>)[key] : null;
+          return { sym, v: typeof v === "number" && Number.isFinite(v) ? v : null };
+        });
+        const winnerSym = winnerFor(key, values);
+        for (const { sym, v } of values) {
+          const td = document.createElement("td");
+          td.dataset.symbol = sym;
+          td.className = "py-3 px-3 align-baseline font-display tabular-nums";
+          if (v === null) {
+            td.classList.add("text-faint", "italic");
+            td.textContent = "-";
+          } else {
+            const formatter = fmt[key];
+            const label = formatter ? formatter(v) : String(v);
+            if (sym === winnerSym) {
+              td.classList.add("text-text", "font-semibold");
+              td.innerHTML = `<span class="inline-flex items-baseline gap-1.5">${label}<span class="text-payment text-[10px]">★</span></span>`;
+            } else {
+              td.classList.add("text-text/85");
+              td.textContent = label;
+            }
+          }
+          row.appendChild(td);
+        }
+      }
+
+      // Show table or empty state.
+      const hasAny = selected.length > 0;
+      emptyEl.classList.toggle("hidden", hasAny);
+      tableWrap.classList.toggle("hidden", !hasAny);
+    };
+
+    const addSymbol = (raw: string) => {
+      const sym = raw.trim().toUpperCase();
+      if (!sym) return;
+      if (!byKey.has(sym)) {
+        setHint(`${labels.unknown}: ${sym}`);
+        return;
+      }
+      if (selected.includes(sym)) {
+        setHint(`${labels.dup}: ${sym}`);
+        return;
+      }
+      if (selected.length >= maxSlots) {
+        setHint(labels.full);
+        return;
+      }
+      selected.push(sym);
+      setHint("");
+      writeUrl();
+      renderChips();
+      renderTable();
+    };
+
+    const removeSymbol = (sym: string) => {
+      selected = selected.filter((s) => s !== sym);
+      setHint("");
+      writeUrl();
+      renderChips();
+      renderTable();
+    };
+
+    const clearAll = () => {
+      selected = [];
+      setHint("");
+      writeUrl();
+      renderChips();
+      renderTable();
+    };
+
+    // Custom typeahead dropdown. Native <datalist> can't reliably detect a
+    // click on the already-typed value (no input event fires), so we own the
+    // list ourselves. Highlights the first option for Enter-to-pick.
+    let activeIndex = 0;
+    let lastMatches: CompareEntry[] = [];
+
+    const hideSuggestions = () => {
+      suggestionsEl.classList.add("hidden");
+      suggestionsEl.innerHTML = "";
+      input.setAttribute("aria-expanded", "false");
+      lastMatches = [];
+      activeIndex = 0;
+    };
+
+    const renderSuggestions = () => {
+      if (!manifest) return;
+      const q = input.value.trim().toUpperCase();
+      if (!q) {
+        hideSuggestions();
+        return;
+      }
+      const matches: CompareEntry[] = [];
+      for (const e of manifest.entries) {
+        if (selected.includes(e.s)) continue;
+        if (e.s.toUpperCase().startsWith(q) || e.n.toUpperCase().includes(q)) {
+          matches.push(e);
+          if (matches.length >= 8) break;
+        }
+      }
+      lastMatches = matches;
+      if (matches.length === 0) {
+        hideSuggestions();
+        return;
+      }
+      activeIndex = 0;
+      suggestionsEl.innerHTML = matches.map((e, i) => `
+        <button type="button" data-sug-symbol="${e.s}" data-sug-idx="${i}"
+          class="sug-row block w-full text-left px-3 py-2 cursor-pointer border-b border-border/40 last:border-b-0"
+          role="option"
+        >
+          <span class="block font-display font-semibold text-text text-[13px] tracking-tight">${e.s}</span>
+          <span class="block text-muted text-[11px] mt-0.5 truncate">${e.n}</span>
+        </button>
+      `).join("");
+      suggestionsEl.classList.remove("hidden");
+      input.setAttribute("aria-expanded", "true");
+      paintActive();
+    };
+
+    const paintActive = () => {
+      const rows = suggestionsEl.querySelectorAll<HTMLElement>(".sug-row");
+      rows.forEach((row, i) => {
+        if (i === activeIndex) {
+          row.classList.add("bg-panel");
+        } else {
+          row.classList.remove("bg-panel");
+        }
+      });
+    };
+
+    input.addEventListener("input", () => renderSuggestions());
+    input.addEventListener("focus", () => {
+      if (input.value) renderSuggestions();
+    });
+    // Delay hide so a mousedown on the panel registers before the input loses
+    // focus and the panel disappears.
+    input.addEventListener("blur", () => {
+      setTimeout(() => hideSuggestions(), 120);
+    });
+    input.addEventListener("keydown", (e) => {
+      if (lastMatches.length === 0) return;
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        activeIndex = (activeIndex + 1) % lastMatches.length;
+        paintActive();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        activeIndex = (activeIndex - 1 + lastMatches.length) % lastMatches.length;
+        paintActive();
+      } else if (e.key === "Escape") {
+        hideSuggestions();
+      }
+    });
+    // mousedown (not click) fires before the input's blur, so we don't lose
+    // the click to the dropdown vanishing.
+    suggestionsEl.addEventListener("mousedown", (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-sug-symbol]");
+      if (!btn) return;
+      e.preventDefault();
+      const sym = btn.dataset.sugSymbol!;
+      addSymbol(sym);
+      input.value = "";
+      hideSuggestions();
+      input.focus();
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // If suggestions are open, pick the highlighted one. Otherwise treat the
+      // raw input as a symbol attempt.
+      if (lastMatches.length > 0) {
+        const pick = lastMatches[activeIndex];
+        addSymbol(pick.s);
+      } else {
+        const val = input.value;
+        if (!val) return;
+        addSymbol(val);
+      }
+      input.value = "";
+      hideSuggestions();
+      input.focus();
+    });
+
+    clearBtn.addEventListener("click", clearAll);
+
+    // Fetch the manifest once, then populate the datalist + apply URL state.
+    loadingEl.classList.remove("hidden");
+    emptyEl.classList.add("hidden");
+
+    fetch(manifestUrl, { cache: "force-cache" })
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json() as Promise<Manifest>;
+      })
+      .then((m) => {
+        manifest = m;
+        byKey = new Map(m.entries.map((e) => [e.s, e]));
+
+        // Apply URL state. Filter against the manifest so stale links don't
+        // leave broken chips.
+        const urlSymbols = readUrlSymbols().filter((s) => byKey.has(s));
+        selected = urlSymbols.slice(0, maxSlots);
+
+        loadingEl.classList.add("hidden");
+        renderChips();
+        renderTable();
+      })
+      .catch(() => {
+        loadingEl.classList.add("hidden");
+        emptyEl.classList.add("hidden");
+        errorEl.classList.remove("hidden");
+      });
+  }
+</script>
