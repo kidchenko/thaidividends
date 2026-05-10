@@ -129,7 +129,7 @@ const { lang } = Astro.props;
       badgeEl.classList.toggle("bg-payment", isPayment);
     }
 
-    set("symbol", tentative ? `${symbol} · ${labelTentative}` : symbol);
+    set("symbol", tentative ? `${symbol} (${labelTentative})` : symbol);
     set("name", d.name ?? "");
     const symbolLink = dialog.querySelector<HTMLAnchorElement>('[data-field="symbol-link"]');
     if (symbolLink && symbol) symbolLink.href = `${BASE}/${lang}/${symbol}/`;
@@ -137,12 +137,12 @@ const { lang } = Astro.props;
     set("recordDate", formatDate(d.recordDate ?? ""));
     set("paymentDate", formatDate(d.paymentDate ?? ""));
     set("dividendType", d.dividendType || labelCash);
-    set("source", d.source || "—");
+    set("source", d.source || "-");
     set(
       "operationPeriod",
       d.opStart && d.opEnd
         ? `${formatDate(d.opStart)} – ${formatDate(d.opEnd)}`
-        : "—",
+        : "-",
     );
     set(
       "amount",

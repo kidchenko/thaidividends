@@ -12,7 +12,8 @@
     "fetch:full": "tsx poc/set-fetch.ts --full",
     "fetch:fundamentals": "tsx poc/yahoo-fundamentals.ts",
     "fetch:prices": "tsx poc/yahoo-prices.ts",
-    "fetch:set-stats": "tsx poc/set-trading-stat.ts"
+    "fetch:set-stats": "tsx poc/set-trading-stat.ts",
+    "fetch:sectors": "tsx poc/set-sectors.ts"
   },
   "devDependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",

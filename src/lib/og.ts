@@ -1,5 +1,5 @@
 // Build-time OG card rendering. Each stock gets a per-symbol PNG and the site
-// has one shared "generic" card for non-ticker pages. Static-only — runs
+// has one shared "generic" card for non-ticker pages. Static-only - runs
 // during `astro build`, no runtime dependency.
 //
 // Two exports:
@@ -122,12 +122,12 @@ function brandLockup(rightSlot: unknown): unknown {
         el("div", { style: { display: "flex", width: 32, height: 7, background: COLORS.ink, opacity: 0.6, borderRadius: 4 } }),
         el("div", { style: { display: "flex", width: 48, height: 7, background: COLORS.accent, borderRadius: 4 } }),
       ]),
-      // Brand mark — Fraunces, italic light + semibold (matches home page).
+      // Brand mark - Fraunces, italic light + semibold (matches home page).
       el("div", { style: { display: "flex", alignItems: "baseline", gap: 8, fontFamily: "Fraunces" } }, [
         el("span", { style: { display: "flex", fontStyle: "italic", fontWeight: 300, fontSize: 26, color: COLORS.ink } }, "Thai Dividends"),
         el("span", { style: { display: "flex", fontWeight: 600, fontSize: 26, color: COLORS.ink } }, "Calendar"),
       ]),
-      el("span", { style: { display: "flex", color: COLORS.faint, fontSize: 18, fontFamily: "Fraunces" } }, "·"),
+      el("span", { style: { display: "flex", color: COLORS.faint, fontSize: 18, fontFamily: "Fraunces" } }, "|"),
       el("span", { style: { display: "flex", fontStyle: "italic", fontFamily: "Fraunces", fontSize: 18, color: COLORS.muted } }, "vol. 01"),
     ]),
     rightSlot,
@@ -328,9 +328,9 @@ function buildStockTree(p: StockProps): unknown {
             marginTop: 4,
           },
         }, [
-          p.cadenceLabel ? `${p.cadenceLabel} · ` : "",
+          p.cadenceLabel ? `${p.cadenceLabel}, ` : "",
           `${p.totalEvents} dividend${p.totalEvents === 1 ? "" : "s"}`,
-          p.trackedSince ? ` · since ${p.trackedSince}` : "",
+          p.trackedSince ? ` since ${p.trackedSince}` : "",
         ].join("")),
       ]),
 
@@ -390,7 +390,7 @@ function buildGenericTree(p: GenericProps): unknown {
       }, "The Daily Ledger"),
     ),
 
-    // Hero — full brand mark blown up.
+    // Hero - full brand mark blown up.
     el("div", {
       style: {
         display: "flex",
@@ -438,7 +438,7 @@ function buildGenericTree(p: GenericProps): unknown {
       }, [
         el("span", { style: { display: "flex", fontSize: 13, letterSpacing: 4, textTransform: "uppercase", color: COLORS.muted, fontWeight: 600 } }, "Tracking"),
         el("span", { style: { display: "flex", fontFamily: "Fraunces", fontWeight: 600, fontSize: 40, color: COLORS.ink, lineHeight: 1 } }, `${fmtNum(p.totalTickers)} symbols`),
-        el("span", { style: { display: "flex", fontSize: 16, color: COLORS.muted, marginTop: 4 } }, `${fmtNum(p.totalEvents)} dividends · since ${p.trackedSince}`),
+        el("span", { style: { display: "flex", fontSize: 16, color: COLORS.muted, marginTop: 4 } }, `${fmtNum(p.totalEvents)} dividends since ${p.trackedSince}`),
       ]),
       el("span", {
         style: {
@@ -487,7 +487,7 @@ export function getStockOgMeta(symbol: string): {
   const company = companies.find((c) => c.symbol === symbol);
   const name = company?.name ?? symbol;
   return {
-    title: `${symbol} — Thai Dividends Calendar`,
+    title: `${symbol} - Thai Dividends Calendar`,
     description: `Dividend history & payment schedule for ${symbol}${company ? ` (${name})` : ""}.`,
   };
 }

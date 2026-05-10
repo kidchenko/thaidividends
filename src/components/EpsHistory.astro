@@ -102,54 +102,23 @@ const showAnnual = history.annual.length >= 2;
 
 {(showQuarterly || showAnnual) && (
   <section class="mb-14">
-    <header class="flex items-baseline justify-between mb-4">
+    <header class="mb-2">
       <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
         <span class="italic font-light text-muted">{t(lang, "epsSection")}</span>
         <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "epsSectionSub")}</span>
       </h2>
     </header>
-
-    <!-- Headline stats -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-6">
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsLatest")}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-text">
-          {latestAnnual ? `${fmtEps(latestAnnual.eps)} ฿` : "—"}
-        </div>
-        {latestAnnual && (
-          <div class="font-display italic text-[12px] text-muted mt-1">{latestAnnual.year}</div>
-        )}
-      </div>
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsRange")}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-text">
-          {annualEps.length > 0 ? `${fmtEps(minEps)} – ${fmtEps(maxEps)}` : "—"}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">฿ / share</div>
-      </div>
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsCagr")}</div>
-        <div class={`font-display tabular-nums text-xl font-medium ${
-          cagr === null ? "text-muted" : cagr > 0 ? "text-payment" : cagr < 0 ? "text-accent" : "text-text"
-        }`}>
-          {cagr !== null ? fmtSignedPct(cagr) : "—"}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">
-          {firstAnnual && latestAnnual
-            ? `${firstAnnual.year}–${latestAnnual.year}`
-            : t(lang, "qualityNoData")}
-        </div>
-      </div>
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsCoverage")}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-text">
-          {history.annual.length} {t(lang, "epsAnnualUnit")}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">
-          {history.quarterly.length} {t(lang, "epsQuarterlyUnit")}
-        </div>
-      </div>
-    </div>
+    {(latestAnnual || annualEps.length > 0) && (
+      <p class="font-display italic text-[13px] text-muted mb-5">
+        {[
+          latestAnnual ? `${t(lang, "metaLatest")} ${fmtEps(latestAnnual.eps)} ฿` : null,
+          annualEps.length > 0 ? `${t(lang, "metaRange")} ${fmtEps(minEps)} – ${fmtEps(maxEps)} ฿` : null,
+          cagr !== null && firstAnnual && latestAnnual
+            ? `${fmtSignedPct(cagr)} ${t(lang, "metaCagr")} (${firstAnnual.year}–${latestAnnual.year})`
+            : null,
+        ].filter(Boolean).join(", ")}
+      </p>
+    )}
 
     <div class="eps-wrap relative" data-eps-grouping={initialGrouping}>
       <!-- Toggle -->
@@ -233,7 +202,7 @@ const showAnnual = history.annual.length >= 2;
                   <rect x={W - PAD_R - 86} y={avgY - 14} width="86" height="12" class="fill-bg" opacity="0.85" />
                   <text x={W - PAD_R} y={avgY - 4} text-anchor="end" class="fill-muted"
                     style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
-                    {t(lang, "tlAvg")} · {fmtEps(quarterly.avg)} ฿
+                    {t(lang, "tlAvg")} {fmtEps(quarterly.avg)} ฿
                   </text>
                 </g>
               );
@@ -312,7 +281,7 @@ const showAnnual = history.annual.length >= 2;
                   <rect x={W - PAD_R - 86} y={avgY - 14} width="86" height="12" class="fill-bg" opacity="0.85" />
                   <text x={W - PAD_R} y={avgY - 4} text-anchor="end" class="fill-muted"
                     style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
-                    {t(lang, "tlAvg")} · {fmtEps(annual.avg)} ฿
+                    {t(lang, "tlAvg")} {fmtEps(annual.avg)} ฿
                   </text>
                 </g>
               );

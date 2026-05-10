@@ -1,0 +1,85 @@
+---
+import { type Lang, t, localePath } from "../lib/i18n";
+import type { RelatedCompany } from "../lib/related";
+
+interface Props {
+  lang: Lang;
+  variant: "related" | "popular";
+  companies: RelatedCompany[];
+  contextLabel?: string | null;
+}
+
+const { lang, variant, companies, contextLabel } = Astro.props;
+const isRelated = variant === "related";
+
+const fmtPct = (n: number): string => `${(n * 100).toFixed(2)}%`;
+
+// Strip the long legal suffixes from company names so the card stays readable.
+// SET names look like "BANGKOK BANK PUBLIC COMPANY LIMITED" - the tail adds
+// no information once the symbol is shown beside it.
+const shortName = (name: string): string =>
+  name
+    .replace(/\s+PUBLIC COMPANY LIMITED$/i, "")
+    .replace(/\s+COMPANY LIMITED$/i, "")
+    .replace(/\s+LIMITED$/i, "")
+    .replace(/\s+PCL\.?$/i, "")
+    .replace(/\s+\(THAILAND\)$/i, "")
+    .trim();
+---
+
+{companies.length > 0 && (
+  <section class={isRelated ? "mb-10 sm:mb-12" : "mt-16 pt-10 border-t border-border"}>
+    <header class="flex items-baseline justify-between gap-3 mb-4 flex-wrap">
+      <h2 class={
+        isRelated
+          ? "m-0 font-display italic text-[clamp(0.95rem,1.5vw,1.05rem)] text-muted tracking-tight"
+          : "m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight"
+      }>
+        {isRelated ? (
+          <span>{t(lang, "relatedSection")}</span>
+        ) : (
+          <>
+            <span class="italic font-light text-muted">{t(lang, "popularSection")}</span>
+            <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">
+              {t(lang, "popularSectionSub")}
+            </span>
+          </>
+        )}
+      </h2>
+      {isRelated && contextLabel && (
+        <span class="text-[10px] uppercase tracking-[0.15em] text-muted border border-border px-2 py-0.5">
+          {contextLabel}
+        </span>
+      )}
+    </header>
+
+    <ul class={
+      isRelated
+        ? "m-0 p-0 list-none grid grid-cols-2 sm:grid-cols-3 gap-px bg-border border border-border"
+        : "m-0 p-0 list-none grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-border border border-border"
+    }>
+      {companies.map((c) => (
+        <li class="bg-bg">
+          <a
+            href={localePath(lang, `/${c.symbol}/`)}
+            class="block p-3 sm:p-4 no-underline hover:bg-panel/40 transition-colors h-full"
+          >
+            <div class="flex items-baseline justify-between gap-2 mb-1">
+              <span class="font-display font-semibold text-text text-[15px] tracking-tight truncate">
+                {c.symbol}
+              </span>
+              {c.currentYield !== null && c.currentYield > 0 && (
+                <span class="font-display tabular-nums text-payment text-[12px] shrink-0">
+                  {fmtPct(c.currentYield)}
+                </span>
+              )}
+            </div>
+            <div class="text-muted text-[11px] leading-snug italic font-display truncate">
+              {shortName(c.name)}
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

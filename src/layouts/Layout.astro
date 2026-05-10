@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import DividendDialog from "../components/DividendDialog.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 import { withBase, absoluteUrl } from "../lib/dividends";
 import { type Lang, t, STORAGE_KEY } from "../lib/i18n";
 
@@ -90,10 +91,7 @@ const canonicalUrl = absoluteUrl(Astro.site, Astro.url.pathname);
   </head>
   <body class="min-h-screen bg-bg text-text font-sans">
     <slot />
-    <footer class="px-8 py-6 text-muted text-[11px] border-t border-border text-center tracking-[0.15em] uppercase">
-      <span class="font-display italic normal-case tracking-normal text-[13px] mr-1.5">fin</span>
-      {t(lang, "footerNote")}
-    </footer>
+    <SiteFooter lang={lang} />
     <DividendDialog lang={lang} />
   </body>
 </html>

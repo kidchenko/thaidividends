@@ -95,7 +95,7 @@ const fcfYearLabel = quality.fcfCoverageYear
         </>
       ) : (
         <>
-          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">-</div>
           <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "qualityNoData")}</div>
         </>
       )}
@@ -113,12 +113,12 @@ const fcfYearLabel = quality.fcfCoverageYear
           </div>
           <div class="font-display italic text-[12px] text-muted mt-1">
             {t(lang, "qualityCoverageHint")}
-            {fcfYearLabel && <span class="text-faint"> · {fcfYearLabel}</span>}
+            {fcfYearLabel && <span class="text-faint"> ({fcfYearLabel})</span>}
           </div>
         </>
       ) : (
         <>
-          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">-</div>
           <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "qualityNoData")}</div>
         </>
       )}
@@ -135,12 +135,12 @@ const fcfYearLabel = quality.fcfCoverageYear
             {fmtSignedPct(divGrowth.rate)}
           </div>
           <div class="font-display italic text-[12px] text-muted mt-1">
-            {divGrowth.startYear}–{divGrowth.endYear} · {t(lang, "qualityGrowthHint")}
+            {divGrowth.startYear}–{divGrowth.endYear}, {t(lang, "qualityGrowthHint")}
           </div>
         </>
       ) : (
         <>
-          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">-</div>
           <div class="font-display italic text-[12px] text-muted mt-1">
             {t(lang, "qualityGrowthInsufficient")}
           </div>
@@ -164,7 +164,7 @@ const fcfYearLabel = quality.fcfCoverageYear
         </>
       ) : (
         <>
-          <div class="font-display tabular-nums text-2xl font-medium text-muted">—</div>
+          <div class="font-display tabular-nums text-2xl font-medium text-muted">-</div>
           <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "qualityNoData")}</div>
         </>
       )}

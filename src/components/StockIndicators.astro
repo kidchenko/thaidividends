@@ -1,0 +1,275 @@
+---
+import type { Indicator, IndicatorTone, IndicatorHistory } from "../lib/indicators";
+import { type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  indicators: Indicator[];
+}
+
+const { lang, indicators } = Astro.props;
+
+const toneClass = (tone: IndicatorTone): string => {
+  switch (tone) {
+    case "ok": return "text-payment";
+    case "warn": return "text-accent";
+    case "danger": return "text-accent";
+    case "neutral": return "text-text";
+  }
+};
+
+// Sparkline geometry. ViewBox dimensions match the rendered display size at
+// modal width (~640px), so font-size values in the SVG keep their natural
+// pixel scale - previously a 320-wide viewBox scaled 2.3× and every label
+// looked oversized.
+const SP_W = 640;
+const SP_H = 180;
+const SP_PAD_T = 32;        // room for value-on-top label
+const SP_PAD_B = 32;
+const SP_PAD_X = 24;
+const SP_CW = SP_W - SP_PAD_X * 2;
+const SP_CH = SP_H - SP_PAD_T - SP_PAD_B;
+
+type SparkLayout = {
+  bars: Array<{ x: number; y: number; w: number; h: number; cx: number; year: number; label: string; value: number; delta: number }>;
+  yAvg: number;
+};
+
+const fmtSignedPct = (n: number): string => `${n >= 0 ? "+" : ""}${(n * 100).toFixed(1)}%`;
+const buildSpark = (h: IndicatorHistory): SparkLayout => {
+  const max = Math.max(...h.series.map((p) => p.value), h.avg);
+  const yMax = max * 1.08 || 1;
+  const slotW = SP_CW / Math.max(h.series.length, 1);
+  const barW = Math.min(60, slotW * 0.55);
+  const yFor = (v: number): number => SP_PAD_T + (1 - v / yMax) * SP_CH;
+  return {
+    bars: h.series.map((p, i) => {
+      const cx = SP_PAD_X + slotW * i + slotW / 2;
+      const y = yFor(p.value);
+      return {
+        x: cx - barW / 2,
+        y,
+        w: barW,
+        h: (SP_PAD_T + SP_CH) - y,
+        cx,
+        year: p.year,
+        label: p.label,
+        value: p.value,
+        delta: h.avg > 0 ? (p.value - h.avg) / h.avg : 0,
+      };
+    }),
+    yAvg: yFor(h.avg),
+  };
+};
+
+const modalId = (labelKey: string): string => `ind-modal-${labelKey}`;
+---
+
+{indicators.length > 0 && (
+  <section class="mb-12">
+    <header class="flex items-baseline justify-between mb-4">
+      <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+        <span class="italic font-light text-muted">{t(lang, "indSection")}</span>
+        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "indSectionSub")}</span>
+      </h2>
+    </header>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border">
+      {indicators.map((row) => {
+        const inner = (
+          <>
+            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
+              {t(lang, row.labelKey)}
+            </div>
+            <div class={`font-display tabular-nums text-2xl font-medium ${toneClass(row.tone)}`}>
+              {row.value}
+            </div>
+            {row.detail && (
+              <div class="font-display italic text-[12px] text-muted mt-1">{row.detail}</div>
+            )}
+          </>
+        );
+        return row.history ? (
+          <button
+            type="button"
+            data-ind-open={row.labelKey}
+            class="ind-tile bg-bg p-4 text-left cursor-pointer transition-colors hover:bg-panel/40 focus:bg-panel/40 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+          >{inner}</button>
+        ) : (
+          <div class="bg-bg p-4">{inner}</div>
+        );
+      })}
+    </div>
+
+    {indicators.filter((r) => r.history).map((row) => {
+      const h = row.history!;
+      const spark = buildSpark(h);
+      return (
+        <dialog
+          id={modalId(row.labelKey)}
+          data-ind-modal
+          class="ind-modal m-auto p-0 w-[min(92vw,800px)] border border-border bg-bg text-text backdrop:bg-black/55"
+          aria-label={t(lang, row.labelKey)}
+        >
+          <header class="flex items-baseline justify-between gap-4 px-5 pt-5 pb-3 border-b border-border">
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[0.18em] text-muted">
+                {t(lang, row.labelKey)}
+              </div>
+              <div class={`font-display tabular-nums text-3xl font-medium mt-1 ${toneClass(row.tone)}`}>
+                {row.value}
+              </div>
+              <div class="font-display italic text-[12px] text-muted mt-1">
+                {t(lang, "indVs5yAvg")} {h.avgLabel}
+              </div>
+            </div>
+            <button
+              type="button"
+              data-ind-close
+              class="shrink-0 text-muted hover:text-text bg-transparent border border-border w-7 h-7 flex items-center justify-center cursor-pointer"
+              aria-label={t(lang, "indClose")}
+            >
+              <svg viewBox="0 0 12 12" class="w-3 h-3" aria-hidden="true">
+                <path d="M2 2 L10 10 M10 2 L2 10" stroke="currentColor" stroke-width="1.5" fill="none" />
+              </svg>
+            </button>
+          </header>
+
+          <div class="px-5 py-4 relative">
+            <svg viewBox={`0 0 ${SP_W} ${SP_H}`} class="w-full h-auto" role="img" aria-label="History">
+              <line
+                x1={SP_PAD_X} y1={spark.yAvg}
+                x2={SP_W - SP_PAD_X} y2={spark.yAvg}
+                class="stroke-muted" stroke-dasharray="4 4" stroke-width="1"
+              />
+              <text
+                x={SP_W - SP_PAD_X - 2} y={spark.yAvg - 4}
+                text-anchor="end" class="fill-muted"
+                style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;"
+              >{t(lang, "tlAvg")} {h.avgLabel}</text>
+              {spark.bars.map((b) => (
+                <g
+                  class="spark-bar"
+                  data-tip-year={b.year}
+                  data-tip-value={b.label}
+                  data-tip-delta={fmtSignedPct(b.delta)}
+                  data-tip-vs={t(lang, "indVs5yAvg")}
+                >
+                  <text
+                    x={b.cx} y={b.y - 6}
+                    text-anchor="middle" class="fill-text"
+                    style="font-size: 12px; font-family: var(--font-display); font-weight: 500;"
+                  >{b.label}</text>
+                  <rect
+                    x={b.x} y={b.y} width={b.w} height={Math.max(b.h, 1)}
+                    class="fill-accent-soft stroke-accent" stroke-width="1.5"
+                  />
+                  <rect
+                    x={b.cx - Math.max(b.w / 2, 28)} y={SP_PAD_T}
+                    width={Math.max(b.w, 56)} height={SP_CH + 12}
+                    fill="transparent" class="spark-hit"
+                  />
+                  <text
+                    x={b.cx} y={SP_H - 8}
+                    text-anchor="middle" class="fill-muted"
+                    style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+                  >{b.year}</text>
+                </g>
+              ))}
+            </svg>
+
+            <div
+              data-spark-tooltip
+              role="tooltip"
+              class="pointer-events-none absolute z-30 hidden -translate-x-1/2 -translate-y-full
+                     bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+                     whitespace-nowrap border border-text rounded-sm"
+            >
+              <div data-tip-slot="year" class="font-display font-semibold text-[13px] tabular-nums"></div>
+              <div class="opacity-90 mt-0.5"><span data-tip-slot="value" class="font-display tabular-nums"></span></div>
+              <div class="opacity-60 text-[10px] uppercase tracking-[0.12em] mt-0.5">
+                <span data-tip-slot="delta"></span>
+                {" "}<span data-tip-slot="vs"></span>
+              </div>
+            </div>
+
+            <ul class="m-0 p-0 list-none border-t border-border mt-2">
+              {h.series.slice().reverse().map((p) => (
+                <li class="flex items-baseline justify-between gap-3 py-1.5 border-b border-border/60 text-[13px]">
+                  <span class="font-display italic tabular-nums text-muted">{p.year}</span>
+                  <span class="font-display tabular-nums text-text">{p.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </dialog>
+      );
+    })}
+  </section>
+)}
+
+<script>
+  // Native <dialog> open/close. Backdrop click closes too - works because the
+  // dialog has padding:0 and content sits in an inner card, so clicks on the
+  // dialog element itself are by definition outside the card.
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    const trigger = target.closest<HTMLElement>("[data-ind-open]");
+    if (trigger) {
+      const id = `ind-modal-${trigger.dataset.indOpen}`;
+      const dlg = document.getElementById(id) as HTMLDialogElement | null;
+      dlg?.showModal();
+      return;
+    }
+    if (target.closest("[data-ind-close]")) {
+      target.closest("dialog")?.close();
+      return;
+    }
+    if (target.matches("dialog[data-ind-modal]")) {
+      (target as HTMLDialogElement).close();
+    }
+  });
+
+  // Sparkline hover tooltip. One tooltip element per modal; we look it up by
+  // climbing to the nearest .ind-modal then querying within.
+  const showSparkTip = (g: SVGGElement) => {
+    const dialog = g.closest<HTMLElement>(".ind-modal");
+    if (!dialog) return;
+    const tooltip = dialog.querySelector<HTMLElement>("[data-spark-tooltip]");
+    if (!tooltip) return;
+    const set = (name: string, value: string) => {
+      const el = tooltip.querySelector<HTMLElement>(`[data-tip-slot="${name}"]`);
+      if (el) el.textContent = value;
+    };
+    set("year", g.dataset.tipYear ?? "");
+    set("value", g.dataset.tipValue ?? "");
+    set("delta", g.dataset.tipDelta ?? "");
+    set("vs", g.dataset.tipVs ?? "");
+    tooltip.classList.remove("hidden");
+    const wrap = tooltip.parentElement as HTMLElement | null;
+    if (!wrap) return;
+    const wrapRect = wrap.getBoundingClientRect();
+    const gRect = (g as unknown as SVGGraphicsElement).getBoundingClientRect();
+    tooltip.style.left = `${gRect.left - wrapRect.left + gRect.width / 2}px`;
+    tooltip.style.top = `${gRect.top - wrapRect.top - 6}px`;
+  };
+  const hideSparkTip = (g: SVGGElement) => {
+    g.closest<HTMLElement>(".ind-modal")
+      ?.querySelector<HTMLElement>("[data-spark-tooltip]")
+      ?.classList.add("hidden");
+  };
+  document.addEventListener("mouseover", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".spark-bar");
+    if (g) showSparkTip(g);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const g = (e.target as HTMLElement).closest<SVGGElement>(".spark-bar");
+    if (g) hideSparkTip(g);
+  });
+</script>
+
+<style>
+  .ind-tile { width: 100%; }
+  .spark-bar { transition: filter 120ms ease; }
+  .spark-bar:hover { filter: brightness(1.2); }
+</style>

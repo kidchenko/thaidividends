@@ -8,7 +8,7 @@
 //   buildIcs({ name, events: [{ uid, date, summary, description?, url? }] })
 
 export type IcsEvent = {
-  uid: string;          // Stable identifier — calendar apps key updates off this.
+  uid: string;          // Stable identifier - calendar apps key updates off this.
   date: string;         // YYYY-MM-DD (all-day, exclusive end is computed as next day).
   summary: string;      // Title shown in the calendar grid.
   description?: string; // Multi-line allowed; \n becomes literal line breaks.

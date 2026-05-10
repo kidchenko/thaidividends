@@ -1,5 +1,5 @@
 // Client-side watchlist: a set of starred stock symbols persisted in
-// localStorage. Components subscribe to `watchlist:change` to stay in sync —
+// localStorage. Components subscribe to `watchlist:change` to stay in sync -
 // a single click on any star button updates every other star button on the
 // page plus any home/calendar filter that depends on the set.
 
@@ -60,7 +60,7 @@ function writeWatchlist(set: Set<string>): void {
   try {
     localStorage.setItem(KEY, JSON.stringify([...set].sort()));
   } catch {
-    // Quota exceeded or storage disabled — silently no-op.
+    // Quota exceeded or storage disabled - silently no-op.
   }
 }
 

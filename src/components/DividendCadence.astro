@@ -25,7 +25,7 @@ const formatAmount = (n: number): string =>
 const buildMeta = (count: number, upcoming: boolean): string => {
   if (count === 0) return t(lang, "cadenceNoEvent");
   const word = t(lang, count === 1 ? "eventOne" : "eventMany");
-  const upWord = upcoming ? ` · ${t(lang, "cadenceUpcoming")}` : "";
+  const upWord = upcoming ? ` (${t(lang, "cadenceUpcoming")})` : "";
   return `${count} ${word}${upWord}`;
 };
 ---
@@ -57,7 +57,7 @@ const buildMeta = (count: number, upcoming: boolean): string => {
             const tipMeta = buildMeta(has ? cell!.events.length : 0, upcoming);
             const tipAmount = has && cell!.totalAmount > 0
               ? `${formatAmount(cell!.totalAmount)} ฿`
-              : "—";
+              : "-";
             return (
               <div
                 class={`cadence-cell tier-${tier}`}

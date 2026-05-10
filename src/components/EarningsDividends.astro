@@ -24,64 +24,81 @@ const H = 240;
 const PAD_T = 18;
 const PAD_R = 18;
 const PAD_B = 44;
-const PAD_L = 56;
+const PAD_L = 72;
 const chartW = W - PAD_L - PAD_R;
 const chartH = H - PAD_T - PAD_B;
 
+// Annual-only: quarterly view was confusing (TTM vs raw quarters, partial-year
+// payouts) and Yahoo only returns ~6 quarters anyway. Year is the right unit
+// for "what share of profits flowed to shareholders".
 const showAnnual = data.annual.length >= 2;
-const showQuarterly = data.quarterly.length >= 3;
-const initialGrouping = showAnnual ? "year" : "quarter";
-
-type Pane = { kind: "year" | "quarter"; rows: EarningsDividendsRow[] };
-const panes: Pane[] = [];
-if (showAnnual) panes.push({ kind: "year", rows: data.annual });
-if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
+const rows = data.annual;
 ---
 
-{(showAnnual || showQuarterly) && (
+{showAnnual && (() => {
+  const payoutValues = rows.map((r) => r.payoutRatio);
+  const payoutAvg = payoutValues.reduce((s, v) => s + v, 0) / payoutValues.length;
+  const payoutMin = Math.min(...payoutValues);
+  const payoutMax = Math.max(...payoutValues);
+  return (
   <section class="mb-14">
-    <header class="flex items-baseline justify-between mb-4">
+    <header class="mb-2">
       <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
         <span class="italic font-light text-muted">{t(lang, "sectionEarnings")}</span>
         <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionEarningsSub")}</span>
       </h2>
     </header>
+    <p class="font-display italic text-[13px] text-muted mb-5">
+      {t(lang, "metaAvg")} {fmtPct(payoutAvg)}, {t(lang, "metaRange")} {fmtPct(payoutMin)} – {fmtPct(payoutMax)}
+    </p>
 
-    <div class="ed-wrap relative" data-ed-grouping={initialGrouping}>
-      {showAnnual && showQuarterly && (
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-[10px] uppercase tracking-[0.18em] text-muted">{t(lang, "tlGroupBy")}</span>
-          <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
-            <button
-              type="button"
-              data-ed-grouping-btn="quarter"
-              class="ed-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer"
-            >{t(lang, "epsGroupQuarter")}</button>
-            <button
-              type="button"
-              data-ed-grouping-btn="year"
-              class="ed-grouping-btn px-3 py-1 text-[12px] font-sans transition-colors cursor-pointer border-l border-border"
-            >{t(lang, "tlGroupYear")}</button>
-          </div>
-        </div>
-      )}
+    <div class="ed-wrap relative">
+      {(() => {
+        const rawMax = Math.max(...rows.map((r) => r.netIncome), 1);
+        const avgIncome = rows.reduce((s, r) => s + r.netIncome, 0) / rows.length;
+        const avgPayout = rows.reduce((s, r) => s + r.payoutRatio, 0) / rows.length;
 
-      {panes.map(({ kind, rows }) => {
-        const yMax = Math.max(...rows.map((r) => r.netIncome), 1);
+        // Round yMax up to a "nice" tick step so the y-axis labels are clean
+        // (e.g. 47.89B → 50B with 10B steps, 8.5B → 10B with 2B steps).
+        const niceStep = (target: number): number => {
+          const mag = Math.pow(10, Math.floor(Math.log10(target)));
+          const norm = target / mag;
+          const niceNorm = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10;
+          return niceNorm * mag;
+        };
+        const step = niceStep(rawMax / 4);
+        const yMax = Math.ceil(rawMax / step) * step;
+        const ticks = Array.from({ length: Math.round(yMax / step) }, (_, i) => (i + 1) * step);
+
         const slotW = chartW / Math.max(rows.length, 1);
-        const barW = Math.min(kind === "year" ? 72 : 50, slotW * 0.55);
+        const barW = Math.min(72, slotW * 0.55);
         const yFor = (v: number): number => PAD_T + (1 - v / yMax) * chartH;
         const xCenter = (i: number): number => PAD_L + slotW * i + slotW / 2;
         return (
-          <div data-ed-pane={kind} class="ed-pane">
+          <div class="ed-pane">
             <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Net income vs dividends paid">
-              <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
               <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
-              <text
-                x={PAD_L - 8} y={PAD_T + 4}
-                text-anchor="end" class="fill-muted"
-                style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
-              >{fmtCompact(yMax)} ฿</text>
+
+              {/* Y-axis gridlines + labels at each nice tick */}
+              {ticks.map((v) => (
+                <g>
+                  <line
+                    x1={PAD_L} y1={yFor(v)} x2={W - PAD_R} y2={yFor(v)}
+                    class="stroke-border" stroke-dasharray="2 4" opacity="0.5"
+                  />
+                  <text
+                    x={PAD_L - 8} y={yFor(v) + 4}
+                    text-anchor="end" class="fill-muted"
+                    style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+                  >{fmtCompact(v)} ฿</text>
+                </g>
+              ))}
+
+              <line
+                x1={PAD_L} y1={yFor(avgIncome)}
+                x2={W - PAD_R} y2={yFor(avgIncome)}
+                class="stroke-muted" stroke-dasharray="4 4" stroke-width="1"
+              />
 
               {rows.map((r, i) => {
                 const x = xCenter(i);
@@ -124,14 +141,27 @@ if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
                       text-anchor="middle"
                       class="fill-muted"
                       style="font-size: 12px; font-family: var(--font-display); font-style: italic;"
-                    >{kind === "year" ? r.year : `Q${r.quarter} ${String(r.year).slice(-2)}`}</text>
+                    >{r.year}</text>
                   </g>
                 );
               })}
+
+              <g>
+                <rect
+                  x={PAD_L} y={yFor(avgIncome) - 14}
+                  width="78" height="12"
+                  class="fill-bg" opacity="0.85"
+                />
+                <text
+                  x={PAD_L + 4} y={yFor(avgIncome) - 4}
+                  text-anchor="start" class="fill-muted"
+                  style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;"
+                >{t(lang, "tlAvg")} {fmtPct(avgPayout)}</text>
+              </g>
             </svg>
           </div>
         );
-      })}
+      })()}
 
       <div
         data-ed-tooltip
@@ -156,17 +186,10 @@ if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
       </div>
     </div>
   </section>
-)}
+  );
+})()}
 
 <script>
-  document.addEventListener("click", (e) => {
-    const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-ed-grouping-btn]");
-    if (!btn) return;
-    const wrap = btn.closest<HTMLElement>(".ed-wrap");
-    if (!wrap) return;
-    wrap.dataset.edGrouping = btn.dataset.edGroupingBtn ?? "year";
-  });
-
   const showEdTip = (g: SVGGElement) => {
     const wrap = g.closest<HTMLElement>(".ed-wrap");
     if (!wrap) return;
@@ -211,21 +234,4 @@ if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
 <style>
   .ed-bar { cursor: pointer; transition: filter 100ms ease; }
   .ed-bar:hover { filter: brightness(1.06); }
-
-  /* Toggle states */
-  .ed-wrap[data-ed-grouping="year"] [data-ed-grouping-btn="year"],
-  .ed-wrap[data-ed-grouping="quarter"] [data-ed-grouping-btn="quarter"] {
-    background: var(--text);
-    color: var(--bg);
-  }
-  .ed-wrap[data-ed-grouping="year"] [data-ed-grouping-btn="quarter"],
-  .ed-wrap[data-ed-grouping="quarter"] [data-ed-grouping-btn="year"] {
-    background: transparent;
-    color: var(--muted);
-  }
-  /* Show only the active pane */
-  .ed-wrap[data-ed-grouping="year"] [data-ed-pane="quarter"],
-  .ed-wrap[data-ed-grouping="quarter"] [data-ed-pane="year"] {
-    display: none;
-  }
 </style>

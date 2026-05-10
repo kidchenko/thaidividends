@@ -26,7 +26,7 @@ const H = 240;
 const PAD_T = 18;
 const PAD_R = 18;
 const PAD_B = 44;
-const PAD_L = 56;
+const PAD_L = 72;
 const chartW = W - PAD_L - PAD_R;
 const chartH = H - PAD_T - PAD_B;
 
@@ -38,16 +38,27 @@ type Pane = { kind: "year" | "quarter"; rows: RevenueProfitRow[] };
 const panes: Pane[] = [];
 if (showAnnual) panes.push({ kind: "year", rows: data.annual });
 if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
+
+// Annual margin average for the meta line under the section header.
+const annualMargins = data.annual.map((r) => r.netMargin);
+const annualMarginAvg = annualMargins.length > 0
+  ? annualMargins.reduce((s, v) => s + v, 0) / annualMargins.length
+  : null;
 ---
 
 {(showAnnual || showQuarterly) && (
   <section class="mb-14">
-    <header class="flex items-baseline justify-between mb-4">
+    <header class="mb-2">
       <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
         <span class="italic font-light text-muted">{t(lang, "sectionRevenue")}</span>
         <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionRevenueSub")}</span>
       </h2>
     </header>
+    {annualMarginAvg !== null && (
+      <p class="font-display italic text-[13px] text-muted mb-5">
+        {t(lang, "metaMargin")} {fmtSignedPct(annualMarginAvg)}
+      </p>
+    )}
 
     <div class="rp-wrap relative" data-rp-grouping={initialGrouping}>
       {showAnnual && showQuarterly && (
@@ -69,7 +80,24 @@ if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
       )}
 
       {panes.map(({ kind, rows }) => {
-        const yMax = Math.max(...rows.map((r) => r.revenue), 1);
+        const rawMax = Math.max(...rows.map((r) => r.revenue), 1);
+        const avgRevenue = rows.reduce((s, r) => s + r.revenue, 0) / rows.length;
+        const avgMargin = rows.reduce((s, r) => s + r.netMargin, 0) / rows.length;
+
+        // Round yMax up to a "nice" tick step so the y-axis labels are clean.
+        const niceStep = (target: number): number => {
+          const mag = Math.pow(10, Math.floor(Math.log10(target)));
+          const norm = target / mag;
+          const niceNorm = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10;
+          return niceNorm * mag;
+        };
+        const step = niceStep(rawMax / 4);
+        const yMax = Math.ceil(rawMax / step) * step;
+        const ticks = Array.from(
+          { length: Math.round(yMax / step) },
+          (_, i) => (i + 1) * step,
+        );
+
         const slotW = chartW / Math.max(rows.length, 1);
         const barW = Math.min(kind === "year" ? 72 : 50, slotW * 0.55);
         const yFor = (v: number): number => PAD_T + (1 - v / yMax) * chartH;
@@ -77,13 +105,29 @@ if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
         return (
           <div data-rp-pane={kind} class="rp-pane">
             <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Revenue and net income">
-              <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
               <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
-              <text
-                x={PAD_L - 8} y={PAD_T + 4}
-                text-anchor="end" class="fill-muted"
-                style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
-              >{fmtCompact(yMax)} ฿</text>
+
+              {/* Y-axis gridlines + labels at each nice tick */}
+              {ticks.map((v) => (
+                <g>
+                  <line
+                    x1={PAD_L} y1={yFor(v)} x2={W - PAD_R} y2={yFor(v)}
+                    class="stroke-border" stroke-dasharray="2 4" opacity="0.5"
+                  />
+                  <text
+                    x={PAD_L - 8} y={yFor(v) + 4}
+                    text-anchor="end" class="fill-muted"
+                    style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+                  >{fmtCompact(v)} ฿</text>
+                </g>
+              ))}
+
+              {/* AVG revenue dashed reference line */}
+              <line
+                x1={PAD_L} y1={yFor(avgRevenue)}
+                x2={W - PAD_R} y2={yFor(avgRevenue)}
+                class="stroke-muted" stroke-dasharray="4 4" stroke-width="1"
+              />
 
               {rows.map((r, i) => {
                 const x = xCenter(i);
@@ -133,6 +177,20 @@ if (showQuarterly) panes.push({ kind: "quarter", rows: data.quarterly });
                   </g>
                 );
               })}
+
+              {/* AVG label on the left, anchored to the avg-revenue line */}
+              <g>
+                <rect
+                  x={PAD_L} y={yFor(avgRevenue) - 14}
+                  width="78" height="12"
+                  class="fill-bg" opacity="0.85"
+                />
+                <text
+                  x={PAD_L + 4} y={yFor(avgRevenue) - 4}
+                  text-anchor="start" class="fill-muted"
+                  style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;"
+                >{t(lang, "tlAvg")} {fmtSignedPct(avgMargin)}</text>
+              </g>
             </svg>
           </div>
         );

@@ -316,11 +316,37 @@ async function main() {
   let removed = 0;
   for (const k of existingByKey.keys()) if (!newKeys.has(k)) removed++;
 
-  // Build a companies lookup from the merged events.
-  const companyMap = new Map<string, Company>();
+  // Build a companies lookup from the merged events. Preserve any sector /
+  // industry / securityType fields that were added by poc/set-sectors.ts so a
+  // weekly dividend refresh doesn't wipe out the filter-pill data.
+  type CompanyAll = Company & {
+    market?: string;
+    securityType?: string;
+    industry?: string;
+    sector?: string;
+    isIFF?: boolean;
+  };
+  let priorCompanies: CompanyAll[] = [];
+  try {
+    priorCompanies = JSON.parse(await readFile("data/companies.json", "utf8"));
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+  }
+  const priorBySymbol = new Map(priorCompanies.map((c) => [c.symbol, c]));
+  const companyMap = new Map<string, CompanyAll>();
   for (const e of deduped) {
     if (!companyMap.has(e.symbol)) {
-      companyMap.set(e.symbol, { symbol: e.symbol, name: e.name, currency: e.currency });
+      const prior = priorBySymbol.get(e.symbol);
+      companyMap.set(e.symbol, {
+        symbol: e.symbol,
+        name: e.name,
+        currency: e.currency,
+        ...(prior?.market ? { market: prior.market } : {}),
+        ...(prior?.securityType ? { securityType: prior.securityType } : {}),
+        ...(prior?.industry ? { industry: prior.industry } : {}),
+        ...(prior?.sector ? { sector: prior.sector } : {}),
+        ...(prior?.isIFF !== undefined ? { isIFF: prior.isIFF } : {}),
+      });
     }
   }
   const companies = [...companyMap.values()].sort((a, b) =>

@@ -58,7 +58,7 @@ const TAG_LABEL_KEY: Record<FilterTag, string> = {
 };
 ---
 
-<Layout lang={lang} title={`${t(lang, "stocksTitle")} — ${t(lang, "siteTitle")}`}>
+<Layout lang={lang} title={`${t(lang, "stocksTitle")} - ${t(lang, "siteTitle")}`}>
   <MainNav lang={lang} active="stocks" annualYear={todayYear} />
   <StockHeader lang={lang} />
   <main class="px-3 sm:px-8 pt-6 sm:pt-12 pb-16 max-w-[760px] mx-auto">
@@ -127,7 +127,7 @@ const TAG_LABEL_KEY: Record<FilterTag, string> = {
     </div>
 
     <!-- Single filter row: industries + REITs/ETFs/DRs as peers. Mutually
-         exclusive — clicking "All" resets, clicking another tag replaces. -->
+         exclusive - clicking "All" resets, clicking another tag replaces. -->
     <div class="filter-row flex flex-wrap gap-1.5 mt-2 mb-5">
       <button
         type="button"
@@ -183,7 +183,7 @@ const TAG_LABEL_KEY: Record<FilterTag, string> = {
             <span class={`font-display tabular-nums leading-none text-[13px] sm:text-sm whitespace-nowrap shrink-0 ${
               row.eventCount > 0 ? "text-muted" : "text-faint italic"
             }`}>
-              {row.eventCount > 0 ? row.eventCount : "—"}
+              {row.eventCount > 0 ? row.eventCount : "-"}
               <span class="text-faint text-[10px] ml-1">{t(lang, row.eventCount === 1 ? "eventOne" : "eventMany")}</span>
             </span>
           </a>
@@ -217,7 +217,7 @@ const TAG_LABEL_KEY: Record<FilterTag, string> = {
   let sortMode: SortMode = "symbol";
   let sortDir: SortDir = "asc";
 
-  // Filter state — single dimension, defaults to "all". Persisted so the
+  // Filter state - single dimension, defaults to "all". Persisted so the
   // selection survives reloads while exploring.
   let tagFilter: string = "all";
   const STORAGE_TAG = "stocks-filter-tag";
@@ -394,7 +394,7 @@ const TAG_LABEL_KEY: Record<FilterTag, string> = {
     color: var(--muted);
   }
 
-  /* Filter pills — single-select chips for instrument type and industry. */
+  /* Filter pills - single-select chips for instrument type and industry. */
   .filter-pill {
     display: inline-flex;
     align-items: center;

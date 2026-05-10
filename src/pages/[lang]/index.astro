@@ -32,7 +32,7 @@ const uniqueSymbols = new Set(events.map((e) => e.symbol)).size;
 const allFeedUrl = absoluteUrl(Astro.site, "/calendar.ics");
 ---
 
-<Layout lang={lang} title={`${ym.label} — ${t(lang, "siteTitle")}`}>
+<Layout lang={lang} title={`${ym.label} - ${t(lang, "siteTitle")}`}>
   <MainNav lang={lang} active="calendar" annualYear={ym.year} />
   <PageHeader
     lang={lang}

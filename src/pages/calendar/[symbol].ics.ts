@@ -24,7 +24,7 @@ export const GET: APIRoute = ({ params, site }) => {
   const basePath = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
   const icsEvents = eventsToIcsEvents(events, { siteUrl, basePath });
   const body = buildIcs({
-    name: `Thai Dividends — ${symbol}`,
+    name: `Thai Dividends - ${symbol}`,
     description: company?.name ?? `Dividend events for ${symbol}`,
     events: icsEvents,
   });

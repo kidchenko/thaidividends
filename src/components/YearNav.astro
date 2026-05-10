@@ -21,7 +21,7 @@ const { lang, current, prev, next } = Astro.props;
     aria-label={t(lang, "prevYearAria")}
   >
     <Icon name="lucide:chevron-left" class="h-4 w-4 shrink-0" aria-hidden="true" />
-    <span class="font-display italic tabular-nums">{prev ?? "—"}</span>
+    <span class="font-display italic tabular-nums">{prev ?? "-"}</span>
   </a>
 
   <div class="text-center">
@@ -39,7 +39,7 @@ const { lang, current, prev, next } = Astro.props;
     aria-disabled={!next}
     aria-label={t(lang, "nextYearAria")}
   >
-    <span class="font-display italic tabular-nums">{next ?? "—"}</span>
+    <span class="font-display italic tabular-nums">{next ?? "-"}</span>
     <Icon name="lucide:chevron-right" class="h-4 w-4 shrink-0" aria-hidden="true" />
   </a>
 </nav>

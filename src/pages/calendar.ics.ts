@@ -15,7 +15,7 @@ export const GET: APIRoute = ({ site }) => {
     cutoffIso: todayIso(),
   });
   const body = buildIcs({
-    name: "Thai Dividends — All upcoming",
+    name: "Thai Dividends - All upcoming",
     description:
       "Upcoming ex-dividend & payment dates for SET-listed stocks. Updates automatically.",
     events: icsEvents,

@@ -108,7 +108,7 @@ const paymentsLabel = (n: number): string =>
   n === 1 ? t(lang, "paymentsCountSingular") : t(lang, "paymentsCountSuffix");
 ---
 
-<Layout lang={lang} title={`${year} — ${t(lang, "annualTitle")} — ${t(lang, "siteTitle")}`}>
+<Layout lang={lang} title={`${year} - ${t(lang, "annualTitle")} - ${t(lang, "siteTitle")}`}>
   <MainNav lang={lang} active="annual" annualYear={year} />
   <StockHeader lang={lang} />
   <main class="px-3 sm:px-8 pt-6 sm:pt-12 pb-16 max-w-[760px] mx-auto">
@@ -255,11 +255,11 @@ const paymentsLabel = (n: number): string =>
                     <div class={`font-display tabular-nums leading-none text-[14px] sm:text-base whitespace-nowrap ${
                       hasAmount ? "font-semibold text-text" : "text-muted italic"
                     }`}>
-                      {hasAmount ? formatAmount(row.totalAmount) : "—"}
+                      {hasAmount ? formatAmount(row.totalAmount) : "-"}
                       <span class="text-muted text-[10px] ml-0.5">฿</span>
                     </div>
                     <div class="font-display italic tabular-nums text-[11px] text-muted mt-0.5 leading-none">
-                      {row.yld !== null && row.yld > 0 ? fmtPct(row.yld) : "—"}
+                      {row.yld !== null && row.yld > 0 ? fmtPct(row.yld) : "-"}
                       {row.yld !== null && row.yld > 0 && (
                         <span class="text-faint not-italic ml-0.5">{t(lang, "annualYieldLabel")}</span>
                       )}

@@ -28,7 +28,7 @@ const yearLabel = fmtDate(isoFor(current), "yyyy", lang);
     aria-label={t(lang, "prevMonthAria")}
   >
     <Icon name="lucide:chevron-left" class="h-4 w-4" aria-hidden="true" />
-    <span class="font-display italic">{prev ? prev.label : "—"}</span>
+    <span class="font-display italic">{prev ? prev.label : "-"}</span>
   </a>
 
   <div class="text-center">
@@ -54,7 +54,7 @@ const yearLabel = fmtDate(isoFor(current), "yyyy", lang);
     aria-disabled={!next}
     aria-label={t(lang, "nextMonthAria")}
   >
-    <span class="font-display italic">{next ? next.label : "—"}</span>
+    <span class="font-display italic">{next ? next.label : "-"}</span>
     <Icon name="lucide:chevron-right" class="h-4 w-4" aria-hidden="true" />
   </a>
 </nav>

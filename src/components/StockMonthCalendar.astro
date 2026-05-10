@@ -1,0 +1,308 @@
+---
+import type { DividendEvent } from "../lib/dividends";
+import { fmtDate, tArr, type Lang, t } from "../lib/i18n";
+
+interface Props {
+  lang: Lang;
+  symbol: string;
+  events: DividendEvent[];
+}
+
+const { lang, symbol, events } = Astro.props;
+
+// ---------- Event-by-day map ----------
+// Each event contributes up to 3 "day with event" entries: ex-date, record,
+// payment. The map key is "YYYY-MM-DD" so it lines up directly with the grid
+// cell `data-cal-day` attribute.
+type DayEntryKind = "ex" | "record" | "pay";
+type DayEntry = { kind: DayEntryKind; event: DividendEvent };
+
+const eventsByDay = new Map<string, DayEntry[]>();
+const pushDay = (date: string | null, kind: DayEntryKind, event: DividendEvent) => {
+  if (!date) return;
+  const list = eventsByDay.get(date) ?? [];
+  list.push({ kind, event });
+  eventsByDay.set(date, list);
+};
+for (const e of events) {
+  pushDay(e.exDate, "ex", e);
+  pushDay(e.recordDate, "record", e);
+  pushDay(e.paymentDate, "pay", e);
+}
+const allDates = [...eventsByDay.keys()].sort();
+const hasAnyDays = allDates.length > 0;
+
+// ---------- Current month only ----------
+// Per spec: this calendar surfaces "what's happening this month" - no month
+// navigation. Anything earlier/later is reachable via the History list above.
+const today = new Date();
+const todayY = today.getFullYear();
+const todayM = today.getMonth() + 1;
+const todayKey = `${todayY}-${String(todayM).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+const monthKey = `${todayY}-${String(todayM).padStart(2, "0")}`;
+
+// Distinct days within the current month that have at least one event. Drives
+// both the subtitle count and the initial selection (today if it has events;
+// otherwise the first event day of the month).
+const monthEventDays = allDates.filter((d) => d.startsWith(monthKey));
+const initialSelected = monthEventDays.includes(todayKey)
+  ? todayKey
+  : (monthEventDays[0] ?? "");
+
+// ---------- Cell layout for the current month ----------
+type Cell = { date: string; day: number; inMonth: boolean };
+const cellsFor = (y: number, m: number): Cell[] => {
+  const first = new Date(y, m - 1, 1);
+  const firstDow = first.getDay(); // 0..6 (Sun..Sat)
+  const daysInMonth = new Date(y, m, 0).getDate();
+  const cells: Cell[] = [];
+  const prevMonthLast = new Date(y, m - 1, 0).getDate();
+  for (let i = firstDow - 1; i >= 0; i--) {
+    const d = prevMonthLast - i;
+    const prevY = m === 1 ? y - 1 : y;
+    const prevM = m === 1 ? 12 : m - 1;
+    cells.push({
+      date: `${prevY}-${String(prevM).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+      day: d,
+      inMonth: false,
+    });
+  }
+  for (let d = 1; d <= daysInMonth; d++) {
+    cells.push({
+      date: `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+      day: d,
+      inMonth: true,
+    });
+  }
+  let trailingDay = 1;
+  while (cells.length < 42) {
+    const nextY = m === 12 ? y + 1 : y;
+    const nextM = m === 12 ? 1 : m + 1;
+    cells.push({
+      date: `${nextY}-${String(nextM).padStart(2, "0")}-${String(trailingDay).padStart(2, "0")}`,
+      day: trailingDay,
+      inMonth: false,
+    });
+    trailingDay++;
+  }
+  return cells;
+};
+const cells = cellsFor(todayY, todayM);
+
+const dotClass = (kind: DayEntryKind): string => {
+  switch (kind) {
+    case "ex": return "bg-accent";
+    case "pay": return "bg-payment";
+    case "record": return "bg-muted";
+  }
+};
+const labelKey = (kind: DayEntryKind): string => {
+  switch (kind) {
+    case "ex": return "calLegendEx";
+    case "pay": return "calLegendPay";
+    case "record": return "calLegendRecord";
+  }
+};
+
+const fmtAmount = (n: number | null): string =>
+  n === null ? "-" : n.toFixed(4).replace(/(\.\d{2})0+$/, "$1");
+const fmtMonthLabel = (key: string): string => fmtDate(`${key}-01`, "MMMM yyyy", lang);
+const weekdays = tArr(lang, "weekdaysMin");
+
+// Events touching the current month - any DividendEvent whose ex-date, record
+// date, or payment date falls inside the month. Sorted by the earliest of
+// those in-month dates so the list reads top-to-bottom chronologically.
+const isInMonth = (date: string | null): boolean =>
+  date !== null && date.startsWith(monthKey);
+type MonthEvent = { event: DividendEvent; sortKey: string };
+const monthEvents: MonthEvent[] = events
+  .filter((e) => isInMonth(e.exDate) || isInMonth(e.recordDate) || isInMonth(e.paymentDate))
+  .map((e) => {
+    const inMonthDates = [e.exDate, e.recordDate, e.paymentDate]
+      .filter((d): d is string => isInMonth(d))
+      .sort();
+    return { event: e, sortKey: inMonthDates[0] ?? e.exDate };
+  })
+  .sort((a, b) => a.sortKey.localeCompare(b.sortKey));
+
+const monthHasEvents = monthEvents.length > 0;
+
+const fmtDateShort = (iso: string | null): string =>
+  iso ? fmtDate(iso, "dd MMM", lang) : "-";
+---
+
+{hasAnyDays && (
+  <section class="mb-14">
+    <header class="mb-2">
+      <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+        <span class="italic font-light text-muted">{t(lang, "calEventsOf")}</span>
+        <span class="font-medium ml-2">{symbol}</span>
+      </h2>
+    </header>
+    <p class="font-display italic text-[13px] text-muted mb-5">
+      {fmtMonthLabel(monthKey)}{monthHasEvents
+        ? ` - ${monthEventDays.length} ${t(lang, monthEventDays.length === 1 ? "calDaysWithEventsOne" : "calDaysWithEventsMany")}`
+        : ""}
+    </p>
+
+    <div
+      class="cal-wrap grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-px bg-border border border-border"
+      data-selected-day={initialSelected}
+    >
+      {/* ---- Calendar grid (left) ---- */}
+      <div class="bg-bg p-4 sm:p-5">
+        <div class="grid grid-cols-7 gap-0.5 mb-1 text-[10px] uppercase tracking-[0.15em] text-muted">
+          {weekdays.map((wd) => (
+            <div class="text-center py-1">{wd}</div>
+          ))}
+        </div>
+
+        <div class="grid grid-cols-7 gap-0.5">
+          {cells.map((c) => {
+            const entries = c.inMonth ? (eventsByDay.get(c.date) ?? []) : [];
+            const kinds = new Set(entries.map((e) => e.kind));
+            const hasEvents = entries.length > 0;
+            return (
+              <button
+                type="button"
+                data-cal-day={c.date}
+                disabled={!hasEvents}
+                aria-pressed={c.date === initialSelected ? "true" : "false"}
+                class={`cal-day relative aspect-square flex flex-col items-center justify-center font-display tabular-nums text-[13px] transition-colors
+                  ${c.inMonth ? "text-text" : "text-faint"}
+                  ${hasEvents ? "cursor-pointer" : "cursor-default"}
+                  ${c.date === todayKey ? "ring-1 ring-inset ring-accent" : ""}
+                `}
+              >
+                <span>{c.day}</span>
+                {kinds.size > 0 && (
+                  <span class="absolute bottom-1.5 left-1/2 -translate-x-1/2 flex gap-1">
+                    {[...kinds].map((k) => (
+                      <span class={`inline-block w-2 h-2 rounded-full ${dotClass(k)}`}></span>
+                    ))}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        <div class="flex flex-wrap gap-x-4 gap-y-1 text-[10px] tracking-[0.15em] uppercase text-muted mt-4">
+          {(["ex", "pay", "record"] as DayEntryKind[]).map((k) => (
+            <span class="inline-flex items-center gap-1.5">
+              <span class={`inline-block w-2 h-2 rounded-full ${dotClass(k)}`}></span>
+              {t(lang, labelKey(k))}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ---- Month events list (right) ---- */}
+      <div class="bg-bg p-4 sm:p-5">
+        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-3">{t(lang, "calMonthEvents")}</div>
+        {monthHasEvents ? (
+          <ul class="m-0 p-0 list-none flex flex-col">
+            {monthEvents.map(({ event }) => {
+              const eventDates = [event.exDate, event.recordDate, event.paymentDate]
+                .filter((d): d is string => d !== null)
+                .join(",");
+              return (
+              <li class="cal-event-card border-t border-border first:border-t-0 py-3" data-event-dates={eventDates}>
+                <div class="flex items-baseline justify-between gap-3 mb-2">
+                  <span class="font-display tabular-nums text-[16px] text-text font-medium">
+                    {fmtAmount(event.amount)}
+                    {event.amount !== null && <span class="text-muted text-[11px] ml-0.5">฿</span>}
+                  </span>
+                  {event.tentative && (
+                    <span class="text-accent text-[9px] font-bold uppercase tracking-[0.15em]">{t(lang, "badgeTentative")}</span>
+                  )}
+                </div>
+                <ul class="m-0 p-0 list-none flex flex-col text-[11px] border-t border-border/60 mt-2">
+                  {(["ex", "record", "pay"] as DayEntryKind[]).map((kind) => {
+                    const date =
+                      kind === "ex" ? event.exDate
+                      : kind === "record" ? event.recordDate
+                      : event.paymentDate;
+                    if (!date) return null;
+                    const inMonth = isInMonth(date);
+                    return (
+                      <li
+                        data-row-date={date}
+                        class={`cal-event-row grid grid-cols-[auto_7rem_1fr] items-center gap-x-3 py-2 px-2 -mx-2 border-b border-border/60 last:border-b-0 ${inMonth ? "" : "opacity-50"}`}
+                      >
+                        <span class={`inline-block w-2 h-2 rounded-full ${dotClass(kind)}`}></span>
+                        <span class="text-[10px] uppercase tracking-[0.15em] text-muted">{t(lang, labelKey(kind))}</span>
+                        <span class="font-display italic tabular-nums text-text text-[13px]">{fmtDateShort(date)}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <div class="h-full flex items-center justify-center text-center min-h-[120px]">
+            <p class="font-display italic text-[14px] text-muted m-0">{t(lang, "calNoEventsMonth")}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .cal-day { background: transparent; border: 1px solid transparent; }
+  .cal-day:not(:disabled):hover { border-color: var(--border); }
+  /* Selected day: inverted fill, matches the existing "today highlight" idiom. */
+  .cal-day.is-selected {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+  }
+  .cal-day.is-selected span:first-child { color: var(--bg); }
+
+  /* Right-panel event row gets a left accent bar when its date matches the
+     selected day; the parent card lifts subtly so the active event reads as
+     "the one you clicked." */
+  .cal-event-row.is-selected {
+    background: var(--panel);
+    box-shadow: inset 3px 0 0 var(--accent);
+  }
+  .cal-event-card.is-active {
+    background: color-mix(in srgb, var(--panel) 60%, transparent);
+  }
+</style>
+
+<script>
+  const syncSelection = (wrap: HTMLElement) => {
+    const day = wrap.dataset.selectedDay ?? "";
+    // Day cells: toggle .is-selected on the matching cell.
+    wrap.querySelectorAll<HTMLElement>(".cal-day").forEach((el) => {
+      const match = el.dataset.calDay === day && day !== "";
+      el.classList.toggle("is-selected", match);
+      el.setAttribute("aria-pressed", match ? "true" : "false");
+    });
+    // Event rows: highlight any row whose date matches.
+    wrap.querySelectorAll<HTMLElement>(".cal-event-row").forEach((el) => {
+      el.classList.toggle("is-selected", el.dataset.rowDate === day && day !== "");
+    });
+    // Event cards: highlight the card whose dates list contains the day.
+    wrap.querySelectorAll<HTMLElement>(".cal-event-card").forEach((el) => {
+      const dates = (el.dataset.eventDates ?? "").split(",");
+      el.classList.toggle("is-active", day !== "" && dates.includes(day));
+    });
+  };
+
+  document.querySelectorAll<HTMLElement>(".cal-wrap").forEach((wrap) => {
+    syncSelection(wrap);
+    wrap.addEventListener("click", (e) => {
+      const dayBtn = (e.target as HTMLElement).closest<HTMLElement>("[data-cal-day]");
+      if (!dayBtn || (dayBtn as HTMLButtonElement).disabled) return;
+      const day = dayBtn.dataset.calDay ?? "";
+      // Click again on the already-selected day to clear the selection.
+      wrap.dataset.selectedDay = wrap.dataset.selectedDay === day ? "" : day;
+      syncSelection(wrap);
+    });
+  });
+</script>

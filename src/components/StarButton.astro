@@ -9,7 +9,7 @@ interface Props {
 
 const { lang, symbol, variant = "default" } = Astro.props;
 
-// Lucide star path — inlined directly so we can control fill from scoped CSS.
+// Lucide star path - inlined directly so we can control fill from scoped CSS.
 // (astro-icon renders icons via <symbol>+<use>, which puts the path in a
 // shadow tree where outside CSS can't reach it.)
 const STAR_PATH =
@@ -146,7 +146,7 @@ const STAR_PATH =
   document.addEventListener("astro:page-load", paintAll);
   paintAll();
 
-  // Single delegated click handler — prevents the row link (if any) from
+  // Single delegated click handler - prevents the row link (if any) from
   // navigating when the user clicks the star.
   document.addEventListener("click", (e) => {
     const btn = (e.target as HTMLElement | null)?.closest<HTMLButtonElement>("[data-star-btn]");
@@ -159,7 +159,7 @@ const STAR_PATH =
     pop(btn);
   });
 
-  // Web Animations API gives us a fresh animation on every call — no class
+  // Web Animations API gives us a fresh animation on every call - no class
   // toggling or reflow tricks needed, works on rapid repeat clicks.
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   function pop(btn: HTMLElement) {

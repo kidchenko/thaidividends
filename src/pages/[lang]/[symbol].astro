@@ -4,13 +4,15 @@ import MainNav from "../../components/MainNav.astro";
 import StockHeader from "../../components/StockHeader.astro";
 import DividendTimeline from "../../components/DividendTimeline.astro";
 import DividendCadence from "../../components/DividendCadence.astro";
-import DividendQuality from "../../components/DividendQuality.astro";
 import CompanyAbout from "../../components/CompanyAbout.astro";
 import RevenueProfit from "../../components/RevenueProfit.astro";
 import EarningsDividends from "../../components/EarningsDividends.astro";
 import EpsHistory from "../../components/EpsHistory.astro";
 import EpsVsDividends from "../../components/EpsVsDividends.astro";
 import ValuationHistory from "../../components/ValuationHistory.astro";
+import StockIndicators from "../../components/StockIndicators.astro";
+import StockMonthCalendar from "../../components/StockMonthCalendar.astro";
+import RelatedCompanies from "../../components/RelatedCompanies.astro";
 import CalendarSubscribe from "../../components/CalendarSubscribe.astro";
 import StarButton from "../../components/StarButton.astro";
 import {
@@ -20,12 +22,13 @@ import {
   getSymbolStats,
   groupEventsByYear,
   getCadence,
-  getDividendCAGR,
   todayIso,
   absoluteUrl,
   type DividendEvent,
 } from "../../lib/dividends";
-import { getDividendQuality, getEarningsVsDividends, getEpsHistory, getEpsVsDps, getFundamentals, getRevenueProfit, getValuationHistory, hasAnyQualityData } from "../../lib/fundamentals";
+import { getDividendQuality, getEarningsVsDividends, getEpsHistory, getEpsVsDps, getFundamentals, getRevenueProfit, getValuationHistory } from "../../lib/fundamentals";
+import { getPopularCompanies, getRelatedCompanies } from "../../lib/related";
+import { getStockIndicators } from "../../lib/indicators";
 import { getPrice, computeCurrentYield, computeCurrentPE } from "../../lib/prices";
 import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
 import { parseISO } from "date-fns";
@@ -74,8 +77,6 @@ const stats10y = getSymbolStats(events10y);
 // Hide the toggle when both windows show essentially the same data.
 const showRangeToggle = events10y.length > events5y.length;
 const quality = getDividendQuality(symbol!);
-const divGrowth = getDividendCAGR(events);
-const showQuality = hasAnyQualityData(quality) || divGrowth !== null;
 const earningsData = getEarningsVsDividends(symbol!);
 const revenueData = getRevenueProfit(symbol!);
 const epsHistory = getEpsHistory(symbol!);
@@ -88,8 +89,13 @@ const profile = getFundamentals(symbol!)?.profile ?? null;
 const priceSnapshot = getPrice(symbol!);
 const hasRevenueChart = revenueData.annual.length >= 2 || revenueData.quarterly.length >= 3;
 const hasEarningsChart = earningsData.annual.length >= 2 || earningsData.quarterly.length >= 3;
-const hasFinancials = hasRevenueChart || hasEarningsChart;
-const tabCount = 1 + (showQuality ? 1 : 0) + (hasFinancials ? 1 : 0);
+// Tab gating: Dividends always visible. Financials = revenue/profit + valuation.
+// Earnings = per-share EPS views (EpsHistory + EpsVsDividends). The Payout
+// (net income vs dividends paid) chart lives in the Dividends tab - it's
+// answering a dividend question, not a fundamentals one.
+const hasFinancials = hasRevenueChart || hasValuation;
+const hasEarningsTab = hasEpsHistory || hasEpsDps;
+const tabCount = 1 + (hasFinancials ? 1 : 0) + (hasEarningsTab ? 1 : 0);
 const today = todayIso();
 const todayYear = new Date().getFullYear();
 const confirmedCount = events.filter((e) => typeof e.amount === "number").length;
@@ -176,11 +182,74 @@ const milestone: Milestone | null = (() => {
   }
   return null;
 })();
+
+// Snapshot tiles: stock fundamentals from getStockIndicators, plus three
+// page-side tiles (TTM amount, next-or-last calendar event, latest EPS) that
+// need formatters or milestone calc only available here.
+const indicators = getStockIndicators(lang, {
+  events,
+  valuation: valuationHistory,
+  fundamentals: getFundamentals(symbol!),
+  revenue: revenueData,
+  quality,
+  epsHistory,
+  currentPE,
+  currentYield,
+  priceSnapshot,
+});
+if (events.length > 0) {
+  indicators.push(
+    ttmCount > 0
+      ? {
+          labelKey: "statLast12Months",
+          value: `${formatAmount(ttmAmount)} ฿`,
+          tone: "ok",
+          detail: `${ttmCount} ${t(lang, ttmCount === 1 ? "payoutOne" : "payoutMany")}`,
+        }
+      : { labelKey: "statLast12Months", value: "-", tone: "neutral" },
+  );
+}
+if (milestone) {
+  const detail = milestone.subDate
+    ? milestone.subPrefixKey
+      ? `${t(lang, milestone.subPrefixKey)} ${formatDateShort(milestone.subDate)}`
+      : formatDateShort(milestone.subDate)
+    : undefined;
+  indicators.push({
+    labelKey: milestone.labelKey,
+    value: formatDateLong(milestone.date),
+    tone: "neutral",
+    detail,
+  });
+}
+// Latest annual EPS - per-share earnings paired with the per-share dividend
+// total above. Skipped when there is no positive annual EPS on file.
+const latestAnnualEps = epsHistory.annual[epsHistory.annual.length - 1] ?? null;
+if (latestAnnualEps && latestAnnualEps.eps > 0) {
+  indicators.push({
+    labelKey: "indLatestEps",
+    value: `${latestAnnualEps.eps.toFixed(2)} ฿`,
+    tone: "neutral",
+    detail: String(latestAnnualEps.year),
+  });
+}
+
+// Cross-page navigation: sector peers near the top, site-wide top payers at
+// the bottom. Both lists exclude the current symbol.
+const relatedCompanies = getRelatedCompanies(symbol!, 6);
+const popularCompanies = getPopularCompanies(symbol!, 8);
+const sectorKey = company?.sector ? `sector${company.sector}` : null;
+const industryKey = company?.industry ? `industry${company.industry}` : null;
+const relatedContextLabel = sectorKey
+  ? t(lang, sectorKey)
+  : industryKey
+    ? t(lang, industryKey)
+    : null;
 ---
 
 <Layout
   lang={lang}
-  title={`${symbol} — ${t(lang, "siteTitle")}`}
+  title={`${symbol} - ${t(lang, "siteTitle")}`}
   description={`Dividend history for ${symbol}${company ? ` (${company.name})` : ""}`}
   ogImagePath={`/og/${encodeURIComponent(symbol!)}.png`}
 >
@@ -227,11 +296,11 @@ const milestone: Milestone | null = (() => {
           </span>
           {currentYield !== null && (
             <span class="font-display tabular-nums text-[13px] text-payment">
-              · {t(lang, "priceYieldLabel")} {(currentYield * 100).toFixed(2)}%
+              {t(lang, "priceYieldLabel")} {(currentYield * 100).toFixed(2)}%
             </span>
           )}
           <span class="font-display italic text-[12px] text-muted">
-            · {t(lang, "priceAsOf")} {formatDateLong(priceSnapshot.asOfDate)}
+            {t(lang, "priceAsOf")} {formatDateLong(priceSnapshot.asOfDate)}
           </span>
         </div>
       )}
@@ -239,48 +308,17 @@ const milestone: Milestone | null = (() => {
 
     <CompanyAbout lang={lang} company={company} profile={profile} />
 
+    <RelatedCompanies
+      lang={lang}
+      variant="related"
+      companies={relatedCompanies}
+      contextLabel={relatedContextLabel}
+    />
+
+    <StockIndicators lang={lang} indicators={indicators} />
+
     {events.length > 0 ? (
       <>
-        <!-- Summary strip -->
-        <section class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-12">
-          <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "statEvents")}</div>
-            <div class="font-display tabular-nums text-2xl font-medium">{stats.count}</div>
-          </div>
-          <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "statTrackedSince")}</div>
-            <div class="font-display italic tabular-nums text-base text-text/90">
-              {stats.firstDate ? formatMonthYear(stats.firstDate) : "—"}
-            </div>
-          </div>
-          <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "statLast12Months")}</div>
-            <div class="font-display tabular-nums text-2xl font-medium text-accent">
-              {ttmCount > 0 ? formatAmount(ttmAmount) : "—"}
-              {ttmCount > 0 && <span class="text-base text-muted ml-0.5">฿</span>}
-            </div>
-            {ttmCount > 0 && (
-              <div class="font-display italic text-[12px] text-muted mt-1">
-                {ttmCount} {t(lang, ttmCount === 1 ? "payoutOne" : "payoutMany")}
-              </div>
-            )}
-          </div>
-          <div class="bg-bg p-4">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">
-              {t(lang, milestone ? milestone.labelKey : "lastPaid")}
-            </div>
-            <div class="font-display italic tabular-nums text-base text-text/90">
-              {milestone ? formatDateLong(milestone.date) : "—"}
-            </div>
-            {milestone?.subDate && (
-              <div class="font-display italic text-[12px] text-muted mt-1">
-                {milestone.subPrefixKey && (<>{t(lang, milestone.subPrefixKey)}{" "}</>)}
-                {formatDateShort(milestone.subDate)}
-              </div>
-            )}
-          </div>
-        </section>
-
         <div class="stock-tabs" data-active="dividends">
           {tabCount > 1 && (
             <nav role="tablist" aria-label="Stock sections" class="stock-tabnav flex gap-1 mb-10 -mx-4 sm:mx-0 px-4 sm:px-0 border-b border-border overflow-x-auto">
@@ -291,15 +329,6 @@ const milestone: Milestone | null = (() => {
                 aria-controls="tabpanel-dividends"
                 class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
               >{t(lang, "tabDividends")}</button>
-              {showQuality && (
-                <button
-                  role="tab" type="button"
-                  data-tab-trigger="quality"
-                  aria-selected="false"
-                  aria-controls="tabpanel-quality"
-                  class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
-                >{t(lang, "tabEarnings")}</button>
-              )}
               {hasFinancials && (
                 <button
                   role="tab" type="button"
@@ -308,6 +337,15 @@ const milestone: Milestone | null = (() => {
                   aria-controls="tabpanel-financials"
                   class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
                 >{t(lang, "tabFinancials")}</button>
+              )}
+              {hasEarningsTab && (
+                <button
+                  role="tab" type="button"
+                  data-tab-trigger="earnings"
+                  aria-selected="false"
+                  aria-controls="tabpanel-earnings"
+                  class="tab-trigger px-4 py-3 text-[12px] font-sans uppercase tracking-[0.15em] cursor-pointer border-b-2 border-transparent transition-colors whitespace-nowrap bg-transparent"
+                >{t(lang, "tabEarnings")}</button>
               )}
             </nav>
           )}
@@ -375,6 +413,10 @@ const milestone: Milestone | null = (() => {
               </div>
             )}
 
+            {hasEarningsChart && (
+              <EarningsDividends lang={lang} data={earningsData} />
+            )}
+
             <!-- Dividend history, grouped by year (recent open, older collapsed) -->
             <section class="mb-14">
           <header class="flex items-baseline justify-between mb-4">
@@ -383,8 +425,8 @@ const milestone: Milestone | null = (() => {
             </h2>
             <span class="text-[11px] tracking-[0.15em] uppercase text-muted">
               {events.length} {t(lang, events.length === 1 ? "eventOne" : "eventMany")}
-              {" · "}
-              {t(lang, "sinceLabel")} {stats.firstDate ? formatMonthYear(stats.firstDate) : "—"}
+              {", "}
+              {t(lang, "sinceLabel")} {stats.firstDate ? formatMonthYear(stats.firstDate) : "-"}
             </span>
           </header>
 
@@ -452,7 +494,7 @@ const milestone: Milestone | null = (() => {
                           <span class={`font-display tabular-nums leading-none text-[15px] sm:text-base whitespace-nowrap ${
                             e.amount === null ? "text-muted italic" : "font-semibold text-text"
                           }`}>
-                            {e.amount === null ? "—" : formatAmount(e.amount)}
+                            {e.amount === null ? "-" : formatAmount(e.amount)}
                             <span class="text-muted text-[10px] ml-0.5">฿</span>
                           </span>
                         </li>
@@ -465,56 +507,47 @@ const milestone: Milestone | null = (() => {
           </div>
         </section>
 
+            <StockMonthCalendar lang={lang} symbol={symbol!} events={events} />
+
           </div>
-
-          {showQuality && (
-            <div role="tabpanel" id="tabpanel-quality" data-tab-panel="quality">
-              <section class="mb-12">
-                <header class="flex items-baseline justify-between mb-4">
-                  <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-                    <span class="italic font-light text-muted">{t(lang, "sectionQuality")}</span>
-                    <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "sectionQualitySub")}</span>
-                  </h2>
-                </header>
-                <DividendQuality lang={lang} quality={quality ?? { payoutRatio: null, fcfCoverage: null, fcfCoverageYear: null, debtToEquity: null, trailingEps: null, epsHistory: [] }} divGrowth={divGrowth} />
-              </section>
-
-              {hasEpsHistory && <EpsHistory lang={lang} history={epsHistory} />}
-              {hasEpsDps && <EpsVsDividends lang={lang} rows={epsDpsRows} />}
-              {hasValuation && <ValuationHistory lang={lang} history={valuationHistory} currentYield={currentYield} currentPE={currentPE} />}
-            </div>
-          )}
 
           {hasFinancials && (
             <div role="tabpanel" id="tabpanel-financials" data-tab-panel="financials">
               {hasRevenueChart && (
                 <RevenueProfit lang={lang} data={revenueData} />
               )}
-              {hasEarningsChart && (
-                <EarningsDividends lang={lang} data={earningsData} />
+              {hasValuation && (
+                <ValuationHistory lang={lang} history={valuationHistory} currentYield={currentYield} currentPE={currentPE} />
               )}
+            </div>
+          )}
+
+          {hasEarningsTab && (
+            <div role="tabpanel" id="tabpanel-earnings" data-tab-panel="earnings">
+              {hasEpsHistory && <EpsHistory lang={lang} history={epsHistory} />}
+              {hasEpsDps && <EpsVsDividends lang={lang} rows={epsDpsRows} />}
             </div>
           )}
         </div>
 
         <style>
-          /* Hide native disclosure marker — we use our own chevron */
+          /* Hide native disclosure marker - we use our own chevron */
           .year-summary::-webkit-details-marker { display: none; }
           .year-summary { list-style: none; }
 
           /* Tabs: only render the active panel; switch via data-active attr */
           .stock-tabs [role="tabpanel"] { display: none; }
           .stock-tabs[data-active="dividends"] [data-tab-panel="dividends"],
-          .stock-tabs[data-active="quality"] [data-tab-panel="quality"],
-          .stock-tabs[data-active="financials"] [data-tab-panel="financials"] {
+          .stock-tabs[data-active="financials"] [data-tab-panel="financials"],
+          .stock-tabs[data-active="earnings"] [data-tab-panel="earnings"] {
             display: block;
           }
 
           .stock-tabnav .tab-trigger { color: var(--muted); }
           .stock-tabnav .tab-trigger:hover { color: var(--text); }
           .stock-tabs[data-active="dividends"] [data-tab-trigger="dividends"],
-          .stock-tabs[data-active="quality"] [data-tab-trigger="quality"],
-          .stock-tabs[data-active="financials"] [data-tab-trigger="financials"] {
+          .stock-tabs[data-active="financials"] [data-tab-trigger="financials"],
+          .stock-tabs[data-active="earnings"] [data-tab-trigger="earnings"] {
             color: var(--text);
             border-bottom-color: var(--accent);
           }
@@ -590,5 +623,11 @@ const milestone: Milestone | null = (() => {
         </a>
       </section>
     )}
+
+    <RelatedCompanies
+      lang={lang}
+      variant="popular"
+      companies={popularCompanies}
+    />
   </main>
 </Layout>

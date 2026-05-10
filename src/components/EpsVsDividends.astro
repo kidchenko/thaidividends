@@ -12,7 +12,7 @@ const { lang, rows } = Astro.props;
 const fmtEps = (n: number): string => n.toFixed(2);
 const fmtPct = (n: number): string => `${(n * 100).toFixed(0)}%`;
 
-// Geometry — matches the other charts.
+// Geometry - matches the other charts.
 const W = 800;
 const H = 240;
 const PAD_T = 22;
@@ -90,7 +90,7 @@ const fmtSignedPct = (n: number): string =>
     <div class="bg-bg p-3">
       <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsLatestEps")}</div>
       <div class="font-display tabular-nums text-xl font-medium text-accent">
-        {latestEps !== null ? `${fmtEps(latestEps)} ฿` : "—"}
+        {latestEps !== null ? `${fmtEps(latestEps)} ฿` : "-"}
       </div>
       <div class="font-display italic text-[12px] text-muted mt-1">
         {epsCagr !== null ? `${fmtSignedPct(epsCagr)} ${t(lang, "epsDpsCagr")}` : t(lang, "qualityNoData")}
@@ -99,7 +99,7 @@ const fmtSignedPct = (n: number): string =>
     <div class="bg-bg p-3">
       <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsLatestDps")}</div>
       <div class="font-display tabular-nums text-xl font-medium text-payment">
-        {latestDps !== null && latestDps > 0 ? `${fmtEps(latestDps)} ฿` : "—"}
+        {latestDps !== null && latestDps > 0 ? `${fmtEps(latestDps)} ฿` : "-"}
       </div>
       <div class="font-display italic text-[12px] text-muted mt-1">
         {dpsCagr !== null ? `${fmtSignedPct(dpsCagr)} ${t(lang, "epsDpsCagr")}` : t(lang, "qualityNoData")}
@@ -113,16 +113,16 @@ const fmtSignedPct = (n: number): string =>
         : latestPayout < 0.9 ? "text-text"
         : "text-accent"
       }`}>
-        {latestPayout !== null ? fmtPct(latestPayout) : "—"}
+        {latestPayout !== null ? fmtPct(latestPayout) : "-"}
       </div>
       <div class="font-display italic text-[12px] text-muted mt-1">
-        {latest ? `${latest.year} · ${t(lang, "epsDpsPerShare")}` : ""}
+        {latest ? `${latest.year}, ${t(lang, "epsDpsPerShare")}` : ""}
       </div>
     </div>
     <div class="bg-bg p-3">
       <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "epsDpsRetained")}</div>
       <div class="font-display tabular-nums text-xl font-medium text-text">
-        {latest && latestEps !== null ? `${fmtEps(latestEps - (latestDps ?? 0))} ฿` : "—"}
+        {latest && latestEps !== null ? `${fmtEps(latestEps - (latestDps ?? 0))} ฿` : "-"}
       </div>
       <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "epsDpsRetainedHint")}</div>
     </div>
@@ -170,9 +170,9 @@ const fmtSignedPct = (n: number): string =>
       {rows.map((r, i) => (
         <g class="epsdps-bar"
           data-tip-year={r.year}
-          data-tip-eps={r.eps !== null ? `${fmtEps(r.eps)} ฿` : "—"}
-          data-tip-dps={r.dps > 0 ? `${fmtEps(r.dps)} ฿` : "—"}
-          data-tip-payout={r.payoutPerShare !== null ? fmtPct(r.payoutPerShare) : "—"}
+          data-tip-eps={r.eps !== null ? `${fmtEps(r.eps)} ฿` : "-"}
+          data-tip-dps={r.dps > 0 ? `${fmtEps(r.dps)} ฿` : "-"}
+          data-tip-payout={r.payoutPerShare !== null ? fmtPct(r.payoutPerShare) : "-"}
         >
           <rect x={xCenter(i) - slotW / 2} y={PAD_T} width={slotW} height={chartH} fill="transparent" />
         </g>

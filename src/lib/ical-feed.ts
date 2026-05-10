@@ -62,7 +62,7 @@ function buildPayment(e: DividendEvent, url: string): IcsEvent {
   };
 }
 
-// Lowercase + alphanumeric/hyphen only — stable across rebuilds.
+// Lowercase + alphanumeric/hyphen only - stable across rebuilds.
 function slug(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }

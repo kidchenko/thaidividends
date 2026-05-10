@@ -1,0 +1,140 @@
+---
+import { type Lang, t, localePath } from "../lib/i18n";
+import { loadEvents, getStockListings, yearPath } from "../lib/dividends";
+import { getPricesAsOf } from "../lib/prices";
+import { FILTER_TAGS, getFilterTag, type FilterTag } from "../lib/categories";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const events = loadEvents();
+const listings = getStockListings();
+
+// --- Year archive ---
+const eventsByYear = new Map<number, number>();
+for (const e of events) {
+  const y = Number(e.exDate.slice(0, 4));
+  if (Number.isFinite(y)) eventsByYear.set(y, (eventsByYear.get(y) ?? 0) + 1);
+}
+const allYears = [...eventsByYear.keys()].sort((a, b) => b - a);
+const recentYears = allYears.slice(0, 5);
+const olderTarget = allYears.length > 5 ? allYears[5] : null;
+const latestYear = allYears[0] ?? new Date().getFullYear();
+
+// --- Industry counts (matching the /stocks page filter tags) ---
+const tagCounts = new Map<FilterTag, number>();
+for (const c of listings) {
+  const tag = getFilterTag(c);
+  tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+}
+
+const TAG_LABEL_KEY: Record<FilterTag, string> = {
+  FINCIAL: "industryFINCIAL",
+  PROPCON: "industryPROPCON",
+  RESOURC: "industryRESOURC",
+  SERVICE: "industrySERVICE",
+  TECH: "industryTECH",
+  INDUS: "industryINDUS",
+  AGRO: "industryAGRO",
+  CONSUMP: "industryCONSUMP",
+  reit: "tagReit",
+  etf: "tagEtf",
+  dr: "tagDr",
+  _none: "filterAll",
+};
+
+const stocksHref = localePath(lang, "/stocks/");
+const calendarHref = localePath(lang, "/");
+const watchlistHref = localePath(lang, "/watchlist/");
+const annualHref = yearPath(lang, latestYear);
+
+// --- Refresh metadata ---
+const pricesAsOf = getPricesAsOf();
+const refreshDate = pricesAsOf ? pricesAsOf.slice(0, 10) : null;
+
+// --- Colophon copy (one translatable sentence with %STOCKS% / %EVENTS% slots) ---
+const totalStocks = listings.length;
+const totalEvents = events.length;
+const colophon = t(lang, "footerColophon")
+  .replace("%STOCKS%", totalStocks.toLocaleString())
+  .replace("%EVENTS%", totalEvents.toLocaleString());
+---
+
+<footer class="border-t border-border mt-12">
+  <div class="max-w-[760px] mx-auto px-3 sm:px-8 py-12">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-10 gap-y-8 mb-10">
+      <!-- Sections -->
+      <section>
+        <h2 class="text-[10px] uppercase tracking-[0.22em] text-muted font-sans font-normal mb-3 m-0">
+          {t(lang, "footerSections")}
+        </h2>
+        <ul class="m-0 p-0 list-none flex flex-col gap-1.5 text-[13px]">
+          <li><a href={calendarHref} class="text-text/85 hover:text-text no-underline">{t(lang, "navCalendar")}</a></li>
+          <li><a href={annualHref} class="text-text/85 hover:text-text no-underline">{t(lang, "navAnnual")}</a></li>
+          <li><a href={stocksHref} class="text-text/85 hover:text-text no-underline">{t(lang, "navStocks")}</a></li>
+          <li><a href={watchlistHref} class="text-text/85 hover:text-text no-underline">{t(lang, "navWatchlist")}</a></li>
+        </ul>
+      </section>
+
+      <!-- Archive (last 5 years + Older →) -->
+      <section>
+        <h2 class="text-[10px] uppercase tracking-[0.22em] text-muted font-sans font-normal mb-3 m-0">
+          {t(lang, "footerArchive")}
+        </h2>
+        <ul class="m-0 p-0 list-none flex flex-col gap-1.5 text-[13px]">
+          {recentYears.map((y) => (
+            <li class="flex items-baseline justify-between gap-3">
+              <a
+                href={yearPath(lang, y)}
+                class="text-text/85 hover:text-text no-underline tabular-nums font-display"
+              >{y}</a>
+              <span class="text-faint text-[11px] tabular-nums">{eventsByYear.get(y)?.toLocaleString()}</span>
+            </li>
+          ))}
+          {olderTarget !== null && (
+            <li class="pt-1">
+              <a
+                href={yearPath(lang, olderTarget)}
+                class="text-muted hover:text-text no-underline italic font-display text-[13px]"
+              >{t(lang, "footerOlder")} →</a>
+            </li>
+          )}
+        </ul>
+      </section>
+
+      <!-- Industries (same filter set as /stocks) -->
+      <section class="col-span-2 sm:col-span-1">
+        <h2 class="text-[10px] uppercase tracking-[0.22em] text-muted font-sans font-normal mb-3 m-0">
+          {t(lang, "footerByIndustry")}
+        </h2>
+        <ul class="m-0 p-0 list-none grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-1.5 text-[13px]">
+          {FILTER_TAGS.map((tag) => (
+            <li class="flex items-baseline justify-between gap-3 min-w-0">
+              <a
+                href={`${stocksHref}?category=${tag}`}
+                class="text-text/85 hover:text-text no-underline truncate"
+              >{t(lang, TAG_LABEL_KEY[tag])}</a>
+              <span class="text-faint text-[11px] tabular-nums shrink-0">{tagCounts.get(tag) ?? 0}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+
+    <!-- Colophon paragraph -->
+    <p class="font-display italic text-[14px] leading-relaxed text-text/85 max-w-prose mb-5 m-0">
+      {colophon}
+    </p>
+
+    <!-- Bottom strip: refresh + tech credits + fin -->
+    <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 text-[10px] uppercase tracking-[0.18em] text-muted pt-5 border-t border-border">
+      {refreshDate && (
+        <span class="tabular-nums">{t(lang, "footerRefreshed")} {refreshDate}</span>
+      )}
+      <span>{t(lang, "footerNote")}</span>
+      <span class="ml-auto font-display italic normal-case tracking-normal text-[13px] text-faint">fin.</span>
+    </div>
+  </div>
+</footer>

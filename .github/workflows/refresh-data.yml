@@ -37,6 +37,9 @@ jobs:
       - name: Fetch SET data
         run: npm run fetch
 
+      - name: Re-enrich companies.json with industry / sector
+        run: npm run fetch:sectors
+
       - name: Fetch SET trading-stat (year-end PE / yield / payout)
         run: npm run fetch:set-stats
         continue-on-error: true

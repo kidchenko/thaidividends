@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* Display: Fraunces — variable serif with optical sizes + slant axis. */
+/* Display: Fraunces - variable serif with optical sizes + slant axis. */
 @import "@fontsource-variable/fraunces/standard.css";
 @import "@fontsource-variable/fraunces/standard-italic.css";
-/* Body: Geist — modern, neutral but distinctive sans by Vercel. */
+/* Body: Geist - modern, neutral but distinctive sans by Vercel. */
 @import "@fontsource-variable/geist/wght.css";
 
 /* ---- Theme palettes ---- */
@@ -21,7 +21,7 @@
   --accent: oklch(56% 0.165 55);          /* deep saffron */
   --accent-soft: oklch(56% 0.165 55 / 0.10);
   --accent-strong: oklch(56% 0.165 55 / 0.18);
-  --today: oklch(45% 0.18 28);            /* darker terracotta — distinct from accent */
+  --today: oklch(45% 0.18 28);            /* darker terracotta - distinct from accent */
   --today-soft: oklch(45% 0.18 28 / 0.08);
   --weekend: oklch(96% 0.012 75);
   --payment: oklch(48% 0.10 230);         /* refined ink-blue */
@@ -33,7 +33,7 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: oklch(15% 0.012 60);              /* warm dark — espresso, not blue-black */
+  --bg: oklch(15% 0.012 60);              /* warm dark - espresso, not blue-black */
   --panel: oklch(19% 0.013 60);
   --panel-2: oklch(23% 0.014 60);
   --border: oklch(32% 0.016 60);          /* slightly lighter so grid lines read */
@@ -87,11 +87,11 @@ html, body {
   font-family: var(--font-sans);
   font-size: 14px;
   line-height: 1.5;
-  font-feature-settings: "ss01", "cv11";  /* Geist alt forms — subtle distinctiveness */
+  font-feature-settings: "ss01", "cv11";  /* Geist alt forms - subtle distinctiveness */
   -webkit-font-smoothing: antialiased;
 }
 
-/* Filter rules — hide calendar cards when corresponding pill is toggled off. */
+/* Filter rules - hide calendar cards when corresponding pill is toggled off. */
 :root[data-hide-xd="1"] [data-event][data-context="xd"] { display: none; }
 :root[data-hide-payment="1"] [data-event][data-context="payment"] { display: none; }
 [data-event].match-hidden { display: none; }

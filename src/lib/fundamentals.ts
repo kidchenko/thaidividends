@@ -178,7 +178,7 @@ export function getEarningsVsDividends(symbol: string): EarningsDividendsData {
   annual.sort((a, b) => a.year - b.year);
 
   // Quarterly: include every quarter with positive net income, even if it
-  // didn't pay a dividend (those just show 0 bottom — useful "earned this much
+  // didn't pay a dividend (those just show 0 bottom - useful "earned this much
   // but didn't pay" context).
   const dividendsByQuarter = new Map<string, number>();
   for (const r of f.quarterlyCashflow ?? []) {
@@ -209,7 +209,7 @@ export function getEarningsVsDividends(symbol: string): EarningsDividendsData {
 
 /**
  * Annual + quarterly revenue and net income. Includes loss periods so the
- * data is honest — chart code clamps the filled portion to 0 visually but
+ * data is honest - chart code clamps the filled portion to 0 visually but
  * reports real margin in the label.
  */
 export function getRevenueProfit(symbol: string): RevenueProfitData {
@@ -314,7 +314,7 @@ export type EpsDpsRow = {
 
 /**
  * Per-year EPS vs DPS. EPS comes from incomeAnnual, DPS is the sum of
- * confirmed dividend amounts (per share — that's how SET reports them) by
+ * confirmed dividend amounts (per share - that's how SET reports them) by
  * ex-date year. Returns rows for any year that has at least one of the two.
  */
 export function getEpsVsDps(
@@ -378,7 +378,7 @@ export type ValuationHistory = {
  *               TTM DPS (sum of confirmed amounts in 12 months ending at the
  *               quarter-end) ÷ quarter-end close.
  *
- * "Historical only" by design — these numbers don't change once the period
+ * "Historical only" by design - these numbers don't change once the period
  * closes, so they're safe to bake into a static build.
  */
 export function getValuationHistory(
@@ -410,7 +410,7 @@ export function getValuationHistory(
   const epsByYear = new Map<number, number>();
   for (const r of f.incomeAnnual) {
     if (r.eps !== null && r.fiscalYearEnd) {
-      // EPS from Yahoo is also split-adjusted historically — no adjustment needed.
+      // EPS from Yahoo is also split-adjusted historically - no adjustment needed.
       epsByYear.set(Number(r.fiscalYearEnd.slice(0, 4)), r.eps);
     }
   }
@@ -421,7 +421,7 @@ export function getValuationHistory(
     const y = Number(e.exDate.slice(0, 4));
     dpsByYear.set(y, (dpsByYear.get(y) ?? 0) + adj);
   }
-  // SET trading-stat overlay — official year-end PE / yield / payout ratio for
+  // SET trading-stat overlay - official year-end PE / yield / payout ratio for
   // the last few fiscal years. Where present we trust SET over our computed
   // values (it uses the published EPS that may differ from Yahoo's reporting).
   const setByYear = getSetAnnualByYear(symbol);

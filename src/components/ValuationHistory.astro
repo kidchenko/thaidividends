@@ -171,87 +171,122 @@ type ChartPane = {
   rows: ValuationRow[];
   layout: Layout;
 };
-const yieldPanes: ChartPane[] = [];
+
+// 5y window cutoff for the Yield-history range toggle. Quarterly rows go back
+// further than annual rows, so we apply the same iso-date filter to both.
+const _today = new Date();
+const _cutoff5y = new Date(_today);
+_cutoff5y.setFullYear(_today.getFullYear() - 5);
+const cutoff5yIso = _cutoff5y.toISOString().slice(0, 10);
+const annual5y = history.annual.filter((r) => r.date >= cutoff5yIso);
+const quarterly5y = history.quarterly.filter((r) => r.date >= cutoff5yIso);
+const showAnnual5y = annual5y.length >= 2;
+const showQuarterly5y = quarterly5y.length >= 3;
+// Toggle is meaningful only when 10y actually has more data than 5y.
+const showYieldRangeToggle =
+  history.annual.length > annual5y.length || history.quarterly.length > quarterly5y.length;
+
+const yieldPanes10y: ChartPane[] = [];
+const yieldPanes5y: ChartPane[] = [];
 const pePanes: ChartPane[] = [];
+// Yahoo only gives ~4 years of EPS, so the P/E chart should clip its x-axis
+// to the periods that actually have a P/E value - otherwise the bars get
+// crammed into the right edge of an empty 10-year strip.
+const peAnnualRows = history.annual.filter((r) => r.pe !== null && r.pe > 0);
+const peQuarterlyRows = history.quarterly.filter((r) => r.pe !== null && r.pe > 0);
+const showPeAnnual = peAnnualRows.length >= 2;
+const showPeQuarterly = peQuarterlyRows.length >= 3;
+
 if (showAnnual) {
-  yieldPanes.push({
+  yieldPanes10y.push({
     kind: "year",
     rows: history.annual,
     layout: layoutFor(history.annual, (r) => r.yld, currentYield),
   });
+}
+if (showPeAnnual) {
   pePanes.push({
     kind: "year",
-    rows: history.annual,
-    layout: layoutFor(history.annual, (r) => r.pe, currentPE),
+    rows: peAnnualRows,
+    layout: layoutFor(peAnnualRows, (r) => r.pe, currentPE),
   });
 }
 if (showQuarterly) {
-  yieldPanes.push({
+  yieldPanes10y.push({
     kind: "quarter",
     rows: history.quarterly,
     layout: layoutFor(history.quarterly, (r) => r.yld, currentYield),
   });
+}
+if (showPeQuarterly) {
   pePanes.push({
     kind: "quarter",
-    rows: history.quarterly,
-    layout: layoutFor(history.quarterly, (r) => r.pe, currentPE),
+    rows: peQuarterlyRows,
+    layout: layoutFor(peQuarterlyRows, (r) => r.pe, currentPE),
   });
 }
+if (showAnnual5y) {
+  yieldPanes5y.push({
+    kind: "year",
+    rows: annual5y,
+    layout: layoutFor(annual5y, (r) => r.yld, currentYield),
+  });
+}
+if (showQuarterly5y) {
+  yieldPanes5y.push({
+    kind: "quarter",
+    rows: quarterly5y,
+    layout: layoutFor(quarterly5y, (r) => r.yld, currentYield),
+  });
+}
+const initialGrouping5y = showAnnual5y ? "year" : "quarter";
 
 const linePath = (pts: Point[]): string =>
   pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+
+// "Nice" tick step for the P/E y-axis. Defined here (not inline in JSX) so the
+// `<` comparisons don't confuse Astro's JSX parser.
+function niceStep(target: number): number {
+  const safe = Math.max(target, 0.001);
+  const mag = Math.pow(10, Math.floor(Math.log10(safe)));
+  const norm = safe / mag;
+  const niceNorm = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10;
+  return niceNorm * mag;
+}
+function ticksWithin(yMin: number, yMax: number): number[] {
+  const step = niceStep((yMax - yMin) / 4);
+  const start = Math.ceil(yMin / step) * step;
+  const count = Math.max(0, Math.floor((yMax - start) / step) + 1);
+  return Array.from({ length: count }, (_, i) => start + i * step);
+}
 ---
 
-{(showAnnual || showQuarterly) && hasAnyValuation && (
+{/* === Yield history section === */}
+{(showAnnual || showQuarterly) && (yields.length > 0 || yieldHeadline !== null) && (
   <section class="mb-14">
-    <header class="flex items-baseline justify-between mb-4">
+    <header class="mb-2">
       <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
-        <span class="italic font-light text-muted">{t(lang, "valSection")}</span>
-        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "valSectionSub")}</span>
+        <span class="italic font-light text-muted">{t(lang, "valYieldSection")}</span>
+        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "valYieldSectionSub")}</span>
       </h2>
     </header>
+    {yields.length > 0 && (
+      <p class="font-display italic text-[13px] text-muted mb-5">
+        {t(lang, "metaRange")} {fmtPct(yieldMin)} – {fmtPct(yieldMax)}
+        {history.annual.length > 0 && (
+          <> ({history.annual[0].year}–{history.annual[history.annual.length - 1].year})</>
+        )}
+      </p>
+    )}
 
-    <!-- Headline tiles -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border mb-6">
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{yieldHeadlineLabel}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-payment">
-          {yieldHeadline !== null ? fmtPct(yieldHeadline) : "—"}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">
-          {yieldPosition !== null ? positionLabel(yieldPosition) : yieldHeadlineSub}
-        </div>
-      </div>
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "valYieldRange")}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-text">
-          {yields.length > 0 ? `${fmtPct(yieldMin)} – ${fmtPct(yieldMax)}` : "—"}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">
-          {history.annual.length > 0 ? `${history.annual[0].year}–${history.annual[history.annual.length - 1].year}` : ""}
-        </div>
-      </div>
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{peHeadlineLabel}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-text">
-          {peHeadline !== null ? fmtPe(peHeadline) : "—"}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">
-          {pePosition !== null ? positionLabel(pePosition) : peHeadlineSub}
-        </div>
-      </div>
-      <div class="bg-bg p-3">
-        <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-1">{t(lang, "valPeRange")}</div>
-        <div class="font-display tabular-nums text-xl font-medium text-text">
-          {pes.length > 0 ? `${fmtPe(peMin)} – ${fmtPe(peMax)}` : "—"}
-        </div>
-        <div class="font-display italic text-[12px] text-muted mt-1">{t(lang, "valPeRangeHint")}</div>
-      </div>
-    </div>
-
-    <div class="val-wrap relative">
-      <!-- Yield chart (line) — independent grouping toggle -->
-      <div class="val-chart mb-5" data-val-grouping={initialGrouping}>
+    <div class="symbol-range" data-symbol-range="5y">
+      {[
+        { rangeKey: "5y", panes: yieldPanes5y, initialGrouping: initialGrouping5y },
+        { rangeKey: "10y", panes: yieldPanes10y, initialGrouping: initialGrouping },
+      ].map(({ rangeKey, panes, initialGrouping: pgi }) => (
+        <div data-symbol-range-pane={rangeKey}>
+          <div class="val-wrap relative">
+            <div class="val-chart" data-val-grouping={pgi}>
         <div class="flex items-center gap-3 mb-2 flex-wrap">
           {showAnnual && showQuarterly && (
             <div class="inline-flex border border-border bg-panel rounded-sm overflow-hidden">
@@ -268,8 +303,22 @@ const linePath = (pts: Point[]): string =>
             </div>
           )}
           <span class="text-[11px] uppercase tracking-[0.18em] text-muted">{t(lang, "valChartYield")}</span>
+          {showYieldRangeToggle && (
+            <div class="ml-auto inline-flex border border-border bg-panel rounded-sm overflow-hidden">
+              <button
+                type="button"
+                data-symbol-range-btn="5y"
+                class="symbol-range-btn px-2.5 py-0.5 text-[11px] tracking-[0.1em] uppercase font-sans transition-colors cursor-pointer"
+              >{t(lang, "range5y")}</button>
+              <button
+                type="button"
+                data-symbol-range-btn="10y"
+                class="symbol-range-btn px-2.5 py-0.5 text-[11px] tracking-[0.1em] uppercase font-sans transition-colors cursor-pointer border-l border-border"
+              >{t(lang, "range10y")}</button>
+            </div>
+          )}
         </div>
-        {yieldPanes.map(({ kind, rows, layout: yldLayout }) => (
+        {panes.map(({ kind, rows, layout: yldLayout }) => (
           <div data-val-grouping-pane={kind} class="val-pane">
             <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="Yield over time">
               <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
@@ -315,8 +364,8 @@ const linePath = (pts: Point[]): string =>
                 return (
                   <g class="val-pt"
                     data-tip-period={r.period}
-                    data-tip-yield={r.yld > 0 ? fmtPct(r.yld) : "—"}
-                    data-tip-pe={r.pe !== null && r.pe > 0 ? fmtPe(r.pe) : "—"}
+                    data-tip-yield={r.yld > 0 ? fmtPct(r.yld) : "-"}
+                    data-tip-pe={r.pe !== null && r.pe > 0 ? fmtPe(r.pe) : "-"}
                     data-tip-close={r.close.toFixed(2)}
                   >
                     <rect x={x - 16} y={PAD_T} width="32" height={chartH} fill="transparent" />
@@ -346,7 +395,7 @@ const linePath = (pts: Point[]): string =>
                   <rect x={W - PAD_R - 96} y={yldLayout.yFor(yldLayout.avg) - 14} width="96" height="12" class="fill-bg" opacity="0.85" />
                   <text x={W - PAD_R} y={yldLayout.yFor(yldLayout.avg) - 4} text-anchor="end" class="fill-muted"
                     style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
-                    {t(lang, "tlAvg")} · {fmtPct(yldLayout.avg)}
+                    {t(lang, "tlAvg")} {fmtPct(yldLayout.avg)}
                   </text>
                 </g>
               )}
@@ -356,16 +405,55 @@ const linePath = (pts: Point[]): string =>
                   <text x={PAD_L + 4} y={yldLayout.yFor(yldLayout.current) - 4} text-anchor="start"
                     class="fill-payment"
                     style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic; font-weight: 600;">
-                    {t(lang, "valNow")} · {fmtPct(yldLayout.current)}
+                    {t(lang, "valNow")} {fmtPct(yldLayout.current)}
                   </text>
                 </g>
               )}
             </svg>
           </div>
         ))}
-      </div>
+            </div>
 
-      <!-- P/E chart (bars) — independent grouping toggle -->
+            {/* Tooltip - one per pane so closest('.val-wrap') resolves locally */}
+            <div
+              data-val-tooltip
+              role="tooltip"
+              class="pointer-events-none absolute z-20 hidden -translate-x-1/2 -translate-y-full
+                     bg-text text-bg px-2.5 py-1.5 text-[11px] leading-tight
+                     whitespace-nowrap border border-text rounded-sm"
+            >
+              <div data-tip-slot="period" class="font-display font-semibold text-[13px] tabular-nums"></div>
+              <div class="opacity-90 mt-1"><span class="opacity-70">{t(lang, "valTipYield")}:</span> <span data-tip-slot="yield"></span></div>
+              <div class="opacity-90"><span class="opacity-70">{t(lang, "valTipPe")}:</span> <span data-tip-slot="pe"></span></div>
+              <div class="opacity-50 text-[10px] uppercase tracking-[0.12em] mt-1"><span data-tip-slot="close"></span> ฿ {t(lang, "valTipClose")}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+{/* === P/E history section === */}
+{(showAnnual || showQuarterly) && (pes.length > 0 || peHeadline !== null) && (
+  <section class="mb-14">
+    <header class="mb-2">
+      <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+        <span class="italic font-light text-muted">{t(lang, "valPeSection")}</span>
+        <span class="text-text/60 text-[14px] ml-2 font-sans normal-case tracking-normal">{t(lang, "valPeSectionSub")}</span>
+      </h2>
+    </header>
+    {pes.length > 0 && (
+      <p class="font-display italic text-[13px] text-muted mb-5">
+        {t(lang, "metaRange")} {fmtPe(peMin)}× – {fmtPe(peMax)}×
+        {peAnnualRows.length > 0 && (
+          <> ({peAnnualRows[0].year}–{peAnnualRows[peAnnualRows.length - 1].year})</>
+        )}
+        , {t(lang, "metaAvg")} {fmtPe(pes.reduce((s, v) => s + v, 0) / pes.length)}×
+      </p>
+    )}
+
+    <div class="val-wrap relative">
       <div class="val-chart" data-val-grouping={initialGrouping}>
         <div class="flex items-center gap-3 mb-2 flex-wrap">
           {showAnnual && showQuarterly && (
@@ -384,24 +472,33 @@ const linePath = (pts: Point[]): string =>
           )}
           <span class="text-[11px] uppercase tracking-[0.18em] text-muted">{t(lang, "valChartPe")}</span>
         </div>
-        {pePanes.map(({ kind, rows, layout: peLayout }) => (
+        {pePanes.map(({ kind, rows, layout: peLayout }) => {
+          const peTicks = ticksWithin(peLayout.yMin, peLayout.yMax);
+          return (
           <div data-val-grouping-pane={kind} class="val-pane">
             <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="P/E over time">
-              <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
               <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
 
-              {peLayout.bars.length > 0 ? (
-                <text
-                  x={PAD_L - 8} y={PAD_T + 4}
-                  text-anchor="end" class="fill-muted"
-                  style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
-                >{fmtPe(peLayout.yMax)}×</text>
-              ) : (
+              {peLayout.bars.length === 0 && (
                 <text
                   x={W / 2} y={H / 2} text-anchor="middle" class="fill-muted"
                   style="font-size: 12px; font-family: var(--font-display); font-style: italic;"
                 >{t(lang, "valPeNoData")}</text>
               )}
+
+              {peLayout.bars.length > 0 && peTicks.map((v) => (
+                <g>
+                  <line
+                    x1={PAD_L} y1={peLayout.yFor(v)} x2={W - PAD_R} y2={peLayout.yFor(v)}
+                    class="stroke-border" stroke-dasharray="2 4" opacity="0.5"
+                  />
+                  <text
+                    x={PAD_L - 8} y={peLayout.yFor(v) + 4}
+                    text-anchor="end" class="fill-muted"
+                    style="font-size: 11px; font-family: var(--font-display); font-style: italic;"
+                  >{fmtPe(v)}×</text>
+                </g>
+              ))}
 
               {peLayout.avg !== null && (
                 <line
@@ -425,7 +522,7 @@ const linePath = (pts: Point[]): string =>
                 return (
                   <g class="val-pt"
                     data-tip-period={b.r.period}
-                    data-tip-yield={b.r.yld > 0 ? fmtPct(b.r.yld) : "—"}
+                    data-tip-yield={b.r.yld > 0 ? fmtPct(b.r.yld) : "-"}
                     data-tip-pe={fmtPe(b.v)}
                     data-tip-close={b.r.close.toFixed(2)}
                   >
@@ -443,7 +540,7 @@ const linePath = (pts: Point[]): string =>
                 );
               })}
 
-              {/* X-axis labels — same positions as yield chart */}
+              {/* X-axis labels - same positions as yield chart */}
               {rows.map((r, i) => {
                 const barSlotW = chartW / rows.length;
                 const x = PAD_L + barSlotW * i + barSlotW / 2;
@@ -465,7 +562,7 @@ const linePath = (pts: Point[]): string =>
                   <rect x={W - PAD_R - 80} y={peLayout.yFor(peLayout.avg) - 14} width="80" height="12" class="fill-bg" opacity="0.85" />
                   <text x={W - PAD_R} y={peLayout.yFor(peLayout.avg) - 4} text-anchor="end" class="fill-muted"
                     style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic;">
-                    {t(lang, "tlAvg")} · {fmtPe(peLayout.avg)}×
+                    {t(lang, "tlAvg")} {fmtPe(peLayout.avg)}×
                   </text>
                 </g>
               )}
@@ -475,13 +572,14 @@ const linePath = (pts: Point[]): string =>
                   <text x={PAD_L + 4} y={peLayout.yFor(peLayout.current) - 4} text-anchor="start"
                     class="fill-accent"
                     style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-family: var(--font-display); font-style: italic; font-weight: 600;">
-                    {t(lang, "valNow")} · {fmtPe(peLayout.current)}×
+                    {t(lang, "valNow")} {fmtPe(peLayout.current)}×
                   </text>
                 </g>
               )}
             </svg>
           </div>
-        ))}
+          );
+        })}
       </div>
 
       <!-- Tooltip -->
@@ -507,6 +605,12 @@ const linePath = (pts: Point[]): string =>
     if (groupBtn) {
       const chart = groupBtn.closest<HTMLElement>(".val-chart");
       if (chart) chart.dataset.valGrouping = groupBtn.dataset.valGroupingBtn ?? "year";
+    }
+    // 5y/10y range toggle (yield section only)
+    const rangeBtn = (e.target as HTMLElement).closest<HTMLElement>("[data-symbol-range-btn]");
+    if (rangeBtn) {
+      const wrap = rangeBtn.closest<HTMLElement>(".symbol-range");
+      if (wrap) wrap.dataset.symbolRange = rangeBtn.dataset.symbolRangeBtn ?? "5y";
     }
   });
 
@@ -561,5 +665,22 @@ const linePath = (pts: Point[]): string =>
   .val-chart[data-val-grouping="year"] [data-val-grouping-pane="year"],
   .val-chart[data-val-grouping="quarter"] [data-val-grouping-pane="quarter"] {
     display: block;
+  }
+
+  /* 5y / 10y range toggle on the Yield section */
+  .symbol-range [data-symbol-range-pane] { display: none; }
+  .symbol-range[data-symbol-range="5y"] [data-symbol-range-pane="5y"],
+  .symbol-range[data-symbol-range="10y"] [data-symbol-range-pane="10y"] {
+    display: block;
+  }
+  .symbol-range[data-symbol-range="5y"] [data-symbol-range-btn="5y"],
+  .symbol-range[data-symbol-range="10y"] [data-symbol-range-btn="10y"] {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .symbol-range[data-symbol-range="5y"] [data-symbol-range-btn="10y"],
+  .symbol-range[data-symbol-range="10y"] [data-symbol-range-btn="5y"] {
+    background: transparent;
+    color: var(--muted);
   }
 </style>

@@ -1,6 +1,6 @@
 // Maps a Company's raw SET classification into the single filter bucket the
 // directory UI cares about. REITs/Funds, ETFs, and DRs are treated as peers
-// to SET industry tags — clicking one is the user's whole filter intent.
+// to SET industry tags - clicking one is the user's whole filter intent.
 
 import type { Company } from "./dividends";
 
@@ -33,7 +33,7 @@ export function isIndustry(s: unknown): s is Industry {
 }
 
 export function getFilterTag(c: Company): FilterTag {
-  // Cross-cutting buckets win over industry — a REIT is a REIT to a Thai
+  // Cross-cutting buckets win over industry - a REIT is a REIT to a Thai
   // investor first, "in the property industry" second.
   if (c.sector === "PF&REIT" || c.isIFF) return "reit";
   if (c.securityType === "L") return "etf";

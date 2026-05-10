@@ -39,7 +39,7 @@ const formatAmount = (n: number): string =>
 const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy", lang);
 ---
 
-<Layout lang={lang} title={`${t(lang, "watchlistTitle")} — ${t(lang, "siteTitle")}`}>
+<Layout lang={lang} title={`${t(lang, "watchlistTitle")} - ${t(lang, "siteTitle")}`}>
   <MainNav lang={lang} active="watchlist" annualYear={todayYear} />
   <StockHeader lang={lang} />
 
@@ -57,12 +57,12 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
       <p class="mt-3 text-text/85 text-[13px] max-w-md">
         <span data-watchlist-count>0</span>
         <span class="text-muted"> {t(lang, "watchlistCount")}</span>
-        <span class="text-muted"> · </span>
+        <span class="text-muted">, </span>
         <span class="text-muted">{t(lang, "watchlistSubtitle")}</span>
       </p>
     </section>
 
-    <!-- Empty state — shown when localStorage watchlist is empty. -->
+    <!-- Empty state - shown when localStorage watchlist is empty. -->
     <section data-watchlist-empty class="hidden border border-border bg-panel/40 p-8 sm:p-12 text-center">
       <Icon name="lucide:star" class="mx-auto h-8 w-8 text-faint mb-4" aria-hidden="true" />
       <h2 class="m-0 font-display italic text-[clamp(1.25rem,3vw,1.75rem)] text-text mb-2">
@@ -79,7 +79,7 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
       </a>
     </section>
 
-    <!-- Starred chips — populated from localStorage. Shown when watchlist is non-empty,
+    <!-- Starred chips - populated from localStorage. Shown when watchlist is non-empty,
          regardless of whether the starred stocks have upcoming events. -->
     <section
       data-watchlist-chips
@@ -93,7 +93,7 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
       <ul class="m-0 p-0 list-none flex flex-wrap gap-2" data-chips></ul>
     </section>
 
-    <!-- "No upcoming" hint — shown when watchlist is non-empty but has neither
+    <!-- "No upcoming" hint - shown when watchlist is non-empty but has neither
          upcoming events nor last-paid history visible. -->
     <p data-watchlist-no-upcoming class="hidden text-muted italic text-[14px] py-8 text-center">
       {t(lang, "noUpcoming")}
@@ -139,7 +139,7 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
                       <span class={`font-display tabular-nums leading-none text-[13px] sm:text-sm whitespace-nowrap shrink-0 ${
                         e.amount === null ? "text-muted italic" : "text-text font-semibold"
                       }`}>
-                        {e.amount === null ? "—" : formatAmount(e.amount)}
+                        {e.amount === null ? "-" : formatAmount(e.amount)}
                         <span class="text-muted text-[10px] ml-0.5">฿</span>
                       </span>
                       <StarButton lang={lang} symbol={e.symbol} variant="row" />
@@ -155,12 +155,12 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
       )}
     </section>
 
-    <!-- Last paid — shown when starred stocks have no upcoming events. JS hides
+    <!-- Last paid - shown when starred stocks have no upcoming events. JS hides
          rows for symbols not in the watchlist (or that have an upcoming event). -->
     <section data-watchlist-last-paid class="hidden border-t border-border pt-4 pb-2 mt-2">
       <div class="flex items-baseline gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
         <span>{t(lang, "lastPaidHeading")}</span>
-        <span class="text-faint normal-case tracking-normal italic">· {t(lang, "lastPaidNote")}</span>
+        <span class="text-faint normal-case tracking-normal italic">({t(lang, "lastPaidNote")})</span>
       </div>
       <ul class="m-0 p-0 list-none flex flex-col">
         {lastPaidEntries.map(({ symbol, event }) => (
@@ -183,13 +183,13 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
                 {event.name}
               </span>
               <span class="text-faint text-[11px] italic shrink-0">
-                · {t(lang, "paidOn")} {formatDateLong(event.paymentDate as string)}
+                {t(lang, "paidOn")} {formatDateLong(event.paymentDate as string)}
               </span>
             </a>
             <span class={`font-display tabular-nums leading-none text-[13px] sm:text-sm whitespace-nowrap shrink-0 ${
               event.amount === null ? "text-muted italic" : "text-text font-semibold"
             }`}>
-              {event.amount === null ? "—" : formatAmount(event.amount)}
+              {event.amount === null ? "-" : formatAmount(event.amount)}
               <span class="text-muted text-[10px] ml-0.5">฿</span>
             </span>
             <StarButton lang={lang} symbol={symbol} variant="row" />
@@ -207,7 +207,7 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
   [data-day].watch-hidden { display: none; }
   [data-last-paid-row].watch-hidden { display: none; }
 
-  /* Starred chips — :global() because chips are injected via innerHTML and
+  /* Starred chips - :global() because chips are injected via innerHTML and
      don't carry the Astro-scoped attribute. */
   :global(.chip) {
     display: inline-flex;
@@ -273,7 +273,7 @@ const formatDateLong = (iso: string): string => fmtDate(iso, "EEE, dd MMM yyyy",
       return;
     }
     section.classList.remove("hidden");
-    if (count) count.textContent = `· ${starred.size}`;
+    if (count) count.textContent = `(${starred.size})`;
     const stockBase = section.dataset.stockBase ?? "/";
     const sorted = [...starred].sort();
     list.innerHTML = sorted
