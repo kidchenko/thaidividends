@@ -1,6 +1,7 @@
-import type { DividendEvent } from "./dividends";
+import { getDividendCAGR, type DividendEvent } from "./dividends";
 import type { DividendQuality, EpsHistory, Fundamentals, RevenueProfitData, ValuationHistory } from "./fundamentals";
 import type { PriceSnapshot } from "./prices";
+import type { SectorStats } from "./sector-stats";
 import { type Lang, t } from "./i18n";
 
 export type IndicatorTone = "ok" | "neutral" | "warn" | "danger";
@@ -51,10 +52,11 @@ type Args = {
   currentPE: number | null;
   currentYield: number | null;
   priceSnapshot: PriceSnapshot | null;
+  sectorStats: SectorStats | null;
 };
 
 export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
-  const { events, valuation, fundamentals, revenue, quality, epsHistory, currentPE, currentYield, priceSnapshot } = args;
+  const { events, valuation, fundamentals, revenue, quality, epsHistory, currentPE, currentYield, priceSnapshot, sectorStats } = args;
   const rows: Indicator[] = [];
 
   // 1. P/E vs 5y average. Cheap below 0.85×, expensive above 1.15× - the deadband
@@ -65,11 +67,18 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
   if (currentPE !== null && peAvg !== null) {
     const ratio = currentPE / peAvg;
     const tone: IndicatorTone = ratio < 0.85 ? "ok" : ratio < 1.15 ? "neutral" : "warn";
+    // Detail line: 5y self-avg first (internal context), then sector median
+    // (external context) when we have it. Sector pairs ratio scanners with the
+    // peer-relative read at the same glance.
+    const detailParts = [`${t(lang, "indVs5yAvg")} ${fmtMul(peAvg)}`];
+    if (sectorStats?.peMedian) {
+      detailParts.push(`${t(lang, "indVsSector")} ${fmtMul(sectorStats.peMedian)}`);
+    }
     rows.push({
       labelKey: "indPe",
       value: fmtMul(currentPE),
       tone,
-      detail: `${t(lang, "indVs5yAvg")} ${fmtMul(peAvg)}`,
+      detail: detailParts.join(" · "),
       history: peRows.length >= 2 ? {
         series: peRows.map((r) => ({ year: r.year, value: r.pe!, label: fmtMul(r.pe!) })),
         avg: peAvg,
@@ -85,11 +94,15 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
   if (currentYield !== null && yldAvg !== null && yldAvg > 0) {
     const ratio = currentYield / yldAvg;
     const tone: IndicatorTone = ratio > 1.15 ? "ok" : ratio > 0.85 ? "neutral" : "warn";
+    const detailParts = [`${t(lang, "indVs5yAvg")} ${fmtPct(yldAvg, 2)}`];
+    if (sectorStats?.yldMedian) {
+      detailParts.push(`${t(lang, "indVsSector")} ${fmtPct(sectorStats.yldMedian, 2)}`);
+    }
     rows.push({
       labelKey: "indYield",
       value: fmtPct(currentYield, 2),
       tone,
-      detail: `${t(lang, "indVs5yAvg")} ${fmtPct(yldAvg, 2)}`,
+      detail: detailParts.join(" · "),
       history: yldRows.length >= 2 ? {
         series: yldRows.map((r) => ({ year: r.year, value: r.yld, label: fmtPct(r.yld, 2) })),
         avg: yldAvg,
@@ -122,10 +135,17 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
       .slice(-5);
     const payoutValues = payoutRows.map((r) => r.payoutRatio!);
     const payoutAvg = avg(payoutValues);
+    // EPS-to-DPS coverage is the inverse of payout but easier to scan: "EPS
+    // covers DPS 1.4×" is more intuitive than "70% payout" for "how much
+    // headroom does the dividend have?"
+    const coverage = latestPayout > 0 ? 1 / latestPayout : null;
     rows.push({
       labelKey: "indPayout",
       value: fmtPct(latestPayout, 0),
       tone,
+      detail: coverage !== null
+        ? `${t(lang, "indCoverageEps")} ${fmtMul(coverage)}`
+        : undefined,
       history: payoutAvg !== null && payoutRows.length >= 2 ? {
         series: payoutRows.map((r) => ({
           year: r.year,
@@ -160,6 +180,42 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
     }
   }
 
+  // 4b. 3-year total return (annualised). Price + reinvested dividends over
+  // the period, normalised to a per-year figure so it's directly comparable
+  // to the 12-month return above. Only emits when we have a price snapshot
+  // ~3 years back (within ±90 days) and a positive starting price.
+  if (priceSnapshot && fundamentals?.priceQuarterEnds && fundamentals.priceQuarterEnds.length > 0) {
+    const todayMs = new Date(`${priceSnapshot.asOfDate}T00:00:00Z`).getTime();
+    const threeYearAgoMs = todayMs - 3 * 365 * 86_400_000;
+    let best: { date: string; close: number } | null = null;
+    let bestDiff = Infinity;
+    for (const p of fundamentals.priceQuarterEnds) {
+      const diff = Math.abs(new Date(`${p.date}T00:00:00Z`).getTime() - threeYearAgoMs);
+      if (diff < bestDiff) { bestDiff = diff; best = p; }
+    }
+    if (best && bestDiff <= 90 * 86_400_000 && best.close > 0) {
+      const startMs = new Date(`${best.date}T00:00:00Z`).getTime();
+      const startIso = best.date;
+      const todayIso = priceSnapshot.asOfDate;
+      const divs = events.reduce(
+        (s, e) => (typeof e.amount === "number" && e.exDate >= startIso && e.exDate <= todayIso ? s + e.amount : s),
+        0,
+      );
+      const totalReturn = (priceSnapshot.close + divs - best.close) / best.close;
+      const spanYears = (todayMs - startMs) / (365 * 86_400_000);
+      if (spanYears > 0) {
+        const annualised = Math.pow(1 + totalReturn, 1 / spanYears) - 1;
+        const tone: IndicatorTone = annualised > 0.10 ? "ok" : annualised > 0 ? "neutral" : "warn";
+        rows.push({
+          labelKey: "indTotalReturn3y",
+          value: fmtSignedPct(annualised),
+          tone,
+          detail: `${t(lang, "indTotalReturnSub")} ${fmtSignedPct(totalReturn)}`,
+        });
+      }
+    }
+  }
+
   // 5. FCF coverage - free cash flow ÷ dividends paid for the latest year on
   // record. ≥1.5× healthy, ≥1.0× tight, <1.0× under-covered (dividend isn't
   // earning itself, paid from balance sheet or debt).
@@ -172,6 +228,43 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
       tone,
       detail: quality.fcfCoverageYear ? quality.fcfCoverageYear.slice(0, 4) : undefined,
     });
+  }
+
+  // 5b. Cash conversion - free cash flow ÷ net income, averaged over up to
+  // 3 most recent years. Catches the "earnings on paper but no cash" pattern
+  // earlier than FCF coverage alone (which can look fine when the dividend
+  // itself is small). Healthy ≥ 0.8×; weak < 0.5×.
+  if (fundamentals?.incomeAnnual && fundamentals.cashflowAnnual) {
+    const incomeByYear = new Map<string, number>();
+    for (const r of fundamentals.incomeAnnual) {
+      if (r.netIncome !== null && r.fiscalYearEnd) {
+        incomeByYear.set(r.fiscalYearEnd, r.netIncome);
+      }
+    }
+    const ratios: Array<{ year: string; ratio: number }> = [];
+    for (const r of fundamentals.cashflowAnnual) {
+      if (r.freeCashflow === null || !r.fiscalYearEnd) continue;
+      const ni = incomeByYear.get(r.fiscalYearEnd);
+      if (ni === undefined || ni <= 0) continue;
+      ratios.push({ year: r.fiscalYearEnd, ratio: r.freeCashflow / ni });
+    }
+    if (ratios.length >= 1) {
+      ratios.sort((a, b) => b.year.localeCompare(a.year));
+      const recent = ratios.slice(0, 3);
+      const avgRatio = avg(recent.map((r) => r.ratio));
+      if (avgRatio !== null) {
+        const tone: IndicatorTone =
+          avgRatio >= 0.8 ? "ok"
+          : avgRatio >= 0.5 ? "neutral"
+          : "warn";
+        rows.push({
+          labelKey: "indCashConversion",
+          value: fmtMul(avgRatio),
+          tone,
+          detail: recent.length > 1 ? `${recent.length}y avg` : recent[0].year.slice(0, 4),
+        });
+      }
+    }
   }
 
   // 6. Debt / equity. Yahoo reports as a percentage; <50% low, 50–100%
@@ -250,6 +343,21 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
         } : undefined,
       });
     }
+  }
+
+  // 8b. Dividend growth CAGR. Annualised growth of total annual dividends
+  // across the available window. Skips the current year (incomplete) inside
+  // getDividendCAGR. Core DGI metric - distinguishes "stable payer" from
+  // "growing payer."
+  const divCagr = getDividendCAGR(events);
+  if (divCagr !== null) {
+    const tone: IndicatorTone = divCagr.rate > 0.05 ? "ok" : divCagr.rate > 0 ? "neutral" : "warn";
+    rows.push({
+      labelKey: "indDividendGrowth",
+      value: fmtSignedPct(divCagr.rate),
+      tone,
+      detail: `${divCagr.startYear}–${divCagr.endYear}`,
+    });
   }
 
   // 9. Dividend streak. Consecutive years (current year tolerated as "not yet")

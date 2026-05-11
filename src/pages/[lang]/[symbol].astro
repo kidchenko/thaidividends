@@ -28,6 +28,7 @@ import {
 } from "../../lib/dividends";
 import { getDividendQuality, getEarningsVsDividends, getEpsHistory, getEpsVsDps, getFundamentals, getRevenueProfit, getValuationHistory } from "../../lib/fundamentals";
 import { getPopularCompanies, getRelatedCompanies } from "../../lib/related";
+import { getSectorStats } from "../../lib/sector-stats";
 import { getStockIndicators } from "../../lib/indicators";
 import { getPrice, computeCurrentYield, computeCurrentPE } from "../../lib/prices";
 import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
@@ -196,6 +197,7 @@ const indicators = getStockIndicators(lang, {
   currentPE,
   currentYield,
   priceSnapshot,
+  sectorStats: getSectorStats(company?.sector),
 });
 if (events.length > 0) {
   indicators.push(

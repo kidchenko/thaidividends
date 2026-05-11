@@ -246,6 +246,25 @@ const METRIC_ROWS: Array<{ key: string; labelKey: string }> = [
       window.history.replaceState(null, "", url);
     };
 
+    const addBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+
+    const updatePickerState = () => {
+      const isFull = selected.length >= maxSlots;
+      input.disabled = isFull;
+      addBtn.disabled = isFull;
+      if (isFull) {
+        input.value = "";
+        hideSuggestions();
+        input.classList.add("opacity-50", "cursor-not-allowed");
+        addBtn.classList.add("opacity-50", "cursor-not-allowed");
+        setHint(labels.full);
+      } else {
+        input.classList.remove("opacity-50", "cursor-not-allowed");
+        addBtn.classList.remove("opacity-50", "cursor-not-allowed");
+        if (hint.textContent === labels.full) setHint("");
+      }
+    };
+
     const renderChips = () => {
       chipList.innerHTML = "";
       for (const sym of selected) {
@@ -272,6 +291,7 @@ const METRIC_ROWS: Array<{ key: string; labelKey: string }> = [
         chipList.appendChild(li);
       }
       slotCount.textContent = String(selected.length);
+      updatePickerState();
     };
 
     const winnerFor = (key: string, values: Array<{ sym: string; v: number | null }>): string | null => {

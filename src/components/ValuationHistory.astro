@@ -477,16 +477,17 @@ function ticksWithin(yMin: number, yMax: number): number[] {
           return (
           <div data-val-grouping-pane={kind} class="val-pane">
             <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto" role="img" aria-label="P/E over time">
+              <line x1={PAD_L} y1={PAD_T} x2={W - PAD_R} y2={PAD_T} class="stroke-border" stroke-dasharray="2 4" />
               <line x1={PAD_L} y1={H - PAD_B} x2={W - PAD_R} y2={H - PAD_B} class="stroke-border" />
 
-              {peLayout.bars.length === 0 && (
+              {peLayout.segments.length === 0 && (
                 <text
                   x={W / 2} y={H / 2} text-anchor="middle" class="fill-muted"
                   style="font-size: 12px; font-family: var(--font-display); font-style: italic;"
                 >{t(lang, "valPeNoData")}</text>
               )}
 
-              {peLayout.bars.length > 0 && peTicks.map((v) => (
+              {peLayout.segments.length > 0 && peTicks.map((v) => (
                 <g>
                   <line
                     x1={PAD_L} y1={peLayout.yFor(v)} x2={W - PAD_R} y2={peLayout.yFor(v)}
@@ -515,35 +516,42 @@ function ticksWithin(yMin: number, yMax: number): number[] {
                 />
               )}
 
-              <!-- Bars: color reflects above/below avg as a subtle valuation cue.
-                   Above avg = filled accent (expensive); below avg = soft accent (cheap). -->
-              {peLayout.bars.map((b) => {
-                const aboveAvg = peLayout.avg !== null && b.v > peLayout.avg;
+              {/* Line + dots. P/E is a ratio, not a quantity - a line tracks
+                  the trajectory without exaggerating absolute height. */}
+              {peLayout.segments.map((seg) => (
+                <path d={linePath(seg)} fill="none" class="stroke-accent" stroke-width="2" stroke-linejoin="round" />
+              ))}
+              {peLayout.segments.flat().map((p) => (
+                <circle cx={p.x} cy={p.y} r="3.5" class="fill-accent stroke-accent" stroke-width="1.5" />
+              ))}
+              {peLayout.segments.flat().map((p) => (
+                <text
+                  x={p.x} y={p.y - 8}
+                  text-anchor="middle" class="fill-text"
+                  style="font-size: 10px; font-family: var(--font-display); font-weight: 500;"
+                >{fmtPe(p.v)}</text>
+              ))}
+
+              {/* Hover targets - invisible rect at each row's x. */}
+              {rows.map((r, i) => {
+                const slotW = chartW / Math.max(rows.length - 1, 1);
+                const x = rows.length === 1 ? PAD_L + chartW / 2 : PAD_L + slotW * i;
                 return (
                   <g class="val-pt"
-                    data-tip-period={b.r.period}
-                    data-tip-yield={b.r.yld > 0 ? fmtPct(b.r.yld) : "-"}
-                    data-tip-pe={fmtPe(b.v)}
-                    data-tip-close={b.r.close.toFixed(2)}
+                    data-tip-period={r.period}
+                    data-tip-yield={r.yld > 0 ? fmtPct(r.yld) : "-"}
+                    data-tip-pe={r.pe !== null && r.pe > 0 ? fmtPe(r.pe) : "-"}
+                    data-tip-close={r.close.toFixed(2)}
                   >
-                    <rect
-                      x={b.x} y={b.y} width={b.w} height={Math.max(b.h, 1)}
-                      class={aboveAvg ? "fill-accent stroke-accent" : "fill-accent-soft stroke-accent"}
-                      stroke-width="1.5"
-                    />
-                    <text
-                      x={b.x + b.w / 2} y={b.y - 4}
-                      text-anchor="middle" class="fill-text"
-                      style="font-size: 10px; font-family: var(--font-display); font-weight: 500;"
-                    >{fmtPe(b.v)}</text>
+                    <rect x={x - 16} y={PAD_T} width="32" height={chartH} fill="transparent" />
                   </g>
                 );
               })}
 
               {/* X-axis labels - same positions as yield chart */}
               {rows.map((r, i) => {
-                const barSlotW = chartW / rows.length;
-                const x = PAD_L + barSlotW * i + barSlotW / 2;
+                const slotW = chartW / Math.max(rows.length - 1, 1);
+                const x = rows.length === 1 ? PAD_L + chartW / 2 : PAD_L + slotW * i;
                 const showLabel = kind === "year"
                   || i === 0
                   || i === rows.length - 1
