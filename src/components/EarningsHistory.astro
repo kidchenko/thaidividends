@@ -1,0 +1,152 @@
+---
+import { addMonths, parseISO, format } from "date-fns";
+import type { EarningsHistoryRow, NextEarnings, Release } from "../lib/earnings";
+import { type Lang, t, fmtDate } from "../lib/i18n";
+import { todayIso } from "../lib/dividends";
+
+interface Props {
+  lang: Lang;
+  rows: EarningsHistoryRow[];
+  next: NextEarnings | null;
+  releases: Release[];
+}
+
+const { lang, rows, next, releases } = Astro.props;
+
+// When Yahoo has no analyst data (rows synthesized from SET releases), every
+// EPS column is null. Collapse to a dates-only single-column layout.
+const hasEpsData = rows.some(
+  (r) => r.epsActual !== null || r.epsEstimate !== null || r.surprisePercent !== null,
+) || next?.epsEstimate !== null && next?.epsEstimate !== undefined;
+
+const fmtEps = (v: number | null): string =>
+  v === null ? "-" : v.toFixed(2);
+
+const fmtSurprise = (v: number | null): string => {
+  if (v === null) return "-";
+  const pct = v * 100;
+  return `${pct >= 0 ? "+" : ""}${pct.toFixed(1)}%`;
+};
+
+const fmtQuarter = (iso: string): string => fmtDate(iso, "QQQ yyyy", lang);
+const fmtShortDate = (iso: string): string => fmtDate(iso, "d MMM", lang);
+const fmtLongDate = (iso: string): string => fmtDate(iso, "d MMM yyyy", lang);
+
+// Pair Yahoo's history rows with SET's releases newest-to-newest by position.
+// Sanity-check: a real release filing must be on/after the quarter-end date.
+// If alignment looks wrong (release predates quarter-end), drop the subtitle
+// rather than show a misleading date.
+function releaseFor(rowIdx: number, quarterIso: string): Release | null {
+  const r = releases[rowIdx];
+  if (!r) return null;
+  if (r.date < quarterIso) return null;
+  return r;
+}
+
+// Derive the upcoming quarter label by stepping one quarter past the most
+// recent reported quarter - robust to Yahoo's release dates (which are filing
+// deadlines, not quarter-ends). When there's no history, fall back to
+// snapping the release date back ~45 days to the previous quarter-end.
+const today = todayIso();
+const upcomingIso: string | null = (() => {
+  if (!next?.earningsDate || next.earningsDate < today) return null;
+  if (rows.length > 0) {
+    const nextEnd = addMonths(parseISO(rows[0].quarter), 3);
+    return format(nextEnd, "yyyy-MM-dd");
+  }
+  const approxQuarterEnd = addMonths(parseISO(next.earningsDate), -2);
+  return format(approxQuarterEnd, "yyyy-MM-dd");
+})();
+const showUpcoming = upcomingIso !== null;
+---
+
+<section class="mb-14">
+  <header class="flex items-baseline justify-between mb-4 gap-3 flex-wrap">
+    <h2 class="m-0 font-display text-[clamp(1.25rem,2.5vw,1.625rem)] tracking-tight">
+      <span class="italic font-light text-muted">{t(lang, "earningsHistoryTitle")}</span>
+    </h2>
+    <span class="text-[11px] tracking-[0.15em] uppercase text-muted font-sans">
+      {t(lang, "earningsHistorySub")}
+    </span>
+  </header>
+
+  {rows.length === 0 && !showUpcoming ? (
+    <p class="text-muted text-[13px] font-sans italic">{t(lang, "earningsNoHistory")}</p>
+  ) : (
+    <div class="border-t border-border">
+      <div class={`grid ${hasEpsData ? "grid-cols-[1fr_auto_auto_auto]" : "grid-cols-1"} gap-x-4 sm:gap-x-6 px-1 py-2 text-[10px] uppercase tracking-[0.15em] text-muted font-sans border-b border-border`}>
+        <span>{t(lang, "earningsColQuarter")}</span>
+        {hasEpsData && (
+          <>
+            <span class="text-right">{t(lang, "earningsColActual")}</span>
+            <span class="text-right">{t(lang, "earningsColEstimate")}</span>
+            <span class="text-right">{t(lang, "earningsColSurprise")}</span>
+          </>
+        )}
+      </div>
+      {showUpcoming && next && (
+        <div class={`grid ${hasEpsData ? "grid-cols-[1fr_auto_auto_auto]" : "grid-cols-[1fr_auto]"} gap-x-4 sm:gap-x-6 items-baseline px-1 py-2.5 border-b border-border/50 text-[13px] border-l-2 border-l-accent -ml-1 pl-2`}>
+          <div class="flex flex-col leading-tight">
+            <span class="font-display tabular-nums text-text">{fmtQuarter(upcomingIso!)}</span>
+            <span class="text-[10px] uppercase tracking-[0.15em] text-muted font-sans mt-0.5">
+              {t(lang, "earningsExpected")} {fmtShortDate(next.earningsDate!)}
+              {next.earningsDateEnd && next.earningsDateEnd !== next.earningsDate && (
+                <span> - {fmtShortDate(next.earningsDateEnd)}</span>
+              )}
+            </span>
+          </div>
+          {hasEpsData && (
+            <>
+              <span class="font-display tabular-nums text-right text-muted italic">-</span>
+              <span class="font-display tabular-nums text-right text-muted">
+                {fmtEps(next.epsEstimate)}
+              </span>
+            </>
+          )}
+          <span class="text-right text-[9px] uppercase tracking-[0.15em] font-sans text-accent">
+            {t(lang, "badgeUpcoming")}
+          </span>
+        </div>
+      )}
+      {rows.map((r, idx) => {
+        const beat = r.surprisePercent !== null && r.surprisePercent > 0;
+        const miss = r.surprisePercent !== null && r.surprisePercent < 0;
+        const release = releaseFor(idx, r.quarter);
+        return (
+          <div class={`grid ${hasEpsData ? "grid-cols-[1fr_auto_auto_auto]" : "grid-cols-1"} gap-x-4 sm:gap-x-6 items-baseline px-1 py-2.5 border-b border-border/50 text-[13px]`}>
+            <div class="flex flex-col leading-tight">
+              <span class="font-display tabular-nums text-text">{fmtQuarter(r.quarter)}</span>
+              {release && (
+                <span class="text-[10px] uppercase tracking-[0.15em] text-muted font-sans mt-0.5">
+                  {t(lang, "earningsReleased")} {fmtLongDate(release.date)}
+                </span>
+              )}
+            </div>
+            {hasEpsData && (
+              <>
+                <span class="font-display tabular-nums text-right text-text font-semibold">
+                  {fmtEps(r.epsActual)}
+                  <span class="text-muted text-[10px] ml-0.5">฿</span>
+                </span>
+                <span class="font-display tabular-nums text-right text-muted">
+                  {fmtEps(r.epsEstimate)}
+                </span>
+                <span class={`font-display tabular-nums text-right ${
+                  beat ? "text-payment" : miss ? "text-accent" : "text-muted"
+                }`}>
+                  {fmtSurprise(r.surprisePercent)}
+                  {beat && (
+                    <span class="ml-1 text-[9px] uppercase tracking-[0.15em] font-sans">{t(lang, "earningsBeat")}</span>
+                  )}
+                  {miss && (
+                    <span class="ml-1 text-[9px] uppercase tracking-[0.15em] font-sans">{t(lang, "earningsMiss")}</span>
+                  )}
+                </span>
+              </>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  )}
+</section>

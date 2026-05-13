@@ -78,7 +78,7 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
       labelKey: "indPe",
       value: fmtMul(currentPE),
       tone,
-      detail: detailParts.join(" · "),
+      detail: detailParts.join(" , "),
       history: peRows.length >= 2 ? {
         series: peRows.map((r) => ({ year: r.year, value: r.pe!, label: fmtMul(r.pe!) })),
         avg: peAvg,
@@ -102,7 +102,7 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
       labelKey: "indYield",
       value: fmtPct(currentYield, 2),
       tone,
-      detail: detailParts.join(" · "),
+      detail: detailParts.join(" , "),
       history: yldRows.length >= 2 ? {
         series: yldRows.map((r) => ({ year: r.year, value: r.yld, label: fmtPct(r.yld, 2) })),
         avg: yldAvg,
@@ -267,8 +267,8 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
     }
   }
 
-  // 6. Debt / equity. Yahoo reports as a percentage; <50% low, 50–100%
-  // moderate, 100–200% elevated, >200% high. Useful sustainability signal:
+  // 6. Debt / equity. Yahoo reports as a percentage; <50% low, 50-100%
+  // moderate, 100-200% elevated, >200% high. Useful sustainability signal:
   // a stretched balance sheet limits room to keep paying through a downturn.
   if (quality?.debtToEquity !== null && quality?.debtToEquity !== undefined) {
     const de = quality.debtToEquity;
@@ -299,7 +299,7 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
         labelKey: "indEpsGrowth",
         value: fmtSignedPct(rate),
         tone,
-        detail: `${first.year}–${last.year}`,
+        detail: `${first.year}-${last.year}`,
         history: epsAvg !== null && epsSeries.length >= 2 ? {
           series: epsSeries.map((p) => ({
             year: p.year,
@@ -331,7 +331,7 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
         labelKey: "indRevenueGrowth",
         value: fmtSignedPct(rate),
         tone,
-        detail: `${start.year}–${latest.year}`,
+        detail: `${start.year}-${latest.year}`,
         history: revAvg !== null && revRows.length >= 2 ? {
           series: revRows.map((r) => ({
             year: r.year,
@@ -356,7 +356,7 @@ export function getStockIndicators(lang: Lang, args: Args): Indicator[] {
       labelKey: "indDividendGrowth",
       value: fmtSignedPct(divCagr.rate),
       tone,
-      detail: `${divCagr.startYear}–${divCagr.endYear}`,
+      detail: `${divCagr.startYear}-${divCagr.endYear}`,
     });
   }
 

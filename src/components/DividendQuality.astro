@@ -17,7 +17,7 @@ const fmtSignedPct = (n: number): string =>
 const fmtDe = (n: number): string => `${n.toFixed(0)}%`;
 
 // Tone classification.
-// Payout: <60% healthy, 60–85% normal, 85–100% tight, >100% over-payout
+// Payout: <60% healthy, 60-85% normal, 85-100% tight, >100% over-payout
 const payoutTone =
   quality.payoutRatio === null
     ? "muted"
@@ -29,7 +29,7 @@ const payoutTone =
     ? "warn"
     : "danger";
 
-// Coverage: ≥1.5× healthy, 1–1.5× tight, <1× under-covered
+// Coverage: ≥1.5× healthy, 1-1.5× tight, <1× under-covered
 const coverageTone =
   quality.fcfCoverage === null
     ? "muted"
@@ -49,7 +49,7 @@ const growthTone =
     : "neutral";
 
 // Debt-to-equity (Yahoo reports as a percentage).
-// <50% low, 50–100% moderate, 100–200% elevated, >200% high
+// <50% low, 50-100% moderate, 100-200% elevated, >200% high
 const deTone =
   quality.debtToEquity === null
     ? "muted"
@@ -135,7 +135,7 @@ const fcfYearLabel = quality.fcfCoverageYear
             {fmtSignedPct(divGrowth.rate)}
           </div>
           <div class="font-display italic text-[12px] text-muted mt-1">
-            {divGrowth.startYear}–{divGrowth.endYear}, {t(lang, "qualityGrowthHint")}
+            {divGrowth.startYear}-{divGrowth.endYear}, {t(lang, "qualityGrowthHint")}
           </div>
         </>
       ) : (

@@ -9,6 +9,7 @@ import RevenueProfit from "../../components/RevenueProfit.astro";
 import EarningsDividends from "../../components/EarningsDividends.astro";
 import EpsHistory from "../../components/EpsHistory.astro";
 import EpsVsDividends from "../../components/EpsVsDividends.astro";
+import EarningsHistory from "../../components/EarningsHistory.astro";
 import ValuationHistory from "../../components/ValuationHistory.astro";
 import StockIndicators from "../../components/StockIndicators.astro";
 import StockMonthCalendar from "../../components/StockMonthCalendar.astro";
@@ -31,8 +32,9 @@ import { getPopularCompanies, getRelatedCompanies } from "../../lib/related";
 import { getSectorStats } from "../../lib/sector-stats";
 import { getStockIndicators } from "../../lib/indicators";
 import { getPrice, computeCurrentYield, computeCurrentPE } from "../../lib/prices";
+import { getNextEarnings, getEarningsHistory, getReleases } from "../../lib/earnings";
 import { LANGS, isLang, t, fmtDate, localePath, type Lang } from "../../lib/i18n";
-import { parseISO } from "date-fns";
+import { parseISO, addMonths, format } from "date-fns";
 
 export async function getStaticPaths() {
   const symbols = getAllSymbols();
@@ -90,12 +92,53 @@ const profile = getFundamentals(symbol!)?.profile ?? null;
 const priceSnapshot = getPrice(symbol!);
 const hasRevenueChart = revenueData.annual.length >= 2 || revenueData.quarterly.length >= 3;
 const hasEarningsChart = earningsData.annual.length >= 2 || earningsData.quarterly.length >= 3;
+const nextEarnings = getNextEarnings(symbol!);
+const yahooHistoryRows = getEarningsHistory(symbol!);
+const earningsReleases = getReleases(symbol!);
+const hasUpcomingEarnings = Boolean(
+  nextEarnings?.earningsDate && nextEarnings.earningsDate >= todayIso(),
+);
+
+// SET-only fallback: when Yahoo has no analyst EPS data but SET has filed
+// release dates, build a stub history with null EPS values. The component
+// collapses the EPS/estimate/surprise columns when all values are null.
+// Quarter mapping is calendar-based (Q1->Mar-31, Q2->Jun-30, ...); for the
+// ~10% of Thai stocks with non-Dec fiscal years this label can drift, but
+// those companies typically have Yahoo coverage so we don't hit this branch.
+function periodToQuarterEnd(period: string): string {
+  const m = period.match(/^Q(\d)\/(\d{4})$/);
+  if (!m) return "";
+  const q = Number(m[1]);
+  const year = Number(m[2]);
+  const month = q * 3;
+  const lastDay = new Date(year, month, 0).getDate();
+  return `${year}-${String(month).padStart(2, "0")}-${String(lastDay).padStart(2, "0")}`;
+}
+const synthesizedHistory = yahooHistoryRows.length === 0
+  ? earningsReleases.map((rel) => ({
+      quarter: periodToQuarterEnd(rel.period),
+      epsActual: null,
+      epsEstimate: null,
+      surprisePercent: null,
+    })).filter((r) => r.quarter)
+  : [];
+const earningsHistoryRows = yahooHistoryRows.length > 0 ? yahooHistoryRows : synthesizedHistory;
+const hasEarningsHistory = earningsHistoryRows.length >= 1 || hasUpcomingEarnings;
+
+// Derive the upcoming quarter from the latest history row (+3 months) when
+// available, otherwise approximate by snapping the release date back ~45 days
+// to the previous quarter-end.
+const upcomingQuarterIso: string | null = hasUpcomingEarnings && nextEarnings?.earningsDate
+  ? (earningsHistoryRows.length > 0
+      ? format(addMonths(parseISO(earningsHistoryRows[0].quarter), 3), "yyyy-MM-dd")
+      : format(addMonths(parseISO(nextEarnings.earningsDate), -2), "yyyy-MM-dd"))
+  : null;
 // Tab gating: Dividends always visible. Financials = revenue/profit + valuation.
 // Earnings = per-share EPS views (EpsHistory + EpsVsDividends). The Payout
 // (net income vs dividends paid) chart lives in the Dividends tab - it's
 // answering a dividend question, not a fundamentals one.
 const hasFinancials = hasRevenueChart || hasValuation;
-const hasEarningsTab = hasEpsHistory || hasEpsDps;
+const hasEarningsTab = hasEpsHistory || hasEpsDps || hasEarningsHistory;
 const tabCount = 1 + (hasFinancials ? 1 : 0) + (hasEarningsTab ? 1 : 0);
 const today = todayIso();
 const todayYear = new Date().getFullYear();
@@ -224,6 +267,23 @@ if (milestone) {
     detail,
   });
 }
+// Next earnings tile - only when Yahoo confirms an upcoming date.
+if (nextEarnings?.earningsDate && nextEarnings.earningsDate >= today) {
+  const detailParts: string[] = [];
+  if (nextEarnings.earningsDateEnd && nextEarnings.earningsDateEnd !== nextEarnings.earningsDate) {
+    detailParts.push(`${t(lang, "earningsNextWindow")} ${formatDateShort(nextEarnings.earningsDate)} - ${formatDateShort(nextEarnings.earningsDateEnd)}`);
+  }
+  if (nextEarnings.epsEstimate !== null) {
+    detailParts.push(`${t(lang, "earningsEstEps")} ${nextEarnings.epsEstimate.toFixed(2)} ฿`);
+  }
+  indicators.push({
+    labelKey: "earningsNextLabel",
+    value: formatDateLong(nextEarnings.earningsDate),
+    tone: "neutral",
+    detail: detailParts.join(" , ") || undefined,
+  });
+}
+
 // Latest annual EPS - per-share earnings paired with the per-share dividend
 // total above. Skipped when there is no positive annual EPS on file.
 const latestAnnualEps = epsHistory.annual[epsHistory.annual.length - 1] ?? null;
@@ -264,7 +324,7 @@ const relatedContextLabel = sectorKey
       <div class="flex items-center justify-between gap-3 text-[10px] tracking-[0.22em] uppercase text-muted mb-3">
         <div class="flex items-baseline gap-3 min-w-0">
           <span class="inline-block h-px w-6 bg-text/40 shrink-0"></span>
-          <span class="truncate">{t(lang, "tickerLabel")} &middot; {company?.exchange ?? "SET"}</span>
+          <span class="truncate">{t(lang, "tickerLabel")} , {company?.exchange ?? "SET"}</span>
         </div>
         <div class="flex items-center gap-2 shrink-0">
           <StarButton lang={lang} symbol={symbol!} variant="default" />
@@ -303,6 +363,25 @@ const relatedContextLabel = sectorKey
           )}
           <span class="font-display italic text-[12px] text-muted">
             {t(lang, "priceAsOf")} {formatDateLong(priceSnapshot.asOfDate)}
+          </span>
+        </div>
+      )}
+      {hasUpcomingEarnings && nextEarnings && (
+        <div class="mt-2 flex items-baseline flex-wrap gap-x-2 text-[13px] text-accent">
+          <span class="font-sans uppercase tracking-[0.18em] text-[10px] text-muted">
+            {t(lang, "earningsNextLabel")}
+          </span>
+          {upcomingQuarterIso && (
+            <span class="font-display tabular-nums">
+              {fmtDate(upcomingQuarterIso, "QQQ yyyy", lang)}
+            </span>
+          )}
+          <span class="font-display tabular-nums text-muted">,</span>
+          <span class="font-display tabular-nums">
+            {formatDateLong(nextEarnings.earningsDate!)}
+            {nextEarnings.earningsDateEnd && nextEarnings.earningsDateEnd !== nextEarnings.earningsDate && (
+              <span>{" - "}{formatDateLong(nextEarnings.earningsDateEnd)}</span>
+            )}
           </span>
         </div>
       )}
@@ -509,7 +588,12 @@ const relatedContextLabel = sectorKey
           </div>
         </section>
 
-            <StockMonthCalendar lang={lang} symbol={symbol!} events={events} />
+            <StockMonthCalendar
+              lang={lang}
+              symbol={symbol!}
+              events={events}
+              earningsDate={hasUpcomingEarnings ? nextEarnings?.earningsDate ?? null : null}
+            />
 
           </div>
 
@@ -528,6 +612,7 @@ const relatedContextLabel = sectorKey
             <div role="tabpanel" id="tabpanel-earnings" data-tab-panel="earnings">
               {hasEpsHistory && <EpsHistory lang={lang} history={epsHistory} />}
               {hasEpsDps && <EpsVsDividends lang={lang} rows={epsDpsRows} />}
+              {hasEarningsHistory && <EarningsHistory lang={lang} rows={earningsHistoryRows} next={nextEarnings} releases={earningsReleases} />}
             </div>
           )}
         </div>

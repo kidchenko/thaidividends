@@ -6,28 +6,35 @@ interface Props {
   lang: Lang;
   symbol: string;
   events: DividendEvent[];
+  earningsDate?: string | null;     // YYYY-MM-DD upcoming earnings release, optional
 }
 
-const { lang, symbol, events } = Astro.props;
+const { lang, symbol, events, earningsDate = null } = Astro.props;
 
 // ---------- Event-by-day map ----------
-// Each event contributes up to 3 "day with event" entries: ex-date, record,
-// payment. The map key is "YYYY-MM-DD" so it lines up directly with the grid
-// cell `data-cal-day` attribute.
-type DayEntryKind = "ex" | "record" | "pay";
-type DayEntry = { kind: DayEntryKind; event: DividendEvent };
+// Each dividend contributes up to 3 "day with event" entries: ex-date, record,
+// payment. Earnings adds a 4th kind (no underlying DividendEvent - it's a
+// standalone date). The map key is "YYYY-MM-DD" so it lines up directly with
+// the grid cell `data-cal-day` attribute.
+type DayEntryKind = "ex" | "record" | "pay" | "earnings";
+type DayEntry =
+  | { kind: "ex" | "record" | "pay"; event: DividendEvent }
+  | { kind: "earnings"; event: null };
 
 const eventsByDay = new Map<string, DayEntry[]>();
-const pushDay = (date: string | null, kind: DayEntryKind, event: DividendEvent) => {
+const pushDay = (date: string | null, entry: DayEntry) => {
   if (!date) return;
   const list = eventsByDay.get(date) ?? [];
-  list.push({ kind, event });
+  list.push(entry);
   eventsByDay.set(date, list);
 };
 for (const e of events) {
-  pushDay(e.exDate, "ex", e);
-  pushDay(e.recordDate, "record", e);
-  pushDay(e.paymentDate, "pay", e);
+  pushDay(e.exDate, { kind: "ex", event: e });
+  pushDay(e.recordDate, { kind: "record", event: e });
+  pushDay(e.paymentDate, { kind: "pay", event: e });
+}
+if (earningsDate) {
+  pushDay(earningsDate, { kind: "earnings", event: null });
 }
 const allDates = [...eventsByDay.keys()].sort();
 const hasAnyDays = allDates.length > 0;
@@ -94,6 +101,7 @@ const dotClass = (kind: DayEntryKind): string => {
     case "ex": return "bg-accent";
     case "pay": return "bg-payment";
     case "record": return "bg-muted";
+    case "earnings": return "bg-earnings";
   }
 };
 const labelKey = (kind: DayEntryKind): string => {
@@ -101,6 +109,7 @@ const labelKey = (kind: DayEntryKind): string => {
     case "ex": return "calLegendEx";
     case "pay": return "calLegendPay";
     case "record": return "calLegendRecord";
+    case "earnings": return "calLegendEarnings";
   }
 };
 
@@ -109,23 +118,30 @@ const fmtAmount = (n: number | null): string =>
 const fmtMonthLabel = (key: string): string => fmtDate(`${key}-01`, "MMMM yyyy", lang);
 const weekdays = tArr(lang, "weekdaysMin");
 
-// Events touching the current month - any DividendEvent whose ex-date, record
-// date, or payment date falls inside the month. Sorted by the earliest of
-// those in-month dates so the list reads top-to-bottom chronologically.
+// Events touching the current month - dividend events (ex/record/pay) plus the
+// upcoming earnings release. Sorted by the earliest in-month date so the list
+// reads top-to-bottom chronologically. Earnings has no amount/sub-rows so it
+// renders as its own compact card.
 const isInMonth = (date: string | null): boolean =>
   date !== null && date.startsWith(monthKey);
-type MonthEvent = { event: DividendEvent; sortKey: string };
-const monthEvents: MonthEvent[] = events
+type MonthListItem =
+  | { kind: "dividend"; event: DividendEvent; sortKey: string }
+  | { kind: "earnings"; date: string; sortKey: string };
+const dividendItems: MonthListItem[] = events
   .filter((e) => isInMonth(e.exDate) || isInMonth(e.recordDate) || isInMonth(e.paymentDate))
   .map((e) => {
     const inMonthDates = [e.exDate, e.recordDate, e.paymentDate]
       .filter((d): d is string => isInMonth(d))
       .sort();
-    return { event: e, sortKey: inMonthDates[0] ?? e.exDate };
-  })
+    return { kind: "dividend" as const, event: e, sortKey: inMonthDates[0] ?? e.exDate };
+  });
+const earningsItems: MonthListItem[] = earningsDate && isInMonth(earningsDate)
+  ? [{ kind: "earnings" as const, date: earningsDate, sortKey: earningsDate }]
+  : [];
+const monthList: MonthListItem[] = [...dividendItems, ...earningsItems]
   .sort((a, b) => a.sortKey.localeCompare(b.sortKey));
 
-const monthHasEvents = monthEvents.length > 0;
+const monthHasEvents = monthList.length > 0;
 
 const fmtDateShort = (iso: string | null): string =>
   iso ? fmtDate(iso, "dd MMM", lang) : "-";
@@ -188,7 +204,9 @@ const fmtDateShort = (iso: string | null): string =>
         </div>
 
         <div class="flex flex-wrap gap-x-4 gap-y-1 text-[10px] tracking-[0.15em] uppercase text-muted mt-4">
-          {(["ex", "pay", "record"] as DayEntryKind[]).map((k) => (
+          {((earningsDate && earningsDate.startsWith(monthKey)
+              ? ["ex", "pay", "record", "earnings"]
+              : ["ex", "pay", "record"]) as DayEntryKind[]).map((k) => (
             <span class="inline-flex items-center gap-1.5">
               <span class={`inline-block w-2 h-2 rounded-full ${dotClass(k)}`}></span>
               {t(lang, labelKey(k))}
@@ -202,7 +220,24 @@ const fmtDateShort = (iso: string | null): string =>
         <div class="text-[10px] uppercase tracking-[0.18em] text-muted mb-3">{t(lang, "calMonthEvents")}</div>
         {monthHasEvents ? (
           <ul class="m-0 p-0 list-none flex flex-col">
-            {monthEvents.map(({ event }) => {
+            {monthList.map((item) => {
+              if (item.kind === "earnings") {
+                return (
+                  <li class="cal-event-card border-t border-border first:border-t-0 py-3" data-event-dates={item.date}>
+                    <ul class="m-0 p-0 list-none flex flex-col text-[11px]">
+                      <li
+                        data-row-date={item.date}
+                        class="cal-event-row grid grid-cols-[auto_7rem_1fr] items-center gap-x-3 py-2 px-2 -mx-2"
+                      >
+                        <span class={`inline-block w-2 h-2 rounded-full ${dotClass("earnings")}`}></span>
+                        <span class="text-[10px] uppercase tracking-[0.15em] text-muted">{t(lang, labelKey("earnings"))}</span>
+                        <span class="font-display italic tabular-nums text-text text-[13px]">{fmtDateShort(item.date)}</span>
+                      </li>
+                    </ul>
+                  </li>
+                );
+              }
+              const event = item.event;
               const eventDates = [event.exDate, event.recordDate, event.paymentDate]
                 .filter((d): d is string => d !== null)
                 .join(",");
@@ -218,7 +253,7 @@ const fmtDateShort = (iso: string | null): string =>
                   )}
                 </div>
                 <ul class="m-0 p-0 list-none flex flex-col text-[11px] border-t border-border/60 mt-2">
-                  {(["ex", "record", "pay"] as DayEntryKind[]).map((kind) => {
+                  {(["ex", "record", "pay"] as const).map((kind) => {
                     const date =
                       kind === "ex" ? event.exDate
                       : kind === "record" ? event.recordDate

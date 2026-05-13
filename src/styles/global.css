@@ -27,6 +27,8 @@
   --payment: oklch(48% 0.10 230);         /* refined ink-blue */
   --payment-soft: oklch(48% 0.10 230 / 0.10);
   --payment-strong: oklch(48% 0.10 230 / 0.18);
+  --earnings: oklch(48% 0.13 310);        /* deep plum - distinct from saffron/blue */
+  --earnings-soft: oklch(48% 0.13 310 / 0.10);
   --backdrop: oklch(15% 0.02 80 / 0.30);
   --shadow: 0 8px 32px oklch(20% 0.03 80 / 0.10);
 }
@@ -49,6 +51,8 @@
   --payment: oklch(72% 0.13 230);         /* refined cool blue */
   --payment-soft: oklch(72% 0.13 230 / 0.13);
   --payment-strong: oklch(72% 0.13 230 / 0.22);
+  --earnings: oklch(75% 0.11 310);        /* lighter plum for dark bg */
+  --earnings-soft: oklch(75% 0.11 310 / 0.14);
   --backdrop: oklch(8% 0.015 60 / 0.55);
   --shadow: 0 12px 40px oklch(0% 0 0 / 0.45);
 }
@@ -71,6 +75,8 @@
   --color-payment: var(--payment);
   --color-payment-soft: var(--payment-soft);
   --color-payment-strong: var(--payment-strong);
+  --color-earnings: var(--earnings);
+  --color-earnings-soft: var(--earnings-soft);
 
   --font-display: "Fraunces Variable", "Fraunces", ui-serif, Georgia, serif;
   --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, sans-serif;

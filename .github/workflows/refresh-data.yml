@@ -44,6 +44,10 @@ jobs:
         run: npm run fetch:set-stats
         continue-on-error: true
 
+      - name: Fetch SET financial-statement release dates
+        run: npm run fetch:statements
+        continue-on-error: true
+
       - name: Commit data changes (if any)
         id: commit
         run: |

@@ -112,9 +112,9 @@ const showAnnual = history.annual.length >= 2;
       <p class="font-display italic text-[13px] text-muted mb-5">
         {[
           latestAnnual ? `${t(lang, "metaLatest")} ${fmtEps(latestAnnual.eps)} ฿` : null,
-          annualEps.length > 0 ? `${t(lang, "metaRange")} ${fmtEps(minEps)} – ${fmtEps(maxEps)} ฿` : null,
+          annualEps.length > 0 ? `${t(lang, "metaRange")} ${fmtEps(minEps)} - ${fmtEps(maxEps)} ฿` : null,
           cagr !== null && firstAnnual && latestAnnual
-            ? `${fmtSignedPct(cagr)} ${t(lang, "metaCagr")} (${firstAnnual.year}–${latestAnnual.year})`
+            ? `${fmtSignedPct(cagr)} ${t(lang, "metaCagr")} (${firstAnnual.year}-${latestAnnual.year})`
             : null,
         ].filter(Boolean).join(", ")}
       </p>

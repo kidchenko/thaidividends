@@ -1,0 +1,9560 @@
+{
+  "AOT": {
+    "symbol": "AOT",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.36808,
+      "revenueEstimate": 17848666670
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.33829,
+        "epsEstimate": 0.32054,
+        "surprisePercent": 0.0554
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.279,
+        "epsEstimate": 0.23667,
+        "surprisePercent": 0.17889999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2736,
+        "epsEstimate": 0.256,
+        "surprisePercent": 0.0688
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.365,
+        "epsEstimate": 0.4325,
+        "surprisePercent": -0.15609999
+      }
+    ]
+  },
+  "BBL": {
+    "symbol": "BBL",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-16",
+      "earningsDateEnd": null,
+      "epsEstimate": 5.16,
+      "revenueEstimate": 39507858000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 5.76,
+        "epsEstimate": 5.21714,
+        "surprisePercent": 0.1041
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 4.06,
+        "epsEstimate": 5.67286,
+        "surprisePercent": -0.2843
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 7.22,
+        "epsEstimate": 5.765,
+        "surprisePercent": 0.2524
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 6.2,
+        "epsEstimate": 5.83333,
+        "surprisePercent": 0.0629
+      }
+    ]
+  },
+  "KBANK": {
+    "symbol": "KBANK",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-21",
+      "earningsDateEnd": null,
+      "epsEstimate": 5.02,
+      "revenueEstimate": 46703081000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 6.24,
+        "epsEstimate": 4.89486,
+        "surprisePercent": 0.2748
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 4.34,
+        "epsEstimate": 4.64841,
+        "surprisePercent": -0.066300005
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 5.35,
+        "epsEstimate": 4.84776,
+        "surprisePercent": 0.103599995
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 5.27,
+        "epsEstimate": 5.36397,
+        "surprisePercent": -0.0175
+      }
+    ]
+  },
+  "PTT": {
+    "symbol": "PTT",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 1.055,
+      "revenueEstimate": 789914724000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.5644,
+        "epsEstimate": 0.815,
+        "surprisePercent": -0.3075
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.69,
+        "epsEstimate": 0.7425,
+        "surprisePercent": -0.070700005
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.76,
+        "epsEstimate": 0.725,
+        "surprisePercent": 0.048299998
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.81,
+        "epsEstimate": 0.8225,
+        "surprisePercent": -0.0152
+      }
+    ]
+  },
+  "2S": {
+    "symbol": "2S",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "3BBIF": {
+    "symbol": "3BBIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2009,
+        "epsEstimate": 0.2,
+        "surprisePercent": 0.0045
+      },
+      {
+        "quarter": "2024-12-31",
+        "epsActual": 0.1901,
+        "epsEstimate": 0.18,
+        "surprisePercent": 0.0561
+      }
+    ]
+  },
+  "88TH": {
+    "symbol": "88TH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "A": {
+    "symbol": "A",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "A5": {
+    "symbol": "A5",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AAI": {
+    "symbol": "AAI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AAPL01": {
+    "symbol": "AAPL01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AAPL03": {
+    "symbol": "AAPL03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AAPL19": {
+    "symbol": "AAPL19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AAPL80": {
+    "symbol": "AAPL80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AAV": {
+    "symbol": "AAV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1252,
+        "epsEstimate": 0.095,
+        "surprisePercent": 0.3179
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": -0.0681,
+        "epsEstimate": -0.07125,
+        "surprisePercent": 0.0442
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0167,
+        "epsEstimate": -0.001,
+        "surprisePercent": 17.7
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.108,
+        "epsEstimate": 0.11067,
+        "surprisePercent": -0.0241
+      }
+    ]
+  },
+  "ABBV19": {
+    "symbol": "ABBV19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ACE": {
+    "symbol": "ACE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ACG": {
+    "symbol": "ACG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ADD": {
+    "symbol": "ADD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ADVANC": {
+    "symbol": "ADVANC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-05",
+      "earningsDateEnd": null,
+      "epsEstimate": 4.1,
+      "revenueEstimate": 57602166670
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 4.53997,
+        "epsEstimate": 4.1,
+        "surprisePercent": 0.1073
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 4.191,
+        "epsEstimate": 3.31667,
+        "surprisePercent": 0.2636
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 4.0376,
+        "epsEstimate": 3.68,
+        "surprisePercent": 0.097200006
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 3.6808,
+        "epsEstimate": 3.6825,
+        "surprisePercent": -0.0005
+      }
+    ]
+  },
+  "ADVANT23": {
+    "symbol": "ADVANT23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ADVICE": {
+    "symbol": "ADVICE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.101,
+        "epsEstimate": 0.135,
+        "surprisePercent": -0.25190002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.106,
+        "epsEstimate": 0.105,
+        "surprisePercent": 0.0095
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.121,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.1
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.102,
+        "epsEstimate": 0.1,
+        "surprisePercent": 0.02
+      }
+    ]
+  },
+  "AEONTS": {
+    "symbol": "AEONTS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-02-28",
+        "epsActual": 3.68,
+        "epsEstimate": 3.19,
+        "surprisePercent": 0.15359999
+      },
+      {
+        "quarter": "2025-11-30",
+        "epsActual": 2.49,
+        "epsEstimate": 2.8,
+        "surprisePercent": -0.1107
+      },
+      {
+        "quarter": "2025-08-31",
+        "epsActual": 3.17,
+        "epsEstimate": 3.25,
+        "surprisePercent": -0.024600001
+      },
+      {
+        "quarter": "2025-05-31",
+        "epsActual": 3.09,
+        "epsEstimate": 2.99,
+        "surprisePercent": 0.0334
+      }
+    ]
+  },
+  "AF": {
+    "symbol": "AF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AFC": {
+    "symbol": "AFC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AGE": {
+    "symbol": "AGE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2017-09-30",
+        "epsActual": 0.04118,
+        "epsEstimate": 0.01461,
+        "surprisePercent": 1.8186
+      }
+    ]
+  },
+  "AH": {
+    "symbol": "AH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.629,
+        "epsEstimate": 0.56,
+        "surprisePercent": 0.1232
+      }
+    ]
+  },
+  "AHC": {
+    "symbol": "AHC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AI": {
+    "symbol": "AI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AIA19": {
+    "symbol": "AIA19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AIA23": {
+    "symbol": "AIA23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AIE": {
+    "symbol": "AIE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AIMCG": {
+    "symbol": "AIMCG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AIMIRT": {
+    "symbol": "AIMIRT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AIRA": {
+    "symbol": "AIRA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AJ": {
+    "symbol": "AJ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2023-09-30",
+        "epsActual": -0.1375,
+        "epsEstimate": -0.18,
+        "surprisePercent": 0.2361
+      }
+    ]
+  },
+  "AKP": {
+    "symbol": "AKP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AKR": {
+    "symbol": "AKR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ALLA": {
+    "symbol": "ALLA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ALLY": {
+    "symbol": "ALLY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ALPHAX": {
+    "symbol": "ALPHAX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ALT": {
+    "symbol": "ALT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ALUCON": {
+    "symbol": "ALUCON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMANAH": {
+    "symbol": "AMANAH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMARC": {
+    "symbol": "AMARC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.038,
+        "epsEstimate": 0.031,
+        "surprisePercent": 0.2258
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1,
+        "epsEstimate": 0.075,
+        "surprisePercent": 0.33330002
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.184,
+        "epsEstimate": 0.084,
+        "surprisePercent": 1.1905
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.056,
+        "epsEstimate": 0.042,
+        "surprisePercent": 0.33330002
+      }
+    ]
+  },
+  "AMARIN": {
+    "symbol": "AMARIN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMATA": {
+    "symbol": "AMATA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.91,
+        "epsEstimate": 0.75504,
+        "surprisePercent": 0.2052
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.99,
+        "epsEstimate": 0.92093,
+        "surprisePercent": 0.075
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.12,
+        "epsEstimate": 0.28834,
+        "surprisePercent": -0.5838
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.72,
+        "epsEstimate": 0.41,
+        "surprisePercent": 0.7561
+      }
+    ]
+  },
+  "AMATAR": {
+    "symbol": "AMATAR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMATAV": {
+    "symbol": "AMATAV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMC": {
+    "symbol": "AMC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMGN06": {
+    "symbol": "AMGN06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AMR": {
+    "symbol": "AMR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ANAN": {
+    "symbol": "ANAN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ANI": {
+    "symbol": "ANI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ANTA13": {
+    "symbol": "ANTA13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AP": {
+    "symbol": "AP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.413,
+        "epsEstimate": 0.40667,
+        "surprisePercent": 0.0156
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.367,
+        "epsEstimate": 0.37,
+        "surprisePercent": -0.0081
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.32,
+        "epsEstimate": 0.32,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.27,
+        "epsEstimate": 0.265,
+        "surprisePercent": 0.0189
+      }
+    ]
+  },
+  "APCO": {
+    "symbol": "APCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "APO": {
+    "symbol": "APO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "APP": {
+    "symbol": "APP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AQUA": {
+    "symbol": "AQUA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ARIP": {
+    "symbol": "ARIP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ASAP": {
+    "symbol": "ASAP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ASEFA": {
+    "symbol": "ASEFA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2017-09-30",
+        "epsActual": 0.12,
+        "epsEstimate": 0.15,
+        "surprisePercent": -0.2
+      },
+      {
+        "quarter": "2017-06-30",
+        "epsActual": 0.12,
+        "epsEstimate": 0.12,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2017-03-31",
+        "epsActual": 0.1,
+        "epsEstimate": 0.11,
+        "surprisePercent": -0.090900004
+      }
+    ]
+  },
+  "ASIA": {
+    "symbol": "ASIA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ASIMAR": {
+    "symbol": "ASIMAR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ASML01": {
+    "symbol": "ASML01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ASN": {
+    "symbol": "ASN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ASP": {
+    "symbol": "ASP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ATLAS": {
+    "symbol": "ATLAS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ATP30": {
+    "symbol": "ATP30",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AU": {
+    "symbol": "AU",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.04,
+        "epsEstimate": 0.075,
+        "surprisePercent": -0.4667
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.07,
+        "surprisePercent": -0.1429
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.07333,
+        "surprisePercent": -0.18180001
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.08,
+        "epsEstimate": 0.08667,
+        "surprisePercent": -0.077
+      }
+    ]
+  },
+  "AUCT": {
+    "symbol": "AUCT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AURA": {
+    "symbol": "AURA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.32,
+        "epsEstimate": 0.305,
+        "surprisePercent": 0.049200002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2288,
+        "epsEstimate": 0.185,
+        "surprisePercent": 0.2368
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2797,
+        "epsEstimate": 0.26,
+        "surprisePercent": 0.0758
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.299,
+        "epsEstimate": 0.26,
+        "surprisePercent": 0.15
+      }
+    ]
+  },
+  "AVGO80": {
+    "symbol": "AVGO80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AWC": {
+    "symbol": "AWC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-06",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.0222,
+      "revenueEstimate": 5054000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0208,
+        "epsEstimate": 0.02036,
+        "surprisePercent": 0.0216
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0087,
+        "epsEstimate": 0.01847,
+        "surprisePercent": -0.52900004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0051,
+        "epsEstimate": 0.00581,
+        "surprisePercent": -0.122200005
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0233,
+        "epsEstimate": 0.02069,
+        "surprisePercent": 0.1261
+      }
+    ]
+  },
+  "AXP06": {
+    "symbol": "AXP06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AXTRART": {
+    "symbol": "AXTRART",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "AYUD": {
+    "symbol": "AYUD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BA": {
+    "symbol": "BA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.21,
+        "epsEstimate": 0.195,
+        "surprisePercent": 0.0769
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.5,
+        "epsEstimate": 0.38333,
+        "surprisePercent": 0.3044
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.19,
+        "epsEstimate": 0.22,
+        "surprisePercent": -0.1364
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.8,
+        "epsEstimate": 0.806,
+        "surprisePercent": -0.0074
+      }
+    ]
+  },
+  "BABA01": {
+    "symbol": "BABA01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BABA13": {
+    "symbol": "BABA13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BABA80": {
+    "symbol": "BABA80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BAC03": {
+    "symbol": "BAC03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BAFS": {
+    "symbol": "BAFS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BAM": {
+    "symbol": "BAM",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-12",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.06667,
+      "revenueEstimate": 2084000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.04,
+        "epsEstimate": 0.09,
+        "surprisePercent": -0.5556
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.082,
+        "surprisePercent": -0.2683
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.4,
+        "epsEstimate": 0.394,
+        "surprisePercent": 0.0152
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.08,
+        "surprisePercent": -0.125
+      }
+    ]
+  },
+  "BANPU": {
+    "symbol": "BANPU",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-12",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.0605,
+        "epsEstimate": -0.06,
+        "surprisePercent": -0.0083
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": -0.03067,
+        "epsEstimate": -0.03,
+        "surprisePercent": -0.0223
+      }
+    ]
+  },
+  "BAREIT": {
+    "symbol": "BAREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BAY": {
+    "symbol": "BAY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 1.17,
+        "epsEstimate": 1.045,
+        "surprisePercent": 0.1196
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.97,
+        "epsEstimate": 1.055,
+        "surprisePercent": -0.0806
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 1.19,
+        "epsEstimate": 1.02,
+        "surprisePercent": 0.1667
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 1.13,
+        "epsEstimate": 0.99,
+        "surprisePercent": 0.14140001
+      }
+    ]
+  },
+  "BBGI": {
+    "symbol": "BBGI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BBIK": {
+    "symbol": "BBIK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.63,
+        "epsEstimate": 0.42,
+        "surprisePercent": 0.5
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.34,
+        "epsEstimate": 0.355,
+        "surprisePercent": -0.0423
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.37,
+        "epsEstimate": 0.36,
+        "surprisePercent": 0.0278
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.36,
+        "epsEstimate": 0.37,
+        "surprisePercent": -0.027
+      }
+    ]
+  },
+  "BC": {
+    "symbol": "BC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BCH": {
+    "symbol": "BCH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.11,
+        "epsEstimate": 0.11167,
+        "surprisePercent": -0.015
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.14,
+        "epsEstimate": 0.142,
+        "surprisePercent": -0.014099999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.16,
+        "epsEstimate": 0.1375,
+        "surprisePercent": 0.16360001
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.13,
+        "epsEstimate": 0.1275,
+        "surprisePercent": 0.0196
+      }
+    ]
+  },
+  "BCP": {
+    "symbol": "BCP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 4.6289,
+        "epsEstimate": 2.74,
+        "surprisePercent": 0.6894
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 4.1655,
+        "epsEstimate": 2.32,
+        "surprisePercent": 0.79550004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.7295,
+        "epsEstimate": -0.47,
+        "surprisePercent": -0.5521
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 1.6504,
+        "epsEstimate": 1.56,
+        "surprisePercent": 0.0579
+      }
+    ]
+  },
+  "BCPG": {
+    "symbol": "BCPG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.24,
+        "epsEstimate": 0.22333,
+        "surprisePercent": 0.0746
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.2508,
+        "epsEstimate": 0.18333,
+        "surprisePercent": 0.368
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2301,
+        "epsEstimate": 0.21,
+        "surprisePercent": 0.095699996
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.22,
+        "epsEstimate": -0.22,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "BCT": {
+    "symbol": "BCT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BDMS": {
+    "symbol": "BDMS",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.24347,
+      "revenueEstimate": 28192000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.24,
+        "epsEstimate": 0.26198,
+        "surprisePercent": -0.083900005
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.27,
+        "epsEstimate": 0.25708,
+        "surprisePercent": 0.050300002
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.22,
+        "epsEstimate": 0.22486,
+        "surprisePercent": -0.0216
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.27,
+        "epsEstimate": 0.27145,
+        "surprisePercent": -0.0053
+      }
+    ]
+  },
+  "BDX06": {
+    "symbol": "BDX06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BEC": {
+    "symbol": "BEC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BEM": {
+    "symbol": "BEM",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.06,
+      "revenueEstimate": 4306250000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.06301,
+        "surprisePercent": -0.2065
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.07,
+        "epsEstimate": 0.0691,
+        "surprisePercent": 0.012999999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.07,
+        "epsEstimate": 0.06335,
+        "surprisePercent": 0.105
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.06202,
+        "surprisePercent": -0.0326
+      }
+    ]
+  },
+  "BEYOND": {
+    "symbol": "BEYOND",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1914,
+        "epsEstimate": 0.22,
+        "surprisePercent": -0.13
+      },
+      {
+        "quarter": "2024-12-31",
+        "epsActual": 0.1193,
+        "epsEstimate": 0.25,
+        "surprisePercent": -0.52279997
+      }
+    ]
+  },
+  "BGC": {
+    "symbol": "BGC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2024-03-31",
+        "epsActual": 0.1325,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0.019199999
+      }
+    ]
+  },
+  "BGT": {
+    "symbol": "BGT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BH": {
+    "symbol": "BH",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-04-23",
+      "earningsDateEnd": null,
+      "epsEstimate": 2.29,
+      "revenueEstimate": 6127258330
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 2.06,
+        "epsEstimate": 2.07173,
+        "surprisePercent": -0.0057
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 2.17,
+        "epsEstimate": 2.25216,
+        "surprisePercent": -0.0365
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 2.35,
+        "epsEstimate": 2.3989,
+        "surprisePercent": -0.020399999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 2.14,
+        "epsEstimate": 2.08461,
+        "surprisePercent": 0.026600001
+      }
+    ]
+  },
+  "BIS": {
+    "symbol": "BIS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BIZ": {
+    "symbol": "BIZ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BJC": {
+    "symbol": "BJC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.32,
+        "epsEstimate": 0.3283,
+        "surprisePercent": -0.0253
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.16,
+        "epsEstimate": 0.176,
+        "surprisePercent": -0.090900004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.25,
+        "epsEstimate": 0.27484,
+        "surprisePercent": -0.0904
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.27,
+        "epsEstimate": 0.28145,
+        "surprisePercent": -0.040700004
+      }
+    ]
+  },
+  "BKA": {
+    "symbol": "BKA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BKD": {
+    "symbol": "BKD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BKGI": {
+    "symbol": "BKGI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.007,
+        "epsEstimate": 0.01,
+        "surprisePercent": -0.3
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.013,
+        "epsEstimate": 0.01,
+        "surprisePercent": 0.3
+      }
+    ]
+  },
+  "BKIH": {
+    "symbol": "BKIH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BKNG03": {
+    "symbol": "BKNG03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BKNG80": {
+    "symbol": "BKNG80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BLA": {
+    "symbol": "BLA",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": []
+  },
+  "BLAND": {
+    "symbol": "BLAND",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BLC": {
+    "symbol": "BLC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BLESS": {
+    "symbol": "BLESS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BLK06": {
+    "symbol": "BLK06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BM": {
+    "symbol": "BM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BOL": {
+    "symbol": "BOL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BONDAS19": {
+    "symbol": "BONDAS19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BPP": {
+    "symbol": "BPP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.3621,
+        "epsEstimate": 0.41,
+        "surprisePercent": -0.1168
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.34771,
+        "epsEstimate": 0.46,
+        "surprisePercent": -0.2441
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1863,
+        "epsEstimate": 0.21,
+        "surprisePercent": -0.1129
+      }
+    ]
+  },
+  "BPS": {
+    "symbol": "BPS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BR": {
+    "symbol": "BR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BRI": {
+    "symbol": "BRI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BROCK": {
+    "symbol": "BROCK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BRR": {
+    "symbol": "BRR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BRRGIF": {
+    "symbol": "BRRGIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BSBM": {
+    "symbol": "BSBM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2016-06-30",
+        "epsActual": 0.119,
+        "epsEstimate": 0.08,
+        "surprisePercent": 0.4875
+      }
+    ]
+  },
+  "BSM": {
+    "symbol": "BSM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BTC": {
+    "symbol": "BTC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BTG": {
+    "symbol": "BTG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.4879,
+        "epsEstimate": 0.46,
+        "surprisePercent": 0.060700003
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.6296,
+        "epsEstimate": 0.615,
+        "surprisePercent": 0.023699999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 1.35422,
+        "epsEstimate": 1.26,
+        "surprisePercent": 0.0748
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.94,
+        "epsEstimate": 0.825,
+        "surprisePercent": 0.13939999
+      }
+    ]
+  },
+  "BTNC": {
+    "symbol": "BTNC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BTSGIF": {
+    "symbol": "BTSGIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BTW": {
+    "symbol": "BTW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BUI": {
+    "symbol": "BUI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BVG": {
+    "symbol": "BVG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BWG": {
+    "symbol": "BWG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BYDCOM01": {
+    "symbol": "BYDCOM01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "BYDCOM80": {
+    "symbol": "BYDCOM80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CAMBRI80": {
+    "symbol": "CAMBRI80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CATL01": {
+    "symbol": "CATL01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CATL23": {
+    "symbol": "CATL23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CATL80": {
+    "symbol": "CATL80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CAZ": {
+    "symbol": "CAZ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CBG": {
+    "symbol": "CBG",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-15",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.63667,
+      "revenueEstimate": 5380000000
+    },
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.62,
+        "epsEstimate": 0.6375,
+        "surprisePercent": -0.0275
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.8,
+        "epsEstimate": 0.8075,
+        "surprisePercent": -0.0093
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.76,
+        "epsEstimate": 0.79,
+        "surprisePercent": -0.038
+      }
+    ]
+  },
+  "CCET": {
+    "symbol": "CCET",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.07,
+        "surprisePercent": -0.2857
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.06,
+        "surprisePercent": -0.1667
+      }
+    ]
+  },
+  "CCP": {
+    "symbol": "CCP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CEG23": {
+    "symbol": "CEG23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CEN": {
+    "symbol": "CEN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CENTEL": {
+    "symbol": "CENTEL",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-11",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.65517,
+      "revenueEstimate": 6804000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.73,
+        "epsEstimate": 0.5075,
+        "surprisePercent": 0.4384
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.12,
+        "epsEstimate": 0.08893,
+        "surprisePercent": 0.34939998
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.08,
+        "epsEstimate": 0.11295,
+        "surprisePercent": -0.2917
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.55,
+        "epsEstimate": 0.5406,
+        "surprisePercent": 0.0174
+      }
+    ]
+  },
+  "CEYE": {
+    "symbol": "CEYE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CFARM": {
+    "symbol": "CFARM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CFRESH": {
+    "symbol": "CFRESH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CGH": {
+    "symbol": "CGH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CH": {
+    "symbol": "CH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHAO": {
+    "symbol": "CHAO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHARAN": {
+    "symbol": "CHARAN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHASE": {
+    "symbol": "CHASE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHAYO": {
+    "symbol": "CHAYO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHEWA": {
+    "symbol": "CHEWA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHG": {
+    "symbol": "CHG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0204,
+        "epsEstimate": 0.021,
+        "surprisePercent": -0.0286
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0247,
+        "epsEstimate": 0.02933,
+        "surprisePercent": -0.1579
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0189,
+        "epsEstimate": 0.02,
+        "surprisePercent": -0.055
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0205,
+        "epsEstimate": 0.02,
+        "surprisePercent": 0.025
+      }
+    ]
+  },
+  "CHHONGQ19": {
+    "symbol": "CHHONGQ19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHIC": {
+    "symbol": "CHIC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHMOBILE19": {
+    "symbol": "CHMOBILE19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHO": {
+    "symbol": "CHO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CHOTI": {
+    "symbol": "CHOTI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CI": {
+    "symbol": "CI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CIMBT": {
+    "symbol": "CIMBT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CITY": {
+    "symbol": "CITY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CIVIL": {
+    "symbol": "CIVIL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CKP": {
+    "symbol": "CKP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.102,
+        "epsEstimate": 0.05,
+        "surprisePercent": 1.04
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.156,
+        "epsEstimate": 0.125,
+        "surprisePercent": 0.248
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.075,
+        "epsEstimate": 0.03,
+        "surprisePercent": 1.5
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.009,
+        "epsEstimate": 0,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "CM": {
+    "symbol": "CM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CMAN": {
+    "symbol": "CMAN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CMBANK23": {
+    "symbol": "CMBANK23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CMC": {
+    "symbol": "CMC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CME03": {
+    "symbol": "CME03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CMR": {
+    "symbol": "CMR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CN01": {
+    "symbol": "CN01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CNT": {
+    "symbol": "CNT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CNTECH01": {
+    "symbol": "CNTECH01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "COLOR": {
+    "symbol": "COLOR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "COM7": {
+    "symbol": "COM7",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-12",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.5,
+      "revenueEstimate": 23513500000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.5,
+        "epsEstimate": 0.48,
+        "surprisePercent": 0.0417
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.3597,
+        "epsEstimate": 0.37333,
+        "surprisePercent": -0.0365
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.43205,
+        "epsEstimate": 0.385,
+        "surprisePercent": 0.122200005
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.42,
+        "epsEstimate": 0.39,
+        "surprisePercent": 0.0769
+      }
+    ]
+  },
+  "COSTCO19": {
+    "symbol": "COSTCO19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPALL": {
+    "symbol": "CPALL",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.89713,
+      "revenueEstimate": 255600914500
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.8,
+        "epsEstimate": 0.79666,
+        "surprisePercent": 0.0042
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.73,
+        "epsEstimate": 0.735,
+        "surprisePercent": -0.0068
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.74,
+        "epsEstimate": 0.76088,
+        "surprisePercent": -0.0274
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.83,
+        "epsEstimate": 0.75903,
+        "surprisePercent": 0.0935
+      }
+    ]
+  },
+  "CPANEL": {
+    "symbol": "CPANEL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPAXT": {
+    "symbol": "CPAXT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.27,
+        "epsEstimate": 0.22632,
+        "surprisePercent": 0.19299999
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.25,
+        "epsEstimate": 0.296,
+        "surprisePercent": -0.1554
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.18,
+        "epsEstimate": 0.18947,
+        "surprisePercent": -0.05
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.22,
+        "epsEstimate": 0.20969,
+        "surprisePercent": 0.049200002
+      }
+    ]
+  },
+  "CPF": {
+    "symbol": "CPF",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.39,
+      "revenueEstimate": 140615428570
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0695,
+        "epsEstimate": 0.27,
+        "surprisePercent": -0.7426
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.7868,
+        "epsEstimate": 0.62,
+        "surprisePercent": 0.269
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 1.3405,
+        "epsEstimate": 1.22,
+        "surprisePercent": 0.0988
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 1.1218,
+        "epsEstimate": 0.765,
+        "surprisePercent": 0.4664
+      }
+    ]
+  },
+  "CPH": {
+    "symbol": "CPH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPI": {
+    "symbol": "CPI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPL": {
+    "symbol": "CPL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPN": {
+    "symbol": "CPN",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-18",
+      "earningsDateEnd": null,
+      "epsEstimate": 1.03456,
+      "revenueEstimate": 12736168000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 1.07,
+        "epsEstimate": 0.9637,
+        "surprisePercent": 0.1103
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 1.21,
+        "epsEstimate": 1.00204,
+        "surprisePercent": 0.2075
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.96,
+        "epsEstimate": 0.95286,
+        "surprisePercent": 0.0075
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.94,
+        "epsEstimate": 0.93997,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "CPNCG": {
+    "symbol": "CPNCG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPNREIT": {
+    "symbol": "CPNREIT",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1315,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0.0115
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1326,
+        "epsEstimate": 0.15,
+        "surprisePercent": -0.116000004
+      }
+    ]
+  },
+  "CPR": {
+    "symbol": "CPR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPT": {
+    "symbol": "CPT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CPTREIT": {
+    "symbol": "CPTREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CRC": {
+    "symbol": "CRC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.42303,
+      "revenueEstimate": 66796000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.43,
+        "epsEstimate": 0.375,
+        "surprisePercent": 0.1467
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.22,
+        "epsEstimate": 0.25702,
+        "surprisePercent": -0.144
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.19,
+        "epsEstimate": 0.2692,
+        "surprisePercent": -0.2942
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.39,
+        "epsEstimate": 0.3895,
+        "surprisePercent": 0.0013
+      }
+    ]
+  },
+  "CRD": {
+    "symbol": "CRD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CRM01": {
+    "symbol": "CRM01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CRM06": {
+    "symbol": "CRM06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CRM80": {
+    "symbol": "CRM80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CSCO06": {
+    "symbol": "CSCO06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CSP": {
+    "symbol": "CSP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CSR": {
+    "symbol": "CSR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CSS": {
+    "symbol": "CSS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CTARAF": {
+    "symbol": "CTARAF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CTW": {
+    "symbol": "CTW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CV": {
+    "symbol": "CV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "CWT": {
+    "symbol": "CWT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "D": {
+    "symbol": "D",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DBS19": {
+    "symbol": "DBS19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DCC": {
+    "symbol": "DCC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.023,
+        "epsEstimate": 0.023,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.031,
+        "epsEstimate": 0.033,
+        "surprisePercent": -0.060599998
+      }
+    ]
+  },
+  "DCON": {
+    "symbol": "DCON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DDD": {
+    "symbol": "DDD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2019-06-30",
+        "epsActual": -0.005,
+        "epsEstimate": -0.005,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2019-03-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2018-12-31",
+        "epsActual": 0.022,
+        "epsEstimate": -0.002,
+        "surprisePercent": 12
+      },
+      {
+        "quarter": "2018-09-30",
+        "epsActual": -0.002,
+        "epsEstimate": 0.013,
+        "surprisePercent": -1.1538
+      }
+    ]
+  },
+  "DELL19": {
+    "symbol": "DELL19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DELTA": {
+    "symbol": "DELTA",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-24",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.75526,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.6946,
+        "epsEstimate": 0.64,
+        "surprisePercent": 0.0853
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.5816,
+        "epsEstimate": 0.56,
+        "surprisePercent": 0.038599998
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.5279,
+        "epsEstimate": 0.46,
+        "surprisePercent": 0.1476
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.37,
+        "epsEstimate": 0.42,
+        "surprisePercent": -0.118999995
+      }
+    ]
+  },
+  "DEMCO": {
+    "symbol": "DEMCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DEXON": {
+    "symbol": "DEXON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DHOUSE": {
+    "symbol": "DHOUSE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DISNEY19": {
+    "symbol": "DISNEY19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DOD": {
+    "symbol": "DOD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DOHOME": {
+    "symbol": "DOHOME",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.02885,
+        "epsEstimate": 0.03846,
+        "surprisePercent": -0.2499
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.02885,
+        "epsEstimate": 0.02564,
+        "surprisePercent": 0.1252
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.04808,
+        "epsEstimate": 0.04808,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.06731,
+        "epsEstimate": 0.07212,
+        "surprisePercent": -0.066700004
+      }
+    ]
+  },
+  "DPAINT": {
+    "symbol": "DPAINT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2023-06-30",
+        "epsActual": 0.03,
+        "epsEstimate": 0.06,
+        "surprisePercent": -0.5
+      },
+      {
+        "quarter": "2023-03-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.08,
+        "surprisePercent": -0.125
+      }
+    ]
+  },
+  "DREIT": {
+    "symbol": "DREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DRT": {
+    "symbol": "DRT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DTCENT": {
+    "symbol": "DTCENT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "DTCI": {
+    "symbol": "DTCI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EA": {
+    "symbol": "EA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EASON": {
+    "symbol": "EASON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EASTW": {
+    "symbol": "EASTW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2022-06-30",
+        "epsActual": 0.15,
+        "epsEstimate": 0.14,
+        "surprisePercent": 0.0714
+      },
+      {
+        "quarter": "2022-03-31",
+        "epsActual": 0.15,
+        "epsEstimate": 0.175,
+        "surprisePercent": -0.1429
+      },
+      {
+        "quarter": "2021-09-30",
+        "epsActual": 0.14,
+        "epsEstimate": 0.14,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "ECF": {
+    "symbol": "ECF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EFORL": {
+    "symbol": "EFORL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2016-06-30",
+        "epsActual": -0.054,
+        "epsEstimate": 0,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "EGATIF": {
+    "symbol": "EGATIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EGCO": {
+    "symbol": "EGCO",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-15",
+      "earningsDateEnd": null,
+      "epsEstimate": 2.64667,
+      "revenueEstimate": 7953750000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1737,
+        "epsEstimate": 0.85333,
+        "surprisePercent": -0.7964
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": -1.25,
+        "epsEstimate": 2.30667,
+        "surprisePercent": -1.5419
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 4.1004,
+        "epsEstimate": 2.585,
+        "surprisePercent": 0.5862
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 2.6658,
+        "epsEstimate": 4.11,
+        "surprisePercent": -0.3514
+      }
+    ]
+  },
+  "EKH": {
+    "symbol": "EKH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1016,
+        "epsEstimate": 0.08,
+        "surprisePercent": 0.27
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0574,
+        "epsEstimate": 0.06,
+        "surprisePercent": -0.0433
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0718,
+        "epsEstimate": 0.09,
+        "surprisePercent": -0.2022
+      }
+    ]
+  },
+  "EP": {
+    "symbol": "EP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EPG": {
+    "symbol": "EPG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1182,
+        "epsEstimate": 0.1,
+        "surprisePercent": 0.18200001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1178,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.0709
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1107,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.0064
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1426,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.29639998
+      }
+    ]
+  },
+  "ERW": {
+    "symbol": "ERW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0764,
+        "epsEstimate": 0.065,
+        "surprisePercent": 0.1754
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0116,
+        "epsEstimate": 0.0115,
+        "surprisePercent": 0.0087
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0129,
+        "epsEstimate": 0.0134,
+        "surprisePercent": -0.0373
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0707,
+        "epsEstimate": 0.0694,
+        "surprisePercent": 0.0187
+      }
+    ]
+  },
+  "ESTAR": {
+    "symbol": "ESTAR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ESTEE80": {
+    "symbol": "ESTEE80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ETC": {
+    "symbol": "ETC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ETE": {
+    "symbol": "ETE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EURO": {
+    "symbol": "EURO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "EXPE06": {
+    "symbol": "EXPE06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "F&D": {
+    "symbol": "F&D",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FANUC23": {
+    "symbol": "FANUC23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FCX23": {
+    "symbol": "FCX23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FE": {
+    "symbol": "FE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FERRARI80": {
+    "symbol": "FERRARI80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FLOYD": {
+    "symbol": "FLOYD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FMT": {
+    "symbol": "FMT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FN": {
+    "symbol": "FN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FNS": {
+    "symbol": "FNS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FORTH": {
+    "symbol": "FORTH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FPI": {
+    "symbol": "FPI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FPT": {
+    "symbol": "FPT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FPTVN11": {
+    "symbol": "FPTVN11",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FPTVN19": {
+    "symbol": "FPTVN19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FSMART": {
+    "symbol": "FSMART",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FTE": {
+    "symbol": "FTE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2018-12-31",
+        "epsActual": 0.06509,
+        "epsEstimate": 0.04545,
+        "surprisePercent": 0.4321
+      },
+      {
+        "quarter": "2018-09-30",
+        "epsActual": 0.04545,
+        "epsEstimate": 0.05455,
+        "surprisePercent": -0.1668
+      },
+      {
+        "quarter": "2018-06-30",
+        "epsActual": 0.06364,
+        "epsEstimate": 0.04545,
+        "surprisePercent": 0.4002
+      },
+      {
+        "quarter": "2018-03-31",
+        "epsActual": 0.02727,
+        "epsEstimate": 0.02727,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "FTI": {
+    "symbol": "FTI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FTREIT": {
+    "symbol": "FTREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2082,
+        "epsEstimate": 0.22,
+        "surprisePercent": -0.053600002
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2188,
+        "epsEstimate": 0.21,
+        "surprisePercent": 0.0419
+      }
+    ]
+  },
+  "FUTURERT": {
+    "symbol": "FUTURERT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "FVC": {
+    "symbol": "FVC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GABLE": {
+    "symbol": "GABLE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.18,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.6364
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.16,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.45450002
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.09,
+        "surprisePercent": 0.22219999
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": -0.01,
+        "epsEstimate": 0.03,
+        "surprisePercent": -1.3333
+      }
+    ]
+  },
+  "GAHREIT": {
+    "symbol": "GAHREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GBX": {
+    "symbol": "GBX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GC": {
+    "symbol": "GC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GCAP": {
+    "symbol": "GCAP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2018-06-30",
+        "epsActual": 0.07,
+        "epsEstimate": 0.07,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2018-03-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0.1667
+      }
+    ]
+  },
+  "GENCO": {
+    "symbol": "GENCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GFPT": {
+    "symbol": "GFPT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.3506,
+        "epsEstimate": 0.37333,
+        "surprisePercent": -0.060900003
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.5664,
+        "epsEstimate": 0.53667,
+        "surprisePercent": 0.0554
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.5254,
+        "epsEstimate": 0.4725,
+        "surprisePercent": 0.111999996
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.51,
+        "epsEstimate": 0.445,
+        "surprisePercent": 0.1461
+      }
+    ]
+  },
+  "GGC": {
+    "symbol": "GGC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GIGA23": {
+    "symbol": "GIGA23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GLAND": {
+    "symbol": "GLAND",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GLOBAL": {
+    "symbol": "GLOBAL",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-29",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.12,
+      "revenueEstimate": 8547750000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.07666,
+        "epsEstimate": 0.08357,
+        "surprisePercent": -0.08270001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.07001,
+        "epsEstimate": 0.0675,
+        "surprisePercent": 0.0372
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.09286,
+        "epsEstimate": 0.09643,
+        "surprisePercent": -0.037
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.11533,
+        "epsEstimate": 0.11205,
+        "surprisePercent": 0.0293
+      }
+    ]
+  },
+  "GLORY": {
+    "symbol": "GLORY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GOOG80": {
+    "symbol": "GOOG80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GOOGL01": {
+    "symbol": "GOOGL01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GOOGL03": {
+    "symbol": "GOOGL03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GPI": {
+    "symbol": "GPI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GPSC": {
+    "symbol": "GPSC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-06",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.48,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.61,
+        "epsEstimate": 0.58,
+        "surprisePercent": 0.0517
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.6605,
+        "epsEstimate": 0.47667,
+        "surprisePercent": 0.3857
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.62,
+        "epsEstimate": 0.495,
+        "surprisePercent": 0.2525
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.72,
+        "epsEstimate": 0.63333,
+        "surprisePercent": 0.1368
+      }
+    ]
+  },
+  "GRAMMY": {
+    "symbol": "GRAMMY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GRAND": {
+    "symbol": "GRAND",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GROREIT": {
+    "symbol": "GROREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GSUS06": {
+    "symbol": "GSUS06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GTB": {
+    "symbol": "GTB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GULF": {
+    "symbol": "GULF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.62423,
+        "epsEstimate": 0.52111,
+        "surprisePercent": 0.19790001
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.4991,
+        "epsEstimate": 0.12274,
+        "surprisePercent": 3.0663002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.4904,
+        "epsEstimate": 0.59274,
+        "surprisePercent": -0.1727
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.5188,
+        "epsEstimate": 0.62892,
+        "surprisePercent": -0.1751
+      }
+    ]
+  },
+  "GUNKUL": {
+    "symbol": "GUNKUL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.06072,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0.518
+      }
+    ]
+  },
+  "GVREIT": {
+    "symbol": "GVREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "GYT": {
+    "symbol": "GYT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HAIERS19": {
+    "symbol": "HAIERS19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HANA": {
+    "symbol": "HANA",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.15,
+      "revenueEstimate": 5052333330
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.17358,
+        "epsEstimate": 0.045,
+        "surprisePercent": 2.8573
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0297,
+        "epsEstimate": 0.25,
+        "surprisePercent": -0.8812
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1243,
+        "epsEstimate": 0.17,
+        "surprisePercent": -0.2688
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.54,
+        "epsEstimate": 0.1825,
+        "surprisePercent": 1.9589
+      }
+    ]
+  },
+  "HANSOH19": {
+    "symbol": "HANSOH19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HARN": {
+    "symbol": "HARN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HENG": {
+    "symbol": "HENG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HERMES80": {
+    "symbol": "HERMES80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HK01": {
+    "symbol": "HK01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HK13": {
+    "symbol": "HK13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HKCE01": {
+    "symbol": "HKCE01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HKEX23": {
+    "symbol": "HKEX23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HL": {
+    "symbol": "HL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HMPRO": {
+    "symbol": "HMPRO",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-04-28",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.12,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.11,
+        "epsEstimate": 0.10976,
+        "surprisePercent": 0.0022
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.12,
+        "epsEstimate": 0.11987,
+        "surprisePercent": 0.0011
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1,
+        "epsEstimate": 0.10476,
+        "surprisePercent": -0.0454
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.11118,
+        "surprisePercent": -0.0106
+      }
+    ]
+  },
+  "HONDA19": {
+    "symbol": "HONDA19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HPF": {
+    "symbol": "HPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HPG19": {
+    "symbol": "HPG19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HPT": {
+    "symbol": "HPT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HSHD23": {
+    "symbol": "HSHD23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HTECH": {
+    "symbol": "HTECH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "HUMAN": {
+    "symbol": "HUMAN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.13,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "HYDROGEN": {
+    "symbol": "HYDROGEN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IBM06": {
+    "symbol": "IBM06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ICBC06": {
+    "symbol": "ICBC06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ICBC19": {
+    "symbol": "ICBC19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ICC": {
+    "symbol": "ICC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ICHI": {
+    "symbol": "ICHI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.24,
+        "epsEstimate": 0.23,
+        "surprisePercent": 0.0435
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.28,
+        "epsEstimate": 0.25333,
+        "surprisePercent": 0.105299994
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.31,
+        "epsEstimate": 0.26667,
+        "surprisePercent": 0.1625
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.19,
+        "epsEstimate": 0.19667,
+        "surprisePercent": -0.0339
+      }
+    ]
+  },
+  "ICN": {
+    "symbol": "ICN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IDG": {
+    "symbol": "IDG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IFS": {
+    "symbol": "IFS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IIG": {
+    "symbol": "IIG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2023-03-31",
+        "epsActual": -0.306,
+        "epsEstimate": 0.16,
+        "surprisePercent": -2.9125
+      }
+    ]
+  },
+  "III": {
+    "symbol": "III",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1433,
+        "epsEstimate": 0.145,
+        "surprisePercent": -0.0117
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1317,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0.013099999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0952,
+        "epsEstimate": 0.11,
+        "surprisePercent": -0.1345
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1389,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0.0685
+      }
+    ]
+  },
+  "ILINK": {
+    "symbol": "ILINK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.12,
+        "epsEstimate": 0.15,
+        "surprisePercent": -0.2
+      }
+    ]
+  },
+  "ILM": {
+    "symbol": "ILM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.36,
+        "epsEstimate": 0.38,
+        "surprisePercent": -0.052600004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.35,
+        "epsEstimate": 0.32,
+        "surprisePercent": 0.0937
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.43,
+        "epsEstimate": 0.36,
+        "surprisePercent": 0.19440001
+      }
+    ]
+  },
+  "IMH": {
+    "symbol": "IMH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IMPACT": {
+    "symbol": "IMPACT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "INGRS": {
+    "symbol": "INGRS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "INSET": {
+    "symbol": "INSET",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0,
+        "epsEstimate": 0.01,
+        "surprisePercent": -1
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.02,
+        "epsEstimate": 0,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.01,
+        "epsEstimate": 0,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.01,
+        "epsEstimate": 0.01,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "INSURE": {
+    "symbol": "INSURE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IRC": {
+    "symbol": "IRC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IROYAL": {
+    "symbol": "IROYAL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IRPC": {
+    "symbol": "IRPC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-12",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.24667,
+      "revenueEstimate": 77535250000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": -0.03,
+        "epsEstimate": -0.02096,
+        "surprisePercent": -0.4313
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.02,
+        "epsEstimate": -0.0144,
+        "surprisePercent": 2.3889
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.1,
+        "epsEstimate": -0.07,
+        "surprisePercent": -0.4286
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": -0.0979,
+        "epsEstimate": -0.03602,
+        "surprisePercent": -1.7178999
+      }
+    ]
+  },
+  "ISSARA": {
+    "symbol": "ISSARA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ITC": {
+    "symbol": "ITC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.28856,
+        "epsEstimate": 0.29,
+        "surprisePercent": -0.005
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.3249,
+        "epsEstimate": 0.29,
+        "surprisePercent": 0.120299995
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.27,
+        "epsEstimate": 0.28,
+        "surprisePercent": -0.0357
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.23,
+        "epsEstimate": 0.32,
+        "surprisePercent": -0.28129998
+      }
+    ]
+  },
+  "ITD": {
+    "symbol": "ITD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ITNS": {
+    "symbol": "ITNS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ITOCHU19": {
+    "symbol": "ITOCHU19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ITTHI": {
+    "symbol": "ITTHI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IVF": {
+    "symbol": "IVF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "IVL": {
+    "symbol": "IVL",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-15",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.08,
+      "revenueEstimate": 107850000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": -0.88,
+        "epsEstimate": -0.82,
+        "surprisePercent": -0.0732
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": -0.1446,
+        "epsEstimate": -0.19,
+        "surprisePercent": 0.23889999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.159,
+        "epsEstimate": 0.15,
+        "surprisePercent": -2.06
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": -0.211,
+        "epsEstimate": 0.185,
+        "surprisePercent": -2.1405
+      }
+    ]
+  },
+  "J": {
+    "symbol": "J",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JAK": {
+    "symbol": "JAK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JAPAN13": {
+    "symbol": "JAPAN13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JCT": {
+    "symbol": "JCT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JD80": {
+    "symbol": "JD80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JDF": {
+    "symbol": "JDF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JEPI19": {
+    "symbol": "JEPI19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JMART": {
+    "symbol": "JMART",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JNJ03": {
+    "symbol": "JNJ03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JPARK": {
+    "symbol": "JPARK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.03,
+        "epsEstimate": 0.03,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0.2
+      }
+    ]
+  },
+  "JPMUS06": {
+    "symbol": "JPMUS06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JPMUS19": {
+    "symbol": "JPMUS19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JR": {
+    "symbol": "JR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2021-03-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0.1667
+      },
+      {
+        "quarter": "2020-12-31",
+        "epsActual": 0.04,
+        "epsEstimate": 0.03,
+        "surprisePercent": 0.33330002
+      }
+    ]
+  },
+  "JSP": {
+    "symbol": "JSP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JTS": {
+    "symbol": "JTS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "JUBILE": {
+    "symbol": "JUBILE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "K": {
+    "symbol": "K",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KAMART": {
+    "symbol": "KAMART",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.155,
+        "epsEstimate": 0.16,
+        "surprisePercent": -0.0313
+      }
+    ]
+  },
+  "KASET": {
+    "symbol": "KASET",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KBS": {
+    "symbol": "KBS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KBSPIF": {
+    "symbol": "KBSPIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KCAR": {
+    "symbol": "KCAR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KCC": {
+    "symbol": "KCC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KCE": {
+    "symbol": "KCE",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-12",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.124,
+      "revenueEstimate": 3121000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1,
+        "epsEstimate": 0.18,
+        "surprisePercent": -0.44439998
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.25,
+        "epsEstimate": 0.26,
+        "surprisePercent": -0.0385
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.15,
+        "epsEstimate": 0.16667,
+        "surprisePercent": -0.1
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.19,
+        "epsEstimate": 0.23333,
+        "surprisePercent": -0.1857
+      }
+    ]
+  },
+  "KCG": {
+    "symbol": "KCG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.35,
+        "epsEstimate": 0.32,
+        "surprisePercent": 0.0937
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.16,
+        "epsEstimate": 0.155,
+        "surprisePercent": 0.0323
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.18,
+        "epsEstimate": 0.18,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.22,
+        "epsEstimate": 0.185,
+        "surprisePercent": 0.1892
+      }
+    ]
+  },
+  "KCM": {
+    "symbol": "KCM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KDH": {
+    "symbol": "KDH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KEYENCE23": {
+    "symbol": "KEYENCE23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KGEN": {
+    "symbol": "KGEN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2014-12-31",
+        "epsActual": 0.01,
+        "epsEstimate": 0.012,
+        "surprisePercent": -0.1667
+      }
+    ]
+  },
+  "KGI": {
+    "symbol": "KGI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KIAT": {
+    "symbol": "KIAT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KISS": {
+    "symbol": "KISS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KJL": {
+    "symbol": "KJL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.04,
+        "epsEstimate": 0.03,
+        "surprisePercent": 0.33330002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.17,
+        "epsEstimate": 0.19,
+        "surprisePercent": -0.105299994
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.21,
+        "epsEstimate": 0.19,
+        "surprisePercent": 0.105299994
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.13,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "KK": {
+    "symbol": "KK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KKC": {
+    "symbol": "KKC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KKP": {
+    "symbol": "KKP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-20",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 2.4,
+        "epsEstimate": 1.91167,
+        "surprisePercent": 0.2554
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 2.17,
+        "epsEstimate": 1.755,
+        "surprisePercent": 0.2365
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 2.02,
+        "epsEstimate": 1.574,
+        "surprisePercent": 0.2834
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 1.7,
+        "epsEstimate": 1.33,
+        "surprisePercent": 0.2782
+      }
+    ]
+  },
+  "KLINIQ": {
+    "symbol": "KLINIQ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.5,
+        "epsEstimate": 0.485,
+        "surprisePercent": 0.0309
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.36,
+        "epsEstimate": 0.37,
+        "surprisePercent": -0.027
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.39,
+        "epsEstimate": 0.45,
+        "surprisePercent": -0.1333
+      }
+    ]
+  },
+  "KO80": {
+    "symbol": "KO80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KOOL": {
+    "symbol": "KOOL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KPNREIT": {
+    "symbol": "KPNREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KTBSTMR": {
+    "symbol": "KTBSTMR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KTC": {
+    "symbol": "KTC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.84,
+        "epsEstimate": 0.816,
+        "surprisePercent": 0.0294
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.81,
+        "epsEstimate": 0.738,
+        "surprisePercent": 0.097600006
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.76,
+        "epsEstimate": 0.75,
+        "surprisePercent": 0.013300001
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.73,
+        "epsEstimate": 0.73,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "KTIS": {
+    "symbol": "KTIS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KTMS": {
+    "symbol": "KTMS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KUAISH01": {
+    "symbol": "KUAISH01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KUAISH23": {
+    "symbol": "KUAISH23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KUAISH80": {
+    "symbol": "KUAISH80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KUMWEL": {
+    "symbol": "KUMWEL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KUN": {
+    "symbol": "KUN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KWC": {
+    "symbol": "KWC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KWM": {
+    "symbol": "KWM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "KYE": {
+    "symbol": "KYE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "L&E": {
+    "symbol": "L&E",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LALIN": {
+    "symbol": "LALIN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LDC": {
+    "symbol": "LDC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LEE": {
+    "symbol": "LEE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LENOVO13": {
+    "symbol": "LENOVO13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LEO": {
+    "symbol": "LEO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LH": {
+    "symbol": "LH",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.0573,
+      "revenueEstimate": 4600000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.08661,
+        "surprisePercent": -0.42270002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.07,
+        "epsEstimate": 0.06199,
+        "surprisePercent": 0.1292
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.12,
+        "epsEstimate": 0.08425,
+        "surprisePercent": 0.42430001
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0.4
+      }
+    ]
+  },
+  "LHHOTEL": {
+    "symbol": "LHHOTEL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2897,
+        "epsEstimate": 0.38,
+        "surprisePercent": -0.2376
+      }
+    ]
+  },
+  "LHK": {
+    "symbol": "LHK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LHRREIT": {
+    "symbol": "LHRREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LIT": {
+    "symbol": "LIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LLY80": {
+    "symbol": "LLY80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LOREAL80": {
+    "symbol": "LOREAL80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LOXLEY": {
+    "symbol": "LOXLEY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LPGOLD13": {
+    "symbol": "LPGOLD13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LPH": {
+    "symbol": "LPH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LPN": {
+    "symbol": "LPN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.04,
+        "epsEstimate": 0.02,
+        "surprisePercent": 1
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.01,
+        "epsEstimate": 0.01,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.01,
+        "epsEstimate": 0.02,
+        "surprisePercent": -0.5
+      }
+    ]
+  },
+  "LRH": {
+    "symbol": "LRH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LST": {
+    "symbol": "LST",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LUXF": {
+    "symbol": "LUXF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "LVMH01": {
+    "symbol": "LVMH01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "M-CHAI": {
+    "symbol": "M-CHAI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "M-STOR": {
+    "symbol": "M-STOR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MA80": {
+    "symbol": "MA80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MAGURO": {
+    "symbol": "MAGURO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.36,
+        "epsEstimate": 0.36,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.3,
+        "epsEstimate": 0.28,
+        "surprisePercent": 0.0714
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.25,
+        "epsEstimate": 0.26,
+        "surprisePercent": -0.0385
+      }
+    ]
+  },
+  "MAJOR": {
+    "symbol": "MAJOR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.1,
+        "epsEstimate": 0.085,
+        "surprisePercent": 0.1765
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.47,
+        "epsEstimate": 0.31,
+        "surprisePercent": 0.5161
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.17,
+        "epsEstimate": 0.13,
+        "surprisePercent": 0.3077
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.16,
+        "epsEstimate": 0.12667,
+        "surprisePercent": 0.2631
+      }
+    ]
+  },
+  "MALEE": {
+    "symbol": "MALEE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MANRIN": {
+    "symbol": "MANRIN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MASTEC": {
+    "symbol": "MASTEC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MASTER": {
+    "symbol": "MASTER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.16,
+        "epsEstimate": 0.08,
+        "surprisePercent": 1
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.14,
+        "epsEstimate": 0.135,
+        "surprisePercent": 0.037
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.17,
+        "epsEstimate": 0.18,
+        "surprisePercent": -0.0556
+      }
+    ]
+  },
+  "MATI": {
+    "symbol": "MATI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MBAX": {
+    "symbol": "MBAX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MCA": {
+    "symbol": "MCA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MCOT": {
+    "symbol": "MCOT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MEB": {
+    "symbol": "MEB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.34,
+        "epsEstimate": 0.36,
+        "surprisePercent": -0.0556
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.34,
+        "epsEstimate": 0.37,
+        "surprisePercent": -0.081099994
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.38,
+        "epsEstimate": 0.38,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "MEDEZE": {
+    "symbol": "MEDEZE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MEGA": {
+    "symbol": "MEGA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.69,
+        "epsEstimate": 0.66333,
+        "surprisePercent": 0.0402
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.57,
+        "epsEstimate": 0.72,
+        "surprisePercent": -0.2083
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.45,
+        "epsEstimate": 0.7375,
+        "surprisePercent": -0.38979998
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.52,
+        "epsEstimate": 0.56,
+        "surprisePercent": -0.0714
+      }
+    ]
+  },
+  "MENA": {
+    "symbol": "MENA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "META01": {
+    "symbol": "META01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "META06": {
+    "symbol": "META06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "META80": {
+    "symbol": "META80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "METCO": {
+    "symbol": "METCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MFC": {
+    "symbol": "MFC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MFEC": {
+    "symbol": "MFEC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MGC": {
+    "symbol": "MGC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MGI": {
+    "symbol": "MGI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MGT": {
+    "symbol": "MGT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MICRO": {
+    "symbol": "MICRO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.075,
+        "epsEstimate": 0,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.008,
+        "epsEstimate": 0.01,
+        "surprisePercent": -0.2
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0101,
+        "epsEstimate": 0.01,
+        "surprisePercent": 0.01
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.007,
+        "epsEstimate": -0.01,
+        "surprisePercent": 1.7
+      }
+    ]
+  },
+  "MICRON01": {
+    "symbol": "MICRON01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MICRON03": {
+    "symbol": "MICRON03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MICRON19": {
+    "symbol": "MICRON19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MICRON80": {
+    "symbol": "MICRON80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MII": {
+    "symbol": "MII",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MILL": {
+    "symbol": "MILL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MINT": {
+    "symbol": "MINT",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.02552,
+      "revenueEstimate": 37197597830
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.44,
+        "epsEstimate": 0.59536,
+        "surprisePercent": -0.261
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.38,
+        "epsEstimate": 0.46619,
+        "surprisePercent": -0.1849
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.47,
+        "epsEstimate": 0.58322,
+        "surprisePercent": -0.19409999
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": -0.0018,
+        "epsEstimate": 0.076,
+        "surprisePercent": -1.0237
+      }
+    ]
+  },
+  "MIPF": {
+    "symbol": "MIPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MITSIB": {
+    "symbol": "MITSIB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MITSU19": {
+    "symbol": "MITSU19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MJLF": {
+    "symbol": "MJLF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ML": {
+    "symbol": "ML",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MMM": {
+    "symbol": "MMM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MNIT": {
+    "symbol": "MNIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MNIT2": {
+    "symbol": "MNIT2",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MNRF": {
+    "symbol": "MNRF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MNSO80": {
+    "symbol": "MNSO80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MODERN": {
+    "symbol": "MODERN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MONO": {
+    "symbol": "MONO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MOONG": {
+    "symbol": "MOONG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MOSHI": {
+    "symbol": "MOSHI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.73,
+        "epsEstimate": 0.73,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.42,
+        "epsEstimate": 0.41,
+        "surprisePercent": 0.024400001
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.41,
+        "epsEstimate": 0.365,
+        "surprisePercent": 0.1233
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.47,
+        "epsEstimate": 0.4625,
+        "surprisePercent": 0.0162
+      }
+    ]
+  },
+  "MOTHER": {
+    "symbol": "MOTHER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MPJ": {
+    "symbol": "MPJ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MRVL06": {
+    "symbol": "MRVL06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MRVL23": {
+    "symbol": "MRVL23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MRVL80": {
+    "symbol": "MRVL80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MS06": {
+    "symbol": "MS06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MSC": {
+    "symbol": "MSC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MSFT01": {
+    "symbol": "MSFT01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MSFT03": {
+    "symbol": "MSFT03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MSFT06": {
+    "symbol": "MSFT06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MSFT19": {
+    "symbol": "MSFT19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MSFT80": {
+    "symbol": "MSFT80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MST": {
+    "symbol": "MST",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MTC": {
+    "symbol": "MTC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-12",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.84538,
+      "revenueEstimate": 6450750000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.84,
+        "epsEstimate": 0.82851,
+        "surprisePercent": 0.0139
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.81,
+        "epsEstimate": 0.80813,
+        "surprisePercent": 0.0023
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.78,
+        "epsEstimate": 0.75751,
+        "surprisePercent": 0.0297
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.74,
+        "epsEstimate": 0.73436,
+        "surprisePercent": 0.0077
+      }
+    ]
+  },
+  "MTI": {
+    "symbol": "MTI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MTW": {
+    "symbol": "MTW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MUD": {
+    "symbol": "MUD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MUFG19": {
+    "symbol": "MUFG19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MUFG23": {
+    "symbol": "MUFG23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "MWG19": {
+    "symbol": "MWG19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NAM": {
+    "symbol": "NAM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NAT": {
+    "symbol": "NAT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NATION": {
+    "symbol": "NATION",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NC": {
+    "symbol": "NC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NCH": {
+    "symbol": "NCH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NCL": {
+    "symbol": "NCL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NCP": {
+    "symbol": "NCP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NDAQ06": {
+    "symbol": "NDAQ06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NDX01": {
+    "symbol": "NDX01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NEM06": {
+    "symbol": "NEM06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NEO": {
+    "symbol": "NEO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.55,
+        "epsEstimate": 0.425,
+        "surprisePercent": 0.2941
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2,
+        "epsEstimate": 0.24,
+        "surprisePercent": -0.1667
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.27,
+        "epsEstimate": 0.525,
+        "surprisePercent": -0.4857
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.85,
+        "epsEstimate": 0.755,
+        "surprisePercent": 0.1258
+      }
+    ]
+  },
+  "NER": {
+    "symbol": "NER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.18089,
+        "epsEstimate": 0.17,
+        "surprisePercent": 0.0641
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.20216,
+        "epsEstimate": 0.18,
+        "surprisePercent": 0.123100005
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.16552,
+        "epsEstimate": 0.16,
+        "surprisePercent": 0.0345
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2998,
+        "epsEstimate": 0.26,
+        "surprisePercent": 0.1531
+      }
+    ]
+  },
+  "NETBAY": {
+    "symbol": "NETBAY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NETEASE80": {
+    "symbol": "NETEASE80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NEW": {
+    "symbol": "NEW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NFC": {
+    "symbol": "NFC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NIKE80": {
+    "symbol": "NIKE80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NINTENDO19": {
+    "symbol": "NINTENDO19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NINTENDO23": {
+    "symbol": "NINTENDO23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NKI": {
+    "symbol": "NKI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NKT": {
+    "symbol": "NKT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NL": {
+    "symbol": "NL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NNCL": {
+    "symbol": "NNCL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NOBLE": {
+    "symbol": "NOBLE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NONGFU80": {
+    "symbol": "NONGFU80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NOVA": {
+    "symbol": "NOVA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NOVOB80": {
+    "symbol": "NOVOB80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NPK": {
+    "symbol": "NPK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NRF": {
+    "symbol": "NRF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NSL": {
+    "symbol": "NSL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.47,
+        "epsEstimate": 0.46,
+        "surprisePercent": 0.0217
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.42,
+        "epsEstimate": 0.43,
+        "surprisePercent": -0.0233
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.55,
+        "epsEstimate": 0.55,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.57,
+        "epsEstimate": 0.5,
+        "surprisePercent": 0.14
+      }
+    ]
+  },
+  "NTF": {
+    "symbol": "NTF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NTSC": {
+    "symbol": "NTSC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NTV": {
+    "symbol": "NTV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NUT": {
+    "symbol": "NUT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NV": {
+    "symbol": "NV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NVD": {
+    "symbol": "NVD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NVDA01": {
+    "symbol": "NVDA01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NVDA03": {
+    "symbol": "NVDA03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NVDA06": {
+    "symbol": "NVDA06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NVDA19": {
+    "symbol": "NVDA19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NVDA80": {
+    "symbol": "NVDA80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "NYT": {
+    "symbol": "NYT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "OCC": {
+    "symbol": "OCC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "OGC": {
+    "symbol": "OGC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "OHTL": {
+    "symbol": "OHTL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "OKJ": {
+    "symbol": "OKJ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.07847,
+        "epsEstimate": 0.078,
+        "surprisePercent": 0.006
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.10398,
+        "epsEstimate": 0.156,
+        "surprisePercent": -0.3335
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.25428,
+        "epsEstimate": 0.278,
+        "surprisePercent": -0.0853
+      }
+    ]
+  },
+  "ONEE": {
+    "symbol": "ONEE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.077,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0.54
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.086,
+        "epsEstimate": 0.02,
+        "surprisePercent": 3.3
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.036,
+        "epsEstimate": 0.02833,
+        "surprisePercent": 0.2707
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": -0.01,
+        "epsEstimate": -0.00133,
+        "surprisePercent": -6.5188003
+      }
+    ]
+  },
+  "ONSENS": {
+    "symbol": "ONSENS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ORCL01": {
+    "symbol": "ORCL01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ORCL06": {
+    "symbol": "ORCL06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ORCL19": {
+    "symbol": "ORCL19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ORI": {
+    "symbol": "ORI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": -0.0221,
+        "epsEstimate": -0.01,
+        "surprisePercent": -1.21
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0749,
+        "epsEstimate": 0.07,
+        "surprisePercent": 0.07
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1301,
+        "epsEstimate": 0.12,
+        "surprisePercent": 0.0842
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0455,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0.1375
+      }
+    ]
+  },
+  "ORN": {
+    "symbol": "ORN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "OSP": {
+    "symbol": "OSP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.34,
+      "revenueEstimate": 6431250000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.23,
+        "epsEstimate": 0.27,
+        "surprisePercent": -0.1481
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.23002,
+        "epsEstimate": 0.2325,
+        "surprisePercent": -0.0107
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.34,
+        "epsEstimate": 0.32333,
+        "surprisePercent": 0.051599998
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.42,
+        "epsEstimate": 0.31804,
+        "surprisePercent": 0.3206
+      }
+    ]
+  },
+  "PACO": {
+    "symbol": "PACO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PAF": {
+    "symbol": "PAF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PANEL": {
+    "symbol": "PANEL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PAP": {
+    "symbol": "PAP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2013-12-31",
+        "epsActual": 0.13,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0.18180001
+      },
+      {
+        "quarter": "2013-09-30",
+        "epsActual": 0.17,
+        "epsEstimate": 0.09,
+        "surprisePercent": 0.8889
+      }
+    ]
+  },
+  "PATO": {
+    "symbol": "PATO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PB": {
+    "symbol": "PB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PCC": {
+    "symbol": "PCC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PCSGH": {
+    "symbol": "PCSGH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PDG": {
+    "symbol": "PDG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2017-06-30",
+        "epsActual": 0.05455,
+        "epsEstimate": 0.31818,
+        "surprisePercent": -0.8286
+      }
+    ]
+  },
+  "PEACE": {
+    "symbol": "PEACE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PEP80": {
+    "symbol": "PEP80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PERM": {
+    "symbol": "PERM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PETROCN80": {
+    "symbol": "PETROCN80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PF": {
+    "symbol": "PF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PFIZER19": {
+    "symbol": "PFIZER19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PG": {
+    "symbol": "PG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PHG": {
+    "symbol": "PHG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PHOL": {
+    "symbol": "PHOL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PICO": {
+    "symbol": "PICO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PIN": {
+    "symbol": "PIN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PINGAN01": {
+    "symbol": "PINGAN01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PINGAN80": {
+    "symbol": "PINGAN80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PIS": {
+    "symbol": "PIS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PJW": {
+    "symbol": "PJW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PK": {
+    "symbol": "PK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PL": {
+    "symbol": "PL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PLANB": {
+    "symbol": "PLANB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.08,
+        "epsEstimate": 0.071,
+        "surprisePercent": 0.1268
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.063,
+        "surprisePercent": -0.0476
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0481,
+        "epsEstimate": 0.0435,
+        "surprisePercent": 0.10569999
+      }
+    ]
+  },
+  "PLANET": {
+    "symbol": "PLANET",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PLAT": {
+    "symbol": "PLAT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2019-06-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.07,
+        "surprisePercent": -0.1429
+      },
+      {
+        "quarter": "2019-03-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.075,
+        "surprisePercent": -0.066700004
+      }
+    ]
+  },
+  "PLE": {
+    "symbol": "PLE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PLT": {
+    "symbol": "PLT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PLUS": {
+    "symbol": "PLUS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PM": {
+    "symbol": "PM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PMC": {
+    "symbol": "PMC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PMTA": {
+    "symbol": "PMTA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "POLY": {
+    "symbol": "POLY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "POPF": {
+    "symbol": "POPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "POPMART80": {
+    "symbol": "POPMART80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PPM": {
+    "symbol": "PPM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PPP": {
+    "symbol": "PPP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2013-06-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.09,
+        "surprisePercent": 0.22219999
+      }
+    ]
+  },
+  "PPS": {
+    "symbol": "PPS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PQS": {
+    "symbol": "PQS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PR9": {
+    "symbol": "PR9",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.28,
+        "epsEstimate": 0.275,
+        "surprisePercent": 0.0182
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.28,
+        "epsEstimate": 0.2875,
+        "surprisePercent": -0.026099999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.23,
+        "epsEstimate": 0.256,
+        "surprisePercent": -0.1016
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.25,
+        "epsEstimate": 0.24,
+        "surprisePercent": 0.0417
+      }
+    ]
+  },
+  "PRAKIT": {
+    "symbol": "PRAKIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRAPAT": {
+    "symbol": "PRAPAT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRG": {
+    "symbol": "PRG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRI": {
+    "symbol": "PRI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRIN": {
+    "symbol": "PRIN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRINC": {
+    "symbol": "PRINC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRM": {
+    "symbol": "PRM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.19,
+        "epsEstimate": 0.19,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.25,
+        "epsEstimate": 0.23,
+        "surprisePercent": 0.087
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2383,
+        "epsEstimate": 0.20333,
+        "surprisePercent": 0.172
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.31,
+        "epsEstimate": 0.205,
+        "surprisePercent": 0.5122
+      }
+    ]
+  },
+  "PROEN": {
+    "symbol": "PROEN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PROS": {
+    "symbol": "PROS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PROUD": {
+    "symbol": "PROUD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PRTR": {
+    "symbol": "PRTR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PSH": {
+    "symbol": "PSH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0322,
+        "epsEstimate": 0.05,
+        "surprisePercent": -0.35599998
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.045,
+        "surprisePercent": 0.111099996
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.03,
+        "epsEstimate": 0.01,
+        "surprisePercent": 2
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0114,
+        "epsEstimate": 0.03,
+        "surprisePercent": -0.62
+      }
+    ]
+  },
+  "PSTC": {
+    "symbol": "PSTC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PT": {
+    "symbol": "PT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PTC": {
+    "symbol": "PTC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PTECH": {
+    "symbol": "PTECH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PTG": {
+    "symbol": "PTG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1888,
+        "epsEstimate": 0.21,
+        "surprisePercent": -0.101
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1191,
+        "epsEstimate": 0.12,
+        "surprisePercent": -0.0075
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1892,
+        "epsEstimate": 0.18333,
+        "surprisePercent": 0.032
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1136,
+        "epsEstimate": 0.105,
+        "surprisePercent": 0.08189999
+      }
+    ]
+  },
+  "PTL": {
+    "symbol": "PTL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PTTEP": {
+    "symbol": "PTTEP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-30",
+      "earningsDateEnd": null,
+      "epsEstimate": 3.78,
+      "revenueEstimate": 80621356000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 3.9488,
+        "epsEstimate": 3.758,
+        "surprisePercent": 0.0508
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 4.1828,
+        "epsEstimate": 3.1452,
+        "surprisePercent": 0.32990003
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 3.12325,
+        "epsEstimate": 3.4724,
+        "surprisePercent": -0.100600004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 3.4583,
+        "epsEstimate": 3.3282,
+        "surprisePercent": 0.039100002
+      }
+    ]
+  },
+  "PTTGC": {
+    "symbol": "PTTGC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.90306,
+      "revenueEstimate": 146207236000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 1.4077,
+        "epsEstimate": 0.65426,
+        "surprisePercent": 1.1516
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": -1.0502,
+        "epsEstimate": -0.74018,
+        "surprisePercent": -0.4188
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": -0.6843,
+        "epsEstimate": -0.73667,
+        "surprisePercent": 0.071100004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.8799,
+        "epsEstimate": -0.77581,
+        "surprisePercent": -0.1342
+      }
+    ]
+  },
+  "PYLON": {
+    "symbol": "PYLON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "PYPL06": {
+    "symbol": "PYPL06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "Q-CON": {
+    "symbol": "Q-CON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QCOM06": {
+    "symbol": "QCOM06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QH": {
+    "symbol": "QH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.04,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.03,
+        "epsEstimate": 0.045,
+        "surprisePercent": -0.33330002
+      }
+    ]
+  },
+  "QHBREIT": {
+    "symbol": "QHBREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QHHRREIT": {
+    "symbol": "QHHRREIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QHOP": {
+    "symbol": "QHOP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QLT": {
+    "symbol": "QLT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QQQM19": {
+    "symbol": "QQQM19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "QTC": {
+    "symbol": "QTC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RAM": {
+    "symbol": "RAM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.23,
+        "epsEstimate": 0.32,
+        "surprisePercent": -0.28129998
+      }
+    ]
+  },
+  "RATCH": {
+    "symbol": "RATCH",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 1.0237,
+        "epsEstimate": 0.49,
+        "surprisePercent": 1.0892
+      }
+    ]
+  },
+  "RBF": {
+    "symbol": "RBF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.07221,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0.2035
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.06,
+        "surprisePercent": -0.1667
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.06,
+        "surprisePercent": -0.1667
+      }
+    ]
+  },
+  "READY": {
+    "symbol": "READY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RICHY": {
+    "symbol": "RICHY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RML": {
+    "symbol": "RML",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2017-03-31",
+        "epsActual": 0.03,
+        "epsEstimate": 0.04,
+        "surprisePercent": -0.25
+      }
+    ]
+  },
+  "ROCK": {
+    "symbol": "ROCK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ROCTEC": {
+    "symbol": "ROCTEC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ROH": {
+    "symbol": "ROH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RP": {
+    "symbol": "RP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RPC": {
+    "symbol": "RPC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RS": {
+    "symbol": "RS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RSP": {
+    "symbol": "RSP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RT": {
+    "symbol": "RT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "RWI": {
+    "symbol": "RWI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "S": {
+    "symbol": "S",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "S&J": {
+    "symbol": "S&J",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "S11": {
+    "symbol": "S11",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SA": {
+    "symbol": "SA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SAAM": {
+    "symbol": "SAAM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SABINA": {
+    "symbol": "SABINA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.32,
+        "epsEstimate": 0.305,
+        "surprisePercent": 0.049200002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.28,
+        "epsEstimate": 0.27,
+        "surprisePercent": 0.037
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.29,
+        "epsEstimate": 0.27,
+        "surprisePercent": 0.074099995
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.3,
+        "epsEstimate": 0.32,
+        "surprisePercent": -0.0625
+      }
+    ]
+  },
+  "SAF": {
+    "symbol": "SAF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SAFE": {
+    "symbol": "SAFE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.11,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1,
+        "epsEstimate": 0.11,
+        "surprisePercent": -0.090900004
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.105,
+        "surprisePercent": 0.0476
+      }
+    ]
+  },
+  "SAK": {
+    "symbol": "SAK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1,
+        "epsEstimate": 0.11,
+        "surprisePercent": -0.090900004
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.1,
+        "surprisePercent": 0.1
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1,
+        "epsEstimate": 0.11,
+        "surprisePercent": -0.090900004
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.11,
+        "epsEstimate": 0.1,
+        "surprisePercent": 0.1
+      }
+    ]
+  },
+  "SALEE": {
+    "symbol": "SALEE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SAMCO": {
+    "symbol": "SAMCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SAMTEL": {
+    "symbol": "SAMTEL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SANKO": {
+    "symbol": "SANKO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SANOFI80": {
+    "symbol": "SANOFI80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SANRIO23": {
+    "symbol": "SANRIO23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SANRIO80": {
+    "symbol": "SANRIO80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SAPPE": {
+    "symbol": "SAPPE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.4015,
+        "epsEstimate": 0.44,
+        "surprisePercent": -0.0875
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.60061,
+        "epsEstimate": 0.62,
+        "surprisePercent": -0.0313
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.797,
+        "epsEstimate": 0.82,
+        "surprisePercent": -0.027999999
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.73,
+        "epsEstimate": 0.62,
+        "surprisePercent": 0.1774
+      }
+    ]
+  },
+  "SAT": {
+    "symbol": "SAT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.47,
+        "epsEstimate": 0.52,
+        "surprisePercent": -0.0962
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.46,
+        "epsEstimate": 0.39333,
+        "surprisePercent": 0.16950001
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.35,
+        "epsEstimate": 0.34,
+        "surprisePercent": 0.0294
+      }
+    ]
+  },
+  "SAUCE": {
+    "symbol": "SAUCE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SAV": {
+    "symbol": "SAV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.225,
+        "epsEstimate": 0.21,
+        "surprisePercent": 0.0714
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2008,
+        "epsEstimate": 0.2,
+        "surprisePercent": 0.004
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.20298,
+        "epsEstimate": 0.205,
+        "surprisePercent": -0.0099
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.2211,
+        "epsEstimate": 0.215,
+        "surprisePercent": 0.028399998
+      }
+    ]
+  },
+  "SAWAD": {
+    "symbol": "SAWAD",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.78459,
+      "revenueEstimate": 4090333330
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.8,
+        "epsEstimate": 0.78114,
+        "surprisePercent": 0.0241
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.8,
+        "epsEstimate": 0.78284,
+        "surprisePercent": 0.0219
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.76,
+        "epsEstimate": 0.72056,
+        "surprisePercent": 0.0547
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.73,
+        "epsEstimate": 0.71818,
+        "surprisePercent": 0.0165
+      }
+    ]
+  },
+  "SBUX80": {
+    "symbol": "SBUX80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SC": {
+    "symbol": "SC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.143,
+        "epsEstimate": 0.15,
+        "surprisePercent": -0.0467
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0911,
+        "epsEstimate": 0.097,
+        "surprisePercent": -0.0608
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0979,
+        "epsEstimate": 0.1,
+        "surprisePercent": -0.021
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.0262,
+        "epsEstimate": 0.03,
+        "surprisePercent": -0.1267
+      }
+    ]
+  },
+  "SCAP": {
+    "symbol": "SCAP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SCB": {
+    "symbol": "SCB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 3.03,
+        "epsEstimate": 3.14553,
+        "surprisePercent": -0.0367
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 3.01,
+        "epsEstimate": 3.18523,
+        "surprisePercent": -0.055
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 3.58,
+        "epsEstimate": 3.34036,
+        "surprisePercent": 0.0717
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 3.8,
+        "epsEstimate": 3.39914,
+        "surprisePercent": 0.1179
+      }
+    ]
+  },
+  "SCC": {
+    "symbol": "SCC",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-30",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": 153477614000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 5.19,
+        "epsEstimate": 3.40025,
+        "surprisePercent": 0.52639997
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": -3.08,
+        "epsEstimate": -0.207,
+        "surprisePercent": -13.8792
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": -0.56,
+        "epsEstimate": 0.65654,
+        "surprisePercent": -1.853
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 14.45,
+        "epsEstimate": 2.04806,
+        "surprisePercent": 6.0555
+      }
+    ]
+  },
+  "SCG": {
+    "symbol": "SCG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SCGD": {
+    "symbol": "SCGD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SCGP": {
+    "symbol": "SCGP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-04-28",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.24602,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.36,
+        "epsEstimate": 0.24776,
+        "surprisePercent": 0.45299998
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.28,
+        "epsEstimate": 0.26007,
+        "surprisePercent": 0.0766
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.22,
+        "epsEstimate": 0.22565,
+        "surprisePercent": -0.025
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.24,
+        "epsEstimate": 0.22979,
+        "surprisePercent": 0.0444
+      }
+    ]
+  },
+  "SCI": {
+    "symbol": "SCI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2016-12-31",
+        "epsActual": 0.16,
+        "epsEstimate": 0.16,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2016-03-31",
+        "epsActual": -0.01,
+        "epsEstimate": 0.04,
+        "surprisePercent": -1.25
+      }
+    ]
+  },
+  "SCL": {
+    "symbol": "SCL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SCM": {
+    "symbol": "SCM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SCN": {
+    "symbol": "SCN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SCP": {
+    "symbol": "SCP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SE": {
+    "symbol": "SE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SE-ED": {
+    "symbol": "SE-ED",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SEAOIL": {
+    "symbol": "SEAOIL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SEI": {
+    "symbol": "SEI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.13,
+        "epsEstimate": 0.12,
+        "surprisePercent": 0.0833
+      }
+    ]
+  },
+  "SELIC": {
+    "symbol": "SELIC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SEMB19": {
+    "symbol": "SEMB19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SENA": {
+    "symbol": "SENA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SENX": {
+    "symbol": "SENX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SFLEX": {
+    "symbol": "SFLEX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.08,
+        "epsEstimate": 0.082,
+        "surprisePercent": -0.024400001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.08,
+        "epsEstimate": 0.074,
+        "surprisePercent": 0.081099994
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.069,
+        "epsEstimate": 0.07,
+        "surprisePercent": -0.0143
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.083,
+        "epsEstimate": 0.083,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "SFT": {
+    "symbol": "SFT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SGC": {
+    "symbol": "SGC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SGP": {
+    "symbol": "SGP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SGX19": {
+    "symbol": "SGX19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SHANG": {
+    "symbol": "SHANG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SHR": {
+    "symbol": "SHR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.05338,
+        "epsEstimate": 0.035,
+        "surprisePercent": 0.5251
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.036,
+        "epsEstimate": 0.03,
+        "surprisePercent": 0.2
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.007,
+        "epsEstimate": -0.01,
+        "surprisePercent": 1.7
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.049,
+        "epsEstimate": 0.04667,
+        "surprisePercent": 0.0499
+      }
+    ]
+  },
+  "SIA19": {
+    "symbol": "SIA19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SIAM": {
+    "symbol": "SIAM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SINGER": {
+    "symbol": "SINGER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SINGTEL80": {
+    "symbol": "SINGTEL80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SINO": {
+    "symbol": "SINO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SINOBIO19": {
+    "symbol": "SINOBIO19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SIRI": {
+    "symbol": "SIRI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0663,
+        "epsEstimate": 0.075,
+        "surprisePercent": -0.116000004
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05289,
+        "epsEstimate": 0.06,
+        "surprisePercent": -0.1185
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.065,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0.0833
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.042,
+        "epsEstimate": 0.03,
+        "surprisePercent": 0.4
+      }
+    ]
+  },
+  "SIRIPRT": {
+    "symbol": "SIRIPRT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SISB": {
+    "symbol": "SISB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.23,
+        "epsEstimate": 0.24333,
+        "surprisePercent": -0.0548
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2564,
+        "epsEstimate": 0.24667,
+        "surprisePercent": 0.0394
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.24,
+        "epsEstimate": 0.23667,
+        "surprisePercent": 0.014099999
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.25,
+        "epsEstimate": 0.24,
+        "surprisePercent": 0.0417
+      }
+    ]
+  },
+  "SITHAI": {
+    "symbol": "SITHAI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SJWD": {
+    "symbol": "SJWD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1543,
+        "epsEstimate": 0.125,
+        "surprisePercent": 0.2344
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1198,
+        "epsEstimate": 0.13,
+        "surprisePercent": -0.0785
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.1613,
+        "epsEstimate": 0.15,
+        "surprisePercent": 0.0753
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1969,
+        "epsEstimate": 0.125,
+        "surprisePercent": 0.5752
+      }
+    ]
+  },
+  "SK": {
+    "symbol": "SK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SKE": {
+    "symbol": "SKE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SKN": {
+    "symbol": "SKN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SKR": {
+    "symbol": "SKR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SKY": {
+    "symbol": "SKY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SLP": {
+    "symbol": "SLP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SMART": {
+    "symbol": "SMART",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SMD100": {
+    "symbol": "SMD100",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SMFG19": {
+    "symbol": "SMFG19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SMIT": {
+    "symbol": "SMIT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SMO": {
+    "symbol": "SMO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SMPC": {
+    "symbol": "SMPC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2022-09-30",
+        "epsActual": 0.36,
+        "epsEstimate": 0.34,
+        "surprisePercent": 0.0588
+      },
+      {
+        "quarter": "2022-06-30",
+        "epsActual": 0.45,
+        "epsEstimate": 0.56,
+        "surprisePercent": -0.19639999
+      },
+      {
+        "quarter": "2022-03-31",
+        "epsActual": 0.54,
+        "epsEstimate": 0.36,
+        "surprisePercent": 0.5
+      }
+    ]
+  },
+  "SMT": {
+    "symbol": "SMT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SNNP": {
+    "symbol": "SNNP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.14,
+        "epsEstimate": 0.14,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.14,
+        "epsEstimate": 0.14,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.18,
+        "epsEstimate": 0.17333,
+        "surprisePercent": 0.0385
+      }
+    ]
+  },
+  "SNP": {
+    "symbol": "SNP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SOFTBANK23": {
+    "symbol": "SOFTBANK23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SONIC": {
+    "symbol": "SONIC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SONY80": {
+    "symbol": "SONY80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SORKON": {
+    "symbol": "SORKON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SP500US19": {
+    "symbol": "SP500US19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SP500US80": {
+    "symbol": "SP500US80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPA": {
+    "symbol": "SPA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.043,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0.075
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.036,
+        "epsEstimate": 0.035,
+        "surprisePercent": 0.0286
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.028,
+        "epsEstimate": 0.02667,
+        "surprisePercent": 0.0499
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.04,
+        "epsEstimate": 0.05333,
+        "surprisePercent": -0.25
+      }
+    ]
+  },
+  "SPACK": {
+    "symbol": "SPACK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPALI": {
+    "symbol": "SPALI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.708,
+        "epsEstimate": 0.6544,
+        "surprisePercent": 0.08189999
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.62,
+        "epsEstimate": 0.52667,
+        "surprisePercent": 0.17719999
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.57,
+        "epsEstimate": 0.56187,
+        "surprisePercent": 0.0145000005
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.21,
+        "epsEstimate": 0.525,
+        "surprisePercent": -0.6
+      }
+    ]
+  },
+  "SPBOND80": {
+    "symbol": "SPBOND80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPC": {
+    "symbol": "SPC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPCG": {
+    "symbol": "SPCG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPCOM80": {
+    "symbol": "SPCOM80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPENGY80": {
+    "symbol": "SPENGY80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPFIN80": {
+    "symbol": "SPFIN80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPG": {
+    "symbol": "SPG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPHLTH80": {
+    "symbol": "SPHLTH80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPI": {
+    "symbol": "SPI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPRC": {
+    "symbol": "SPRC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.58072,
+        "epsEstimate": 0.761,
+        "surprisePercent": -0.2369
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.3488,
+        "epsEstimate": -0.0745,
+        "surprisePercent": 5.6819
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": -0.23585,
+        "epsEstimate": 0.05333,
+        "surprisePercent": -5.4225
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1289,
+        "epsEstimate": 0.07667,
+        "surprisePercent": 0.6812
+      }
+    ]
+  },
+  "SPREME": {
+    "symbol": "SPREME",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPRIME": {
+    "symbol": "SPRIME",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SPTECH80": {
+    "symbol": "SPTECH80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SQ": {
+    "symbol": "SQ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SR": {
+    "symbol": "SR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SRICHA": {
+    "symbol": "SRICHA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SRIPANWA": {
+    "symbol": "SRIPANWA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SRS": {
+    "symbol": "SRS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SSF": {
+    "symbol": "SSF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SSPF": {
+    "symbol": "SSPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SSSC": {
+    "symbol": "SSSC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SST": {
+    "symbol": "SST",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2015-03-31",
+        "epsActual": -0.03578,
+        "epsEstimate": 0.0322,
+        "surprisePercent": -2.1111999
+      },
+      {
+        "quarter": "2014-12-31",
+        "epsActual": -0.0161,
+        "epsEstimate": 0.02147,
+        "surprisePercent": -1.7499001
+      },
+      {
+        "quarter": "2014-09-30",
+        "epsActual": 0.79425,
+        "epsEstimate": 0.47762,
+        "surprisePercent": 0.66290003
+      }
+    ]
+  },
+  "SSTRT": {
+    "symbol": "SSTRT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STA": {
+    "symbol": "STA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.49322,
+        "epsEstimate": 0.22,
+        "surprisePercent": 1.2419
+      }
+    ]
+  },
+  "STANLY": {
+    "symbol": "STANLY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 6.4,
+        "epsEstimate": 5.285,
+        "surprisePercent": 0.21100001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 8.05,
+        "epsEstimate": 6.42667,
+        "surprisePercent": 0.2526
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 4.82,
+        "epsEstimate": 4.3,
+        "surprisePercent": 0.120900005
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 5.77,
+        "epsEstimate": 4.69,
+        "surprisePercent": 0.23030001
+      }
+    ]
+  },
+  "STARM": {
+    "symbol": "STARM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STC": {
+    "symbol": "STC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STECH": {
+    "symbol": "STECH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STECON": {
+    "symbol": "STECON",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.26939,
+        "epsEstimate": 0.2,
+        "surprisePercent": 0.347
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.11,
+        "epsEstimate": 0.11,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.34,
+        "epsEstimate": 0.26,
+        "surprisePercent": 0.3077
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.22,
+        "epsEstimate": 0.17333,
+        "surprisePercent": 0.2693
+      }
+    ]
+  },
+  "STEG19": {
+    "symbol": "STEG19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STGT": {
+    "symbol": "STGT",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-06",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": []
+  },
+  "STOWER": {
+    "symbol": "STOWER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STP": {
+    "symbol": "STP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STPI": {
+    "symbol": "STPI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "STX": {
+    "symbol": "STX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUC": {
+    "symbol": "SUC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUN": {
+    "symbol": "SUN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2023-09-30",
+        "epsActual": 0.10833,
+        "epsEstimate": 0.13333,
+        "surprisePercent": -0.1875
+      },
+      {
+        "quarter": "2023-06-30",
+        "epsActual": 0.075,
+        "epsEstimate": 0.14167,
+        "surprisePercent": -0.4706
+      },
+      {
+        "quarter": "2023-03-31",
+        "epsActual": 0.125,
+        "epsEstimate": 0.06667,
+        "surprisePercent": 0.8749
+      }
+    ]
+  },
+  "SUNNY19": {
+    "symbol": "SUNNY19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUNNY80": {
+    "symbol": "SUNNY80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUPER": {
+    "symbol": "SUPER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUPEREIF": {
+    "symbol": "SUPEREIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUSCO": {
+    "symbol": "SUSCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SUTHA": {
+    "symbol": "SUTHA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SVOA": {
+    "symbol": "SVOA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SVR": {
+    "symbol": "SVR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SVT": {
+    "symbol": "SVT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SWC": {
+    "symbol": "SWC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2015-09-30",
+        "epsActual": 0.14091,
+        "epsEstimate": 0.12727,
+        "surprisePercent": 0.107200004
+      }
+    ]
+  },
+  "SYMC": {
+    "symbol": "SYMC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "SYNEX": {
+    "symbol": "SYNEX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1988,
+        "epsEstimate": 0.22,
+        "surprisePercent": -0.0964
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.24885,
+        "epsEstimate": 0.215,
+        "surprisePercent": 0.1574
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.3051,
+        "epsEstimate": 0.21,
+        "surprisePercent": 0.45290002
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.184,
+        "epsEstimate": 0.17,
+        "surprisePercent": 0.082399994
+      }
+    ]
+  },
+  "SYNTEC": {
+    "symbol": "SYNTEC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TAE": {
+    "symbol": "TAE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TAIWAN19": {
+    "symbol": "TAIWAN19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TAIWANAI13": {
+    "symbol": "TAIWANAI13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TAIWANHD13": {
+    "symbol": "TAIWANHD13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TAKUNI": {
+    "symbol": "TAKUNI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TASCO": {
+    "symbol": "TASCO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.07,
+        "epsEstimate": 0.03,
+        "surprisePercent": 1.3333
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.1078,
+        "epsEstimate": 0.1375,
+        "surprisePercent": -0.216
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2385,
+        "epsEstimate": 0.27,
+        "surprisePercent": -0.1167
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.2563,
+        "epsEstimate": 0.33,
+        "surprisePercent": -0.2233
+      }
+    ]
+  },
+  "TATG": {
+    "symbol": "TATG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TBN": {
+    "symbol": "TBN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TC": {
+    "symbol": "TC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TCAP": {
+    "symbol": "TCAP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-20",
+      "earningsDateEnd": null,
+      "epsEstimate": 1.7,
+      "revenueEstimate": 2652000000
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 1.81,
+        "epsEstimate": 1.76,
+        "surprisePercent": 0.028399998
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 1.98,
+        "epsEstimate": 1.56,
+        "surprisePercent": 0.2692
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 1.97,
+        "epsEstimate": 1.67,
+        "surprisePercent": 0.17959999
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 1.63,
+        "epsEstimate": 1.59,
+        "surprisePercent": 0.0252
+      }
+    ]
+  },
+  "TCC": {
+    "symbol": "TCC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TCOAT": {
+    "symbol": "TCOAT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TEAM": {
+    "symbol": "TEAM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TEAMG": {
+    "symbol": "TEAMG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TEKA": {
+    "symbol": "TEKA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TEL23": {
+    "symbol": "TEL23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TEL80": {
+    "symbol": "TEL80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TENCENT01": {
+    "symbol": "TENCENT01",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TENCENT06": {
+    "symbol": "TENCENT06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TENCENT13": {
+    "symbol": "TENCENT13",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TENCENT19": {
+    "symbol": "TENCENT19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TENCENT80": {
+    "symbol": "TENCENT80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TERA": {
+    "symbol": "TERA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TFFIF": {
+    "symbol": "TFFIF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TFG": {
+    "symbol": "TFG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.2237,
+        "epsEstimate": 0.25,
+        "surprisePercent": -0.10520001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.29,
+        "epsEstimate": 0.282,
+        "surprisePercent": 0.028399998
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.4525,
+        "epsEstimate": 0.4315,
+        "surprisePercent": 0.048699997
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.3565,
+        "epsEstimate": 0.292,
+        "surprisePercent": 0.2209
+      }
+    ]
+  },
+  "TFM": {
+    "symbol": "TFM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.1934,
+        "epsEstimate": 0.21,
+        "surprisePercent": -0.079
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.2446,
+        "epsEstimate": 0.22,
+        "surprisePercent": 0.1118
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.19,
+        "epsEstimate": 0.31,
+        "surprisePercent": -0.38709998
+      }
+    ]
+  },
+  "TFMAMA": {
+    "symbol": "TFMAMA",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-14",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": []
+  },
+  "TGE": {
+    "symbol": "TGE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TGH": {
+    "symbol": "TGH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THAIBEV19": {
+    "symbol": "THAIBEV19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THANA": {
+    "symbol": "THANA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THANI": {
+    "symbol": "THANI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0.25
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0.25
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.04,
+        "epsEstimate": 0.04,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "THE": {
+    "symbol": "THE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THG": {
+    "symbol": "THG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THIP": {
+    "symbol": "THIP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THMUI": {
+    "symbol": "THMUI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THRE": {
+    "symbol": "THRE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "THREL": {
+    "symbol": "THREL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TIDLOR": {
+    "symbol": "TIDLOR",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-06",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.50864,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.56,
+        "epsEstimate": 0.48005,
+        "surprisePercent": 0.1665
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.36,
+        "epsEstimate": 0.43915,
+        "surprisePercent": -0.18020001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.48,
+        "epsEstimate": 0.45039,
+        "surprisePercent": 0.0657
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.45,
+        "epsEstimate": 0.43049,
+        "surprisePercent": 0.045300003
+      }
+    ]
+  },
+  "TIF1": {
+    "symbol": "TIF1",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TIGER": {
+    "symbol": "TIGER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TIPH": {
+    "symbol": "TIPH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TISCO": {
+    "symbol": "TISCO",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-14",
+      "earningsDateEnd": null,
+      "epsEstimate": 2.16476,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 2.17,
+        "epsEstimate": 2.08874,
+        "surprisePercent": 0.038900003
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 2.05,
+        "epsEstimate": 2.07042,
+        "surprisePercent": -0.0099
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 2.16,
+        "epsEstimate": 2.08409,
+        "surprisePercent": 0.0364
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 2.05,
+        "epsEstimate": 1.96635,
+        "surprisePercent": 0.0425
+      }
+    ]
+  },
+  "TITLE": {
+    "symbol": "TITLE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TK": {
+    "symbol": "TK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TKC": {
+    "symbol": "TKC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TKS": {
+    "symbol": "TKS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TKT": {
+    "symbol": "TKT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TLHPF": {
+    "symbol": "TLHPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TM": {
+    "symbol": "TM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TMD": {
+    "symbol": "TMD",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TME23": {
+    "symbol": "TME23",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TMI": {
+    "symbol": "TMI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2012-06-30",
+        "epsActual": 0.01,
+        "epsEstimate": 0.01714,
+        "surprisePercent": -0.4166
+      }
+    ]
+  },
+  "TMT": {
+    "symbol": "TMT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2016-09-30",
+        "epsActual": 0.165,
+        "epsEstimate": 0.165,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2016-06-30",
+        "epsActual": 0.325,
+        "epsEstimate": 0.305,
+        "surprisePercent": 0.0656
+      },
+      {
+        "quarter": "2016-03-31",
+        "epsActual": 0.32,
+        "epsEstimate": 0.305,
+        "surprisePercent": 0.049200002
+      }
+    ]
+  },
+  "TMW": {
+    "symbol": "TMW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNDT": {
+    "symbol": "TNDT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNH": {
+    "symbol": "TNH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNITY": {
+    "symbol": "TNITY",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNL": {
+    "symbol": "TNL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNP": {
+    "symbol": "TNP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.08,
+        "epsEstimate": 0.07,
+        "surprisePercent": 0.1429
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.063,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0.05
+      }
+    ]
+  },
+  "TNPC": {
+    "symbol": "TNPC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNPF": {
+    "symbol": "TNPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TNR": {
+    "symbol": "TNR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2017-03-31",
+        "epsActual": 0.01,
+        "epsEstimate": 0.15,
+        "surprisePercent": -0.9333
+      }
+    ]
+  },
+  "TOA": {
+    "symbol": "TOA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.44,
+        "epsEstimate": 0.295,
+        "surprisePercent": 0.49150002
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.373,
+        "epsEstimate": 0.34,
+        "surprisePercent": 0.0971
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.3851,
+        "epsEstimate": 0.3,
+        "surprisePercent": 0.28370002
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.37,
+        "epsEstimate": 0.28,
+        "surprisePercent": 0.3214
+      }
+    ]
+  },
+  "TOG": {
+    "symbol": "TOG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TOP": {
+    "symbol": "TOP",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-11",
+      "earningsDateEnd": null,
+      "epsEstimate": 2.34978,
+      "revenueEstimate": 134410919000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 10.1162,
+        "epsEstimate": 2.39367,
+        "surprisePercent": 3.2261999
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.4517,
+        "epsEstimate": 1.47333,
+        "surprisePercent": -0.69339997
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 1.5403,
+        "epsEstimate": 1.07233,
+        "surprisePercent": 0.4364
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 2.2542,
+        "epsEstimate": 1.12537,
+        "surprisePercent": 1.0030999
+      }
+    ]
+  },
+  "TOPP": {
+    "symbol": "TOPP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TOYOTA80": {
+    "symbol": "TOYOTA80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPA": {
+    "symbol": "TPA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPBI": {
+    "symbol": "TPBI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPCH": {
+    "symbol": "TPCH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPCS": {
+    "symbol": "TPCS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPIPL": {
+    "symbol": "TPIPL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2023-06-30",
+        "epsActual": 0.062,
+        "epsEstimate": 0.05,
+        "surprisePercent": 0.24
+      }
+    ]
+  },
+  "TPIPP": {
+    "symbol": "TPIPP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPLAS": {
+    "symbol": "TPLAS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPP": {
+    "symbol": "TPP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPRIME": {
+    "symbol": "TPRIME",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TPS": {
+    "symbol": "TPS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TQR": {
+    "symbol": "TQR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TR": {
+    "symbol": "TR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRC": {
+    "symbol": "TRC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRIPCOM80": {
+    "symbol": "TRIPCOM80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRITN": {
+    "symbol": "TRITN",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRT": {
+    "symbol": "TRT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRU": {
+    "symbol": "TRU",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRUBB": {
+    "symbol": "TRUBB",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRUE": {
+    "symbol": "TRUE",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-04",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.1869,
+      "revenueEstimate": 46410666670
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.19,
+        "epsEstimate": 0.1869,
+        "surprisePercent": 0.0166
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.111,
+        "epsEstimate": 0.11096,
+        "surprisePercent": 0.0004
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.1184,
+        "surprisePercent": -0.5777
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.059,
+        "epsEstimate": 0.12709,
+        "surprisePercent": -0.53580004
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.05,
+        "epsEstimate": 0.07433,
+        "surprisePercent": -0.32729998
+      }
+    ]
+  },
+  "TRV": {
+    "symbol": "TRV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TRVUS06": {
+    "symbol": "TRVUS06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TSC": {
+    "symbol": "TSC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TSE": {
+    "symbol": "TSE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TSR": {
+    "symbol": "TSR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TSTE": {
+    "symbol": "TSTE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TSTH": {
+    "symbol": "TSTH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TTA": {
+    "symbol": "TTA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.04,
+        "epsEstimate": 0.3,
+        "surprisePercent": -0.8667
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.28,
+        "epsEstimate": 0.34,
+        "surprisePercent": -0.1765
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.05,
+        "epsEstimate": -0.1,
+        "surprisePercent": 1.5
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.47,
+        "epsEstimate": 0.14,
+        "surprisePercent": 2.3571
+      }
+    ]
+  },
+  "TTB": {
+    "symbol": "TTB",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-07-17",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.06,
+      "revenueEstimate": 16014492000
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.05424,
+        "surprisePercent": 0.1062
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.05379,
+        "surprisePercent": 0.1154
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.06,
+        "epsEstimate": 0.05056,
+        "surprisePercent": 0.1867
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.05,
+        "epsEstimate": 0.05163,
+        "surprisePercent": -0.031600002
+      }
+    ]
+  },
+  "TTCL": {
+    "symbol": "TTCL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TTI": {
+    "symbol": "TTI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TTLPF": {
+    "symbol": "TTLPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TTT": {
+    "symbol": "TTT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TTW": {
+    "symbol": "TTW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.21,
+        "epsEstimate": 0.185,
+        "surprisePercent": 0.1351
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.24,
+        "epsEstimate": 0.23,
+        "surprisePercent": 0.0435
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.2,
+        "epsEstimate": 0.2,
+        "surprisePercent": 0
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.17,
+        "epsEstimate": 0.16,
+        "surprisePercent": 0.0625
+      }
+    ]
+  },
+  "TU": {
+    "symbol": "TU",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-08-03",
+      "earningsDateEnd": null,
+      "epsEstimate": null,
+      "revenueEstimate": null
+    },
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.1959,
+        "epsEstimate": 0.23667,
+        "surprisePercent": -0.1723
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.26,
+        "epsEstimate": 0.22333,
+        "surprisePercent": 0.16420001
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.34,
+        "epsEstimate": 0.255,
+        "surprisePercent": 0.33330002
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.32,
+        "epsEstimate": 0.245,
+        "surprisePercent": 0.3061
+      }
+    ]
+  },
+  "TURTLE": {
+    "symbol": "TURTLE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TVH": {
+    "symbol": "TVH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TVO": {
+    "symbol": "TVO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2026-03-31",
+        "epsActual": 0.5681,
+        "epsEstimate": 0.61,
+        "surprisePercent": -0.0687
+      },
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.59,
+        "epsEstimate": 0.55,
+        "surprisePercent": 0.0727
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.5485,
+        "epsEstimate": 0.6,
+        "surprisePercent": -0.0858
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.8819,
+        "epsEstimate": 0.53,
+        "surprisePercent": 0.66400003
+      }
+    ]
+  },
+  "TVT": {
+    "symbol": "TVT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TWP": {
+    "symbol": "TWP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TWPC": {
+    "symbol": "TWPC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "TWZ": {
+    "symbol": "TWZ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UAC": {
+    "symbol": "UAC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2013-09-30",
+        "epsActual": 0.06222,
+        "epsEstimate": 0.05333,
+        "surprisePercent": 0.1667
+      }
+    ]
+  },
+  "UBA": {
+    "symbol": "UBA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UBE": {
+    "symbol": "UBE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2022-09-30",
+        "epsActual": 0.0092,
+        "epsEstimate": 0.02,
+        "surprisePercent": -0.54
+      },
+      {
+        "quarter": "2022-06-30",
+        "epsActual": 0.021,
+        "epsEstimate": 0.019,
+        "surprisePercent": 0.105299994
+      }
+    ]
+  },
+  "UBIS": {
+    "symbol": "UBIS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UEC": {
+    "symbol": "UEC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2014-06-30",
+        "epsActual": 0.08,
+        "epsEstimate": 0.09,
+        "surprisePercent": -0.111099996
+      }
+    ]
+  },
+  "UKEM": {
+    "symbol": "UKEM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UMI": {
+    "symbol": "UMI",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2012-06-30",
+        "epsActual": 0.03,
+        "epsEstimate": 0.03429,
+        "surprisePercent": -0.1251
+      },
+      {
+        "quarter": "2012-03-31",
+        "epsActual": 0.05143,
+        "epsEstimate": 0.05143,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "UNH19": {
+    "symbol": "UNH19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UNIQ": {
+    "symbol": "UNIQ",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UNIQLO80": {
+    "symbol": "UNIQLO80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UNIX": {
+    "symbol": "UNIX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UOB19": {
+    "symbol": "UOB19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UP": {
+    "symbol": "UP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UPF": {
+    "symbol": "UPF",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UPOIC": {
+    "symbol": "UPOIC",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "USTR24": {
+    "symbol": "USTR24",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UTP": {
+    "symbol": "UTP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "UV": {
+    "symbol": "UV",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VARO": {
+    "symbol": "VARO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VAYU1": {
+    "symbol": "VAYU1",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VCB11": {
+    "symbol": "VCB11",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VCB19": {
+    "symbol": "VCB19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VCOM": {
+    "symbol": "VCOM",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VENTURE19": {
+    "symbol": "VENTURE19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VIBHA": {
+    "symbol": "VIBHA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VISA06": {
+    "symbol": "VISA06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VISA80": {
+    "symbol": "VISA80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VNG": {
+    "symbol": "VNG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VNM19": {
+    "symbol": "VNM19",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VRANDA": {
+    "symbol": "VRANDA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VS": {
+    "symbol": "VS",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "VT03": {
+    "symbol": "VT03",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WACOAL": {
+    "symbol": "WACOAL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WASH": {
+    "symbol": "WASH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WFX": {
+    "symbol": "WFX",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WGE": {
+    "symbol": "WGE",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WHA": {
+    "symbol": "WHA",
+    "asOf": "2026-05-13",
+    "next": {
+      "earningsDate": "2026-05-13",
+      "earningsDateEnd": null,
+      "epsEstimate": 0.0618,
+      "revenueEstimate": 2855025860
+    },
+    "history": [
+      {
+        "quarter": "2025-12-31",
+        "epsActual": 0.0966,
+        "epsEstimate": 0.08691,
+        "surprisePercent": 0.111499995
+      },
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.0424,
+        "epsEstimate": 0.04388,
+        "surprisePercent": -0.0337
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.0656,
+        "epsEstimate": 0.06752,
+        "surprisePercent": -0.028399998
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.1389,
+        "epsEstimate": 0.09869,
+        "surprisePercent": 0.4074
+      }
+    ]
+  },
+  "WHABT": {
+    "symbol": "WHABT",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WHAIR": {
+    "symbol": "WHAIR",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.16332,
+        "epsEstimate": 0.18,
+        "surprisePercent": -0.092700005
+      }
+    ]
+  },
+  "WHART": {
+    "symbol": "WHART",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WHAUP": {
+    "symbol": "WHAUP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": [
+      {
+        "quarter": "2025-09-30",
+        "epsActual": 0.13,
+        "epsEstimate": 0.095,
+        "surprisePercent": 0.3684
+      },
+      {
+        "quarter": "2025-06-30",
+        "epsActual": 0.04,
+        "epsEstimate": 0.07,
+        "surprisePercent": -0.4286
+      },
+      {
+        "quarter": "2025-03-31",
+        "epsActual": 0.06,
+        "epsEstimate": 0.06,
+        "surprisePercent": 0
+      }
+    ]
+  },
+  "WIIK": {
+    "symbol": "WIIK",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WINDOW": {
+    "symbol": "WINDOW",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WINMED": {
+    "symbol": "WINMED",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WINNER": {
+    "symbol": "WINNER",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WMT06": {
+    "symbol": "WMT06",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WP": {
+    "symbol": "WP",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WPH": {
+    "symbol": "WPH",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WSOL": {
+    "symbol": "WSOL",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "WUXIAT80": {
+    "symbol": "WUXIAT80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "XO": {
+    "symbol": "XO",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "YGG": {
+    "symbol": "YGG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "YONG": {
+    "symbol": "YONG",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "YUASA": {
+    "symbol": "YUASA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ZIGA": {
+    "symbol": "ZIGA",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  },
+  "ZJINNO80": {
+    "symbol": "ZJINNO80",
+    "asOf": "2026-05-13",
+    "next": null,
+    "history": []
+  }
+}

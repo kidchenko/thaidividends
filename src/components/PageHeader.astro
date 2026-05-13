@@ -71,13 +71,13 @@ const pillBase =
       <strong class="text-text font-semibold tabular-nums" data-count="xd">{totalXdMonth}</strong>
       <span class="label text-muted lowercase tracking-wide">{t(lang, "pillExDividend")}</span>
     </button>
-    <span class="text-faint">&middot;</span>
+    <span class="text-faint">,</span>
     <button type="button" class={pillBase} data-filter="payment" aria-pressed="true">
       <span class="dot inline-block w-1.5 h-3 bg-payment transition"></span>
       <strong class="text-text font-semibold tabular-nums" data-count="payment">{totalPaymentMonth}</strong>
       <span class="label text-muted lowercase tracking-wide">{t(lang, "pillPayment")}</span>
     </button>
-    <span class="text-faint">&middot;</span>
+    <span class="text-faint">,</span>
     <span class="text-muted">
       <strong class="font-display italic font-medium text-text mr-1.5 tabular-nums">{totalAll.toLocaleString()}</strong>
       {t(lang, "trackedAcross")}

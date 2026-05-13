@@ -13,7 +13,7 @@ const today = todayIso();
 const monthsAbbr = tArr(lang, "monthsAbbr");
 const monthsFirst = tArr(lang, "monthsFirst");
 
-// Cell intensity: scale 0–1 based on max amount per cell across all cells.
+// Cell intensity: scale 0-1 based on max amount per cell across all cells.
 const maxCellAmount = Math.max(
   ...[...cadence.cells.values()].map((c) => c.totalAmount),
   0.01,

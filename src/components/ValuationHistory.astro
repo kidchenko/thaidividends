@@ -272,9 +272,9 @@ function ticksWithin(yMin: number, yMax: number): number[] {
     </header>
     {yields.length > 0 && (
       <p class="font-display italic text-[13px] text-muted mb-5">
-        {t(lang, "metaRange")} {fmtPct(yieldMin)} – {fmtPct(yieldMax)}
+        {t(lang, "metaRange")} {fmtPct(yieldMin)} - {fmtPct(yieldMax)}
         {history.annual.length > 0 && (
-          <> ({history.annual[0].year}–{history.annual[history.annual.length - 1].year})</>
+          <> ({history.annual[0].year}-{history.annual[history.annual.length - 1].year})</>
         )}
       </p>
     )}
@@ -445,9 +445,9 @@ function ticksWithin(yMin: number, yMax: number): number[] {
     </header>
     {pes.length > 0 && (
       <p class="font-display italic text-[13px] text-muted mb-5">
-        {t(lang, "metaRange")} {fmtPe(peMin)}× – {fmtPe(peMax)}×
+        {t(lang, "metaRange")} {fmtPe(peMin)}× - {fmtPe(peMax)}×
         {peAnnualRows.length > 0 && (
-          <> ({peAnnualRows[0].year}–{peAnnualRows[peAnnualRows.length - 1].year})</>
+          <> ({peAnnualRows[0].year}-{peAnnualRows[peAnnualRows.length - 1].year})</>
         )}
         , {t(lang, "metaAvg")} {fmtPe(pes.reduce((s, v) => s + v, 0) / pes.length)}×
       </p>
