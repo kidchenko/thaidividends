@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-05-10T05:45:18.631Z",
+  "asOf": "2026-05-17T04:25:39.734Z",
   "data": {
     "AMATA": [
       {
@@ -67910,6 +67910,192 @@
         "dividendPayoutRatio": null,
         "marketCap": 101702000,
         "listedShare": 3600000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ADVANT19": [
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 5.45,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 17440000,
+        "listedShare": 2767000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AIA06": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 3.32,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 6640000,
+        "listedShare": 3000000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 3.64,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4368000,
+        "listedShare": 3000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ANTA23": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 2.08,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 11448320,
+        "listedShare": 4310000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 2,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 14072000,
+        "listedShare": 4310000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GANFENG23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 3.02,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 66500400,
+        "listedShare": 4065000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GOOG23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 3.2,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 55955200,
+        "listedShare": 4166000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MSFT23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 2.48,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 14090368,
+        "listedShare": 4237000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "NEM23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 2.32,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7354400,
+        "listedShare": 4273000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "POPMART23": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 1.88,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3850240,
+        "listedShare": 4273000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 1.51,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 6088320,
+        "listedShare": 4273000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "TENCENT23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-15",
+        "close": 2.12,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 16218000,
+        "listedShare": 5025000000,
         "beta": null,
         "financialDate": null
       }

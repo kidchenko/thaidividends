@@ -197,6 +197,14 @@
     "isIFF": false
   },
   {
+    "symbol": "ADVANT19",
+    "name": "Depositary Receipt on ADVANT Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "ADVANT23",
     "name": "Depositary Receipt on ADVANT Issued by INVX",
     "currency": "Baht",
@@ -281,6 +289,14 @@
     "securityType": "S",
     "industry": "RESOURC",
     "sector": "ENERG",
+    "isIFF": false
+  },
+  {
+    "symbol": "AIA06",
+    "name": "Depositary Receipt on AIA Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -550,6 +566,14 @@
   {
     "symbol": "ANTA13",
     "name": "Depositary Receipt on ANTA Issued by KGI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "ANTA23",
+    "name": "Depositary Receipt on ANTA Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -3007,6 +3031,14 @@
     "isIFF": false
   },
   {
+    "symbol": "GANFENG23",
+    "name": "Depositary Receipt on GANFENG Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "GBX",
     "name": "GLOBLEX HOLDING MANAGEMENT PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -3135,6 +3167,14 @@
     "symbol": "GOLDPF",
     "name": "GOLD PROPERTY FUND (LEASE HOLD)",
     "currency": "Baht"
+  },
+  {
+    "symbol": "GOOG23",
+    "name": "Depositary Receipt on GOOG Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
   },
   {
     "symbol": "GOOG80",
@@ -5292,6 +5332,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MSFT23",
+    "name": "Depositary Receipt on MSFT Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MSFT80",
     "name": "Depositary Receipt on MSFT Issued by KTB",
     "currency": "Baht",
@@ -5476,6 +5524,14 @@
   {
     "symbol": "NEM06",
     "name": "Depositary Receipt on NEM Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "NEM23",
+    "name": "Depositary Receipt on NEM Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -6315,6 +6371,14 @@
     "securityType": "S",
     "industry": "PROPCON",
     "sector": "PF&REIT",
+    "isIFF": false
+  },
+  {
+    "symbol": "POPMART23",
+    "name": "Depositary Receipt on POPMART Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -8700,6 +8764,14 @@
   {
     "symbol": "TENCENT19",
     "name": "Depositary Receipt on TENCENT Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "TENCENT23",
+    "name": "Depositary Receipt on TENCENT Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
