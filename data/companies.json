@@ -2832,7 +2832,7 @@
   },
   {
     "symbol": "FE",
-    "name": "FAR EAST FAME LINE DDB PUBLIC COMPANY LIMITED",
+    "name": "FAR EAST FAME LINE PUBLIC COMPANY LIMITED",
     "currency": "Baht",
     "market": "SET",
     "securityType": "S",
@@ -3068,6 +3068,14 @@
     "isIFF": false
   },
   {
+    "symbol": "GEELY80",
+    "name": "Depositary Receipt on GEELY Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "GENCO",
     "name": "GENERAL ENVIRONMENTAL CONSERVATION PUBLIC CO., LTD.",
     "currency": "Baht",
@@ -3075,6 +3083,14 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "PROF",
+    "isIFF": false
+  },
+  {
+    "symbol": "GEV80",
+    "name": "Depositary Receipt on GEV Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -4216,6 +4232,14 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "TRANS",
+    "isIFF": false
+  },
+  {
+    "symbol": "KINGSOFT23",
+    "name": "Depositary Receipt on KINGSOFT Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -5516,6 +5540,14 @@
   {
     "symbol": "NDX01",
     "name": "Depositary Receipt on CAM NASDAQ 100 ETF Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "NEE80",
+    "name": "Depositary Receipt on NEE Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -10471,6 +10503,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "INDUS",
+    "isIFF": false
+  },
+  {
+    "symbol": "ZIJIN80",
+    "name": "Depositary Receipt on ZIJIN Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {

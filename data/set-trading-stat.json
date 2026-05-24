@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-05-17T04:25:39.734Z",
+  "asOf": "2026-05-24T04:29:09.916Z",
   "data": {
     "AMATA": [
       {
@@ -68096,6 +68096,128 @@
         "dividendPayoutRatio": null,
         "marketCap": 16218000,
         "listedShare": 5025000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GEELY80": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 7.25,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 36540000,
+        "listedShare": 1500000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-22",
+        "close": 8.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 44226000,
+        "listedShare": 1500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GEV80": [
+      {
+        "period": "YTD",
+        "date": "2026-05-22",
+        "close": 34.25,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 10925750,
+        "listedShare": 500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "KINGSOFT23": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 1.9,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4628400,
+        "listedShare": 4504000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-22",
+        "close": 1.5,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5382000,
+        "listedShare": 4504000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "NEE80": [
+      {
+        "period": "YTD",
+        "date": "2026-05-22",
+        "close": 2.96,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 18796000,
+        "listedShare": 3800000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ZIJIN80": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 14.3,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 110396000,
+        "listedShare": 1000000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-22",
+        "close": 14.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 155664000,
+        "listedShare": 1000000000,
         "beta": null,
         "financialDate": null
       }
