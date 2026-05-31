@@ -653,8 +653,8 @@
     "currency": "Baht",
     "market": "SET",
     "securityType": "S",
-    "industry": "SERVICE",
-    "sector": "MEDIA",
+    "industry": "AGRO",
+    "sector": "FOOD",
     "isIFF": false
   },
   {
@@ -691,8 +691,8 @@
     "currency": "Baht",
     "market": "SET",
     "securityType": "S",
-    "industry": "FINCIAL",
-    "sector": "FIN",
+    "industry": "INDUS",
+    "sector": "AUTO",
     "isIFF": false
   },
   {
@@ -904,8 +904,24 @@
     "isIFF": false
   },
   {
+    "symbol": "BABA06",
+    "name": "Depositary Receipt on BABA Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "BABA13",
     "name": "Depositary Receipt on BABA Issued by KGI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "BABA23",
+    "name": "Depositary Receipt on BABA Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -1815,6 +1831,14 @@
   {
     "symbol": "CHMOBILE19",
     "name": "Depositary Receipt on CHMOBILE Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "CHMOBILE23",
+    "name": "Depositary Receipt on CHMOBILE Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -3068,6 +3092,14 @@
     "isIFF": false
   },
   {
+    "symbol": "GEELY06",
+    "name": "Depositary Receipt on GEELY Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "GEELY80",
     "name": "Depositary Receipt on GEELY Issued by KTB",
     "currency": "Baht",
@@ -3618,8 +3650,8 @@
     "currency": "Baht",
     "market": "SET",
     "securityType": "S",
-    "industry": "INDUS",
-    "sector": "AUTO",
+    "industry": "CONSUMP",
+    "sector": "FASHION",
     "isIFF": false
   },
   {
@@ -4077,7 +4109,7 @@
     "currency": "Baht",
     "market": "mai",
     "securityType": "S",
-    "industry": "PROPCON",
+    "industry": "SERVICE",
     "isIFF": false
   },
   {
@@ -4402,6 +4434,14 @@
   {
     "symbol": "KUAISH01",
     "name": "Depositary Receipt on KUAISH Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "KUAISH06",
+    "name": "Depositary Receipt on KUAISH Issued by KKPS",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -5849,6 +5889,14 @@
   {
     "symbol": "NVDA19",
     "name": "Depositary Receipt on NVDA Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "NVDA23",
+    "name": "Depositary Receipt on NVDA Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -10503,6 +10551,22 @@
     "market": "mai",
     "securityType": "S",
     "industry": "INDUS",
+    "isIFF": false
+  },
+  {
+    "symbol": "ZIJIN13",
+    "name": "Depositary Receipt on ZIJIN Issued by KGI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "ZIJIN23",
+    "name": "Depositary Receipt on ZIJIN Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {

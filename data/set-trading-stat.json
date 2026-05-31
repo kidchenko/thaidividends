@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-05-24T04:29:09.916Z",
+  "asOf": "2026-05-31T04:31:33.283Z",
   "data": {
     "AMATA": [
       {
@@ -68218,6 +68218,204 @@
         "dividendPayoutRatio": null,
         "marketCap": 155664000,
         "listedShare": 1000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "BABA06": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 5.85,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 23400000,
+        "listedShare": 1800000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 5.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 88230000,
+        "listedShare": 1800000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "BABA23": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 3.9,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 91260000,
+        "listedShare": 2000000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 3.32,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 119055200,
+        "listedShare": 2000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "CHMOBILE23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 2.76,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 6458400,
+        "listedShare": 4132000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GEELY06": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 2.96,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7400000,
+        "listedShare": 3000000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 3.14,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5652000,
+        "listedShare": 3000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "KUAISH06": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 2.58,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7740000,
+        "listedShare": 3000000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 1.92,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4800000,
+        "listedShare": 3000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "NVDA23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 3.34,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 85929516,
+        "listedShare": 3623000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ZIJIN13": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 2.44,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1464000,
+        "listedShare": 4300000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 2.46,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3837600,
+        "listedShare": 4300000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ZIJIN23": [
+      {
+        "period": "YTD",
+        "date": "2026-05-29",
+        "close": 2.16,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4773600,
+        "listedShare": 3816000000,
         "beta": null,
         "financialDate": null
       }
