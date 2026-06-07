@@ -1997,6 +1997,14 @@
     "isIFF": false
   },
   {
+    "symbol": "CNRE80",
+    "name": "Depositary Receipt on CNRE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "CNS",
     "name": "CAPITAL NOMURA SECURITIES PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3115,6 +3123,14 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "PROF",
+    "isIFF": false
+  },
+  {
+    "symbol": "GEV23",
+    "name": "Depositary Receipt on GEV Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -4708,6 +4724,14 @@
     "securityType": "S",
     "industry": "PROPCON",
     "sector": "PROP",
+    "isIFF": false
+  },
+  {
+    "symbol": "LRCX23",
+    "name": "Depositary Receipt on LRCX Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -7476,6 +7500,14 @@
     "securityType": "S",
     "industry": "PROPCON",
     "sector": "CONS",
+    "isIFF": false
+  },
+  {
+    "symbol": "SEAGATE23",
+    "name": "Depositary Receipt on SEAGATE Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
