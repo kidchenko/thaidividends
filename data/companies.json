@@ -830,6 +830,14 @@
     "isIFF": false
   },
   {
+    "symbol": "AVGO23",
+    "name": "Depositary Receipt on AVGO Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "AVGO80",
     "name": "Depositary Receipt on AVGO Issued by KTB",
     "currency": "Baht",
@@ -5022,6 +5030,14 @@
     "isIFF": false
   },
   {
+    "symbol": "META23",
+    "name": "Depositary Receipt on META Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "META80",
     "name": "Depositary Receipt on META Issued by KTB",
     "currency": "Baht",
@@ -5129,6 +5145,14 @@
   {
     "symbol": "MICRON80",
     "name": "Depositary Receipt on MICRON Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "MIDEA80",
+    "name": "Depositary Receipt on MIDEA Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -10279,6 +10303,14 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "TOURISM",
+    "isIFF": false
+  },
+  {
+    "symbol": "VRT23",
+    "name": "Depositary Receipt on VRT Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {

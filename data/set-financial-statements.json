@@ -1,7 +1,7 @@
 {
   "AOT": {
     "symbol": "AOT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -55,7 +55,7 @@
   },
   "KBANK": {
     "symbol": "KBANK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -109,7 +109,7 @@
   },
   "PTT": {
     "symbol": "PTT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -163,7 +163,7 @@
   },
   "1DIV": {
     "symbol": "1DIV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-02-26",
@@ -193,7 +193,7 @@
   },
   "2S": {
     "symbol": "2S",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -247,7 +247,7 @@
   },
   "3BBIF": {
     "symbol": "3BBIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -301,12 +301,12 @@
   },
   "3K-BAT": {
     "symbol": "3K-BAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "88TH": {
     "symbol": "88TH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -352,7 +352,7 @@
   },
   "A": {
     "symbol": "A",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -406,7 +406,7 @@
   },
   "A5": {
     "symbol": "A5",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -460,7 +460,7 @@
   },
   "AAI": {
     "symbol": "AAI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -514,27 +514,27 @@
   },
   "AAPL01": {
     "symbol": "AAPL01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AAPL03": {
     "symbol": "AAPL03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AAPL19": {
     "symbol": "AAPL19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AAPL80": {
     "symbol": "AAPL80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AAV": {
     "symbol": "AAV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -588,12 +588,12 @@
   },
   "ABBV19": {
     "symbol": "ABBV19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ABFTH": {
     "symbol": "ABFTH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-10",
@@ -647,17 +647,17 @@
   },
   "ABICO": {
     "symbol": "ABICO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ABPIF": {
     "symbol": "ABPIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ACAP": {
     "symbol": "ACAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -711,7 +711,7 @@
   },
   "ACE": {
     "symbol": "ACE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -765,7 +765,7 @@
   },
   "ACG": {
     "symbol": "ACG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -819,7 +819,7 @@
   },
   "ADB": {
     "symbol": "ADB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -873,7 +873,7 @@
   },
   "ADD": {
     "symbol": "ADD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -927,7 +927,7 @@
   },
   "ADVANC": {
     "symbol": "ADVANC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -981,12 +981,12 @@
   },
   "ADVANT23": {
     "symbol": "ADVANT23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ADVICE": {
     "symbol": "ADVICE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1040,7 +1040,7 @@
   },
   "AEONTS": {
     "symbol": "AEONTS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-07",
@@ -1094,7 +1094,7 @@
   },
   "AF": {
     "symbol": "AF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -1148,7 +1148,7 @@
   },
   "AFC": {
     "symbol": "AFC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -1202,7 +1202,7 @@
   },
   "AGE": {
     "symbol": "AGE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -1256,7 +1256,7 @@
   },
   "AH": {
     "symbol": "AH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1310,7 +1310,7 @@
   },
   "AHC": {
     "symbol": "AHC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -1364,7 +1364,7 @@
   },
   "AI": {
     "symbol": "AI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1418,17 +1418,17 @@
   },
   "AIA19": {
     "symbol": "AIA19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AIA23": {
     "symbol": "AIA23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AIE": {
     "symbol": "AIE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1482,7 +1482,7 @@
   },
   "AIMCG": {
     "symbol": "AIMCG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -1536,7 +1536,7 @@
   },
   "AIMIRT": {
     "symbol": "AIMIRT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -1590,7 +1590,7 @@
   },
   "AIRA": {
     "symbol": "AIRA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1644,7 +1644,7 @@
   },
   "AIT": {
     "symbol": "AIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -1698,7 +1698,7 @@
   },
   "AJ": {
     "symbol": "AJ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1752,7 +1752,7 @@
   },
   "AKP": {
     "symbol": "AKP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -1806,7 +1806,7 @@
   },
   "AKR": {
     "symbol": "AKR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -1860,12 +1860,12 @@
   },
   "ALL": {
     "symbol": "ALL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ALLA": {
     "symbol": "ALLA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -1919,7 +1919,7 @@
   },
   "ALLY": {
     "symbol": "ALLY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -1973,7 +1973,7 @@
   },
   "ALPHAX": {
     "symbol": "ALPHAX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -2027,7 +2027,7 @@
   },
   "ALT": {
     "symbol": "ALT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -2081,7 +2081,7 @@
   },
   "ALUCON": {
     "symbol": "ALUCON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -2135,7 +2135,7 @@
   },
   "AMA": {
     "symbol": "AMA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -2189,7 +2189,7 @@
   },
   "AMANAH": {
     "symbol": "AMANAH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -2243,7 +2243,7 @@
   },
   "AMARC": {
     "symbol": "AMARC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -2297,7 +2297,7 @@
   },
   "AMARIN": {
     "symbol": "AMARIN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -2351,7 +2351,7 @@
   },
   "AMATA": {
     "symbol": "AMATA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -2405,7 +2405,7 @@
   },
   "AMATAR": {
     "symbol": "AMATAR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -2467,7 +2467,7 @@
   },
   "AMATAV": {
     "symbol": "AMATAV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -2521,7 +2521,7 @@
   },
   "AMC": {
     "symbol": "AMC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -2575,12 +2575,12 @@
   },
   "AMGN06": {
     "symbol": "AMGN06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AMR": {
     "symbol": "AMR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -2634,7 +2634,7 @@
   },
   "ANAN": {
     "symbol": "ANAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -2688,7 +2688,7 @@
   },
   "ANI": {
     "symbol": "ANI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -2742,12 +2742,12 @@
   },
   "ANTA13": {
     "symbol": "ANTA13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AP": {
     "symbol": "AP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -2801,7 +2801,7 @@
   },
   "APCO": {
     "symbol": "APCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -2855,7 +2855,7 @@
   },
   "APCS": {
     "symbol": "APCS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -2909,7 +2909,7 @@
   },
   "APO": {
     "symbol": "APO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -2963,7 +2963,7 @@
   },
   "APP": {
     "symbol": "APP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -3017,7 +3017,7 @@
   },
   "APURE": {
     "symbol": "APURE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -3071,7 +3071,7 @@
   },
   "AQUA": {
     "symbol": "AQUA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -3125,7 +3125,7 @@
   },
   "ARIP": {
     "symbol": "ARIP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -3179,7 +3179,7 @@
   },
   "ARROW": {
     "symbol": "ARROW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -3233,7 +3233,7 @@
   },
   "AS": {
     "symbol": "AS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -3287,7 +3287,7 @@
   },
   "ASAP": {
     "symbol": "ASAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -3341,7 +3341,7 @@
   },
   "ASEFA": {
     "symbol": "ASEFA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -3395,7 +3395,7 @@
   },
   "ASIA": {
     "symbol": "ASIA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -3449,7 +3449,7 @@
   },
   "ASIAN": {
     "symbol": "ASIAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -3503,7 +3503,7 @@
   },
   "ASIMAR": {
     "symbol": "ASIMAR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -3557,7 +3557,7 @@
   },
   "ASK": {
     "symbol": "ASK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -3611,12 +3611,12 @@
   },
   "ASML01": {
     "symbol": "ASML01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ASN": {
     "symbol": "ASN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -3670,7 +3670,7 @@
   },
   "ASP": {
     "symbol": "ASP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -3724,7 +3724,7 @@
   },
   "ASW": {
     "symbol": "ASW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -3778,7 +3778,7 @@
   },
   "ATLAS": {
     "symbol": "ATLAS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -3824,7 +3824,7 @@
   },
   "ATP30": {
     "symbol": "ATP30",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -3878,7 +3878,7 @@
   },
   "AU": {
     "symbol": "AU",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -3932,7 +3932,7 @@
   },
   "AUCT": {
     "symbol": "AUCT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -3986,7 +3986,7 @@
   },
   "AURA": {
     "symbol": "AURA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -4040,12 +4040,12 @@
   },
   "AVGO80": {
     "symbol": "AVGO80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AWC": {
     "symbol": "AWC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -4099,12 +4099,12 @@
   },
   "AXP06": {
     "symbol": "AXP06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AXTRART": {
     "symbol": "AXTRART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -4158,7 +4158,7 @@
   },
   "AYUD": {
     "symbol": "AYUD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -4212,7 +4212,7 @@
   },
   "B-WORK": {
     "symbol": "B-WORK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -4266,7 +4266,7 @@
   },
   "BA": {
     "symbol": "BA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -4320,27 +4320,27 @@
   },
   "BABA01": {
     "symbol": "BABA01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BABA13": {
     "symbol": "BABA13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BABA80": {
     "symbol": "BABA80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BAC03": {
     "symbol": "BAC03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BAFS": {
     "symbol": "BAFS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -4394,7 +4394,7 @@
   },
   "BAM": {
     "symbol": "BAM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -4448,7 +4448,7 @@
   },
   "BANPU": {
     "symbol": "BANPU",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -4502,7 +4502,7 @@
   },
   "BAREIT": {
     "symbol": "BAREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-23",
@@ -4556,12 +4556,12 @@
   },
   "BAT-3K": {
     "symbol": "BAT-3K",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BAY": {
     "symbol": "BAY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -4615,7 +4615,7 @@
   },
   "BBGI": {
     "symbol": "BBGI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -4669,7 +4669,7 @@
   },
   "BBIK": {
     "symbol": "BBIK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -4723,7 +4723,7 @@
   },
   "BBL": {
     "symbol": "BBL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -4777,7 +4777,7 @@
   },
   "BC": {
     "symbol": "BC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -4831,7 +4831,7 @@
   },
   "BCH": {
     "symbol": "BCH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -4885,7 +4885,7 @@
   },
   "BCP": {
     "symbol": "BCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -4939,7 +4939,7 @@
   },
   "BCPG": {
     "symbol": "BCPG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -4993,7 +4993,7 @@
   },
   "BCT": {
     "symbol": "BCT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-25",
@@ -5047,7 +5047,7 @@
   },
   "BDMS": {
     "symbol": "BDMS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -5101,12 +5101,12 @@
   },
   "BDX06": {
     "symbol": "BDX06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BE8": {
     "symbol": "BE8",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -5160,7 +5160,7 @@
   },
   "BEAUTY": {
     "symbol": "BEAUTY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -5214,7 +5214,7 @@
   },
   "BEC": {
     "symbol": "BEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -5268,7 +5268,7 @@
   },
   "BEM": {
     "symbol": "BEM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -5322,7 +5322,7 @@
   },
   "BEYOND": {
     "symbol": "BEYOND",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -5376,7 +5376,7 @@
   },
   "BGC": {
     "symbol": "BGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -5430,7 +5430,7 @@
   },
   "BGRIM": {
     "symbol": "BGRIM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -5484,7 +5484,7 @@
   },
   "BGT": {
     "symbol": "BGT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -5538,7 +5538,7 @@
   },
   "BH": {
     "symbol": "BH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-23",
@@ -5592,12 +5592,12 @@
   },
   "BH-P": {
     "symbol": "BH-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BIG": {
     "symbol": "BIG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -5651,12 +5651,12 @@
   },
   "BIGC": {
     "symbol": "BIGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BIS": {
     "symbol": "BIS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -5710,7 +5710,7 @@
   },
   "BIZ": {
     "symbol": "BIZ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -5764,7 +5764,7 @@
   },
   "BJC": {
     "symbol": "BJC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -5818,7 +5818,7 @@
   },
   "BJCHI": {
     "symbol": "BJCHI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -5872,7 +5872,7 @@
   },
   "BKA": {
     "symbol": "BKA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -5926,7 +5926,7 @@
   },
   "BKD": {
     "symbol": "BKD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -5980,7 +5980,7 @@
   },
   "BKGI": {
     "symbol": "BKGI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -6034,12 +6034,12 @@
   },
   "BKI": {
     "symbol": "BKI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BKIH": {
     "symbol": "BKIH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -6093,22 +6093,22 @@
   },
   "BKKCP": {
     "symbol": "BKKCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BKNG03": {
     "symbol": "BKNG03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BKNG80": {
     "symbol": "BKNG80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BLA": {
     "symbol": "BLA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -6162,7 +6162,7 @@
   },
   "BLAND": {
     "symbol": "BLAND",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-29",
@@ -6216,7 +6216,7 @@
   },
   "BLC": {
     "symbol": "BLC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -6270,7 +6270,7 @@
   },
   "BLESS": {
     "symbol": "BLESS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -6324,12 +6324,12 @@
   },
   "BLK06": {
     "symbol": "BLK06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BM": {
     "symbol": "BM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -6383,7 +6383,7 @@
   },
   "BMSCITH": {
     "symbol": "BMSCITH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-01-19",
@@ -6413,7 +6413,7 @@
   },
   "BOFFICE": {
     "symbol": "BOFFICE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -6467,7 +6467,7 @@
   },
   "BOL": {
     "symbol": "BOL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -6521,12 +6521,12 @@
   },
   "BONDAS19": {
     "symbol": "BONDAS19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BPP": {
     "symbol": "BPP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -6580,7 +6580,7 @@
   },
   "BPS": {
     "symbol": "BPS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -6634,7 +6634,7 @@
   },
   "BR": {
     "symbol": "BR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -6688,7 +6688,7 @@
   },
   "BRI": {
     "symbol": "BRI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -6742,7 +6742,7 @@
   },
   "BROCK": {
     "symbol": "BROCK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -6796,7 +6796,7 @@
   },
   "BRR": {
     "symbol": "BRR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -6850,7 +6850,7 @@
   },
   "BRRGIF": {
     "symbol": "BRRGIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -6904,7 +6904,7 @@
   },
   "BSBM": {
     "symbol": "BSBM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -6958,7 +6958,7 @@
   },
   "BSET100": {
     "symbol": "BSET100",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-09",
@@ -6988,7 +6988,7 @@
   },
   "BSM": {
     "symbol": "BSM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -7042,7 +7042,7 @@
   },
   "BSRC": {
     "symbol": "BSRC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-11-04",
@@ -7080,7 +7080,7 @@
   },
   "BTC": {
     "symbol": "BTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -7134,7 +7134,7 @@
   },
   "BTG": {
     "symbol": "BTG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -7188,7 +7188,7 @@
   },
   "BTNC": {
     "symbol": "BTNC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -7242,7 +7242,7 @@
   },
   "BTS": {
     "symbol": "BTS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-06-02",
@@ -7296,7 +7296,7 @@
   },
   "BTSGIF": {
     "symbol": "BTSGIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-28",
@@ -7350,7 +7350,7 @@
   },
   "BTW": {
     "symbol": "BTW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -7404,7 +7404,7 @@
   },
   "BUI": {
     "symbol": "BUI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -7458,7 +7458,7 @@
   },
   "BVG": {
     "symbol": "BVG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -7512,7 +7512,7 @@
   },
   "BWG": {
     "symbol": "BWG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -7566,37 +7566,37 @@
   },
   "BYDCOM01": {
     "symbol": "BYDCOM01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BYDCOM80": {
     "symbol": "BYDCOM80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CAMBRI80": {
     "symbol": "CAMBRI80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CATL01": {
     "symbol": "CATL01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CATL23": {
     "symbol": "CATL23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CATL80": {
     "symbol": "CATL80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CAZ": {
     "symbol": "CAZ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -7650,7 +7650,7 @@
   },
   "CBG": {
     "symbol": "CBG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -7704,7 +7704,7 @@
   },
   "CCET": {
     "symbol": "CCET",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -7758,7 +7758,7 @@
   },
   "CCP": {
     "symbol": "CCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -7812,12 +7812,12 @@
   },
   "CEG23": {
     "symbol": "CEG23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CEN": {
     "symbol": "CEN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -7871,7 +7871,7 @@
   },
   "CENTEL": {
     "symbol": "CENTEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -7925,7 +7925,7 @@
   },
   "CEYE": {
     "symbol": "CEYE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -7979,7 +7979,7 @@
   },
   "CFARM": {
     "symbol": "CFARM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -8033,7 +8033,7 @@
   },
   "CFRESH": {
     "symbol": "CFRESH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -8087,7 +8087,7 @@
   },
   "CGH": {
     "symbol": "CGH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -8141,7 +8141,7 @@
   },
   "CH": {
     "symbol": "CH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -8195,7 +8195,7 @@
   },
   "CHAO": {
     "symbol": "CHAO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -8249,11 +8249,11 @@
   },
   "CHARAN": {
     "symbol": "CHARAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
-        "date": "2026-05-15",
-        "headline": "Financial Statement Quarter 1/2026 (Reviewed)",
+        "date": "2026-06-08",
+        "headline": "Financial Statement Quarter 1/2026 (Revised Note to the Financial Statement No. 1.2)",
         "period": "Q1/2026",
         "isAnnual": false,
         "isAudited": false,
@@ -8303,7 +8303,7 @@
   },
   "CHASE": {
     "symbol": "CHASE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -8357,7 +8357,7 @@
   },
   "CHAYO": {
     "symbol": "CHAYO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -8411,7 +8411,7 @@
   },
   "CHEWA": {
     "symbol": "CHEWA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -8465,7 +8465,7 @@
   },
   "CHG": {
     "symbol": "CHG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -8519,12 +8519,12 @@
   },
   "CHHONGQ19": {
     "symbol": "CHHONGQ19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CHIC": {
     "symbol": "CHIC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -8578,12 +8578,12 @@
   },
   "CHMOBILE19": {
     "symbol": "CHMOBILE19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CHO": {
     "symbol": "CHO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-11-13",
@@ -8621,7 +8621,7 @@
   },
   "CHOTI": {
     "symbol": "CHOTI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -8675,7 +8675,7 @@
   },
   "CI": {
     "symbol": "CI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -8729,7 +8729,7 @@
   },
   "CIMBT": {
     "symbol": "CIMBT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -8783,8 +8783,16 @@
   },
   "CITY": {
     "symbol": "CITY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
+      {
+        "date": "2026-06-12",
+        "headline": "Financial Statement Quarter 3/2026 (Reviewed)",
+        "period": "Q3/2026",
+        "isAnnual": false,
+        "isAudited": false,
+        "isRevised": false
+      },
       {
         "date": "2026-03-13",
         "headline": "Financial Statement Quarter 2/2026 (Reviewed)",
@@ -8824,20 +8832,12 @@
         "isAnnual": false,
         "isAudited": false,
         "isRevised": false
-      },
-      {
-        "date": "2024-12-13",
-        "headline": "Financial Statement Quarter 1/2025 (Reviewed)",
-        "period": "Q1/2025",
-        "isAnnual": false,
-        "isAudited": false,
-        "isRevised": false
       }
     ]
   },
   "CIVIL": {
     "symbol": "CIVIL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -8891,7 +8891,7 @@
   },
   "CK": {
     "symbol": "CK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -8945,7 +8945,7 @@
   },
   "CKP": {
     "symbol": "CKP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -8999,7 +8999,7 @@
   },
   "CM": {
     "symbol": "CM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -9053,7 +9053,7 @@
   },
   "CMAN": {
     "symbol": "CMAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -9107,12 +9107,12 @@
   },
   "CMBANK23": {
     "symbol": "CMBANK23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CMC": {
     "symbol": "CMC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -9166,12 +9166,12 @@
   },
   "CME03": {
     "symbol": "CME03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CMO": {
     "symbol": "CMO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -9225,7 +9225,7 @@
   },
   "CMR": {
     "symbol": "CMR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -9279,17 +9279,17 @@
   },
   "CN01": {
     "symbol": "CN01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CNS": {
     "symbol": "CNS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CNT": {
     "symbol": "CNT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -9343,12 +9343,12 @@
   },
   "CNTECH01": {
     "symbol": "CNTECH01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "COCOCO": {
     "symbol": "COCOCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -9402,12 +9402,12 @@
   },
   "COL": {
     "symbol": "COL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "COLOR": {
     "symbol": "COLOR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -9461,7 +9461,7 @@
   },
   "COM7": {
     "symbol": "COM7",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -9515,7 +9515,7 @@
   },
   "COMAN": {
     "symbol": "COMAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -9569,17 +9569,17 @@
   },
   "COSTCO19": {
     "symbol": "COSTCO19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "COTTO": {
     "symbol": "COTTO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CPALL": {
     "symbol": "CPALL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -9633,7 +9633,7 @@
   },
   "CPANEL": {
     "symbol": "CPANEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -9687,7 +9687,7 @@
   },
   "CPAXT": {
     "symbol": "CPAXT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -9741,12 +9741,12 @@
   },
   "CPAXTT": {
     "symbol": "CPAXTT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CPF": {
     "symbol": "CPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -9800,7 +9800,7 @@
   },
   "CPH": {
     "symbol": "CPH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -9854,7 +9854,7 @@
   },
   "CPI": {
     "symbol": "CPI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -9908,7 +9908,7 @@
   },
   "CPL": {
     "symbol": "CPL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -9962,7 +9962,7 @@
   },
   "CPN": {
     "symbol": "CPN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -10016,7 +10016,7 @@
   },
   "CPNCG": {
     "symbol": "CPNCG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -10070,7 +10070,7 @@
   },
   "CPNREIT": {
     "symbol": "CPNREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -10124,12 +10124,12 @@
   },
   "CPNRF": {
     "symbol": "CPNRF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CPR": {
     "symbol": "CPR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -10183,7 +10183,7 @@
   },
   "CPT": {
     "symbol": "CPT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -10237,12 +10237,12 @@
   },
   "CPTGF": {
     "symbol": "CPTGF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CPTREIT": {
     "symbol": "CPTREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -10296,7 +10296,7 @@
   },
   "CPW": {
     "symbol": "CPW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -10350,7 +10350,7 @@
   },
   "CRC": {
     "symbol": "CRC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -10404,7 +10404,7 @@
   },
   "CRD": {
     "symbol": "CRD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -10458,7 +10458,7 @@
   },
   "CREDIT": {
     "symbol": "CREDIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -10512,27 +10512,27 @@
   },
   "CRM01": {
     "symbol": "CRM01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CRM06": {
     "symbol": "CRM06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CRM80": {
     "symbol": "CRM80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CRYSTAL": {
     "symbol": "CRYSTAL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CSC": {
     "symbol": "CSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -10586,22 +10586,22 @@
   },
   "CSC-P": {
     "symbol": "CSC-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CSCO06": {
     "symbol": "CSCO06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CSL": {
     "symbol": "CSL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CSP": {
     "symbol": "CSP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -10655,7 +10655,7 @@
   },
   "CSR": {
     "symbol": "CSR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -10709,7 +10709,7 @@
   },
   "CSS": {
     "symbol": "CSS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -10763,7 +10763,7 @@
   },
   "CTARAF": {
     "symbol": "CTARAF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -10817,7 +10817,7 @@
   },
   "CTW": {
     "symbol": "CTW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -10871,12 +10871,12 @@
   },
   "CV": {
     "symbol": "CV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CWT": {
     "symbol": "CWT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -10930,7 +10930,7 @@
   },
   "D": {
     "symbol": "D",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -10984,12 +10984,12 @@
   },
   "DBS19": {
     "symbol": "DBS19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "DCC": {
     "symbol": "DCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -11043,7 +11043,7 @@
   },
   "DCON": {
     "symbol": "DCON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -11097,7 +11097,7 @@
   },
   "DDD": {
     "symbol": "DDD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -11151,12 +11151,12 @@
   },
   "DELL19": {
     "symbol": "DELL19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "DELTA": {
     "symbol": "DELTA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-27",
@@ -11210,7 +11210,7 @@
   },
   "DEMCO": {
     "symbol": "DEMCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -11264,7 +11264,7 @@
   },
   "DEXON": {
     "symbol": "DEXON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-27",
@@ -11310,7 +11310,7 @@
   },
   "DHOUSE": {
     "symbol": "DHOUSE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -11364,7 +11364,7 @@
   },
   "DIF": {
     "symbol": "DIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -11418,12 +11418,12 @@
   },
   "DISNEY19": {
     "symbol": "DISNEY19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "DITTO": {
     "symbol": "DITTO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -11477,7 +11477,7 @@
   },
   "DMT": {
     "symbol": "DMT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -11531,7 +11531,7 @@
   },
   "DOD": {
     "symbol": "DOD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -11585,7 +11585,7 @@
   },
   "DOHOME": {
     "symbol": "DOHOME",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -11639,7 +11639,7 @@
   },
   "DPAINT": {
     "symbol": "DPAINT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -11693,7 +11693,7 @@
   },
   "DREIT": {
     "symbol": "DREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -11747,7 +11747,7 @@
   },
   "DRT": {
     "symbol": "DRT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -11801,17 +11801,17 @@
   },
   "DSGT": {
     "symbol": "DSGT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "DTAC": {
     "symbol": "DTAC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "DTCENT": {
     "symbol": "DTCENT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -11865,7 +11865,7 @@
   },
   "DTCI": {
     "symbol": "DTCI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -11919,12 +11919,12 @@
   },
   "DTCPF": {
     "symbol": "DTCPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "DUSIT": {
     "symbol": "DUSIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -11978,7 +11978,7 @@
   },
   "EA": {
     "symbol": "EA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12032,12 +12032,12 @@
   },
   "EARTH": {
     "symbol": "EARTH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "EASON": {
     "symbol": "EASON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12091,7 +12091,7 @@
   },
   "EAST": {
     "symbol": "EAST",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -12145,7 +12145,7 @@
   },
   "EASTW": {
     "symbol": "EASTW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -12199,12 +12199,12 @@
   },
   "EBANK": {
     "symbol": "EBANK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ECF": {
     "symbol": "ECF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-11-20",
@@ -12242,17 +12242,17 @@
   },
   "ECOMM": {
     "symbol": "ECOMM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "EFOOD": {
     "symbol": "EFOOD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "EFORL": {
     "symbol": "EFORL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12306,7 +12306,7 @@
   },
   "EGATIF": {
     "symbol": "EGATIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -12360,7 +12360,7 @@
   },
   "EGCO": {
     "symbol": "EGCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -12414,12 +12414,12 @@
   },
   "EICT": {
     "symbol": "EICT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "EKH": {
     "symbol": "EKH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12473,7 +12473,7 @@
   },
   "ENGY": {
     "symbol": "ENGY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-08-07",
@@ -12495,12 +12495,12 @@
   },
   "ENY": {
     "symbol": "ENY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "EP": {
     "symbol": "EP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12554,7 +12554,7 @@
   },
   "EPG": {
     "symbol": "EPG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-27",
@@ -12608,7 +12608,7 @@
   },
   "ERW": {
     "symbol": "ERW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12662,17 +12662,17 @@
   },
   "ERWPF": {
     "symbol": "ERWPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ESET50": {
     "symbol": "ESET50",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ESTAR": {
     "symbol": "ESTAR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -12726,12 +12726,12 @@
   },
   "ESTEE80": {
     "symbol": "ESTEE80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ETC": {
     "symbol": "ETC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -12785,7 +12785,7 @@
   },
   "ETE": {
     "symbol": "ETE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -12839,7 +12839,7 @@
   },
   "EURO": {
     "symbol": "EURO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -12893,27 +12893,27 @@
   },
   "EXPE06": {
     "symbol": "EXPE06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "F&D": {
     "symbol": "F&D",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FANUC23": {
     "symbol": "FANUC23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FCX23": {
     "symbol": "FCX23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FE": {
     "symbol": "FE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -12967,12 +12967,12 @@
   },
   "FERRARI80": {
     "symbol": "FERRARI80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FLOYD": {
     "symbol": "FLOYD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13026,7 +13026,7 @@
   },
   "FM": {
     "symbol": "FM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -13080,7 +13080,7 @@
   },
   "FMT": {
     "symbol": "FMT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-29",
@@ -13134,7 +13134,7 @@
   },
   "FN": {
     "symbol": "FN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -13188,7 +13188,7 @@
   },
   "FNS": {
     "symbol": "FNS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13242,7 +13242,7 @@
   },
   "FORTH": {
     "symbol": "FORTH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -13296,7 +13296,7 @@
   },
   "FPI": {
     "symbol": "FPI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -13350,7 +13350,7 @@
   },
   "FPT": {
     "symbol": "FPT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -13404,17 +13404,17 @@
   },
   "FPTVN11": {
     "symbol": "FPTVN11",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FPTVN19": {
     "symbol": "FPTVN19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FSMART": {
     "symbol": "FSMART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13468,7 +13468,7 @@
   },
   "FSS": {
     "symbol": "FSS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-07",
@@ -13482,7 +13482,7 @@
   },
   "FTE": {
     "symbol": "FTE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -13536,7 +13536,7 @@
   },
   "FTI": {
     "symbol": "FTI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13590,7 +13590,7 @@
   },
   "FTREIT": {
     "symbol": "FTREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13644,12 +13644,12 @@
   },
   "FUTUREPF": {
     "symbol": "FUTUREPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "FUTURERT": {
     "symbol": "FUTURERT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -13703,7 +13703,7 @@
   },
   "FVC": {
     "symbol": "FVC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -13757,7 +13757,7 @@
   },
   "GABLE": {
     "symbol": "GABLE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -13811,7 +13811,7 @@
   },
   "GAHREIT": {
     "symbol": "GAHREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13865,7 +13865,7 @@
   },
   "GBX": {
     "symbol": "GBX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -13919,7 +13919,7 @@
   },
   "GC": {
     "symbol": "GC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -13973,7 +13973,7 @@
   },
   "GCAP": {
     "symbol": "GCAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -14027,7 +14027,7 @@
   },
   "GENCO": {
     "symbol": "GENCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -14081,7 +14081,7 @@
   },
   "GFC": {
     "symbol": "GFC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -14135,7 +14135,7 @@
   },
   "GFPT": {
     "symbol": "GFPT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -14189,7 +14189,7 @@
   },
   "GGC": {
     "symbol": "GGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -14243,17 +14243,17 @@
   },
   "GIGA23": {
     "symbol": "GIGA23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GL": {
     "symbol": "GL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GLAND": {
     "symbol": "GLAND",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -14307,12 +14307,12 @@
   },
   "GLANDRT": {
     "symbol": "GLANDRT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GLOBAL": {
     "symbol": "GLOBAL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -14366,7 +14366,7 @@
   },
   "GLORY": {
     "symbol": "GLORY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -14420,37 +14420,37 @@
   },
   "GLOW": {
     "symbol": "GLOW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GOLD": {
     "symbol": "GOLD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GOLDPF": {
     "symbol": "GOLDPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GOOG80": {
     "symbol": "GOOG80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GOOGL01": {
     "symbol": "GOOGL01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GOOGL03": {
     "symbol": "GOOGL03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GPI": {
     "symbol": "GPI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -14504,7 +14504,7 @@
   },
   "GPSC": {
     "symbol": "GPSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -14558,7 +14558,7 @@
   },
   "GRAMMY": {
     "symbol": "GRAMMY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -14612,7 +14612,7 @@
   },
   "GRAND": {
     "symbol": "GRAND",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -14666,7 +14666,7 @@
   },
   "GROREIT": {
     "symbol": "GROREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -14720,12 +14720,12 @@
   },
   "GSUS06": {
     "symbol": "GSUS06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GTB": {
     "symbol": "GTB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -14779,7 +14779,7 @@
   },
   "GULF": {
     "symbol": "GULF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -14817,7 +14817,7 @@
   },
   "GULFI": {
     "symbol": "GULFI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-02-10",
@@ -14831,7 +14831,7 @@
   },
   "GUNKUL": {
     "symbol": "GUNKUL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -14885,7 +14885,7 @@
   },
   "GVREIT": {
     "symbol": "GVREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -14939,7 +14939,7 @@
   },
   "GYT": {
     "symbol": "GYT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -14993,12 +14993,12 @@
   },
   "HAIERS19": {
     "symbol": "HAIERS19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HANA": {
     "symbol": "HANA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -15052,12 +15052,12 @@
   },
   "HANSOH19": {
     "symbol": "HANSOH19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HARN": {
     "symbol": "HARN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -15111,7 +15111,7 @@
   },
   "HENG": {
     "symbol": "HENG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -15165,12 +15165,12 @@
   },
   "HERMES80": {
     "symbol": "HERMES80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HFT": {
     "symbol": "HFT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -15224,27 +15224,27 @@
   },
   "HK01": {
     "symbol": "HK01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HK13": {
     "symbol": "HK13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HKCE01": {
     "symbol": "HKCE01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HKEX23": {
     "symbol": "HKEX23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HL": {
     "symbol": "HL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -15298,7 +15298,7 @@
   },
   "HMPRO": {
     "symbol": "HMPRO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-28",
@@ -15352,12 +15352,12 @@
   },
   "HONDA19": {
     "symbol": "HONDA19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HPF": {
     "symbol": "HPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -15411,12 +15411,12 @@
   },
   "HPG19": {
     "symbol": "HPG19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HPT": {
     "symbol": "HPT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-11-13",
@@ -15454,12 +15454,12 @@
   },
   "HSHD23": {
     "symbol": "HSHD23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "HTC": {
     "symbol": "HTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -15513,7 +15513,7 @@
   },
   "HTECH": {
     "symbol": "HTECH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -15567,7 +15567,7 @@
   },
   "HUMAN": {
     "symbol": "HUMAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -15621,7 +15621,7 @@
   },
   "HYDROGEN": {
     "symbol": "HYDROGEN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -15675,7 +15675,7 @@
   },
   "I2": {
     "symbol": "I2",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -15729,22 +15729,22 @@
   },
   "IBM06": {
     "symbol": "IBM06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ICBC06": {
     "symbol": "ICBC06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ICBC19": {
     "symbol": "ICBC19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ICC": {
     "symbol": "ICC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -15798,7 +15798,7 @@
   },
   "ICHI": {
     "symbol": "ICHI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -15852,7 +15852,7 @@
   },
   "ICN": {
     "symbol": "ICN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -15906,7 +15906,7 @@
   },
   "IDG": {
     "symbol": "IDG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -15952,12 +15952,12 @@
   },
   "IFEC": {
     "symbol": "IFEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "IFS": {
     "symbol": "IFS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -16011,7 +16011,7 @@
   },
   "IHL": {
     "symbol": "IHL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -16065,7 +16065,7 @@
   },
   "IIG": {
     "symbol": "IIG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -16119,7 +16119,7 @@
   },
   "III": {
     "symbol": "III",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -16173,7 +16173,7 @@
   },
   "ILINK": {
     "symbol": "ILINK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -16227,7 +16227,7 @@
   },
   "ILM": {
     "symbol": "ILM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -16281,7 +16281,7 @@
   },
   "IMH": {
     "symbol": "IMH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -16335,7 +16335,7 @@
   },
   "IMPACT": {
     "symbol": "IMPACT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-21",
@@ -16389,7 +16389,7 @@
   },
   "IND": {
     "symbol": "IND",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -16443,7 +16443,7 @@
   },
   "INET": {
     "symbol": "INET",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -16497,7 +16497,7 @@
   },
   "INETREIT": {
     "symbol": "INETREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -16551,7 +16551,7 @@
   },
   "INGRS": {
     "symbol": "INGRS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-12-15",
@@ -16584,20 +16584,12 @@
         "isAnnual": true,
         "isAudited": true,
         "isRevised": false
-      },
-      {
-        "date": "2024-12-13",
-        "headline": "Financial Statement Quarter 3/2025 (Reviewed) (Revised)",
-        "period": "Q3/2025",
-        "isAnnual": false,
-        "isAudited": false,
-        "isRevised": true
       }
     ]
   },
   "INOX": {
     "symbol": "INOX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -16651,7 +16643,7 @@
   },
   "INSET": {
     "symbol": "INSET",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -16705,7 +16697,7 @@
   },
   "INSURE": {
     "symbol": "INSURE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -16759,7 +16751,7 @@
   },
   "INTUCH": {
     "symbol": "INTUCH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-02-10",
@@ -16773,7 +16765,7 @@
   },
   "IP": {
     "symbol": "IP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -16827,7 +16819,7 @@
   },
   "IRC": {
     "symbol": "IRC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -16881,7 +16873,7 @@
   },
   "IRCP": {
     "symbol": "IRCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -16935,7 +16927,7 @@
   },
   "IROYAL": {
     "symbol": "IROYAL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -16989,7 +16981,7 @@
   },
   "IRPC": {
     "symbol": "IRPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -17043,7 +17035,7 @@
   },
   "ISSARA": {
     "symbol": "ISSARA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -17097,7 +17089,7 @@
   },
   "IT": {
     "symbol": "IT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -17151,7 +17143,7 @@
   },
   "ITC": {
     "symbol": "ITC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-29",
@@ -17205,7 +17197,7 @@
   },
   "ITD": {
     "symbol": "ITD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -17259,7 +17251,7 @@
   },
   "ITEL": {
     "symbol": "ITEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -17313,7 +17305,7 @@
   },
   "ITNS": {
     "symbol": "ITNS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -17367,12 +17359,12 @@
   },
   "ITOCHU19": {
     "symbol": "ITOCHU19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ITTHI": {
     "symbol": "ITTHI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -17426,7 +17418,7 @@
   },
   "IVF": {
     "symbol": "IVF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -17475,28 +17467,12 @@
         "isAnnual": true,
         "isAudited": true,
         "isRevised": false
-      },
-      {
-        "date": "2024-12-09",
-        "headline": "Financial Statement Quarter 3/2024 (Reviewed)",
-        "period": "Q3/2024",
-        "isAnnual": false,
-        "isAudited": false,
-        "isRevised": false
-      },
-      {
-        "date": "2024-12-09",
-        "headline": "Financial Statement Yearly 2023 (Audited)",
-        "period": "Q4/2023",
-        "isAnnual": true,
-        "isAudited": true,
-        "isRevised": false
       }
     ]
   },
   "IVL": {
     "symbol": "IVL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -17550,7 +17526,7 @@
   },
   "J": {
     "symbol": "J",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -17604,7 +17580,7 @@
   },
   "JAK": {
     "symbol": "JAK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -17658,12 +17634,12 @@
   },
   "JAPAN13": {
     "symbol": "JAPAN13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JAS": {
     "symbol": "JAS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -17717,12 +17693,12 @@
   },
   "JCP": {
     "symbol": "JCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JCT": {
     "symbol": "JCT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -17776,12 +17752,12 @@
   },
   "JD80": {
     "symbol": "JD80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JDF": {
     "symbol": "JDF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -17835,17 +17811,17 @@
   },
   "JEPI19": {
     "symbol": "JEPI19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JKN": {
     "symbol": "JKN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JMART": {
     "symbol": "JMART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -17899,7 +17875,7 @@
   },
   "JMT": {
     "symbol": "JMT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -17953,12 +17929,12 @@
   },
   "JNJ03": {
     "symbol": "JNJ03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JPARK": {
     "symbol": "JPARK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -18012,17 +17988,17 @@
   },
   "JPMUS06": {
     "symbol": "JPMUS06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JPMUS19": {
     "symbol": "JPMUS19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "JR": {
     "symbol": "JR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -18076,7 +18052,7 @@
   },
   "JSP": {
     "symbol": "JSP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -18130,7 +18106,7 @@
   },
   "JTS": {
     "symbol": "JTS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -18184,7 +18160,7 @@
   },
   "JUBILE": {
     "symbol": "JUBILE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -18238,7 +18214,7 @@
   },
   "K": {
     "symbol": "K",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -18292,7 +18268,7 @@
   },
   "KAMART": {
     "symbol": "KAMART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -18346,7 +18322,7 @@
   },
   "KASET": {
     "symbol": "KASET",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -18400,7 +18376,7 @@
   },
   "KBS": {
     "symbol": "KBS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -18454,7 +18430,7 @@
   },
   "KBSPIF": {
     "symbol": "KBSPIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -18508,7 +18484,7 @@
   },
   "KCAR": {
     "symbol": "KCAR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -18562,7 +18538,7 @@
   },
   "KCC": {
     "symbol": "KCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -18616,12 +18592,12 @@
   },
   "KCCAMC": {
     "symbol": "KCCAMC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KCE": {
     "symbol": "KCE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -18675,7 +18651,7 @@
   },
   "KCG": {
     "symbol": "KCG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -18729,7 +18705,7 @@
   },
   "KCM": {
     "symbol": "KCM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -18783,7 +18759,7 @@
   },
   "KDH": {
     "symbol": "KDH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -18837,7 +18813,7 @@
   },
   "KEX": {
     "symbol": "KEX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-08-13",
@@ -18867,12 +18843,12 @@
   },
   "KEYENCE23": {
     "symbol": "KEYENCE23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KGEN": {
     "symbol": "KGEN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -18926,7 +18902,7 @@
   },
   "KGI": {
     "symbol": "KGI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -18980,7 +18956,7 @@
   },
   "KIAT": {
     "symbol": "KIAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -19034,7 +19010,7 @@
   },
   "KISS": {
     "symbol": "KISS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19088,7 +19064,7 @@
   },
   "KJL": {
     "symbol": "KJL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -19142,7 +19118,7 @@
   },
   "KK": {
     "symbol": "KK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19196,7 +19172,7 @@
   },
   "KKC": {
     "symbol": "KKC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-06-04",
@@ -19226,7 +19202,7 @@
   },
   "KKP": {
     "symbol": "KKP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -19280,7 +19256,7 @@
   },
   "KLINIQ": {
     "symbol": "KLINIQ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19334,12 +19310,12 @@
   },
   "KO80": {
     "symbol": "KO80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KOOL": {
     "symbol": "KOOL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -19393,12 +19369,12 @@
   },
   "KPNPF": {
     "symbol": "KPNPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KPNREIT": {
     "symbol": "KPNREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -19452,8 +19428,16 @@
   },
   "KSL": {
     "symbol": "KSL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
+      {
+        "date": "2026-06-12",
+        "headline": "Financial Statement Quarter 2/2026 (Reviewed)",
+        "period": "Q2/2026",
+        "isAnnual": false,
+        "isAudited": false,
+        "isRevised": false
+      },
       {
         "date": "2026-03-13",
         "headline": "Financial Statement Quarter 1/2026 (Reviewed)",
@@ -19506,7 +19490,7 @@
   },
   "KTB": {
     "symbol": "KTB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -19560,12 +19544,12 @@
   },
   "KTB-P": {
     "symbol": "KTB-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KTBSTMR": {
     "symbol": "KTBSTMR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -19619,7 +19603,7 @@
   },
   "KTC": {
     "symbol": "KTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19673,7 +19657,7 @@
   },
   "KTIS": {
     "symbol": "KTIS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19727,7 +19711,7 @@
   },
   "KTMS": {
     "symbol": "KTMS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19781,22 +19765,22 @@
   },
   "KUAISH01": {
     "symbol": "KUAISH01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KUAISH23": {
     "symbol": "KUAISH23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KUAISH80": {
     "symbol": "KUAISH80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KUMWEL": {
     "symbol": "KUMWEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -19850,7 +19834,7 @@
   },
   "KUN": {
     "symbol": "KUN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -19904,7 +19888,7 @@
   },
   "KWC": {
     "symbol": "KWC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -19958,7 +19942,7 @@
   },
   "KWM": {
     "symbol": "KWM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -20012,7 +19996,7 @@
   },
   "KYE": {
     "symbol": "KYE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-02-12",
@@ -20050,12 +20034,12 @@
   },
   "L&E": {
     "symbol": "L&E",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LALIN": {
     "symbol": "LALIN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -20109,7 +20093,7 @@
   },
   "LANNA": {
     "symbol": "LANNA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -20163,7 +20147,7 @@
   },
   "LDC": {
     "symbol": "LDC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -20217,7 +20201,7 @@
   },
   "LEE": {
     "symbol": "LEE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -20271,12 +20255,12 @@
   },
   "LENOVO13": {
     "symbol": "LENOVO13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LEO": {
     "symbol": "LEO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -20330,7 +20314,7 @@
   },
   "LH": {
     "symbol": "LH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -20384,7 +20368,7 @@
   },
   "LHFG": {
     "symbol": "LHFG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -20438,7 +20422,7 @@
   },
   "LHHOTEL": {
     "symbol": "LHHOTEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -20492,7 +20476,7 @@
   },
   "LHK": {
     "symbol": "LHK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-29",
@@ -20546,12 +20530,12 @@
   },
   "LHPF": {
     "symbol": "LHPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LHRREIT": {
     "symbol": "LHRREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -20605,7 +20589,7 @@
   },
   "LHSC": {
     "symbol": "LHSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -20659,7 +20643,7 @@
   },
   "LIT": {
     "symbol": "LIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -20713,17 +20697,17 @@
   },
   "LLY80": {
     "symbol": "LLY80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LOREAL80": {
     "symbol": "LOREAL80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LOXLEY": {
     "symbol": "LOXLEY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -20777,17 +20761,17 @@
   },
   "LPF": {
     "symbol": "LPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LPGOLD13": {
     "symbol": "LPGOLD13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LPH": {
     "symbol": "LPH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -20841,7 +20825,7 @@
   },
   "LPN": {
     "symbol": "LPN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -20895,7 +20879,7 @@
   },
   "LRH": {
     "symbol": "LRH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -20949,7 +20933,7 @@
   },
   "LST": {
     "symbol": "LST",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -21003,7 +20987,7 @@
   },
   "LTMH": {
     "symbol": "LTMH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -21057,12 +21041,12 @@
   },
   "LTX": {
     "symbol": "LTX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LUXF": {
     "symbol": "LUXF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -21116,12 +21100,12 @@
   },
   "LVMH01": {
     "symbol": "LVMH01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "M": {
     "symbol": "M",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -21175,7 +21159,7 @@
   },
   "M-CHAI": {
     "symbol": "M-CHAI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -21229,12 +21213,12 @@
   },
   "M-II": {
     "symbol": "M-II",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "M-PAT": {
     "symbol": "M-PAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -21288,7 +21272,7 @@
   },
   "M-STOR": {
     "symbol": "M-STOR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -21342,12 +21326,12 @@
   },
   "MA80": {
     "symbol": "MA80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MAGURO": {
     "symbol": "MAGURO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -21401,7 +21385,7 @@
   },
   "MAJOR": {
     "symbol": "MAJOR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -21455,7 +21439,7 @@
   },
   "MALEE": {
     "symbol": "MALEE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -21509,7 +21493,7 @@
   },
   "MANRIN": {
     "symbol": "MANRIN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -21563,7 +21547,7 @@
   },
   "MASTEC": {
     "symbol": "MASTEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -21609,7 +21593,7 @@
   },
   "MASTER": {
     "symbol": "MASTER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -21663,7 +21647,7 @@
   },
   "MATI": {
     "symbol": "MATI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -21717,7 +21701,7 @@
   },
   "MBAX": {
     "symbol": "MBAX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -21771,7 +21755,7 @@
   },
   "MBK": {
     "symbol": "MBK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -21825,7 +21809,7 @@
   },
   "MC": {
     "symbol": "MC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -21879,7 +21863,7 @@
   },
   "MCA": {
     "symbol": "MCA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -21933,7 +21917,7 @@
   },
   "MCOT": {
     "symbol": "MCOT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -21987,7 +21971,7 @@
   },
   "MCS": {
     "symbol": "MCS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -22041,7 +22025,7 @@
   },
   "MEB": {
     "symbol": "MEB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -22095,7 +22079,7 @@
   },
   "MEDEZE": {
     "symbol": "MEDEZE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -22149,7 +22133,7 @@
   },
   "MEGA": {
     "symbol": "MEGA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -22203,7 +22187,7 @@
   },
   "MENA": {
     "symbol": "MENA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -22257,22 +22241,22 @@
   },
   "META01": {
     "symbol": "META01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "META06": {
     "symbol": "META06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "META80": {
     "symbol": "META80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "METCO": {
     "symbol": "METCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -22326,7 +22310,7 @@
   },
   "MFC": {
     "symbol": "MFC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -22380,7 +22364,7 @@
   },
   "MFEC": {
     "symbol": "MFEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -22434,7 +22418,7 @@
   },
   "MGC": {
     "symbol": "MGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -22488,12 +22472,12 @@
   },
   "MGE": {
     "symbol": "MGE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MGI": {
     "symbol": "MGI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -22547,7 +22531,7 @@
   },
   "MGT": {
     "symbol": "MGT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -22601,7 +22585,7 @@
   },
   "MICRO": {
     "symbol": "MICRO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -22655,27 +22639,27 @@
   },
   "MICRON01": {
     "symbol": "MICRON01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MICRON03": {
     "symbol": "MICRON03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MICRON19": {
     "symbol": "MICRON19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MICRON80": {
     "symbol": "MICRON80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MII": {
     "symbol": "MII",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -22729,7 +22713,7 @@
   },
   "MILL": {
     "symbol": "MILL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-11-14",
@@ -22767,7 +22751,7 @@
   },
   "MINT": {
     "symbol": "MINT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -22821,7 +22805,7 @@
   },
   "MIPF": {
     "symbol": "MIPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -22875,7 +22859,7 @@
   },
   "MIT": {
     "symbol": "MIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-05-15",
@@ -22897,7 +22881,7 @@
   },
   "MITSIB": {
     "symbol": "MITSIB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -22951,12 +22935,12 @@
   },
   "MITSU19": {
     "symbol": "MITSU19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MJLF": {
     "symbol": "MJLF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -23010,7 +22994,7 @@
   },
   "MK": {
     "symbol": "MK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -23064,7 +23048,7 @@
   },
   "ML": {
     "symbol": "ML",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -23118,7 +23102,7 @@
   },
   "MMM": {
     "symbol": "MMM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -23156,7 +23140,7 @@
   },
   "MNIT": {
     "symbol": "MNIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -23210,7 +23194,7 @@
   },
   "MNIT2": {
     "symbol": "MNIT2",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -23264,7 +23248,7 @@
   },
   "MNRF": {
     "symbol": "MNRF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -23318,12 +23302,12 @@
   },
   "MNSO80": {
     "symbol": "MNSO80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MODERN": {
     "symbol": "MODERN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -23377,7 +23361,7 @@
   },
   "MONO": {
     "symbol": "MONO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -23431,12 +23415,12 @@
   },
   "MONTRI": {
     "symbol": "MONTRI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MOONG": {
     "symbol": "MOONG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -23490,7 +23474,7 @@
   },
   "MOSHI": {
     "symbol": "MOSHI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -23544,7 +23528,7 @@
   },
   "MOTHER": {
     "symbol": "MOTHER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -23614,7 +23598,7 @@
   },
   "MPJ": {
     "symbol": "MPJ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -23668,7 +23652,7 @@
   },
   "MRDIYT": {
     "symbol": "MRDIYT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -23714,27 +23698,27 @@
   },
   "MRVL06": {
     "symbol": "MRVL06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MRVL23": {
     "symbol": "MRVL23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MRVL80": {
     "symbol": "MRVL80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MS06": {
     "symbol": "MS06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MSC": {
     "symbol": "MSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -23788,32 +23772,32 @@
   },
   "MSFT01": {
     "symbol": "MSFT01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MSFT03": {
     "symbol": "MSFT03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MSFT06": {
     "symbol": "MSFT06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MSFT19": {
     "symbol": "MSFT19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MSFT80": {
     "symbol": "MSFT80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MST": {
     "symbol": "MST",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -23867,7 +23851,7 @@
   },
   "MTC": {
     "symbol": "MTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -23921,7 +23905,7 @@
   },
   "MTI": {
     "symbol": "MTI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -23975,7 +23959,7 @@
   },
   "MTW": {
     "symbol": "MTW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24029,7 +24013,7 @@
   },
   "MUD": {
     "symbol": "MUD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24083,22 +24067,22 @@
   },
   "MUFG19": {
     "symbol": "MUFG19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MUFG23": {
     "symbol": "MUFG23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MWG19": {
     "symbol": "MWG19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NAM": {
     "symbol": "NAM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24152,7 +24136,7 @@
   },
   "NAT": {
     "symbol": "NAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24206,7 +24190,7 @@
   },
   "NATION": {
     "symbol": "NATION",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24260,7 +24244,7 @@
   },
   "NC": {
     "symbol": "NC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -24314,7 +24298,7 @@
   },
   "NCAP": {
     "symbol": "NCAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -24368,7 +24352,7 @@
   },
   "NCH": {
     "symbol": "NCH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24422,7 +24406,7 @@
   },
   "NCL": {
     "symbol": "NCL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -24476,7 +24460,7 @@
   },
   "NCP": {
     "symbol": "NCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -24530,12 +24514,12 @@
   },
   "NDAQ06": {
     "symbol": "NDAQ06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NDR": {
     "symbol": "NDR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24589,17 +24573,17 @@
   },
   "NDX01": {
     "symbol": "NDX01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NEM06": {
     "symbol": "NEM06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NEO": {
     "symbol": "NEO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -24653,7 +24637,7 @@
   },
   "NER": {
     "symbol": "NER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -24707,7 +24691,7 @@
   },
   "NETBAY": {
     "symbol": "NETBAY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24761,12 +24745,12 @@
   },
   "NETEASE80": {
     "symbol": "NETEASE80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NEW": {
     "symbol": "NEW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -24820,7 +24804,7 @@
   },
   "NFC": {
     "symbol": "NFC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -24874,22 +24858,22 @@
   },
   "NIKE80": {
     "symbol": "NIKE80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NINTENDO19": {
     "symbol": "NINTENDO19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NINTENDO23": {
     "symbol": "NINTENDO23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NKI": {
     "symbol": "NKI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -24943,7 +24927,7 @@
   },
   "NKT": {
     "symbol": "NKT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -25013,7 +24997,7 @@
   },
   "NL": {
     "symbol": "NL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -25067,7 +25051,7 @@
   },
   "NNCL": {
     "symbol": "NNCL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -25121,7 +25105,7 @@
   },
   "NOBLE": {
     "symbol": "NOBLE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -25175,12 +25159,12 @@
   },
   "NONGFU80": {
     "symbol": "NONGFU80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NOVA": {
     "symbol": "NOVA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -25234,12 +25218,12 @@
   },
   "NOVOB80": {
     "symbol": "NOVOB80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NPK": {
     "symbol": "NPK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -25293,7 +25277,7 @@
   },
   "NRF": {
     "symbol": "NRF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-29",
@@ -25355,12 +25339,12 @@
   },
   "NSI": {
     "symbol": "NSI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NSL": {
     "symbol": "NSL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -25414,7 +25398,7 @@
   },
   "NTF": {
     "symbol": "NTF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -25452,7 +25436,7 @@
   },
   "NTL": {
     "symbol": "NTL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2025-05-08",
@@ -25474,7 +25458,7 @@
   },
   "NTSC": {
     "symbol": "NTSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -25528,7 +25512,7 @@
   },
   "NTV": {
     "symbol": "NTV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -25582,7 +25566,7 @@
   },
   "NUT": {
     "symbol": "NUT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -25636,7 +25620,7 @@
   },
   "NV": {
     "symbol": "NV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -25690,7 +25674,7 @@
   },
   "NVD": {
     "symbol": "NVD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -25744,32 +25728,32 @@
   },
   "NVDA01": {
     "symbol": "NVDA01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NVDA03": {
     "symbol": "NVDA03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NVDA06": {
     "symbol": "NVDA06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NVDA19": {
     "symbol": "NVDA19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NVDA80": {
     "symbol": "NVDA80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NWR": {
     "symbol": "NWR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -25823,7 +25807,7 @@
   },
   "NYT": {
     "symbol": "NYT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -25877,7 +25861,7 @@
   },
   "OCC": {
     "symbol": "OCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -25931,7 +25915,7 @@
   },
   "OGC": {
     "symbol": "OGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -25985,7 +25969,7 @@
   },
   "OHTL": {
     "symbol": "OHTL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -26039,12 +26023,12 @@
   },
   "OISHI": {
     "symbol": "OISHI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "OKJ": {
     "symbol": "OKJ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -26098,7 +26082,7 @@
   },
   "ONEE": {
     "symbol": "ONEE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -26152,7 +26136,7 @@
   },
   "ONSENS": {
     "symbol": "ONSENS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -26198,7 +26182,7 @@
   },
   "OR": {
     "symbol": "OR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -26252,22 +26236,22 @@
   },
   "ORCL01": {
     "symbol": "ORCL01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ORCL06": {
     "symbol": "ORCL06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ORCL19": {
     "symbol": "ORCL19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ORI": {
     "symbol": "ORI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -26321,7 +26305,7 @@
   },
   "ORN": {
     "symbol": "ORN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -26375,7 +26359,7 @@
   },
   "OSP": {
     "symbol": "OSP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -26429,7 +26413,7 @@
   },
   "PACO": {
     "symbol": "PACO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -26483,7 +26467,7 @@
   },
   "PAF": {
     "symbol": "PAF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -26537,7 +26521,7 @@
   },
   "PANEL": {
     "symbol": "PANEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -26591,7 +26575,7 @@
   },
   "PAP": {
     "symbol": "PAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -26645,7 +26629,7 @@
   },
   "PATO": {
     "symbol": "PATO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -26699,7 +26683,7 @@
   },
   "PB": {
     "symbol": "PB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -26753,7 +26737,7 @@
   },
   "PCC": {
     "symbol": "PCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -26807,7 +26791,7 @@
   },
   "PCE": {
     "symbol": "PCE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -26861,7 +26845,7 @@
   },
   "PCSGH": {
     "symbol": "PCSGH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -26915,7 +26899,7 @@
   },
   "PDG": {
     "symbol": "PDG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -26969,7 +26953,7 @@
   },
   "PDJ": {
     "symbol": "PDJ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -27023,7 +27007,7 @@
   },
   "PEACE": {
     "symbol": "PEACE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27077,7 +27061,7 @@
   },
   "PEER": {
     "symbol": "PEER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -27131,12 +27115,12 @@
   },
   "PEP80": {
     "symbol": "PEP80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PERM": {
     "symbol": "PERM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -27190,12 +27174,12 @@
   },
   "PETROCN80": {
     "symbol": "PETROCN80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PF": {
     "symbol": "PF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -27249,12 +27233,12 @@
   },
   "PFIZER19": {
     "symbol": "PFIZER19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PG": {
     "symbol": "PG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -27308,7 +27292,7 @@
   },
   "PHG": {
     "symbol": "PHG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -27362,7 +27346,7 @@
   },
   "PHOL": {
     "symbol": "PHOL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27416,7 +27400,7 @@
   },
   "PICO": {
     "symbol": "PICO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-06-05",
@@ -27470,7 +27454,7 @@
   },
   "PIMO": {
     "symbol": "PIMO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27524,7 +27508,7 @@
   },
   "PIN": {
     "symbol": "PIN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -27578,17 +27562,17 @@
   },
   "PINGAN01": {
     "symbol": "PINGAN01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PINGAN80": {
     "symbol": "PINGAN80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PIS": {
     "symbol": "PIS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -27658,7 +27642,7 @@
   },
   "PJW": {
     "symbol": "PJW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27712,7 +27696,7 @@
   },
   "PK": {
     "symbol": "PK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -27766,12 +27750,12 @@
   },
   "PK-P": {
     "symbol": "PK-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PL": {
     "symbol": "PL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27825,7 +27809,7 @@
   },
   "PLANB": {
     "symbol": "PLANB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27879,7 +27863,7 @@
   },
   "PLANET": {
     "symbol": "PLANET",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -27933,7 +27917,7 @@
   },
   "PLAT": {
     "symbol": "PLAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -27987,7 +27971,7 @@
   },
   "PLE": {
     "symbol": "PLE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -28041,7 +28025,7 @@
   },
   "PLT": {
     "symbol": "PLT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -28095,7 +28079,7 @@
   },
   "PLUS": {
     "symbol": "PLUS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -28149,7 +28133,7 @@
   },
   "PM": {
     "symbol": "PM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -28203,7 +28187,7 @@
   },
   "PMC": {
     "symbol": "PMC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -28257,7 +28241,7 @@
   },
   "PMTA": {
     "symbol": "PMTA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -28311,7 +28295,7 @@
   },
   "POLY": {
     "symbol": "POLY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -28365,7 +28349,7 @@
   },
   "POPF": {
     "symbol": "POPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -28419,12 +28403,12 @@
   },
   "POPMART80": {
     "symbol": "POPMART80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PORT": {
     "symbol": "PORT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -28478,12 +28462,12 @@
   },
   "PPF": {
     "symbol": "PPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PPM": {
     "symbol": "PPM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -28537,7 +28521,7 @@
   },
   "PPP": {
     "symbol": "PPP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -28591,7 +28575,7 @@
   },
   "PPS": {
     "symbol": "PPS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -28645,7 +28629,7 @@
   },
   "PQS": {
     "symbol": "PQS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -28699,12 +28683,12 @@
   },
   "PR": {
     "symbol": "PR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PR9": {
     "symbol": "PR9",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -28758,7 +28742,7 @@
   },
   "PRAKIT": {
     "symbol": "PRAKIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -28812,7 +28796,7 @@
   },
   "PRAPAT": {
     "symbol": "PRAPAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -28866,7 +28850,7 @@
   },
   "PREB": {
     "symbol": "PREB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -28920,7 +28904,7 @@
   },
   "PRG": {
     "symbol": "PRG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -28974,7 +28958,7 @@
   },
   "PRI": {
     "symbol": "PRI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -29028,7 +29012,7 @@
   },
   "PRIN": {
     "symbol": "PRIN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -29082,7 +29066,7 @@
   },
   "PRINC": {
     "symbol": "PRINC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -29136,7 +29120,7 @@
   },
   "PRM": {
     "symbol": "PRM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -29190,7 +29174,7 @@
   },
   "PROEN": {
     "symbol": "PROEN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -29244,7 +29228,7 @@
   },
   "PROS": {
     "symbol": "PROS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -29298,7 +29282,7 @@
   },
   "PROSPECT": {
     "symbol": "PROSPECT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -29352,7 +29336,7 @@
   },
   "PROUD": {
     "symbol": "PROUD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -29406,7 +29390,7 @@
   },
   "PRTR": {
     "symbol": "PRTR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -29460,12 +29444,12 @@
   },
   "PS": {
     "symbol": "PS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PSH": {
     "symbol": "PSH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -29519,7 +29503,7 @@
   },
   "PSL": {
     "symbol": "PSL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -29573,7 +29557,7 @@
   },
   "PSP": {
     "symbol": "PSP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -29627,7 +29611,7 @@
   },
   "PSTC": {
     "symbol": "PSTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -29681,7 +29665,7 @@
   },
   "PT": {
     "symbol": "PT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -29735,7 +29719,7 @@
   },
   "PTC": {
     "symbol": "PTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -29789,12 +29773,12 @@
   },
   "PTECH": {
     "symbol": "PTECH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "PTG": {
     "symbol": "PTG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -29848,7 +29832,7 @@
   },
   "PTL": {
     "symbol": "PTL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-22",
@@ -29902,7 +29886,7 @@
   },
   "PTTEP": {
     "symbol": "PTTEP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-30",
@@ -29956,7 +29940,7 @@
   },
   "PTTGC": {
     "symbol": "PTTGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -30010,7 +29994,7 @@
   },
   "PYLON": {
     "symbol": "PYLON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -30064,12 +30048,12 @@
   },
   "PYPL06": {
     "symbol": "PYPL06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "Q-CON": {
     "symbol": "Q-CON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -30123,12 +30107,12 @@
   },
   "QCOM06": {
     "symbol": "QCOM06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "QH": {
     "symbol": "QH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -30182,7 +30166,7 @@
   },
   "QHBREIT": {
     "symbol": "QHBREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -30236,12 +30220,12 @@
   },
   "QHHR": {
     "symbol": "QHHR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "QHHRREIT": {
     "symbol": "QHHRREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -30295,7 +30279,7 @@
   },
   "QHOP": {
     "symbol": "QHOP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -30349,12 +30333,12 @@
   },
   "QHPF": {
     "symbol": "QHPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "QLT": {
     "symbol": "QLT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -30408,12 +30392,12 @@
   },
   "QQQM19": {
     "symbol": "QQQM19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "QTC": {
     "symbol": "QTC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -30467,7 +30451,7 @@
   },
   "RAM": {
     "symbol": "RAM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -30521,7 +30505,7 @@
   },
   "RATCH": {
     "symbol": "RATCH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -30575,7 +30559,7 @@
   },
   "RBF": {
     "symbol": "RBF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -30629,7 +30613,7 @@
   },
   "RCL": {
     "symbol": "RCL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -30683,7 +30667,7 @@
   },
   "READY": {
     "symbol": "READY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -30737,7 +30721,7 @@
   },
   "RICHY": {
     "symbol": "RICHY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -30791,7 +30775,7 @@
   },
   "RJH": {
     "symbol": "RJH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -30845,7 +30829,7 @@
   },
   "RML": {
     "symbol": "RML",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -30899,12 +30883,12 @@
   },
   "ROBINS": {
     "symbol": "ROBINS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ROCK": {
     "symbol": "ROCK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -30958,7 +30942,7 @@
   },
   "ROCTEC": {
     "symbol": "ROCTEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-22",
@@ -31012,7 +30996,7 @@
   },
   "ROH": {
     "symbol": "ROH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -31066,7 +31050,7 @@
   },
   "ROJNA": {
     "symbol": "ROJNA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -31120,7 +31104,7 @@
   },
   "RP": {
     "symbol": "RP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -31174,7 +31158,7 @@
   },
   "RPC": {
     "symbol": "RPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -31228,7 +31212,7 @@
   },
   "RPH": {
     "symbol": "RPH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -31282,7 +31266,7 @@
   },
   "RS": {
     "symbol": "RS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -31336,7 +31320,7 @@
   },
   "RSP": {
     "symbol": "RSP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -31390,7 +31374,7 @@
   },
   "RT": {
     "symbol": "RT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -31444,7 +31428,7 @@
   },
   "RWI": {
     "symbol": "RWI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -31498,7 +31482,7 @@
   },
   "S": {
     "symbol": "S",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -31552,7 +31536,7 @@
   },
   "S&J": {
     "symbol": "S&J",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -31606,7 +31590,7 @@
   },
   "S11": {
     "symbol": "S11",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -31660,7 +31644,7 @@
   },
   "SA": {
     "symbol": "SA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -31714,7 +31698,7 @@
   },
   "SAAM": {
     "symbol": "SAAM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -31768,7 +31752,7 @@
   },
   "SABINA": {
     "symbol": "SABINA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -31822,7 +31806,7 @@
   },
   "SAF": {
     "symbol": "SAF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -31876,7 +31860,7 @@
   },
   "SAFE": {
     "symbol": "SAFE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -31930,7 +31914,7 @@
   },
   "SAK": {
     "symbol": "SAK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -31984,7 +31968,7 @@
   },
   "SALEE": {
     "symbol": "SALEE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -32038,7 +32022,7 @@
   },
   "SAMART": {
     "symbol": "SAMART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32092,7 +32076,7 @@
   },
   "SAMCO": {
     "symbol": "SAMCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -32146,7 +32130,7 @@
   },
   "SAMTEL": {
     "symbol": "SAMTEL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32200,7 +32184,7 @@
   },
   "SANKO": {
     "symbol": "SANKO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32254,22 +32238,22 @@
   },
   "SANOFI80": {
     "symbol": "SANOFI80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SANRIO23": {
     "symbol": "SANRIO23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SANRIO80": {
     "symbol": "SANRIO80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SAPPE": {
     "symbol": "SAPPE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32323,7 +32307,7 @@
   },
   "SAT": {
     "symbol": "SAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32377,7 +32361,7 @@
   },
   "SAUCE": {
     "symbol": "SAUCE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32431,7 +32415,7 @@
   },
   "SAV": {
     "symbol": "SAV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -32485,7 +32469,7 @@
   },
   "SAWAD": {
     "symbol": "SAWAD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -32539,12 +32523,12 @@
   },
   "SBUX80": {
     "symbol": "SBUX80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SC": {
     "symbol": "SC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32598,7 +32582,7 @@
   },
   "SCAP": {
     "symbol": "SCAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -32652,7 +32636,7 @@
   },
   "SCB": {
     "symbol": "SCB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -32706,22 +32690,22 @@
   },
   "SCBB": {
     "symbol": "SCBB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SCBB-P": {
     "symbol": "SCBB-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SCC": {
     "symbol": "SCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SCCC": {
     "symbol": "SCCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -32775,7 +32759,7 @@
   },
   "SCG": {
     "symbol": "SCG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -32829,17 +32813,17 @@
   },
   "SCGD": {
     "symbol": "SCGD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SCGP": {
     "symbol": "SCGP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SCI": {
     "symbol": "SCI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -32893,7 +32877,7 @@
   },
   "SCL": {
     "symbol": "SCL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -32947,7 +32931,7 @@
   },
   "SCM": {
     "symbol": "SCM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -33001,7 +32985,7 @@
   },
   "SCN": {
     "symbol": "SCN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -33055,7 +33039,7 @@
   },
   "SCP": {
     "symbol": "SCP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33109,7 +33093,7 @@
   },
   "SE": {
     "symbol": "SE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33163,7 +33147,7 @@
   },
   "SE-ED": {
     "symbol": "SE-ED",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -33217,7 +33201,7 @@
   },
   "SEAFCO": {
     "symbol": "SEAFCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -33271,7 +33255,7 @@
   },
   "SEAOIL": {
     "symbol": "SEAOIL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33325,7 +33309,7 @@
   },
   "SECURE": {
     "symbol": "SECURE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33379,7 +33363,7 @@
   },
   "SEI": {
     "symbol": "SEI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33433,7 +33417,7 @@
   },
   "SELIC": {
     "symbol": "SELIC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33487,12 +33471,12 @@
   },
   "SEMB19": {
     "symbol": "SEMB19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SENA": {
     "symbol": "SENA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -33546,7 +33530,7 @@
   },
   "SENX": {
     "symbol": "SENX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -33600,12 +33584,12 @@
   },
   "SF": {
     "symbol": "SF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SFLEX": {
     "symbol": "SFLEX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -33659,12 +33643,12 @@
   },
   "SFP": {
     "symbol": "SFP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SFT": {
     "symbol": "SFT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -33718,7 +33702,7 @@
   },
   "SGC": {
     "symbol": "SGC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33772,7 +33756,7 @@
   },
   "SGP": {
     "symbol": "SGP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33826,12 +33810,12 @@
   },
   "SGX19": {
     "symbol": "SGX19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SHANG": {
     "symbol": "SHANG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -33885,7 +33869,7 @@
   },
   "SHR": {
     "symbol": "SHR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -33939,17 +33923,17 @@
   },
   "SHREIT": {
     "symbol": "SHREIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SIA19": {
     "symbol": "SIA19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SIAM": {
     "symbol": "SIAM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34003,7 +33987,7 @@
   },
   "SICT": {
     "symbol": "SICT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34057,7 +34041,7 @@
   },
   "SIMAT": {
     "symbol": "SIMAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34111,7 +34095,7 @@
   },
   "SINGER": {
     "symbol": "SINGER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34165,12 +34149,12 @@
   },
   "SINGTEL80": {
     "symbol": "SINGTEL80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SINO": {
     "symbol": "SINO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34224,12 +34208,12 @@
   },
   "SINOBIO19": {
     "symbol": "SINOBIO19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SIRI": {
     "symbol": "SIRI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34283,12 +34267,12 @@
   },
   "SIRIP": {
     "symbol": "SIRIP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SIRIPRT": {
     "symbol": "SIRIPRT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -34342,7 +34326,7 @@
   },
   "SIS": {
     "symbol": "SIS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34396,7 +34380,7 @@
   },
   "SISB": {
     "symbol": "SISB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34450,7 +34434,7 @@
   },
   "SITHAI": {
     "symbol": "SITHAI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -34504,7 +34488,7 @@
   },
   "SJWD": {
     "symbol": "SJWD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34558,7 +34542,7 @@
   },
   "SK": {
     "symbol": "SK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34612,7 +34596,7 @@
   },
   "SKE": {
     "symbol": "SKE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34666,7 +34650,7 @@
   },
   "SKN": {
     "symbol": "SKN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34720,7 +34704,7 @@
   },
   "SKR": {
     "symbol": "SKR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -34774,7 +34758,7 @@
   },
   "SKY": {
     "symbol": "SKY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34828,7 +34812,7 @@
   },
   "SLP": {
     "symbol": "SLP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -34882,7 +34866,7 @@
   },
   "SMART": {
     "symbol": "SMART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -34936,7 +34920,7 @@
   },
   "SMD100": {
     "symbol": "SMD100",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -34990,12 +34974,12 @@
   },
   "SMFG19": {
     "symbol": "SMFG19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SMIT": {
     "symbol": "SMIT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -35049,12 +35033,12 @@
   },
   "SMK": {
     "symbol": "SMK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SMO": {
     "symbol": "SMO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -35100,7 +35084,7 @@
   },
   "SMPC": {
     "symbol": "SMPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -35154,7 +35138,7 @@
   },
   "SMT": {
     "symbol": "SMT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -35208,7 +35192,7 @@
   },
   "SNC": {
     "symbol": "SNC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -35262,7 +35246,7 @@
   },
   "SNNP": {
     "symbol": "SNNP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -35316,7 +35300,7 @@
   },
   "SNP": {
     "symbol": "SNP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -35370,7 +35354,7 @@
   },
   "SNPS": {
     "symbol": "SNPS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -35424,7 +35408,7 @@
   },
   "SO": {
     "symbol": "SO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -35478,12 +35462,12 @@
   },
   "SOFTBANK23": {
     "symbol": "SOFTBANK23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SONIC": {
     "symbol": "SONIC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -35537,12 +35521,12 @@
   },
   "SONY80": {
     "symbol": "SONY80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SORKON": {
     "symbol": "SORKON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -35596,17 +35580,17 @@
   },
   "SP500US19": {
     "symbol": "SP500US19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SP500US80": {
     "symbol": "SP500US80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPA": {
     "symbol": "SPA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -35660,7 +35644,7 @@
   },
   "SPACK": {
     "symbol": "SPACK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -35714,7 +35698,7 @@
   },
   "SPALI": {
     "symbol": "SPALI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -35768,12 +35752,12 @@
   },
   "SPBOND80": {
     "symbol": "SPBOND80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPC": {
     "symbol": "SPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -35827,7 +35811,7 @@
   },
   "SPCG": {
     "symbol": "SPCG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -35881,27 +35865,27 @@
   },
   "SPCOM80": {
     "symbol": "SPCOM80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPENGY80": {
     "symbol": "SPENGY80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPF": {
     "symbol": "SPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPFIN80": {
     "symbol": "SPFIN80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPG": {
     "symbol": "SPG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -35955,12 +35939,12 @@
   },
   "SPHLTH80": {
     "symbol": "SPHLTH80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPI": {
     "symbol": "SPI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -36014,7 +35998,7 @@
   },
   "SPRC": {
     "symbol": "SPRC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -36068,7 +36052,7 @@
   },
   "SPREME": {
     "symbol": "SPREME",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -36122,7 +36106,7 @@
   },
   "SPRIME": {
     "symbol": "SPRIME",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -36176,12 +36160,12 @@
   },
   "SPTECH80": {
     "symbol": "SPTECH80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SPVI": {
     "symbol": "SPVI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -36235,12 +36219,12 @@
   },
   "SPWPF": {
     "symbol": "SPWPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SQ": {
     "symbol": "SQ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -36294,7 +36278,7 @@
   },
   "SR": {
     "symbol": "SR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -36348,7 +36332,7 @@
   },
   "SRICHA": {
     "symbol": "SRICHA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -36402,7 +36386,7 @@
   },
   "SRIPANWA": {
     "symbol": "SRIPANWA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -36456,7 +36440,7 @@
   },
   "SRS": {
     "symbol": "SRS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -36510,12 +36494,12 @@
   },
   "SSC": {
     "symbol": "SSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SSF": {
     "symbol": "SSF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -36569,7 +36553,7 @@
   },
   "SSP": {
     "symbol": "SSP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -36623,7 +36607,7 @@
   },
   "SSPF": {
     "symbol": "SSPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -36677,7 +36661,7 @@
   },
   "SSSC": {
     "symbol": "SSSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -36731,7 +36715,7 @@
   },
   "SST": {
     "symbol": "SST",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -36785,12 +36769,12 @@
   },
   "SSTPF": {
     "symbol": "SSTPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SSTRT": {
     "symbol": "SSTRT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -36844,12 +36828,12 @@
   },
   "SSTSS": {
     "symbol": "SSTSS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "STA": {
     "symbol": "STA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -36903,7 +36887,7 @@
   },
   "STANLY": {
     "symbol": "STANLY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -36957,7 +36941,7 @@
   },
   "STARM": {
     "symbol": "STARM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37011,7 +36995,7 @@
   },
   "STC": {
     "symbol": "STC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -37065,12 +37049,12 @@
   },
   "STEC": {
     "symbol": "STEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "STECH": {
     "symbol": "STECH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37124,7 +37108,7 @@
   },
   "STECON": {
     "symbol": "STECON",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -37178,12 +37162,12 @@
   },
   "STEG19": {
     "symbol": "STEG19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "STGT": {
     "symbol": "STGT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -37237,12 +37221,12 @@
   },
   "STHAI": {
     "symbol": "STHAI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "STI": {
     "symbol": "STI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -37296,7 +37280,7 @@
   },
   "STOWER": {
     "symbol": "STOWER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37350,7 +37334,7 @@
   },
   "STP": {
     "symbol": "STP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37404,7 +37388,7 @@
   },
   "STPI": {
     "symbol": "STPI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-18",
@@ -37458,7 +37442,7 @@
   },
   "STX": {
     "symbol": "STX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -37512,7 +37496,7 @@
   },
   "SUC": {
     "symbol": "SUC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37566,7 +37550,7 @@
   },
   "SUN": {
     "symbol": "SUN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -37620,17 +37604,17 @@
   },
   "SUNNY19": {
     "symbol": "SUNNY19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SUNNY80": {
     "symbol": "SUNNY80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SUPER": {
     "symbol": "SUPER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -37684,7 +37668,7 @@
   },
   "SUPEREIF": {
     "symbol": "SUPEREIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -37738,7 +37722,7 @@
   },
   "SUSCO": {
     "symbol": "SUSCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37792,7 +37776,7 @@
   },
   "SUTHA": {
     "symbol": "SUTHA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -37846,12 +37830,12 @@
   },
   "SVH": {
     "symbol": "SVH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SVI": {
     "symbol": "SVI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -37905,7 +37889,7 @@
   },
   "SVOA": {
     "symbol": "SVOA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -37959,7 +37943,7 @@
   },
   "SVR": {
     "symbol": "SVR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -38013,7 +37997,7 @@
   },
   "SVT": {
     "symbol": "SVT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -38067,7 +38051,7 @@
   },
   "SWC": {
     "symbol": "SWC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -38121,7 +38105,7 @@
   },
   "SYMC": {
     "symbol": "SYMC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -38175,7 +38159,7 @@
   },
   "SYNEX": {
     "symbol": "SYNEX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -38229,7 +38213,7 @@
   },
   "SYNTEC": {
     "symbol": "SYNTEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -38283,7 +38267,7 @@
   },
   "TACC": {
     "symbol": "TACC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -38337,7 +38321,7 @@
   },
   "TAE": {
     "symbol": "TAE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -38391,22 +38375,22 @@
   },
   "TAIWAN19": {
     "symbol": "TAIWAN19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TAIWANAI13": {
     "symbol": "TAIWANAI13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TAIWANHD13": {
     "symbol": "TAIWANHD13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TAKUNI": {
     "symbol": "TAKUNI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -38460,7 +38444,7 @@
   },
   "TAN": {
     "symbol": "TAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -38514,7 +38498,7 @@
   },
   "TAPAC": {
     "symbol": "TAPAC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-28",
@@ -38544,7 +38528,7 @@
   },
   "TASCO": {
     "symbol": "TASCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -38598,7 +38582,7 @@
   },
   "TATG": {
     "symbol": "TATG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -38652,7 +38636,7 @@
   },
   "TBN": {
     "symbol": "TBN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -38706,7 +38690,7 @@
   },
   "TC": {
     "symbol": "TC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -38760,7 +38744,7 @@
   },
   "TCAP": {
     "symbol": "TCAP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -38814,12 +38798,12 @@
   },
   "TCAP-P": {
     "symbol": "TCAP-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TCC": {
     "symbol": "TCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -38873,17 +38857,17 @@
   },
   "TCCC": {
     "symbol": "TCCC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TCIF": {
     "symbol": "TCIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TCJ": {
     "symbol": "TCJ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -38937,7 +38921,7 @@
   },
   "TCMC": {
     "symbol": "TCMC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -38991,7 +38975,7 @@
   },
   "TCOAT": {
     "symbol": "TCOAT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -39045,7 +39029,7 @@
   },
   "TDEX": {
     "symbol": "TDEX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-02-26",
@@ -39075,7 +39059,7 @@
   },
   "TEAM": {
     "symbol": "TEAM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -39129,7 +39113,7 @@
   },
   "TEAMG": {
     "symbol": "TEAMG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -39183,7 +39167,7 @@
   },
   "TEGH": {
     "symbol": "TEGH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -39237,7 +39221,7 @@
   },
   "TEKA": {
     "symbol": "TEKA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -39291,42 +39275,42 @@
   },
   "TEL23": {
     "symbol": "TEL23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TEL80": {
     "symbol": "TEL80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TENCENT01": {
     "symbol": "TENCENT01",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TENCENT06": {
     "symbol": "TENCENT06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TENCENT13": {
     "symbol": "TENCENT13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TENCENT19": {
     "symbol": "TENCENT19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TENCENT80": {
     "symbol": "TENCENT80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TERA": {
     "symbol": "TERA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -39380,12 +39364,12 @@
   },
   "TF": {
     "symbol": "TF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TFFIF": {
     "symbol": "TFFIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -39439,7 +39423,7 @@
   },
   "TFG": {
     "symbol": "TFG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -39493,7 +39477,7 @@
   },
   "TFM": {
     "symbol": "TFM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-30",
@@ -39547,7 +39531,7 @@
   },
   "TFMAMA": {
     "symbol": "TFMAMA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -39601,17 +39585,17 @@
   },
   "TFUND": {
     "symbol": "TFUND",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TGCI": {
     "symbol": "TGCI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TGE": {
     "symbol": "TGE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -39665,7 +39649,7 @@
   },
   "TGH": {
     "symbol": "TGH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -39719,17 +39703,17 @@
   },
   "TGROWTH": {
     "symbol": "TGROWTH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TH100": {
     "symbol": "TH100",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "THAI": {
     "symbol": "THAI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -39783,12 +39767,12 @@
   },
   "THAIBEV19": {
     "symbol": "THAIBEV19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "THANA": {
     "symbol": "THANA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -39842,7 +39826,7 @@
   },
   "THANI": {
     "symbol": "THANI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -39896,7 +39880,7 @@
   },
   "THCOM": {
     "symbol": "THCOM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -39950,7 +39934,7 @@
   },
   "THE": {
     "symbol": "THE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -40004,7 +39988,7 @@
   },
   "THG": {
     "symbol": "THG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -40058,12 +40042,12 @@
   },
   "THIF": {
     "symbol": "THIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "THIP": {
     "symbol": "THIP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -40117,7 +40101,7 @@
   },
   "THMUI": {
     "symbol": "THMUI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -40171,7 +40155,7 @@
   },
   "THRE": {
     "symbol": "THRE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -40225,7 +40209,7 @@
   },
   "THREL": {
     "symbol": "THREL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40279,17 +40263,17 @@
   },
   "TIC": {
     "symbol": "TIC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TIC-P": {
     "symbol": "TIC-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TIDLOR": {
     "symbol": "TIDLOR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -40335,7 +40319,7 @@
   },
   "TIF1": {
     "symbol": "TIF1",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-21",
@@ -40389,7 +40373,7 @@
   },
   "TIGER": {
     "symbol": "TIGER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -40443,12 +40427,12 @@
   },
   "TIP": {
     "symbol": "TIP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TIPCO": {
     "symbol": "TIPCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40502,7 +40486,7 @@
   },
   "TIPH": {
     "symbol": "TIPH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40556,7 +40540,7 @@
   },
   "TISCO": {
     "symbol": "TISCO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40610,12 +40594,12 @@
   },
   "TISCO-P": {
     "symbol": "TISCO-P",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TITLE": {
     "symbol": "TITLE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -40669,7 +40653,7 @@
   },
   "TK": {
     "symbol": "TK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -40723,7 +40707,7 @@
   },
   "TKC": {
     "symbol": "TKC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -40777,7 +40761,7 @@
   },
   "TKN": {
     "symbol": "TKN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40831,7 +40815,7 @@
   },
   "TKS": {
     "symbol": "TKS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40885,7 +40869,7 @@
   },
   "TKT": {
     "symbol": "TKT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -40939,7 +40923,7 @@
   },
   "TLHPF": {
     "symbol": "TLHPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -40993,7 +40977,7 @@
   },
   "TLI": {
     "symbol": "TLI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -41047,12 +41031,12 @@
   },
   "TLOGIS": {
     "symbol": "TLOGIS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TM": {
     "symbol": "TM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -41106,7 +41090,7 @@
   },
   "TMAN": {
     "symbol": "TMAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -41160,7 +41144,7 @@
   },
   "TMD": {
     "symbol": "TMD",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -41214,12 +41198,12 @@
   },
   "TME23": {
     "symbol": "TME23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TMI": {
     "symbol": "TMI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -41273,7 +41257,7 @@
   },
   "TMILL": {
     "symbol": "TMILL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -41327,7 +41311,7 @@
   },
   "TMT": {
     "symbol": "TMT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -41381,7 +41365,7 @@
   },
   "TMW": {
     "symbol": "TMW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-28",
@@ -41435,7 +41419,7 @@
   },
   "TNDT": {
     "symbol": "TNDT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -41489,8 +41473,16 @@
   },
   "TNH": {
     "symbol": "TNH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
+      {
+        "date": "2026-06-08",
+        "headline": "Financial Statement Quarter 3/2026 (Reviewed)",
+        "period": "Q3/2026",
+        "isAnnual": false,
+        "isAudited": false,
+        "isRevised": false
+      },
       {
         "date": "2026-03-17",
         "headline": "Financial Statement Quarter 2/2026 (Reviewed)",
@@ -41530,20 +41522,12 @@
         "isAnnual": false,
         "isAudited": false,
         "isRevised": false
-      },
-      {
-        "date": "2024-12-12",
-        "headline": "Financial Statement Quarter 1/2025 (Reviewed)",
-        "period": "Q1/2025",
-        "isAnnual": false,
-        "isAudited": false,
-        "isRevised": false
       }
     ]
   },
   "TNITY": {
     "symbol": "TNITY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -41597,7 +41581,7 @@
   },
   "TNL": {
     "symbol": "TNL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -41651,7 +41635,7 @@
   },
   "TNP": {
     "symbol": "TNP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -41705,7 +41689,7 @@
   },
   "TNPC": {
     "symbol": "TNPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -41759,7 +41743,7 @@
   },
   "TNPF": {
     "symbol": "TNPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -41813,7 +41797,7 @@
   },
   "TNR": {
     "symbol": "TNR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -41867,7 +41851,7 @@
   },
   "TOA": {
     "symbol": "TOA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -41921,7 +41905,7 @@
   },
   "TOG": {
     "symbol": "TOG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -41975,7 +41959,7 @@
   },
   "TOP": {
     "symbol": "TOP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -42029,7 +42013,7 @@
   },
   "TOPP": {
     "symbol": "TOPP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -42083,12 +42067,12 @@
   },
   "TOYOTA80": {
     "symbol": "TOYOTA80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TPA": {
     "symbol": "TPA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -42142,7 +42126,7 @@
   },
   "TPAC": {
     "symbol": "TPAC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -42196,7 +42180,7 @@
   },
   "TPBI": {
     "symbol": "TPBI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-06",
@@ -42250,12 +42234,12 @@
   },
   "TPC": {
     "symbol": "TPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TPCH": {
     "symbol": "TPCH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -42309,7 +42293,7 @@
   },
   "TPCS": {
     "symbol": "TPCS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -42363,7 +42347,7 @@
   },
   "TPIPL": {
     "symbol": "TPIPL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -42417,7 +42401,7 @@
   },
   "TPIPP": {
     "symbol": "TPIPP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -42471,7 +42455,7 @@
   },
   "TPLAS": {
     "symbol": "TPLAS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -42525,7 +42509,7 @@
   },
   "TPOLY": {
     "symbol": "TPOLY",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -42579,7 +42563,7 @@
   },
   "TPP": {
     "symbol": "TPP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -42633,7 +42617,7 @@
   },
   "TPRIME": {
     "symbol": "TPRIME",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -42687,7 +42671,7 @@
   },
   "TPS": {
     "symbol": "TPS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -42741,7 +42725,7 @@
   },
   "TQM": {
     "symbol": "TQM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -42795,7 +42779,7 @@
   },
   "TQR": {
     "symbol": "TQR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -42849,7 +42833,7 @@
   },
   "TR": {
     "symbol": "TR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-27",
@@ -42903,7 +42887,7 @@
   },
   "TRC": {
     "symbol": "TRC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -42957,17 +42941,17 @@
   },
   "TRIF": {
     "symbol": "TRIF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TRIPCOM80": {
     "symbol": "TRIPCOM80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TRITN": {
     "symbol": "TRITN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -43021,7 +43005,7 @@
   },
   "TRP": {
     "symbol": "TRP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -43075,7 +43059,7 @@
   },
   "TRT": {
     "symbol": "TRT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -43129,7 +43113,7 @@
   },
   "TRU": {
     "symbol": "TRU",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -43183,7 +43167,7 @@
   },
   "TRUBB": {
     "symbol": "TRUBB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -43237,7 +43221,7 @@
   },
   "TRUE": {
     "symbol": "TRUE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -43291,12 +43275,12 @@
   },
   "TRUEE": {
     "symbol": "TRUEE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TRV": {
     "symbol": "TRV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -43350,12 +43334,12 @@
   },
   "TRVUS06": {
     "symbol": "TRVUS06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TSC": {
     "symbol": "TSC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -43409,7 +43393,7 @@
   },
   "TSE": {
     "symbol": "TSE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -43463,7 +43447,7 @@
   },
   "TSR": {
     "symbol": "TSR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-20",
@@ -43517,7 +43501,7 @@
   },
   "TSTE": {
     "symbol": "TSTE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -43571,7 +43555,7 @@
   },
   "TSTH": {
     "symbol": "TSTH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-04-28",
@@ -43625,7 +43609,7 @@
   },
   "TTA": {
     "symbol": "TTA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -43679,7 +43663,7 @@
   },
   "TTB": {
     "symbol": "TTB",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -43733,7 +43717,7 @@
   },
   "TTCL": {
     "symbol": "TTCL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -43787,7 +43771,7 @@
   },
   "TTI": {
     "symbol": "TTI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -43841,12 +43825,12 @@
   },
   "TTL": {
     "symbol": "TTL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TTLPF": {
     "symbol": "TTLPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -43900,7 +43884,7 @@
   },
   "TTT": {
     "symbol": "TTT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-29",
@@ -43954,12 +43938,12 @@
   },
   "TTTM": {
     "symbol": "TTTM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TTW": {
     "symbol": "TTW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -44013,7 +43997,7 @@
   },
   "TU": {
     "symbol": "TU",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-05",
@@ -44067,7 +44051,7 @@
   },
   "TURTLE": {
     "symbol": "TURTLE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-19",
@@ -44121,7 +44105,7 @@
   },
   "TVDH": {
     "symbol": "TVDH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -44175,7 +44159,7 @@
   },
   "TVH": {
     "symbol": "TVH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -44229,12 +44213,12 @@
   },
   "TVI": {
     "symbol": "TVI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TVO": {
     "symbol": "TVO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -44288,7 +44272,7 @@
   },
   "TVT": {
     "symbol": "TVT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -44342,7 +44326,7 @@
   },
   "TWP": {
     "symbol": "TWP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -44396,7 +44380,7 @@
   },
   "TWPC": {
     "symbol": "TWPC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44450,7 +44434,7 @@
   },
   "TWZ": {
     "symbol": "TWZ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -44504,7 +44488,7 @@
   },
   "UAC": {
     "symbol": "UAC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -44558,7 +44542,7 @@
   },
   "UBA": {
     "symbol": "UBA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44612,7 +44596,7 @@
   },
   "UBE": {
     "symbol": "UBE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44666,7 +44650,7 @@
   },
   "UBIS": {
     "symbol": "UBIS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44720,7 +44704,7 @@
   },
   "UEC": {
     "symbol": "UEC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44774,7 +44758,7 @@
   },
   "UKEM": {
     "symbol": "UKEM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -44828,7 +44812,7 @@
   },
   "UMI": {
     "symbol": "UMI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44882,17 +44866,17 @@
   },
   "UNH19": {
     "symbol": "UNH19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "UNIPF": {
     "symbol": "UNIPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "UNIQ": {
     "symbol": "UNIQ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -44946,12 +44930,12 @@
   },
   "UNIQLO80": {
     "symbol": "UNIQLO80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "UNIX": {
     "symbol": "UNIX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -44973,17 +44957,17 @@
   },
   "UOB19": {
     "symbol": "UOB19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "UOB8TF": {
     "symbol": "UOB8TF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "UOBKH": {
     "symbol": "UOBKH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-02-26",
@@ -45029,7 +45013,7 @@
   },
   "UP": {
     "symbol": "UP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -45083,7 +45067,7 @@
   },
   "UPF": {
     "symbol": "UPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -45137,7 +45121,7 @@
   },
   "UPOIC": {
     "symbol": "UPOIC",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -45191,17 +45175,17 @@
   },
   "URBNPF": {
     "symbol": "URBNPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "USTR24": {
     "symbol": "USTR24",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "UTP": {
     "symbol": "UTP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -45255,7 +45239,7 @@
   },
   "UV": {
     "symbol": "UV",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -45309,7 +45293,7 @@
   },
   "UVAN": {
     "symbol": "UVAN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -45363,7 +45347,7 @@
   },
   "VARO": {
     "symbol": "VARO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -45417,7 +45401,7 @@
   },
   "VAYU1": {
     "symbol": "VAYU1",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-03-25",
@@ -45447,17 +45431,17 @@
   },
   "VCB11": {
     "symbol": "VCB11",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VCB19": {
     "symbol": "VCB19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VCOM": {
     "symbol": "VCOM",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -45511,12 +45495,12 @@
   },
   "VENTURE19": {
     "symbol": "VENTURE19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VGI": {
     "symbol": "VGI",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-25",
@@ -45570,7 +45554,7 @@
   },
   "VIBHA": {
     "symbol": "VIBHA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -45624,7 +45608,7 @@
   },
   "VIH": {
     "symbol": "VIH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -45678,17 +45662,17 @@
   },
   "VISA06": {
     "symbol": "VISA06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VISA80": {
     "symbol": "VISA80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VL": {
     "symbol": "VL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -45742,7 +45726,7 @@
   },
   "VNG": {
     "symbol": "VNG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -45796,17 +45780,17 @@
   },
   "VNM19": {
     "symbol": "VNM19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VNT": {
     "symbol": "VNT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "VRANDA": {
     "symbol": "VRANDA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -45860,7 +45844,7 @@
   },
   "VS": {
     "symbol": "VS",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -45914,12 +45898,12 @@
   },
   "VT03": {
     "symbol": "VT03",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "WACOAL": {
     "symbol": "WACOAL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -45973,7 +45957,7 @@
   },
   "WARRIX": {
     "symbol": "WARRIX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -46027,7 +46011,7 @@
   },
   "WASH": {
     "symbol": "WASH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-12",
@@ -46073,7 +46057,7 @@
   },
   "WFX": {
     "symbol": "WFX",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -46127,12 +46111,12 @@
   },
   "WG": {
     "symbol": "WG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "WGE": {
     "symbol": "WGE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -46186,7 +46170,7 @@
   },
   "WHA": {
     "symbol": "WHA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -46240,7 +46224,7 @@
   },
   "WHABT": {
     "symbol": "WHABT",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-22",
@@ -46294,7 +46278,7 @@
   },
   "WHAIR": {
     "symbol": "WHAIR",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -46348,12 +46332,12 @@
   },
   "WHAPF": {
     "symbol": "WHAPF",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "WHART": {
     "symbol": "WHART",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -46407,7 +46391,7 @@
   },
   "WHAUP": {
     "symbol": "WHAUP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -46461,7 +46445,7 @@
   },
   "WICE": {
     "symbol": "WICE",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -46515,7 +46499,7 @@
   },
   "WIIK": {
     "symbol": "WIIK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -46569,7 +46553,7 @@
   },
   "WINDOW": {
     "symbol": "WINDOW",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-07",
@@ -46623,7 +46607,7 @@
   },
   "WINMED": {
     "symbol": "WINMED",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -46677,7 +46661,7 @@
   },
   "WINNER": {
     "symbol": "WINNER",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -46731,12 +46715,12 @@
   },
   "WMT06": {
     "symbol": "WMT06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "WORK": {
     "symbol": "WORK",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-08",
@@ -46790,7 +46774,7 @@
   },
   "WP": {
     "symbol": "WP",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-13",
@@ -46844,7 +46828,7 @@
   },
   "WPH": {
     "symbol": "WPH",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -46898,7 +46882,7 @@
   },
   "WSOL": {
     "symbol": "WSOL",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-03-06",
@@ -46944,12 +46928,12 @@
   },
   "WUXIAT80": {
     "symbol": "WUXIAT80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "XO": {
     "symbol": "XO",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -47003,7 +46987,7 @@
   },
   "XPG": {
     "symbol": "XPG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -47057,7 +47041,7 @@
   },
   "XYZ": {
     "symbol": "XYZ",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -47111,7 +47095,7 @@
   },
   "YGG": {
     "symbol": "YGG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -47165,7 +47149,7 @@
   },
   "YONG": {
     "symbol": "YONG",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-11",
@@ -47219,7 +47203,7 @@
   },
   "YUASA": {
     "symbol": "YUASA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -47273,7 +47257,7 @@
   },
   "ZEN": {
     "symbol": "ZEN",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-15",
@@ -47327,7 +47311,7 @@
   },
   "ZIGA": {
     "symbol": "ZIGA",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": [
       {
         "date": "2026-05-14",
@@ -47381,137 +47365,157 @@
   },
   "ZJINNO80": {
     "symbol": "ZJINNO80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ADVANT19": {
     "symbol": "ADVANT19",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "AIA06": {
     "symbol": "AIA06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ANTA23": {
     "symbol": "ANTA23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GANFENG23": {
     "symbol": "GANFENG23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GOOG23": {
     "symbol": "GOOG23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "MSFT23": {
     "symbol": "MSFT23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NEM23": {
     "symbol": "NEM23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "POPMART23": {
     "symbol": "POPMART23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "TENCENT23": {
     "symbol": "TENCENT23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GEELY80": {
     "symbol": "GEELY80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GEV80": {
     "symbol": "GEV80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KINGSOFT23": {
     "symbol": "KINGSOFT23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NEE80": {
     "symbol": "NEE80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ZIJIN80": {
     "symbol": "ZIJIN80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BABA06": {
     "symbol": "BABA06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "BABA23": {
     "symbol": "BABA23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CHMOBILE23": {
     "symbol": "CHMOBILE23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GEELY06": {
     "symbol": "GEELY06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "KUAISH06": {
     "symbol": "KUAISH06",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "NVDA23": {
     "symbol": "NVDA23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ZIJIN13": {
     "symbol": "ZIJIN13",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "ZIJIN23": {
     "symbol": "ZIJIN23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "CNRE80": {
     "symbol": "CNRE80",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "GEV23": {
     "symbol": "GEV23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "LRCX23": {
     "symbol": "LRCX23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
     "releases": []
   },
   "SEAGATE23": {
     "symbol": "SEAGATE23",
-    "asOf": "2026-06-07",
+    "asOf": "2026-06-14",
+    "releases": []
+  },
+  "AVGO23": {
+    "symbol": "AVGO23",
+    "asOf": "2026-06-14",
+    "releases": []
+  },
+  "META23": {
+    "symbol": "META23",
+    "asOf": "2026-06-14",
+    "releases": []
+  },
+  "MIDEA80": {
+    "symbol": "MIDEA80",
+    "asOf": "2026-06-14",
+    "releases": []
+  },
+  "VRT23": {
+    "symbol": "VRT23",
+    "asOf": "2026-06-14",
     "releases": []
   }
 }

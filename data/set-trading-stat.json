@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-06-07T04:31:49.558Z",
+  "asOf": "2026-06-14T04:31:59.712Z",
   "data": {
     "AMATA": [
       {
@@ -68480,6 +68480,70 @@
         "dividendPayoutRatio": null,
         "marketCap": 125494080,
         "listedShare": 3968000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AVGO23": [
+      {
+        "period": "YTD",
+        "date": "2026-06-12",
+        "close": 2.9,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 26847040,
+        "listedShare": 4098000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "META23": [
+      {
+        "period": "YTD",
+        "date": "2026-06-12",
+        "close": 2.24,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 14579712,
+        "listedShare": 4098000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MIDEA80": [
+      {
+        "period": "YTD",
+        "date": "2026-06-12",
+        "close": 3.86,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3126600,
+        "listedShare": 2900000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "VRT23": [
+      {
+        "period": "YTD",
+        "date": "2026-06-12",
+        "close": 2.88,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 108957888,
+        "listedShare": 4000000000,
         "beta": null,
         "financialDate": null
       }
