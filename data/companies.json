@@ -122,6 +122,14 @@
     "isIFF": false
   },
   {
+    "symbol": "ABBV80",
+    "name": "Depositary Receipt on ABBV Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "ABFTH",
     "name": "THE ABF THAILAND BOND INDEX FUND",
     "currency": "Baht",
@@ -723,6 +731,14 @@
     "securityType": "S",
     "industry": "AGRO",
     "sector": "FOOD",
+    "isIFF": false
+  },
+  {
+    "symbol": "ASICS23",
+    "name": "Depositary Receipt on ASICS Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -4065,6 +4081,14 @@
     "isIFF": false
   },
   {
+    "symbol": "JPANIME24",
+    "name": "Depositary Receipt on JPANIME ETF Issued by FSS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "JPARK",
     "name": "JENKONGKLAI PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -4084,6 +4108,14 @@
   {
     "symbol": "JPMUS19",
     "name": "Depositary Receipt on JPMUS Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "JPROBOAI24",
+    "name": "Depositary Receipt on JPROBOAI ETF Issued by FSS",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -5717,6 +5749,14 @@
   {
     "symbol": "NIKE80",
     "name": "Depositary Receipt on NIKE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "NIKKEI80",
+    "name": "Depositary Receipt on NIKKEI ETF Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -10225,6 +10265,14 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "MEDIA",
+    "isIFF": false
+  },
+  {
+    "symbol": "VHM19",
+    "name": "Depositary Receipt on VHM Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
