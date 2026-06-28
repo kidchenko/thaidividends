@@ -5350,6 +5350,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MONTAGE80",
+    "name": "Depositary Receipt on MONTAGE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MONTRI",
     "name": "101 MONTRI STORAGE PROPERTY FUND",
     "currency": "Baht"
@@ -5380,6 +5388,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "SERVICE",
+    "isIFF": false
+  },
+  {
+    "symbol": "MOUTAI80",
+    "name": "Depositary Receipt on MOUTAI Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -5590,6 +5606,22 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "MEDIA",
+    "isIFF": false
+  },
+  {
+    "symbol": "NAURA23",
+    "name": "Depositary Receipt on NAURA Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "NAURA80",
+    "name": "Depositary Receipt on NAURA Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
