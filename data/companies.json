@@ -5175,6 +5175,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MICRON23",
+    "name": "Depositary Receipt on MICRON Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MICRON80",
     "name": "Depositary Receipt on MICRON Issued by KTB",
     "currency": "Baht",
@@ -7778,6 +7786,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "TECH",
+    "isIFF": false
+  },
+  {
+    "symbol": "SIL03",
+    "name": "Depositary Receipt on SIL ETF Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
