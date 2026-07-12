@@ -494,6 +494,14 @@
     "isIFF": false
   },
   {
+    "symbol": "AMAT19",
+    "name": "Depositary Receipt on AMAT Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "AMATA",
     "name": "AMATA CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -1638,6 +1646,14 @@
     "isIFF": false
   },
   {
+    "symbol": "CAT19",
+    "name": "Depositary Receipt on CAT Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "CATL01",
     "name": "Depositary Receipt on CATL Issued by BLS",
     "currency": "Baht",
@@ -2417,6 +2433,14 @@
     "securityType": "S",
     "industry": "INDUS",
     "sector": "AUTO",
+    "isIFF": false
+  },
+  {
+    "symbol": "CYPC80",
+    "name": "Depositary Receipt on CYPC Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -3673,6 +3697,14 @@
     "symbol": "IFEC",
     "name": "INTER FAR EAST ENERGY CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht"
+  },
+  {
+    "symbol": "IFLYTEK80",
+    "name": "Depositary Receipt on IFLYTEK Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
   },
   {
     "symbol": "IFS",
@@ -7744,6 +7776,14 @@
     "securityType": "S",
     "industry": "SERVICE",
     "sector": "TOURISM",
+    "isIFF": false
+  },
+  {
+    "symbol": "SHINCHEM19",
+    "name": "Depositary Receipt on SHINCHEM Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {

@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-05T04:24:09.109Z",
+  "asOf": "2026-07-12T05:50:26.351Z",
   "data": {
     "AMATA": [
       {
@@ -68764,6 +68764,86 @@
         "dividendPayoutRatio": null,
         "marketCap": 32749600,
         "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AMAT19": [
+      {
+        "period": "YTD",
+        "date": "2026-07-10",
+        "close": 4.8,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5260800,
+        "listedShare": 3425000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "CAT19": [
+      {
+        "period": "YTD",
+        "date": "2026-07-10",
+        "close": 6.3,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3465000,
+        "listedShare": 2113000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "CYPC80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-10",
+        "close": 13.7,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5014200,
+        "listedShare": 800000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "IFLYTEK80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-10",
+        "close": 2.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1806000,
+        "listedShare": 4500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SHINCHEM19": [
+      {
+        "period": "YTD",
+        "date": "2026-07-10",
+        "close": 3.02,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4228000,
+        "listedShare": 4094000000,
         "beta": null,
         "financialDate": null
       }
