@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-13T14:03:48.401Z",
+  "asOf": "2026-07-14T13:06:31.386Z",
   "prices": {
     "1DIV": {
       "close": 14.16,
@@ -20,10 +20,10 @@
       "asOfDate": "2026-07-13"
     },
     "88TH": {
-      "close": 4.26,
-      "change": -0.03999996,
-      "changePercent": -0.93023163,
-      "asOfDate": "2026-07-13"
+      "close": 4.22,
+      "change": -0.04000044,
+      "changePercent": -0.93897736,
+      "asOfDate": "2026-07-14"
     },
     "A": {
       "close": 2.72,
@@ -365,6 +365,12 @@
       "close": 1.88,
       "change": -0.00999999,
       "changePercent": -0.52910006,
+      "asOfDate": "2026-07-13"
+    },
+    "ANTA23": {
+      "close": 1.95,
+      "change": 0.0200001,
+      "changePercent": 1.0362747,
       "asOfDate": "2026-07-13"
     },
     "AOT": {
@@ -2144,100 +2150,100 @@
       "asOfDate": "2026-07-06"
     },
     "HAIERS19": {
-      "close": 8.55,
-      "change": -0.09999943,
-      "changePercent": -1.1560628,
-      "asOfDate": "2026-07-13"
+      "close": 8.6,
+      "change": 0.05000019,
+      "changePercent": 0.58479756,
+      "asOfDate": "2026-07-14"
     },
     "HANA": {
-      "close": 37.75,
-      "change": 0.25,
-      "changePercent": 0.6666667,
-      "asOfDate": "2026-07-13"
+      "close": 37,
+      "change": -0.75,
+      "changePercent": -1.986755,
+      "asOfDate": "2026-07-14"
     },
     "HANSOH19": {
       "close": 5.6,
-      "change": 0.049999714,
-      "changePercent": 0.9008957,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "HARN": {
       "close": 2.08,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "HENG": {
-      "close": 0.95,
-      "change": 0.01999998,
-      "changePercent": 2.1505356,
-      "asOfDate": "2026-07-13"
+      "close": 0.94,
+      "change": -0.00999999,
+      "changePercent": -1.0526305,
+      "asOfDate": "2026-07-14"
     },
     "HERMES80": {
-      "close": 6.25,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 6.3,
+      "change": 0.05000019,
+      "changePercent": 0.80000305,
+      "asOfDate": "2026-07-14"
     },
     "HFT": {
-      "close": 3.98,
-      "change": -0.01999998,
-      "changePercent": -0.49999952,
-      "asOfDate": "2026-07-13"
+      "close": 4,
+      "change": 0.01999998,
+      "changePercent": 0.5025121,
+      "asOfDate": "2026-07-14"
     },
     "HK01": {
       "close": 20.9,
-      "change": -0.10000038,
-      "changePercent": -0.4761923,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "HK13": {
       "close": 5.6,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "HKCE01": {
       "close": 23.6,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "HKEX23": {
-      "close": 2.12,
-      "change": 0.01999998,
-      "changePercent": 0.95238006,
-      "asOfDate": "2026-07-13"
+      "close": 2.1,
+      "change": -0.01999998,
+      "changePercent": -0.9433954,
+      "asOfDate": "2026-07-14"
     },
     "HL": {
       "close": 5.8,
-      "change": 0.05000019,
-      "changePercent": 0.8695685,
-      "asOfDate": "2026-07-13"
-    },
-    "HMPRO": {
-      "close": 6.55,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "HMPRO": {
+      "close": 6.65,
+      "change": 0.099999905,
+      "changePercent": 1.5267161,
+      "asOfDate": "2026-07-14"
     },
     "HONDA19": {
-      "close": 3.08,
-      "change": -0.01999998,
-      "changePercent": -0.6451607,
-      "asOfDate": "2026-07-13"
+      "close": 3.1,
+      "change": 0.01999998,
+      "changePercent": 0.64935005,
+      "asOfDate": "2026-07-14"
     },
     "HPF": {
-      "close": 6.2,
-      "change": 0.049999714,
-      "changePercent": 0.8130034,
-      "asOfDate": "2026-07-13"
+      "close": 6.25,
+      "change": 0.05000019,
+      "changePercent": 0.8064547,
+      "asOfDate": "2026-07-14"
     },
     "HPG19": {
-      "close": 2.9,
-      "change": -0.03999996,
-      "changePercent": -1.3605429,
-      "asOfDate": "2026-07-13"
+      "close": 2.86,
+      "change": -0.0400002,
+      "changePercent": -1.3793172,
+      "asOfDate": "2026-07-14"
     },
     "HPT": {
       "close": 0.14,
@@ -2246,45 +2252,45 @@
       "asOfDate": "2026-07-03"
     },
     "HSHD23": {
-      "close": 6.4,
-      "change": 0.05000019,
-      "changePercent": 0.78740454,
-      "asOfDate": "2026-07-13"
+      "close": 6.35,
+      "change": -0.05000019,
+      "changePercent": -0.781253,
+      "asOfDate": "2026-07-14"
     },
     "HTC": {
-      "close": 15.8,
+      "close": 15.7,
+      "change": -0.10000038,
+      "changePercent": -0.6329138,
+      "asOfDate": "2026-07-14"
+    },
+    "HTECH": {
+      "close": 3.9,
+      "change": 0.1400001,
+      "changePercent": 3.723407,
+      "asOfDate": "2026-07-14"
+    },
+    "HUMAN": {
+      "close": 4.8,
+      "change": -0.01999998,
+      "changePercent": -0.41493735,
+      "asOfDate": "2026-07-14"
+    },
+    "HYDROGEN": {
+      "close": 8.15,
       "change": 0,
       "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
-    "HTECH": {
-      "close": 3.76,
-      "change": -0.03999996,
-      "changePercent": -1.0526305,
-      "asOfDate": "2026-07-13"
-    },
-    "HUMAN": {
-      "close": 4.82,
-      "change": -0.07999992,
-      "changePercent": -1.6326514,
-      "asOfDate": "2026-07-13"
-    },
-    "HYDROGEN": {
-      "close": 8.15,
-      "change": -0.10000038,
-      "changePercent": -1.2121258,
-      "asOfDate": "2026-07-13"
-    },
     "I2": {
-      "close": 0.82,
+      "close": 0.81,
       "change": -0.00999999,
-      "changePercent": -1.2048181,
-      "asOfDate": "2026-07-13"
+      "changePercent": -1.219511,
+      "asOfDate": "2026-07-14"
     },
     "IBM06": {
       "close": 3.88,
       "change": -0.07999992,
-      "changePercent": -2.0202003,
+      "changePercent": -2.0202,
       "asOfDate": "2026-07-13"
     },
     "ICBC06": {
@@ -2295,459 +2301,459 @@
     },
     "ICBC19": {
       "close": 2.92,
-      "change": 0.08000016,
-      "changePercent": 2.8169072,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "ICC": {
       "close": 24.5,
-      "change": 0.5,
-      "changePercent": 2.0833335,
-      "asOfDate": "2026-07-13"
-    },
-    "ICHI": {
-      "close": 14.3,
-      "change": -0.09999943,
-      "changePercent": -0.6944405,
-      "asOfDate": "2026-07-13"
-    },
-    "ICN": {
-      "close": 2.26,
-      "change": 0.1400001,
-      "changePercent": 6.603779,
-      "asOfDate": "2026-07-13"
-    },
-    "IDG": {
-      "close": 1.27,
-      "change": -0.01999998,
-      "changePercent": -1.5503862,
-      "asOfDate": "2026-07-13"
-    },
-    "IFLYTEK80": {
-      "close": 2.08,
-      "change": -0.01999998,
-      "changePercent": -0.95238006,
-      "asOfDate": "2026-07-13"
-    },
-    "IFS": {
-      "close": 1.92,
       "change": 0,
       "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
-    "IHL": {
-      "close": 1.42,
+    "ICHI": {
+      "close": 14.3,
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
+    },
+    "ICN": {
+      "close": 2.2,
+      "change": -0.059999943,
+      "changePercent": -2.6548648,
+      "asOfDate": "2026-07-14"
+    },
+    "IDG": {
+      "close": 1.28,
       "change": 0.00999999,
-      "changePercent": 0.70921916,
-      "asOfDate": "2026-07-13"
+      "changePercent": 0.78740084,
+      "asOfDate": "2026-07-14"
+    },
+    "IFLYTEK80": {
+      "close": 2,
+      "change": -0.07999992,
+      "changePercent": -3.8461504,
+      "asOfDate": "2026-07-14"
+    },
+    "IFS": {
+      "close": 1.91,
+      "change": -0.00999999,
+      "changePercent": -0.52083284,
+      "asOfDate": "2026-07-14"
+    },
+    "IHL": {
+      "close": 1.41,
+      "change": -0.00999999,
+      "changePercent": -0.7042247,
+      "asOfDate": "2026-07-14"
     },
     "IIG": {
-      "close": 1.39,
-      "change": 0.01999998,
-      "changePercent": 1.4598526,
-      "asOfDate": "2026-07-13"
+      "close": 1.63,
+      "change": 0.24000001,
+      "changePercent": 17.266188,
+      "asOfDate": "2026-07-14"
     },
     "III": {
-      "close": 4.36,
-      "change": 0.03999996,
-      "changePercent": 0.925925,
-      "asOfDate": "2026-07-13"
+      "close": 4.32,
+      "change": -0.03999996,
+      "changePercent": -0.9174303,
+      "asOfDate": "2026-07-14"
     },
     "ILINK": {
-      "close": 5.15,
-      "change": -0.049999714,
-      "changePercent": -0.961533,
-      "asOfDate": "2026-07-13"
+      "close": 5.1,
+      "change": -0.05000019,
+      "changePercent": -0.96154207,
+      "asOfDate": "2026-07-14"
     },
     "ILM": {
-      "close": 13.1,
-      "change": 0.10000038,
-      "changePercent": 0.7692337,
-      "asOfDate": "2026-07-13"
+      "close": 13.2,
+      "change": 0.09999943,
+      "changePercent": 0.7692263,
+      "asOfDate": "2026-07-14"
     },
     "IMH": {
       "close": 3.1,
-      "change": 0.01999998,
-      "changePercent": 0.64935005,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "IMPACT": {
       "close": 11.9,
-      "change": 0.19999981,
-      "changePercent": 1.7094002,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "IND": {
-      "close": 1.04,
-      "change": 0.07999998,
-      "changePercent": 8.333332,
-      "asOfDate": "2026-07-13"
+      "close": 1,
+      "change": -0.03999996,
+      "changePercent": -3.8461504,
+      "asOfDate": "2026-07-14"
     },
     "INET": {
-      "close": 4.3,
-      "change": 0.01999998,
-      "changePercent": 0.46728924,
-      "asOfDate": "2026-07-13"
+      "close": 4.26,
+      "change": -0.03999996,
+      "changePercent": -0.9345786,
+      "asOfDate": "2026-07-14"
     },
     "INETREIT": {
       "close": 13,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "INGRS": {
-      "close": 0.11,
-      "change": 0.009999998,
-      "changePercent": 9.999998,
-      "asOfDate": "2026-07-13"
+      "close": 0.1,
+      "change": -0.009999998,
+      "changePercent": -8.333331,
+      "asOfDate": "2026-07-14"
     },
     "INOX": {
       "close": 4.14,
-      "change": 0.01999998,
-      "changePercent": 0.48543644,
-      "asOfDate": "2026-07-13"
-    },
-    "INSET": {
-      "close": 4.58,
       "change": 0,
       "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
+    "INSET": {
+      "close": 4.52,
+      "change": -0.059999943,
+      "changePercent": -1.3100424,
+      "asOfDate": "2026-07-14"
+    },
     "INSURE": {
       "close": 51.25,
-      "change": -0.25,
-      "changePercent": -0.4854369,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "IP": {
       "close": 4.84,
-      "change": 0.01999998,
-      "changePercent": 0.41493738,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "IRC": {
       "close": 12,
-      "change": 0.10000038,
-      "changePercent": 0.84033936,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "IRCP": {
-      "close": 0.26,
-      "change": -0.01000002,
-      "changePercent": -3.7037113,
-      "asOfDate": "2026-07-13"
+      "close": 0.27,
+      "change": 0.01000002,
+      "changePercent": 3.8461618,
+      "asOfDate": "2026-07-14"
     },
     "IROYAL": {
-      "close": 4.66,
-      "change": 0.059999943,
-      "changePercent": 1.3043466,
-      "asOfDate": "2026-07-13"
+      "close": 4.88,
+      "change": 0.22000027,
+      "changePercent": 4.721036,
+      "asOfDate": "2026-07-14"
     },
     "IRPC": {
-      "close": 1.92,
-      "change": 0.059999943,
-      "changePercent": 3.2258034,
-      "asOfDate": "2026-07-13"
+      "close": 1.94,
+      "change": 0.0200001,
+      "changePercent": 1.0471257,
+      "asOfDate": "2026-07-14"
     },
     "ISSARA": {
       "close": 6.6,
-      "change": 0.049999714,
-      "changePercent": 0.7633544,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "IT": {
       "close": 6.7,
-      "change": 0.2999997,
-      "changePercent": 4.6874957,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "ITC": {
       "close": 16.2,
-      "change": 0.10000038,
-      "changePercent": 0.62112033,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "ITD": {
       "close": 0.42,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "ITEL": {
-      "close": 1.76,
-      "change": -0.01999998,
-      "changePercent": -1.1235945,
-      "asOfDate": "2026-07-13"
+      "close": 1.75,
+      "change": -0.00999999,
+      "changePercent": -0.5681813,
+      "asOfDate": "2026-07-14"
     },
     "ITNS": {
-      "close": 1.8,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.78,
+      "change": -0.01999998,
+      "changePercent": -1.1111101,
+      "asOfDate": "2026-07-14"
     },
     "ITOCHU19": {
-      "close": 6.45,
-      "change": -0.05000019,
-      "changePercent": -0.7692337,
-      "asOfDate": "2026-07-13"
+      "close": 6.55,
+      "change": 0.10000038,
+      "changePercent": 1.5748093,
+      "asOfDate": "2026-07-14"
     },
     "ITTHI": {
-      "close": 1.31,
-      "change": -0.0200001,
-      "changePercent": -1.5037669,
-      "asOfDate": "2026-07-13"
+      "close": 1.32,
+      "change": 0.01000011,
+      "changePercent": 0.7633672,
+      "asOfDate": "2026-07-14"
     },
     "IVF": {
       "close": 0.76,
-      "change": 0.01999998,
-      "changePercent": 2.7027001,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "IVL": {
-      "close": 23.1,
-      "change": 0.20000076,
-      "changePercent": 0.8733658,
-      "asOfDate": "2026-07-13"
+      "close": 23.3,
+      "change": 0.19999886,
+      "changePercent": 0.8695602,
+      "asOfDate": "2026-07-14"
     },
     "J": {
-      "close": 0.78,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 0.88,
+      "change": 0.100000024,
+      "changePercent": 12.987016,
+      "asOfDate": "2026-07-14"
     },
     "JAK": {
-      "close": 1.28,
-      "change": -0.060000062,
-      "changePercent": -4.4776163,
-      "asOfDate": "2026-07-13"
+      "close": 1.29,
+      "change": 0.00999999,
+      "changePercent": 0.7812493,
+      "asOfDate": "2026-07-14"
     },
     "JAPAN13": {
-      "close": 5.8,
-      "change": -0.099999905,
-      "changePercent": -1.6949136,
-      "asOfDate": "2026-07-13"
+      "close": 5.85,
+      "change": 0.049999714,
+      "changePercent": 0.862064,
+      "asOfDate": "2026-07-14"
     },
     "JAS": {
-      "close": 1.13,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.12,
+      "change": -0.00999999,
+      "changePercent": -0.8849549,
+      "asOfDate": "2026-07-14"
     },
     "JCT": {
       "close": 83,
-      "change": 0.25,
-      "changePercent": 0.3021148,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "JD80": {
-      "close": 4.78,
-      "change": 0.10000038,
-      "changePercent": 2.1367605,
-      "asOfDate": "2026-07-13"
+      "close": 4.86,
+      "change": 0.07999992,
+      "changePercent": 1.6736385,
+      "asOfDate": "2026-07-14"
     },
     "JDF": {
-      "close": 2.06,
-      "change": 0.07999992,
-      "changePercent": 4.0404005,
-      "asOfDate": "2026-07-13"
+      "close": 2.04,
+      "change": -0.01999998,
+      "changePercent": -0.9708729,
+      "asOfDate": "2026-07-14"
     },
     "JEPI19": {
       "close": 6.35,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "JMART": {
-      "close": 12.1,
-      "change": -0.19999981,
-      "changePercent": -1.6260147,
-      "asOfDate": "2026-07-13"
+      "close": 12.3,
+      "change": 0.19999981,
+      "changePercent": 1.6528909,
+      "asOfDate": "2026-07-14"
     },
     "JMT": {
       "close": 12.6,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "JNJ03": {
-      "close": 4.3,
-      "change": -0.03999996,
-      "changePercent": -0.92165804,
-      "asOfDate": "2026-07-13"
+      "close": 4.32,
+      "change": 0.01999998,
+      "changePercent": 0.46511582,
+      "asOfDate": "2026-07-14"
     },
     "JPANIME24": {
-      "close": 1.24,
-      "change": -0.00999999,
-      "changePercent": -0.7999992,
-      "asOfDate": "2026-07-13"
+      "close": 1.25,
+      "change": 0.00999999,
+      "changePercent": 0.80645084,
+      "asOfDate": "2026-07-14"
     },
     "JPARK": {
-      "close": 3.74,
-      "change": 0.3399999,
-      "changePercent": 9.999997,
-      "asOfDate": "2026-07-13"
+      "close": 3.76,
+      "change": 0.01999998,
+      "changePercent": 0.53475887,
+      "asOfDate": "2026-07-14"
     },
     "JPMUS06": {
       "close": 3.76,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "JPMUS19": {
       "close": 22.5,
-      "change": 0.10000038,
-      "changePercent": 0.44643027,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "JPROBOAI24": {
-      "close": 1.41,
-      "change": -0.060000062,
-      "changePercent": -4.0816364,
-      "asOfDate": "2026-07-13"
+      "close": 1.39,
+      "change": -0.01999998,
+      "changePercent": -1.4184384,
+      "asOfDate": "2026-07-14"
     },
     "JR": {
       "close": 1.76,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "JSP": {
-      "close": 1.79,
-      "change": 0.01999998,
-      "changePercent": 1.1299425,
-      "asOfDate": "2026-07-13"
+      "close": 1.76,
+      "change": -0.029999971,
+      "changePercent": -1.675976,
+      "asOfDate": "2026-07-14"
     },
     "JTS": {
-      "close": 30.75,
-      "change": 0.5,
-      "changePercent": 1.6528925,
-      "asOfDate": "2026-07-13"
+      "close": 30.5,
+      "change": -0.25,
+      "changePercent": -0.8130081,
+      "asOfDate": "2026-07-14"
     },
     "JUBILE": {
       "close": 7.3,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "K": {
-      "close": 1,
-      "change": 0.04000002,
-      "changePercent": 4.166669,
-      "asOfDate": "2026-07-13"
+      "close": 0.96,
+      "change": -0.04000002,
+      "changePercent": -4.000002,
+      "asOfDate": "2026-07-14"
     },
     "KAMART": {
-      "close": 7.75,
-      "change": 0.05000019,
-      "changePercent": 0.64935315,
-      "asOfDate": "2026-07-13"
+      "close": 7.7,
+      "change": -0.05000019,
+      "changePercent": -0.6451638,
+      "asOfDate": "2026-07-14"
     },
     "KASET": {
-      "close": 0.69,
-      "change": 0.00999999,
-      "changePercent": 1.4705869,
-      "asOfDate": "2026-07-13"
+      "close": 0.68,
+      "change": -0.00999999,
+      "changePercent": -1.449274,
+      "asOfDate": "2026-07-14"
     },
     "KBANK": {
-      "close": 233,
-      "change": 1,
-      "changePercent": 0.43103448,
-      "asOfDate": "2026-07-13"
+      "close": 231,
+      "change": -2,
+      "changePercent": -0.8583691,
+      "asOfDate": "2026-07-14"
     },
     "KBS": {
-      "close": 6,
-      "change": 0.05000019,
-      "changePercent": 0.84033936,
-      "asOfDate": "2026-07-13"
+      "close": 5.95,
+      "change": -0.05000019,
+      "changePercent": -0.83333653,
+      "asOfDate": "2026-07-14"
     },
     "KBSPIF": {
-      "close": 9.75,
-      "change": 0.10000038,
-      "changePercent": 1.0362734,
-      "asOfDate": "2026-07-13"
+      "close": 9.7,
+      "change": -0.05000019,
+      "changePercent": -0.51282245,
+      "asOfDate": "2026-07-14"
     },
     "KCAR": {
-      "close": 4.9,
+      "close": 4.92,
       "change": 0.01999998,
-      "changePercent": 0.40983567,
-      "asOfDate": "2026-07-13"
+      "changePercent": 0.40816286,
+      "asOfDate": "2026-07-14"
     },
     "KCC": {
       "close": 3.04,
-      "change": -0.01999998,
-      "changePercent": -0.6535942,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "KCE": {
-      "close": 44.25,
-      "change": 1.75,
-      "changePercent": 4.117647,
-      "asOfDate": "2026-07-13"
+      "close": 44.5,
+      "change": 0.25,
+      "changePercent": 0.5681818,
+      "asOfDate": "2026-07-14"
     },
     "KCG": {
       "close": 10.5,
-      "change": 0.10000038,
-      "changePercent": 0.9615421,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "KCM": {
-      "close": 0.29,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 0.28,
+      "change": -0.00999999,
+      "changePercent": -3.4482727,
+      "asOfDate": "2026-07-14"
     },
     "KDH": {
-      "close": 83.25,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-03"
+      "close": 83.5,
+      "change": 0.25,
+      "changePercent": 0.3003003,
+      "asOfDate": "2026-07-14"
     },
     "KEYENCE23": {
-      "close": 2.74,
-      "change": -0.059999943,
-      "changePercent": -2.1428552,
-      "asOfDate": "2026-07-13"
+      "close": 2.76,
+      "change": 0.01999998,
+      "changePercent": 0.7299263,
+      "asOfDate": "2026-07-14"
     },
     "KGEN": {
-      "close": 1.88,
-      "change": -0.00999999,
-      "changePercent": -0.52910006,
-      "asOfDate": "2026-07-13"
+      "close": 1.91,
+      "change": 0.029999971,
+      "changePercent": 1.5957432,
+      "asOfDate": "2026-07-14"
     },
     "KGI": {
       "close": 4.68,
-      "change": 0.099999905,
-      "changePercent": 2.183404,
-      "asOfDate": "2026-07-13"
-    },
-    "KIAT": {
-      "close": 0.34,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "KIAT": {
+      "close": 0.33,
+      "change": -0.00999999,
+      "changePercent": -2.9411736,
+      "asOfDate": "2026-07-14"
     },
     "KINGSOFT23": {
-      "close": 1.67,
-      "change": -0.07000005,
-      "changePercent": -4.0229917,
-      "asOfDate": "2026-07-13"
+      "close": 1.64,
+      "change": -0.029999971,
+      "changePercent": -1.7964056,
+      "asOfDate": "2026-07-14"
     },
     "KISS": {
-      "close": 3.62,
-      "change": 0.03999996,
-      "changePercent": 1.1173174,
-      "asOfDate": "2026-07-13"
+      "close": 3.6,
+      "change": -0.01999998,
+      "changePercent": -0.5524857,
+      "asOfDate": "2026-07-14"
     },
     "KJL": {
       "close": 6.25,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "KK": {
-      "close": 1.01,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.03,
+      "change": 0.01999998,
+      "changePercent": 1.9801961,
+      "asOfDate": "2026-07-14"
     },
     "KKC": {
       "close": 0.04,
@@ -2756,28 +2762,28 @@
       "asOfDate": "2024-07-26"
     },
     "KKP": {
-      "close": 106.5,
-      "change": 2.5,
-      "changePercent": 2.4038463,
-      "asOfDate": "2026-07-13"
+      "close": 105.5,
+      "change": -1,
+      "changePercent": -0.9389671,
+      "asOfDate": "2026-07-14"
     },
     "KLINIQ": {
       "close": 27.5,
-      "change": 0.75,
-      "changePercent": 2.803738,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "KO80": {
-      "close": 2.8,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 2.82,
+      "change": 0.01999998,
+      "changePercent": 0.714285,
+      "asOfDate": "2026-07-14"
     },
     "KOOL": {
-      "close": 0.29,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 0.3,
+      "change": 0.01000002,
+      "changePercent": 3.448283,
+      "asOfDate": "2026-07-14"
     },
     "KPNPF": {
       "close": 2.26,
@@ -2786,22 +2792,22 @@
       "asOfDate": "2025-02-17"
     },
     "KPNREIT": {
-      "close": 2,
-      "change": 0.01999998,
-      "changePercent": 1.0101001,
-      "asOfDate": "2026-07-13"
+      "close": 1.99,
+      "change": -0.00999999,
+      "changePercent": -0.49999952,
+      "asOfDate": "2026-07-14"
     },
     "KSL": {
-      "close": 1.53,
-      "change": -0.01999998,
-      "changePercent": -1.2903214,
-      "asOfDate": "2026-07-13"
+      "close": 1.59,
+      "change": 0.060000062,
+      "changePercent": 3.9215727,
+      "asOfDate": "2026-07-14"
     },
     "KTB": {
       "close": 41.25,
-      "change": 0.5,
-      "changePercent": 1.2269938,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "KTB-P": {
       "close": 153,
@@ -2810,148 +2816,148 @@
       "asOfDate": "2024-07-23"
     },
     "KTBSTMR": {
-      "close": 6.55,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 6.65,
+      "change": 0.099999905,
+      "changePercent": 1.5267161,
+      "asOfDate": "2026-07-14"
     },
     "KTC": {
-      "close": 37.25,
-      "change": 0.25,
-      "changePercent": 0.6756757,
-      "asOfDate": "2026-07-13"
+      "close": 37,
+      "change": -0.25,
+      "changePercent": -0.6756757,
+      "asOfDate": "2026-07-14"
     },
     "KTIS": {
-      "close": 1.82,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.9,
+      "change": 0.07999992,
+      "changePercent": 4.3956,
+      "asOfDate": "2026-07-14"
     },
     "KTMS": {
-      "close": 1.32,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.33,
+      "change": 0.00999999,
+      "changePercent": 0.757575,
+      "asOfDate": "2026-07-14"
     },
     "KUAISH01": {
-      "close": 2.36,
-      "change": 0.059999943,
-      "changePercent": 2.6086931,
-      "asOfDate": "2026-07-13"
+      "close": 2.38,
+      "change": 0.02000022,
+      "changePercent": 0.84746695,
+      "asOfDate": "2026-07-14"
     },
     "KUAISH06": {
-      "close": 1.85,
-      "change": 0.04000008,
-      "changePercent": 2.2099493,
-      "asOfDate": "2026-07-13"
+      "close": 1.86,
+      "change": 0.00999999,
+      "changePercent": 0.54054004,
+      "asOfDate": "2026-07-14"
     },
     "KUAISH23": {
-      "close": 1.32,
-      "change": 0.03000009,
-      "changePercent": 2.3255885,
-      "asOfDate": "2026-07-13"
+      "close": 1.37,
+      "change": 0.049999952,
+      "changePercent": 3.787875,
+      "asOfDate": "2026-07-14"
     },
     "KUAISH80": {
-      "close": 1.85,
-      "change": 0.04000008,
-      "changePercent": 2.2099493,
-      "asOfDate": "2026-07-13"
+      "close": 1.91,
+      "change": 0.059999943,
+      "changePercent": 3.24324,
+      "asOfDate": "2026-07-14"
     },
     "KUMWEL": {
-      "close": 2.78,
-      "change": 0.27999997,
-      "changePercent": 11.199999,
-      "asOfDate": "2026-07-13"
+      "close": 2.74,
+      "change": -0.03999996,
+      "changePercent": -1.4388475,
+      "asOfDate": "2026-07-14"
     },
     "KUN": {
       "close": 0.64,
-      "change": -0.00999999,
-      "changePercent": -1.5384601,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "KWC": {
       "close": 281,
-      "change": -1,
-      "changePercent": -0.3546099,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "KWM": {
-      "close": 0.87,
-      "change": 0.00999999,
-      "changePercent": 1.1627896,
-      "asOfDate": "2026-07-13"
+      "close": 0.85,
+      "change": -0.01999998,
+      "changePercent": -2.2988484,
+      "asOfDate": "2026-07-14"
     },
     "KYE": {
       "close": 317,
-      "change": 2,
-      "changePercent": 0.63492066,
-      "asOfDate": "2026-07-13"
-    },
-    "L&E": {
-      "close": 1.2,
-      "change": 0.00999999,
-      "changePercent": 0.84033525,
-      "asOfDate": "2026-07-13"
-    },
-    "LALIN": {
-      "close": 4.34,
-      "change": 0.01999998,
-      "changePercent": 0.4629625,
-      "asOfDate": "2026-07-13"
-    },
-    "LANNA": {
-      "close": 14.6,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "L&E": {
+      "close": 1.18,
+      "change": -0.0200001,
+      "changePercent": -1.666675,
+      "asOfDate": "2026-07-14"
+    },
+    "LALIN": {
+      "close": 4.32,
+      "change": -0.01999998,
+      "changePercent": -0.46082905,
+      "asOfDate": "2026-07-14"
+    },
+    "LANNA": {
+      "close": 14.7,
+      "change": 0.09999943,
+      "changePercent": 0.6849276,
+      "asOfDate": "2026-07-14"
     },
     "LDC": {
       "close": 0.25,
-      "change": 0.010000005,
-      "changePercent": 4.166669,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "LEE": {
-      "close": 2.5,
-      "change": 0.01999998,
-      "changePercent": 0.80645084,
-      "asOfDate": "2026-07-13"
+      "close": 2.48,
+      "change": -0.01999998,
+      "changePercent": -0.79999924,
+      "asOfDate": "2026-07-14"
     },
     "LENOVO13": {
-      "close": 5.1,
-      "change": -0.25,
-      "changePercent": -4.6728973,
-      "asOfDate": "2026-07-13"
+      "close": 5.05,
+      "change": -0.049999714,
+      "changePercent": -0.98038656,
+      "asOfDate": "2026-07-14"
     },
     "LEO": {
-      "close": 1.9,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.98,
+      "change": 0.08000004,
+      "changePercent": 4.2105284,
+      "asOfDate": "2026-07-14"
     },
     "LH": {
-      "close": 3.78,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 3.76,
+      "change": -0.01999998,
+      "changePercent": -0.5291,
+      "asOfDate": "2026-07-14"
     },
     "LHFG": {
       "close": 1.29,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "LHHOTEL": {
-      "close": 14.1,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 14,
+      "change": -0.10000038,
+      "changePercent": -0.70922256,
+      "asOfDate": "2026-07-14"
     },
     "LHK": {
-      "close": 3.52,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 3.54,
+      "change": 0.01999998,
+      "changePercent": 0.5681813,
+      "asOfDate": "2026-07-14"
     },
     "LHPF": {
       "close": 5.2,
@@ -2960,40 +2966,40 @@
       "asOfDate": "2025-01-17"
     },
     "LHRREIT": {
-      "close": 4.38,
-      "change": 0.01999998,
-      "changePercent": 0.45871517,
-      "asOfDate": "2026-07-13"
+      "close": 4.36,
+      "change": -0.01999998,
+      "changePercent": -0.45662054,
+      "asOfDate": "2026-07-14"
     },
     "LHSC": {
       "close": 15.2,
-      "change": 0.09999943,
-      "changePercent": 0.66224784,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "LIT": {
-      "close": 0.87,
-      "change": -0.01999998,
-      "changePercent": -2.247189,
-      "asOfDate": "2026-07-13"
+      "close": 0.89,
+      "change": 0.01999998,
+      "changePercent": 2.2988484,
+      "asOfDate": "2026-07-14"
     },
     "LLY80": {
-      "close": 1.99,
-      "change": -0.06999993,
-      "changePercent": -3.3980553,
-      "asOfDate": "2026-07-13"
+      "close": 2,
+      "change": 0.00999999,
+      "changePercent": 0.5025121,
+      "asOfDate": "2026-07-14"
     },
     "LOREAL80": {
-      "close": 1.46,
-      "change": 0.01999998,
-      "changePercent": 1.3888875,
-      "asOfDate": "2026-07-13"
+      "close": 1.47,
+      "change": 0.00999999,
+      "changePercent": 0.68493086,
+      "asOfDate": "2026-07-14"
     },
     "LOXLEY": {
-      "close": 1.44,
-      "change": 0.0200001,
-      "changePercent": 1.4084578,
-      "asOfDate": "2026-07-13"
+      "close": 1.49,
+      "change": 0.049999952,
+      "changePercent": 3.4722188,
+      "asOfDate": "2026-07-14"
     },
     "LPF": {
       "close": 11.3,
@@ -3002,28 +3008,28 @@
       "asOfDate": "2025-01-17"
     },
     "LPGOLD13": {
-      "close": 1.67,
-      "change": -0.05000007,
-      "changePercent": -2.906981,
-      "asOfDate": "2026-07-13"
+      "close": 1.62,
+      "change": -0.049999952,
+      "changePercent": -2.9940093,
+      "asOfDate": "2026-07-14"
     },
     "LPH": {
-      "close": 3.56,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 3.58,
+      "change": 0.01999998,
+      "changePercent": 0.5617972,
+      "asOfDate": "2026-07-14"
     },
     "LPN": {
       "close": 1.57,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "LRCX23": {
-      "close": 4.36,
-      "change": -0.119999886,
-      "changePercent": -2.6785688,
-      "asOfDate": "2026-07-13"
+      "close": 4.38,
+      "change": 0.01999998,
+      "changePercent": 0.45871514,
+      "asOfDate": "2026-07-14"
     },
     "LRH": {
       "close": 33.75,
@@ -3032,16 +3038,16 @@
       "asOfDate": "2025-06-04"
     },
     "LST": {
-      "close": 4.76,
-      "change": -0.01999998,
-      "changePercent": -0.41840962,
-      "asOfDate": "2026-07-13"
+      "close": 4.78,
+      "change": 0.01999998,
+      "changePercent": 0.42016765,
+      "asOfDate": "2026-07-14"
     },
     "LTMH": {
-      "close": 7.7,
-      "change": 0.2999997,
-      "changePercent": 4.05405,
-      "asOfDate": "2026-07-13"
+      "close": 7.9,
+      "change": 0.20000029,
+      "changePercent": 2.5974064,
+      "asOfDate": "2026-07-14"
     },
     "LUXF": {
       "close": 9.2,
@@ -3050,22 +3056,22 @@
       "asOfDate": "2026-07-13"
     },
     "LVMH01": {
-      "close": 11.7,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 11.8,
+      "change": 0.10000038,
+      "changePercent": 0.85470414,
+      "asOfDate": "2026-07-14"
     },
     "M": {
       "close": 22.1,
-      "change": 0.30000114,
-      "changePercent": 1.3761522,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "M-CHAI": {
-      "close": 19,
-      "change": -0.70000076,
-      "changePercent": -3.5533032,
-      "asOfDate": "2026-07-13"
+      "close": 19.1,
+      "change": 0.10000038,
+      "changePercent": 0.5263178,
+      "asOfDate": "2026-07-14"
     },
     "M-II": {
       "close": 6.05,
@@ -3081,225 +3087,225 @@
     },
     "M-STOR": {
       "close": 8.75,
-      "change": 1,
-      "changePercent": 12.903225,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "MA80": {
-      "close": 1.74,
-      "change": -0.01999998,
-      "changePercent": -1.1363626,
-      "asOfDate": "2026-07-13"
+      "close": 1.8,
+      "change": 0.059999943,
+      "changePercent": 3.4482725,
+      "asOfDate": "2026-07-14"
     },
     "MAGURO": {
-      "close": 18.2,
-      "change": -0.29999924,
-      "changePercent": -1.6216176,
-      "asOfDate": "2026-07-13"
+      "close": 18.3,
+      "change": 0.099998474,
+      "changePercent": 0.5494422,
+      "asOfDate": "2026-07-14"
     },
     "MAJOR": {
       "close": 6.65,
-      "change": -0.099999905,
-      "changePercent": -1.48148,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "MALEE": {
-      "close": 4.2,
-      "change": 0.13999987,
-      "changePercent": 3.4482725,
-      "asOfDate": "2026-07-13"
+      "close": 4.16,
+      "change": -0.03999996,
+      "changePercent": -0.95238006,
+      "asOfDate": "2026-07-14"
     },
     "MANRIN": {
       "close": 21,
-      "change": 0.10000038,
-      "changePercent": 0.47847074,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
     "MASTEC": {
-      "close": 2.12,
-      "change": 0.07999992,
-      "changePercent": 3.921565,
-      "asOfDate": "2026-07-13"
+      "close": 2.38,
+      "change": 0.26000023,
+      "changePercent": 12.264162,
+      "asOfDate": "2026-07-14"
     },
     "MASTER": {
-      "close": 9.2,
-      "change": 0.39999962,
-      "changePercent": 4.54545,
-      "asOfDate": "2026-07-13"
+      "close": 9.15,
+      "change": -0.05000019,
+      "changePercent": -0.54348034,
+      "asOfDate": "2026-07-14"
     },
     "MATI": {
-      "close": 2.94,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-08"
+      "close": 3.16,
+      "change": 0.22000003,
+      "changePercent": 7.4829946,
+      "asOfDate": "2026-07-14"
     },
     "MBAX": {
-      "close": 1.93,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 1.92,
+      "change": -0.00999999,
+      "changePercent": -0.51813424,
+      "asOfDate": "2026-07-14"
     },
     "MBK": {
-      "close": 20.9,
-      "change": 0.6000004,
-      "changePercent": 2.955667,
-      "asOfDate": "2026-07-13"
+      "close": 21.2,
+      "change": 0.30000114,
+      "changePercent": 1.4354122,
+      "asOfDate": "2026-07-14"
     },
     "MC": {
-      "close": 11.7,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 11.6,
+      "change": -0.09999943,
+      "changePercent": -0.854696,
+      "asOfDate": "2026-07-14"
     },
     "MCA": {
-      "close": 1.29,
-      "change": -0.00999999,
-      "changePercent": -0.76923007,
-      "asOfDate": "2026-07-13"
+      "close": 1.3,
+      "change": 0.00999999,
+      "changePercent": 0.7751931,
+      "asOfDate": "2026-07-14"
     },
     "MCOT": {
       "close": 6.1,
-      "change": -0.05000019,
-      "changePercent": -0.81301117,
-      "asOfDate": "2026-07-13"
-    },
-    "MCS": {
-      "close": 7.85,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "MCS": {
+      "close": 7.9,
+      "change": 0.05000019,
+      "changePercent": 0.6369451,
+      "asOfDate": "2026-07-14"
     },
     "MEB": {
-      "close": 12.5,
-      "change": -0.19999981,
-      "changePercent": -1.5748017,
-      "asOfDate": "2026-07-13"
+      "close": 12.4,
+      "change": -0.10000038,
+      "changePercent": -0.80000305,
+      "asOfDate": "2026-07-14"
     },
     "MEDEZE": {
-      "close": 6.65,
-      "change": 0.05000019,
-      "changePercent": 0.7575787,
-      "asOfDate": "2026-07-13"
+      "close": 6.7,
+      "change": 0.049999714,
+      "changePercent": 0.7518754,
+      "asOfDate": "2026-07-14"
     },
     "MEGA": {
-      "close": 37.25,
+      "close": 37.5,
       "change": 0.25,
-      "changePercent": 0.6756757,
-      "asOfDate": "2026-07-13"
+      "changePercent": 0.67114097,
+      "asOfDate": "2026-07-14"
     },
     "MENA": {
       "close": 0.73,
-      "change": -0.00999999,
-      "changePercent": -1.3513501,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "META01": {
-      "close": 6.5,
-      "change": 0.25,
-      "changePercent": 4,
-      "asOfDate": "2026-07-13"
+      "close": 6.45,
+      "change": -0.05000019,
+      "changePercent": -0.7692337,
+      "asOfDate": "2026-07-14"
     },
     "META06": {
-      "close": 2.8,
-      "change": 0.119999886,
-      "changePercent": 4.4776073,
-      "asOfDate": "2026-07-13"
+      "close": 2.74,
+      "change": -0.059999943,
+      "changePercent": -2.1428552,
+      "asOfDate": "2026-07-14"
     },
     "META23": {
-      "close": 2.64,
-      "change": 0.08000016,
-      "changePercent": 3.1250064,
-      "asOfDate": "2026-07-13"
+      "close": 2.62,
+      "change": -0.02000022,
+      "changePercent": -0.7633671,
+      "asOfDate": "2026-07-14"
     },
     "META80": {
-      "close": 2.8,
-      "change": 0.099999905,
-      "changePercent": 3.7037,
-      "asOfDate": "2026-07-13"
+      "close": 2.76,
+      "change": -0.03999996,
+      "changePercent": -1.42857,
+      "asOfDate": "2026-07-14"
     },
     "METCO": {
-      "close": 296,
+      "close": 297,
       "change": 1,
-      "changePercent": 0.33898306,
-      "asOfDate": "2026-07-13"
+      "changePercent": 0.33783785,
+      "asOfDate": "2026-07-14"
     },
     "MFC": {
-      "close": 19.7,
-      "change": -0.099998474,
-      "changePercent": -0.5050428,
-      "asOfDate": "2026-07-13"
+      "close": 20,
+      "change": 0.29999924,
+      "changePercent": 1.5228387,
+      "asOfDate": "2026-07-14"
     },
     "MFEC": {
-      "close": 5.9,
-      "change": 0.05000019,
-      "changePercent": 0.85470414,
-      "asOfDate": "2026-07-13"
+      "close": 5.95,
+      "change": 0.049999714,
+      "changePercent": 0.84745276,
+      "asOfDate": "2026-07-14"
     },
     "MGC": {
-      "close": 9.05,
-      "change": 1.5500002,
-      "changePercent": 20.66667,
-      "asOfDate": "2026-07-13"
+      "close": 9.95,
+      "change": 0.8999996,
+      "changePercent": 9.944747,
+      "asOfDate": "2026-07-14"
     },
     "MGI": {
-      "close": 6.4,
-      "change": -0.099999905,
-      "changePercent": -1.53846,
-      "asOfDate": "2026-07-13"
+      "close": 6.25,
+      "change": -0.1500001,
+      "changePercent": -2.3437514,
+      "asOfDate": "2026-07-14"
     },
     "MGT": {
-      "close": 1.89,
-      "change": 0.059999943,
-      "changePercent": 3.2786853,
-      "asOfDate": "2026-07-13"
+      "close": 1.86,
+      "change": -0.029999971,
+      "changePercent": -1.5873001,
+      "asOfDate": "2026-07-14"
     },
     "MICRO": {
-      "close": 1.22,
-      "change": 0.09000003,
-      "changePercent": 7.9646053,
-      "asOfDate": "2026-07-13"
+      "close": 1.26,
+      "change": 0.03999996,
+      "changePercent": 3.2786853,
+      "asOfDate": "2026-07-14"
     },
     "MICRON01": {
       "close": 19.3,
-      "change": -0.9000015,
-      "changePercent": -4.455453,
-      "asOfDate": "2026-07-13"
-    },
-    "MICRON03": {
-      "close": 10.3,
-      "change": -0.5999994,
-      "changePercent": -5.504582,
-      "asOfDate": "2026-07-13"
-    },
-    "MICRON19": {
-      "close": 20.6,
-      "change": -1,
-      "changePercent": -4.6296296,
-      "asOfDate": "2026-07-13"
-    },
-    "MICRON23": {
-      "close": 6.25,
-      "change": -0.19999981,
-      "changePercent": -3.1007724,
-      "asOfDate": "2026-07-13"
-    },
-    "MICRON80": {
-      "close": 31.25,
-      "change": -1,
-      "changePercent": -3.1007752,
-      "asOfDate": "2026-07-13"
-    },
-    "MIDEA80": {
-      "close": 3.8,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "MICRON03": {
+      "close": 10.4,
+      "change": 0.09999943,
+      "changePercent": 0.97086823,
+      "asOfDate": "2026-07-14"
+    },
+    "MICRON19": {
+      "close": 21,
+      "change": 0.39999962,
+      "changePercent": 1.9417456,
+      "asOfDate": "2026-07-14"
+    },
+    "MICRON23": {
+      "close": 6.2,
+      "change": -0.05000019,
+      "changePercent": -0.80000305,
+      "asOfDate": "2026-07-14"
+    },
+    "MICRON80": {
+      "close": 31.75,
+      "change": 0.5,
+      "changePercent": 1.6,
+      "asOfDate": "2026-07-14"
+    },
+    "MIDEA80": {
+      "close": 3.82,
+      "change": 0.01999998,
+      "changePercent": 0.5263153,
+      "asOfDate": "2026-07-14"
     },
     "MII": {
       "close": 6.25,
-      "change": 0.19999981,
-      "changePercent": 3.305782,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "MILL": {
       "close": 0.01,
@@ -3308,10 +3314,10 @@
       "asOfDate": "2026-07-03"
     },
     "MINT": {
-      "close": 23.4,
-      "change": -0.10000038,
-      "changePercent": -0.42553353,
-      "asOfDate": "2026-07-13"
+      "close": 23.2,
+      "change": -0.19999886,
+      "changePercent": -0.854696,
+      "asOfDate": "2026-07-14"
     },
     "MIPF": {
       "close": 9.3,
@@ -3320,232 +3326,232 @@
       "asOfDate": "2026-07-07"
     },
     "MITSIB": {
-      "close": 0.56,
-      "change": -0.00999999,
-      "changePercent": -1.7543843,
-      "asOfDate": "2026-07-13"
+      "close": 0.57,
+      "change": 0.00999999,
+      "changePercent": 1.7857126,
+      "asOfDate": "2026-07-14"
     },
     "MITSU19": {
-      "close": 7.8,
-      "change": -0.14999962,
-      "changePercent": -1.8867877,
-      "asOfDate": "2026-07-13"
+      "close": 7.75,
+      "change": -0.05000019,
+      "changePercent": -0.64102805,
+      "asOfDate": "2026-07-14"
     },
     "MJLF": {
-      "close": 5.75,
-      "change": 0.05000019,
-      "changePercent": 0.8771963,
-      "asOfDate": "2026-07-13"
+      "close": 5.7,
+      "change": -0.05000019,
+      "changePercent": -0.8695685,
+      "asOfDate": "2026-07-14"
     },
     "MK": {
       "close": 0.6,
-      "change": -0.00999999,
-      "changePercent": -1.6393427,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "ML": {
-      "close": 1.6,
-      "change": -0.01999998,
-      "changePercent": -1.2345667,
-      "asOfDate": "2026-07-13"
+      "close": 1.59,
+      "change": -0.00999999,
+      "changePercent": -0.6249994,
+      "asOfDate": "2026-07-14"
     },
     "MMM": {
-      "close": 2.8,
+      "close": 2.78,
+      "change": -0.01999998,
+      "changePercent": -0.714285,
+      "asOfDate": "2026-07-14"
+    },
+    "MNIT": {
+      "close": 1.92,
       "change": 0,
       "changePercent": 0,
       "asOfDate": "2026-07-13"
     },
-    "MNIT": {
-      "close": 1.92,
-      "change": -0.04000008,
-      "changePercent": -2.0408204,
-      "asOfDate": "2026-07-13"
-    },
     "MNIT2": {
       "close": 4.98,
-      "change": -0.01999998,
-      "changePercent": -0.3999996,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "MNRF": {
       "close": 2.02,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "MNSO80": {
-      "close": 9.55,
-      "change": -0.25,
-      "changePercent": -2.5510204,
-      "asOfDate": "2026-07-13"
+      "close": 9.4,
+      "change": -0.15000057,
+      "changePercent": -1.5706866,
+      "asOfDate": "2026-07-14"
     },
     "MODERN": {
       "close": 2.04,
-      "change": 0.01999998,
-      "changePercent": 0.99009806,
-      "asOfDate": "2026-07-13"
-    },
-    "MONO": {
-      "close": 0.73,
-      "change": -0.01999998,
-      "changePercent": -2.6666641,
-      "asOfDate": "2026-07-13"
-    },
-    "MONTAGE80": {
-      "close": 14.3,
-      "change": -0.8000002,
-      "changePercent": -5.298014,
-      "asOfDate": "2026-07-13"
-    },
-    "MOONG": {
-      "close": 2.36,
-      "change": 0.03999996,
-      "changePercent": 1.7241362,
-      "asOfDate": "2026-07-13"
-    },
-    "MOSHI": {
-      "close": 39,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "MONO": {
+      "close": 0.71,
+      "change": -0.02000004,
+      "changePercent": -2.7397316,
+      "asOfDate": "2026-07-14"
+    },
+    "MONTAGE80": {
+      "close": 14.8,
+      "change": 0.5,
+      "changePercent": 3.4965034,
+      "asOfDate": "2026-07-14"
+    },
+    "MOONG": {
+      "close": 2.34,
+      "change": -0.01999998,
+      "changePercent": -0.8474569,
+      "asOfDate": "2026-07-14"
+    },
+    "MOSHI": {
+      "close": 39.5,
+      "change": 0.5,
+      "changePercent": 1.2820513,
+      "asOfDate": "2026-07-14"
     },
     "MOTHER": {
-      "close": 1.18,
-      "change": 0.029999971,
-      "changePercent": 2.6086931,
-      "asOfDate": "2026-07-13"
+      "close": 1.19,
+      "change": 0.01000011,
+      "changePercent": 0.84746695,
+      "asOfDate": "2026-07-14"
     },
     "MOUTAI80": {
       "close": 5.9,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
     },
     "MPJ": {
       "close": 3.74,
-      "change": 0.01999998,
-      "changePercent": 0.5376339,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "MRDIYT": {
-      "close": 10.1,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 10.2,
+      "change": 0.09999943,
+      "changePercent": 0.9900933,
+      "asOfDate": "2026-07-14"
     },
     "MRVL06": {
-      "close": 7.55,
-      "change": -0.3499999,
-      "changePercent": -4.4303784,
-      "asOfDate": "2026-07-13"
+      "close": 7.2,
+      "change": -0.35000038,
+      "changePercent": -4.6357665,
+      "asOfDate": "2026-07-14"
     },
     "MRVL23": {
-      "close": 6.35,
-      "change": -0.3000002,
-      "changePercent": -4.511281,
-      "asOfDate": "2026-07-13"
+      "close": 6,
+      "change": -0.3499999,
+      "changePercent": -5.51181,
+      "asOfDate": "2026-07-14"
     },
     "MRVL80": {
-      "close": 7.7,
-      "change": -0.25,
-      "changePercent": -3.1446543,
-      "asOfDate": "2026-07-13"
+      "close": 7.25,
+      "change": -0.4499998,
+      "changePercent": -5.8441534,
+      "asOfDate": "2026-07-14"
     },
     "MS06": {
-      "close": 4.94,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 4.96,
+      "change": 0.01999998,
+      "changePercent": 0.4048579,
+      "asOfDate": "2026-07-14"
     },
     "MSC": {
       "close": 6.05,
-      "change": -0.14999962,
-      "changePercent": -2.4193487,
-      "asOfDate": "2026-07-13"
-    },
-    "MSFT01": {
-      "close": 3.8,
-      "change": -0.01999998,
-      "changePercent": -0.5235597,
-      "asOfDate": "2026-07-13"
-    },
-    "MSFT03": {
-      "close": 2.6,
       "change": 0,
       "changePercent": 0,
+      "asOfDate": "2026-07-14"
+    },
+    "MSFT01": {
+      "close": 3.82,
+      "change": 0.01999998,
+      "changePercent": 0.5263153,
+      "asOfDate": "2026-07-14"
+    },
+    "MSFT03": {
+      "close": 2.62,
+      "change": 0.01999998,
+      "changePercent": 0.76923007,
       "asOfDate": "2026-07-13"
     },
     "MSFT06": {
-      "close": 3.24,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 3.28,
+      "change": 0.03999996,
+      "changePercent": 1.2345667,
+      "asOfDate": "2026-07-14"
     },
     "MSFT19": {
-      "close": 4.32,
-      "change": 0,
-      "changePercent": 0,
+      "close": 4.38,
+      "change": 0.059999943,
+      "changePercent": 1.3888875,
       "asOfDate": "2026-07-13"
     },
     "MSFT23": {
-      "close": 2.4,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 2.42,
+      "change": 0.01999998,
+      "changePercent": 0.8333325,
+      "asOfDate": "2026-07-14"
     },
     "MSFT80": {
-      "close": 6.45,
-      "change": -0.05000019,
-      "changePercent": -0.7692337,
-      "asOfDate": "2026-07-13"
+      "close": 6.55,
+      "change": 0.10000038,
+      "changePercent": 1.5503936,
+      "asOfDate": "2026-07-14"
     },
     "MST": {
-      "close": 7.95,
-      "change": 0.099999905,
-      "changePercent": 1.2738842,
-      "asOfDate": "2026-07-13"
+      "close": 8,
+      "change": 0.05000019,
+      "changePercent": 0.62893325,
+      "asOfDate": "2026-07-14"
     },
     "MTC": {
-      "close": 33,
-      "change": 0.5,
-      "changePercent": 1.5384616,
-      "asOfDate": "2026-07-13"
+      "close": 32.25,
+      "change": -0.75,
+      "changePercent": -2.2727273,
+      "asOfDate": "2026-07-14"
     },
     "MTI": {
-      "close": 18.4,
-      "change": -0.70000076,
-      "changePercent": -3.6649253,
-      "asOfDate": "2026-07-13"
+      "close": 18.2,
+      "change": -0.19999886,
+      "changePercent": -1.0869503,
+      "asOfDate": "2026-07-14"
     },
     "MTW": {
-      "close": 0.78,
-      "change": -0.01000005,
-      "changePercent": -1.2658291,
-      "asOfDate": "2026-07-13"
+      "close": 0.79,
+      "change": 0.01000005,
+      "changePercent": 1.2820578,
+      "asOfDate": "2026-07-14"
     },
     "MUD": {
-      "close": 0.91,
-      "change": -0.03999996,
-      "changePercent": -4.210522,
-      "asOfDate": "2026-07-13"
+      "close": 0.9,
+      "change": -0.01000005,
+      "changePercent": -1.0989065,
+      "asOfDate": "2026-07-14"
     },
     "MUFG19": {
-      "close": 7.3,
-      "change": 0.1500001,
-      "changePercent": 2.0979035,
-      "asOfDate": "2026-07-13"
+      "close": 7.4,
+      "change": 0.099999905,
+      "changePercent": 1.3698617,
+      "asOfDate": "2026-07-14"
     },
     "MUFG23": {
       "close": 2.94,
-      "change": 0.10000014,
-      "changePercent": 3.5211318,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "MWG19": {
-      "close": 9.95,
+      "close": 9.9,
       "change": -0.05000019,
-      "changePercent": -0.5000019,
-      "asOfDate": "2026-07-13"
+      "changePercent": -0.5025145,
+      "asOfDate": "2026-07-14"
     },
     "NAM": {
       "close": 3.4,
@@ -3866,70 +3872,70 @@
       "asOfDate": "2026-07-10"
     },
     "OHTL": {
-      "close": 262,
-      "change": -3,
-      "changePercent": -1.1320755,
-      "asOfDate": "2026-07-13"
+      "close": 263,
+      "change": 1,
+      "changePercent": 0.3816794,
+      "asOfDate": "2026-07-14"
     },
     "OKJ": {
-      "close": 3.8,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 3.78,
+      "change": -0.01999998,
+      "changePercent": -0.5263153,
+      "asOfDate": "2026-07-14"
     },
     "ONEE": {
-      "close": 3.34,
-      "change": 0.099999905,
-      "changePercent": 3.0864167,
-      "asOfDate": "2026-07-13"
+      "close": 3.3,
+      "change": -0.03999996,
+      "changePercent": -1.1976037,
+      "asOfDate": "2026-07-14"
     },
     "ONSENS": {
-      "close": 1.17,
-      "change": -0.0200001,
-      "changePercent": -1.6806805,
-      "asOfDate": "2026-07-13"
+      "close": 1.18,
+      "change": 0.00999999,
+      "changePercent": 0.8547001,
+      "asOfDate": "2026-07-14"
     },
     "OR": {
-      "close": 12.8,
-      "change": 0.10000038,
-      "changePercent": 0.78740454,
-      "asOfDate": "2026-07-13"
+      "close": 12.5,
+      "change": -0.3000002,
+      "changePercent": -2.3437514,
+      "asOfDate": "2026-07-14"
     },
     "ORCL01": {
-      "close": 2.94,
-      "change": -0.099999905,
-      "changePercent": -3.2894704,
-      "asOfDate": "2026-07-13"
+      "close": 2.8,
+      "change": -0.1400001,
+      "changePercent": -4.761908,
+      "asOfDate": "2026-07-14"
     },
     "ORCL06": {
-      "close": 1.89,
-      "change": -0.07000005,
-      "changePercent": -3.5714314,
-      "asOfDate": "2026-07-13"
+      "close": 1.78,
+      "change": -0.110000014,
+      "changePercent": -5.820107,
+      "asOfDate": "2026-07-14"
     },
     "ORCL19": {
-      "close": 4.72,
-      "change": -0.16000032,
-      "changePercent": -3.278695,
-      "asOfDate": "2026-07-13"
+      "close": 4.46,
+      "change": -0.25999975,
+      "changePercent": -5.5084696,
+      "asOfDate": "2026-07-14"
     },
     "ORI": {
-      "close": 1.83,
-      "change": -0.01999998,
-      "changePercent": -1.08108,
-      "asOfDate": "2026-07-13"
+      "close": 1.86,
+      "change": 0.029999971,
+      "changePercent": 1.6393427,
+      "asOfDate": "2026-07-14"
     },
     "ORN": {
-      "close": 0.79,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 0.8,
+      "change": 0.00999999,
+      "changePercent": 1.2658216,
+      "asOfDate": "2026-07-14"
     },
     "OSP": {
-      "close": 17.5,
-      "change": 0.10000038,
-      "changePercent": 0.57471484,
-      "asOfDate": "2026-07-13"
+      "close": 17.4,
+      "change": -0.10000038,
+      "changePercent": -0.57143074,
+      "asOfDate": "2026-07-14"
     },
     "PACO": {
       "close": 1.46,
@@ -6632,22 +6638,22 @@
       "asOfDate": "2026-07-13"
     },
     "XO": {
-      "close": 19.2,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "close": 19.1,
+      "change": -0.10000038,
+      "changePercent": -0.5208353,
+      "asOfDate": "2026-07-14"
     },
     "XPG": {
       "close": 0.45,
-      "change": 0.00999999,
-      "changePercent": 2.272725,
-      "asOfDate": "2026-07-13"
-    },
-    "XYZ": {
-      "close": 0.28,
       "change": 0,
       "changePercent": 0,
-      "asOfDate": "2026-07-13"
+      "asOfDate": "2026-07-14"
+    },
+    "XYZ": {
+      "close": 0.27,
+      "change": -0.00999999,
+      "changePercent": -3.5714252,
+      "asOfDate": "2026-07-14"
     },
     "YGG": {
       "close": 0.19,
@@ -6656,52 +6662,52 @@
       "asOfDate": "2026-07-13"
     },
     "YONG": {
-      "close": 0.74,
-      "change": 0.01999998,
-      "changePercent": 2.777775,
-      "asOfDate": "2026-07-13"
+      "close": 0.73,
+      "change": -0.00999999,
+      "changePercent": -1.3513501,
+      "asOfDate": "2026-07-14"
     },
     "YUASA": {
       "close": 14.4,
-      "change": 0.19999981,
-      "changePercent": 1.4084494,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "ZEN": {
-      "close": 5.7,
-      "change": 0.19999981,
-      "changePercent": 3.6363602,
-      "asOfDate": "2026-07-13"
+      "close": 5.65,
+      "change": -0.049999714,
+      "changePercent": -0.87718797,
+      "asOfDate": "2026-07-14"
     },
     "ZIGA": {
       "close": 0.89,
-      "change": -0.00999999,
-      "changePercent": -1.1111101,
-      "asOfDate": "2026-07-13"
+      "change": 0,
+      "changePercent": 0,
+      "asOfDate": "2026-07-14"
     },
     "ZIJIN13": {
-      "close": 2.12,
-      "change": -0.08000016,
-      "changePercent": -3.636371,
-      "asOfDate": "2026-07-13"
+      "close": 2.24,
+      "change": 0.120000124,
+      "changePercent": 5.6603837,
+      "asOfDate": "2026-07-14"
     },
     "ZIJIN23": {
-      "close": 1.96,
-      "change": -0.00999999,
-      "changePercent": -0.5076137,
-      "asOfDate": "2026-07-13"
+      "close": 2.02,
+      "change": 0.059999943,
+      "changePercent": 3.0612216,
+      "asOfDate": "2026-07-14"
     },
     "ZIJIN80": {
-      "close": 12.5,
-      "change": -0.19999981,
-      "changePercent": -1.5748017,
-      "asOfDate": "2026-07-13"
+      "close": 13.1,
+      "change": 0.6000004,
+      "changePercent": 4.800003,
+      "asOfDate": "2026-07-14"
     },
     "ZJINNO80": {
-      "close": 5.4,
-      "change": -0.049999714,
-      "changePercent": -0.91742593,
-      "asOfDate": "2026-07-13"
+      "close": 5.85,
+      "change": 0.4499998,
+      "changePercent": 8.333329,
+      "asOfDate": "2026-07-14"
     }
   }
 }
