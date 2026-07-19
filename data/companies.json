@@ -2119,6 +2119,14 @@
     "isIFF": false
   },
   {
+    "symbol": "COSTCO80",
+    "name": "Depositary Receipt on COSTCO Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "COTTO",
     "name": "SCG CERAMICS PUBLIC COMPANY LIMITED",
     "currency": "Baht"
@@ -3269,6 +3277,14 @@
     "symbol": "GLOW",
     "name": "GLOW ENERGY PUBLIC COMPANY LIMITED",
     "currency": "Baht"
+  },
+  {
+    "symbol": "GLW80",
+    "name": "Depositary Receipt on GLW Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
   },
   {
     "symbol": "GOLD",
@@ -5612,6 +5628,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MWG11",
+    "name": "Depositary Receipt on MWG Issued by KS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MWG19",
     "name": "Depositary Receipt on MWG Issued by YUANTA",
     "currency": "Baht",
@@ -6591,6 +6615,14 @@
     "securityType": "S",
     "industry": "INDUS",
     "sector": "PETRO",
+    "isIFF": false
+  },
+  {
+    "symbol": "PNG80",
+    "name": "Depositary Receipt on PNG Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -10625,6 +10657,14 @@
   {
     "symbol": "WMT06",
     "name": "Depositary Receipt on WMT Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "WMT80",
+    "name": "Depositary Receipt on WMT Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",

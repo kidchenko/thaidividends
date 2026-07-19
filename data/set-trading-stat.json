@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-12T05:50:26.351Z",
+  "asOf": "2026-07-19T05:44:33.845Z",
   "data": {
     "AMATA": [
       {
@@ -68844,6 +68844,100 @@
         "dividendPayoutRatio": null,
         "marketCap": 4228000,
         "listedShare": 4094000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "COSTCO80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-17",
+        "close": 3.2,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1792000,
+        "listedShare": 3100000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GLW80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-17",
+        "close": 5.05,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7186150,
+        "listedShare": 1900000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MWG11": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 4.24,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 63282000,
+        "listedShare": 1750000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-07-17",
+        "close": 4.08,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 111526800,
+        "listedShare": 1750000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "PNG80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-17",
+        "close": 5.15,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1828250,
+        "listedShare": 2200000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "WMT80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-17",
+        "close": 3.96,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1279080,
+        "listedShare": 2400000000,
         "beta": null,
         "financialDate": null
       }
