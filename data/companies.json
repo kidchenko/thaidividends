@@ -2555,6 +2555,14 @@
     "isIFF": true
   },
   {
+    "symbol": "DISCO80",
+    "name": "Depositary Receipt on DISCO Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "DISNEY19",
     "name": "Depositary Receipt on DISNEY Issued by YUANTA",
     "currency": "Baht",
@@ -3323,6 +3331,14 @@
   {
     "symbol": "GOOGL03",
     "name": "Depositary Receipt on GOOGL Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "GOOGL19",
+    "name": "Depositary Receipt on GOOGL Issued by YUANTA",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",

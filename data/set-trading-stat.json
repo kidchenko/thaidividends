@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-19T05:44:33.845Z",
+  "asOf": "2026-07-26T05:53:46.590Z",
   "data": {
     "AMATA": [
       {
@@ -68938,6 +68938,38 @@
         "dividendPayoutRatio": null,
         "marketCap": 1279080,
         "listedShare": 2400000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "DISCO80": [
+      {
+        "period": "YTD",
+        "date": "2026-07-24",
+        "close": 12.5,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3750000,
+        "listedShare": 700000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GOOGL19": [
+      {
+        "period": "YTD",
+        "date": "2026-07-24",
+        "close": 5.45,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 6387400,
+        "listedShare": 1909000000,
         "beta": null,
         "financialDate": null
       }
