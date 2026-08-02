@@ -2884,6 +2884,14 @@
     "isIFF": false
   },
   {
+    "symbol": "ETN23",
+    "name": "Depositary Receipt on ETN Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "EURO",
     "name": "Euro Creations Public Company Limited",
     "currency": "Baht",
@@ -4476,7 +4484,7 @@
   },
   {
     "symbol": "KPNREIT",
-    "name": "KPN Real Estate Investment Trust",
+    "name": "KPN FREEHOLD AND LEASEHOLD REAL ESTATE INVESTMENT TRUST",
     "currency": "Baht",
     "market": "SET",
     "securityType": "S",

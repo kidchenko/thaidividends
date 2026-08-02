@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-26T05:53:46.590Z",
+  "asOf": "2026-08-02T05:49:40.382Z",
   "data": {
     "AMATA": [
       {
@@ -68970,6 +68970,22 @@
         "dividendPayoutRatio": null,
         "marketCap": 6387400,
         "listedShare": 1909000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ETN23": [
+      {
+        "period": "YTD",
+        "date": "2026-07-31",
+        "close": 6.6,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 12302400,
+        "listedShare": 1503000000,
         "beta": null,
         "financialDate": null
       }
