@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-08-02T05:49:40.382Z",
+  "asOf": "2026-08-09T04:12:57.176Z",
   "data": {
     "AMATA": [
       {
@@ -68986,6 +68986,134 @@
         "dividendPayoutRatio": null,
         "marketCap": 12302400,
         "listedShare": 1503000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ETN03": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 2.5,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2055000,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GFS03": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 1.4,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1540560,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "KLAC19": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 3.24,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3460320,
+        "listedShare": 3973000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "LLY23": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 3.96,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 8276400,
+        "listedShare": 2994000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MKSI03": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 1.97,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 689500,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "OXY03": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 1.85,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1979500,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "STM03": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 1.8,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1080000,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "VST03": [
+      {
+        "period": "YTD",
+        "date": "2026-08-07",
+        "close": 1.91,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5539000,
+        "listedShare": 10000000000,
         "beta": null,
         "financialDate": null
       }

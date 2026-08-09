@@ -2884,6 +2884,14 @@
     "isIFF": false
   },
   {
+    "symbol": "ETN03",
+    "name": "Depositary Receipt on ETN Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "ETN23",
     "name": "Depositary Receipt on ETN Issued by INVX",
     "currency": "Baht",
@@ -3230,6 +3238,14 @@
     "securityType": "S",
     "industry": "AGRO",
     "sector": "AGRI",
+    "isIFF": false
+  },
+  {
+    "symbol": "GFS03",
+    "name": "Depositary Receipt on GFS Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -4451,6 +4467,14 @@
     "isIFF": false
   },
   {
+    "symbol": "KLAC19",
+    "name": "Depositary Receipt on KLAC Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "KLINIQ",
     "name": "The Klinique Medical Clinic Public Company Limited",
     "currency": "Baht",
@@ -4777,6 +4801,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "FINCIAL",
+    "isIFF": false
+  },
+  {
+    "symbol": "LLY23",
+    "name": "Depositary Receipt on LLY Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -5350,6 +5382,14 @@
     "securityType": "S",
     "industry": "PROPCON",
     "sector": "PROP",
+    "isIFF": false
+  },
+  {
+    "symbol": "MKSI03",
+    "name": "Depositary Receipt on MKSI Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -6265,6 +6305,14 @@
     "securityType": "S",
     "industry": "AGRO",
     "sector": "FOOD",
+    "isIFF": false
+  },
+  {
+    "symbol": "OXY03",
+    "name": "Depositary Receipt on OXY Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -8621,6 +8669,14 @@
     "isIFF": false
   },
   {
+    "symbol": "STM03",
+    "name": "Depositary Receipt on STM Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "STOWER",
     "name": "SKY TOWER PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -10512,6 +10568,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "SERVICE",
+    "isIFF": false
+  },
+  {
+    "symbol": "VST03",
+    "name": "Depositary Receipt on VST Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
