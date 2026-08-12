@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-08-11T12:39:37.226Z",
+  "asOf": "2026-08-12T12:42:49.345Z",
   "prices": {
     "1DIV": {
       "close": 14.13,
@@ -44,27 +44,27 @@
       "asOfDate": "2026-08-11"
     },
     "AAPL01": {
-      "close": 30.25,
-      "change": 0,
-      "changePercent": 0,
+      "close": 30,
+      "change": -0.25,
+      "changePercent": -0.82644624,
       "asOfDate": "2026-08-11"
     },
     "AAPL03": {
-      "close": 3.42,
-      "change": -0.03999996,
-      "changePercent": -1.1560682,
+      "close": 3.4,
+      "change": -0.01999998,
+      "changePercent": -0.58479476,
       "asOfDate": "2026-08-11"
     },
     "AAPL19": {
-      "close": 6.8,
-      "change": -0.099999905,
-      "changePercent": -1.449274,
+      "close": 6.75,
+      "change": -0.05000019,
+      "changePercent": -0.7352969,
       "asOfDate": "2026-08-11"
     },
     "AAPL80": {
-      "close": 10.3,
-      "change": 0,
-      "changePercent": 0,
+      "close": 10.1,
+      "change": -0.19999981,
+      "changePercent": -1.9417458,
       "asOfDate": "2026-08-11"
     },
     "AAV": {
@@ -74,15 +74,15 @@
       "asOfDate": "2026-08-11"
     },
     "ABBV19": {
-      "close": 8.2,
-      "change": 0.05000019,
-      "changePercent": 0.6134993,
+      "close": 8.3,
+      "change": 0.10000038,
+      "changePercent": 1.2195169,
       "asOfDate": "2026-08-11"
     },
     "ABBV80": {
-      "close": 8.15,
-      "change": 0,
-      "changePercent": 0,
+      "close": 8.3,
+      "change": 0.15000057,
+      "changePercent": 1.840498,
       "asOfDate": "2026-08-11"
     },
     "ABFTH": {
@@ -135,8 +135,8 @@
     },
     "ADVANT23": {
       "close": 4.74,
-      "change": -0.06000042,
-      "changePercent": -1.2500087,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ADVICE": {
@@ -189,20 +189,20 @@
     },
     "AIA06": {
       "close": 3.1,
-      "change": -0.0400002,
-      "changePercent": -1.2738917,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "AIA19": {
       "close": 3.1,
-      "change": -0.0400002,
-      "changePercent": -1.2738917,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "AIA23": {
       "close": 2.4,
-      "change": -0.01999998,
-      "changePercent": -0.8264455,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "AIE": {
@@ -308,9 +308,9 @@
       "asOfDate": "2026-08-11"
     },
     "AMAT19": {
-      "close": 4.36,
-      "change": -0.15999985,
-      "changePercent": -3.5398197,
+      "close": 4.34,
+      "change": -0.01999998,
+      "changePercent": -0.45871517,
       "asOfDate": "2026-08-11"
     },
     "AMATA": {
@@ -339,8 +339,8 @@
     },
     "AMGN06": {
       "close": 3.44,
-      "change": 0.059999943,
-      "changePercent": 1.7751461,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "AMR": {
@@ -363,14 +363,14 @@
     },
     "ANTA13": {
       "close": 1.94,
-      "change": 0.0200001,
-      "changePercent": 1.0416719,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ANTA23": {
       "close": 1.98,
-      "change": -0.00999999,
-      "changePercent": -0.5025121,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "AOT": {
@@ -465,8 +465,8 @@
     },
     "ASICS23": {
       "close": 3.1,
-      "change": -0.0400002,
-      "changePercent": -1.2738917,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ASIMAR": {
@@ -483,8 +483,8 @@
     },
     "ASML01": {
       "close": 48.75,
-      "change": -0.25,
-      "changePercent": -0.5102041,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ASN": {
@@ -536,15 +536,15 @@
       "asOfDate": "2026-08-11"
     },
     "AVGO23": {
-      "close": 3.2,
-      "change": -0.03999996,
-      "changePercent": -1.2345667,
+      "close": 3.12,
+      "change": -0.08000016,
+      "changePercent": -2.500005,
       "asOfDate": "2026-08-11"
     },
     "AVGO80": {
-      "close": 2.78,
-      "change": -0.059999943,
-      "changePercent": -2.1126742,
+      "close": 2.76,
+      "change": -0.01999998,
+      "changePercent": -0.7194238,
       "asOfDate": "2026-08-11"
     },
     "AWC": {
@@ -554,9 +554,9 @@
       "asOfDate": "2026-08-11"
     },
     "AXP06": {
-      "close": 2.82,
+      "close": 2.84,
       "change": 0.01999998,
-      "changePercent": 0.7142851,
+      "changePercent": 0.70921916,
       "asOfDate": "2026-08-11"
     },
     "AXTRART": {
@@ -591,20 +591,20 @@
     },
     "BABA06": {
       "close": 5.3,
-      "change": -0.049999714,
-      "changePercent": -0.9345741,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "BABA13": {
       "close": 2.2,
-      "change": 0.01999998,
-      "changePercent": 0.91743034,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "BABA23": {
       "close": 3.52,
-      "change": -0.03999996,
-      "changePercent": -1.1235945,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "BABA80": {
@@ -615,8 +615,8 @@
     },
     "BAC03": {
       "close": 4.24,
-      "change": 0.059999943,
-      "changePercent": 1.4354054,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "BAFS": {
@@ -704,9 +704,9 @@
       "asOfDate": "2026-08-11"
     },
     "BDX06": {
-      "close": 1.96,
-      "change": 0,
-      "changePercent": 0,
+      "close": 2,
+      "change": 0.03999996,
+      "changePercent": 2.0408144,
       "asOfDate": "2026-08-11"
     },
     "BE8": {
@@ -830,15 +830,15 @@
       "asOfDate": "2025-01-17"
     },
     "BKNG03": {
-      "close": 2.92,
-      "change": -0.01999998,
-      "changePercent": -0.68027145,
+      "close": 2.94,
+      "change": 0.01999998,
+      "changePercent": 0.68493086,
       "asOfDate": "2026-08-11"
     },
     "BKNG80": {
-      "close": 3.48,
-      "change": -0.01999998,
-      "changePercent": -0.571428,
+      "close": 3.54,
+      "change": 0.059999943,
+      "changePercent": 1.7241362,
       "asOfDate": "2026-08-11"
     },
     "BLA": {
@@ -866,9 +866,9 @@
       "asOfDate": "2026-08-11"
     },
     "BLK06": {
-      "close": 3.76,
-      "change": 0,
-      "changePercent": 0,
+      "close": 3.82,
+      "change": 0.059999943,
+      "changePercent": 1.5957432,
       "asOfDate": "2026-08-11"
     },
     "BM": {
@@ -900,12 +900,6 @@
       "change": 0,
       "changePercent": 0,
       "asOfDate": "2026-08-11"
-    },
-    "BPP": {
-      "close": 12,
-      "change": 0,
-      "changePercent": 0,
-      "asOfDate": "2026-07-16"
     },
     "BPS": {
       "close": 0.59,
@@ -1017,44 +1011,44 @@
     },
     "BYDCOM01": {
       "close": 0.88,
-      "change": -0.00999999,
-      "changePercent": -1.1235945,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "BYDCOM80": {
       "close": 0.38,
-      "change": -0.00999999,
-      "changePercent": -2.5641003,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CAMBRI80": {
       "close": 5.45,
-      "change": -0.1500001,
-      "changePercent": -2.6785731,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CAT19": {
-      "close": 5.5,
-      "change": -0.099999905,
-      "changePercent": -1.7857127,
+      "close": 5.6,
+      "change": 0.099999905,
+      "changePercent": 1.8181801,
       "asOfDate": "2026-08-11"
     },
     "CATL01": {
       "close": 6.25,
-      "change": 0.099999905,
-      "changePercent": 1.6260147,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CATL23": {
       "close": 10.9,
-      "change": 0.09999943,
-      "changePercent": 0.9259206,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CATL80": {
       "close": 27.5,
-      "change": 0.5,
-      "changePercent": 1.8518518,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CAZ": {
@@ -1082,9 +1076,9 @@
       "asOfDate": "2026-08-11"
     },
     "CEG23": {
-      "close": 2.24,
-      "change": 0,
-      "changePercent": 0,
+      "close": 2.3,
+      "change": 0.059999943,
+      "changePercent": 2.6785688,
       "asOfDate": "2026-08-11"
     },
     "CEN": {
@@ -1179,8 +1173,8 @@
     },
     "CHMOBILE19": {
       "close": 3.48,
-      "change": 0.01999998,
-      "changePercent": 0.5780341,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CHMOBILE23": {
@@ -1251,8 +1245,8 @@
     },
     "CMBANK23": {
       "close": 2.28,
-      "change": -0.01999998,
-      "changePercent": -0.8695644,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CMC": {
@@ -1262,10 +1256,10 @@
       "asOfDate": "2026-08-11"
     },
     "CME03": {
-      "close": 2.92,
-      "change": -0.01999998,
-      "changePercent": -0.68027145,
-      "asOfDate": "2026-08-10"
+      "close": 2.88,
+      "change": -0.03999996,
+      "changePercent": -1.3698617,
+      "asOfDate": "2026-08-11"
     },
     "CMO": {
       "close": 0.69,
@@ -1281,14 +1275,14 @@
     },
     "CN01": {
       "close": 23.9,
-      "change": 0.10000038,
-      "changePercent": 0.42016968,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CNRE80": {
       "close": 2.04,
-      "change": -0.10000014,
-      "changePercent": -4.6729035,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "CNT": {
@@ -1299,8 +1293,8 @@
     },
     "CNTECH01": {
       "close": 26,
-      "change": -0.5,
-      "changePercent": -1.8867924,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "COCOCO": {
@@ -1448,21 +1442,21 @@
       "asOfDate": "2026-08-11"
     },
     "CRM01": {
-      "close": 3.6,
-      "change": 0.059999943,
-      "changePercent": 1.6949136,
+      "close": 3.64,
+      "change": 0.0400002,
+      "changePercent": 1.1111168,
       "asOfDate": "2026-08-11"
     },
     "CRM06": {
-      "close": 2.58,
+      "close": 2.6,
       "change": 0.01999998,
-      "changePercent": 0.7812493,
+      "changePercent": 0.7751931,
       "asOfDate": "2026-08-11"
     },
     "CRM80": {
-      "close": 6.55,
-      "change": 0.1500001,
-      "changePercent": 2.3437514,
+      "close": 6.6,
+      "change": 0.049999714,
+      "changePercent": 0.7633544,
       "asOfDate": "2026-08-11"
     },
     "CSC": {
@@ -1478,9 +1472,9 @@
       "asOfDate": "2024-07-23"
     },
     "CSCO06": {
-      "close": 5.15,
-      "change": 0.099999905,
-      "changePercent": 1.9801961,
+      "close": 5.05,
+      "change": -0.099999905,
+      "changePercent": -1.9417458,
       "asOfDate": "2026-08-11"
     },
     "CSP": {
@@ -1562,9 +1556,9 @@
       "asOfDate": "2026-08-11"
     },
     "DELL19": {
-      "close": 15,
-      "change": -0.10000038,
-      "changePercent": -0.66225415,
+      "close": 14.6,
+      "change": -0.39999962,
+      "changePercent": -2.6666641,
       "asOfDate": "2026-08-11"
     },
     "DELTA": {
@@ -1604,9 +1598,9 @@
       "asOfDate": "2026-08-10"
     },
     "DISNEY19": {
-      "close": 17.1,
-      "change": -0.29999924,
-      "changePercent": -1.7241336,
+      "close": 17.2,
+      "change": 0.10000038,
+      "changePercent": 0.58479756,
       "asOfDate": "2026-08-11"
     },
     "DITTO": {
@@ -1796,9 +1790,9 @@
       "asOfDate": "2026-08-11"
     },
     "ESTEE80": {
-      "close": 0.97,
-      "change": 0.01000005,
-      "changePercent": 1.0416719,
+      "close": 0.95,
+      "change": -0.02000004,
+      "changePercent": -2.0618596,
       "asOfDate": "2026-08-11"
     },
     "ETC": {
@@ -1814,15 +1808,15 @@
       "asOfDate": "2026-08-11"
     },
     "ETN03": {
-      "close": 2.46,
-      "change": -0.03999996,
-      "changePercent": -1.5999984,
+      "close": 2.54,
+      "change": 0.07999992,
+      "changePercent": 3.2520294,
       "asOfDate": "2026-08-11"
     },
     "ETN23": {
-      "close": 7.5,
-      "change": 0,
-      "changePercent": 0,
+      "close": 7.6,
+      "change": 0.099999905,
+      "changePercent": 1.3333321,
       "asOfDate": "2026-08-11"
     },
     "EURO": {
@@ -1832,9 +1826,9 @@
       "asOfDate": "2026-08-11"
     },
     "EXPE06": {
-      "close": 4.14,
-      "change": 0.07999992,
-      "changePercent": 1.9704415,
+      "close": 4.3,
+      "change": 0.16000032,
+      "changePercent": 3.864742,
       "asOfDate": "2026-08-11"
     },
     "F&D": {
@@ -1845,14 +1839,14 @@
     },
     "FANUC23": {
       "close": 2.44,
-      "change": -0.01999998,
-      "changePercent": -0.81300735,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "FCX23": {
-      "close": 2.92,
-      "change": 0.01999998,
-      "changePercent": 0.68965447,
+      "close": 2.84,
+      "change": -0.08000016,
+      "changePercent": -2.7397316,
       "asOfDate": "2026-08-11"
     },
     "FE": {
@@ -1983,8 +1977,8 @@
     },
     "GANFENG23": {
       "close": 1.71,
-      "change": -0.029999971,
-      "changePercent": -1.7241362,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "GBX": {
@@ -2007,14 +2001,14 @@
     },
     "GEELY06": {
       "close": 3.1,
-      "change": -0.10000014,
-      "changePercent": -3.1250045,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "GEELY80": {
       "close": 7.75,
-      "change": -0.35000038,
-      "changePercent": -4.320992,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "GENCO": {
@@ -2024,15 +2018,15 @@
       "asOfDate": "2026-08-11"
     },
     "GEV23": {
-      "close": 2.98,
-      "change": 0,
-      "changePercent": 0,
+      "close": 3.06,
+      "change": 0.07999992,
+      "changePercent": 2.6845613,
       "asOfDate": "2026-08-11"
     },
     "GEV80": {
-      "close": 32.75,
-      "change": -0.25,
-      "changePercent": -0.75757575,
+      "close": 33.5,
+      "change": 0.75,
+      "changePercent": 2.2900765,
       "asOfDate": "2026-08-11"
     },
     "GFC": {
@@ -2048,9 +2042,9 @@
       "asOfDate": "2026-08-11"
     },
     "GFS03": {
-      "close": 1.4,
-      "change": -0.100000024,
-      "changePercent": -6.6666684,
+      "close": 1.41,
+      "change": 0.00999999,
+      "changePercent": 0.7142851,
       "asOfDate": "2026-08-11"
     },
     "GGC": {
@@ -2061,8 +2055,8 @@
     },
     "GIGA23": {
       "close": 7.05,
-      "change": 0.10000038,
-      "changePercent": 1.4388545,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "GLAND": {
@@ -2084,9 +2078,9 @@
       "asOfDate": "2026-08-11"
     },
     "GLW80": {
-      "close": 5.2,
-      "change": -0.4000001,
-      "changePercent": -7.142859,
+      "close": 5.3,
+      "change": 0.10000038,
+      "changePercent": 1.9230843,
       "asOfDate": "2026-08-11"
     },
     "GOLDPF": {
@@ -2096,33 +2090,33 @@
       "asOfDate": "2022-04-11"
     },
     "GOOG23": {
-      "close": 2.96,
-      "change": 0.03999996,
-      "changePercent": 1.3698617,
+      "close": 2.86,
+      "change": -0.10000014,
+      "changePercent": -3.3783832,
       "asOfDate": "2026-08-11"
     },
     "GOOG80": {
-      "close": 5.9,
-      "change": 0,
-      "changePercent": 0,
+      "close": 5.7,
+      "change": -0.20000029,
+      "changePercent": -3.3898354,
       "asOfDate": "2026-08-11"
     },
     "GOOGL01": {
-      "close": 35,
-      "change": 0.25,
-      "changePercent": 0.7194245,
+      "close": 33.75,
+      "change": -1.25,
+      "changePercent": -3.5714288,
       "asOfDate": "2026-08-11"
     },
     "GOOGL03": {
-      "close": 5.95,
-      "change": 0.049999714,
-      "changePercent": 0.84745276,
+      "close": 5.75,
+      "change": -0.19999981,
+      "changePercent": -3.3613415,
       "asOfDate": "2026-08-11"
     },
     "GOOGL19": {
-      "close": 5.95,
-      "change": 0.099999905,
-      "changePercent": 1.7094002,
+      "close": 5.75,
+      "change": -0.19999981,
+      "changePercent": -3.3613415,
       "asOfDate": "2026-08-11"
     },
     "GPI": {
@@ -2156,9 +2150,9 @@
       "asOfDate": "2026-08-11"
     },
     "GSUS06": {
-      "close": 4.88,
-      "change": 0,
-      "changePercent": 0,
+      "close": 4.9,
+      "change": 0.01999998,
+      "changePercent": 0.40983567,
       "asOfDate": "2026-08-11"
     },
     "GTB": {
@@ -2193,8 +2187,8 @@
     },
     "HAIERS19": {
       "close": 9.15,
-      "change": 0.14999962,
-      "changePercent": 1.6666625,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HANA": {
@@ -2205,8 +2199,8 @@
     },
     "HANSOH19": {
       "close": 5.9,
-      "change": 0.05000019,
-      "changePercent": 0.85470414,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HARN": {
@@ -2222,9 +2216,9 @@
       "asOfDate": "2026-08-11"
     },
     "HERMES80": {
-      "close": 6.3,
-      "change": 0.05000019,
-      "changePercent": 0.800003,
+      "close": 6.35,
+      "change": 0.049999714,
+      "changePercent": 0.79364616,
       "asOfDate": "2026-08-11"
     },
     "HFT": {
@@ -2235,26 +2229,26 @@
     },
     "HK01": {
       "close": 22.1,
-      "change": -0.19999886,
-      "changePercent": -0.8968559,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HK13": {
       "close": 5.65,
-      "change": -0.099999905,
-      "changePercent": -1.7391288,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HKCE01": {
       "close": 24.8,
-      "change": -0.10000038,
-      "changePercent": -0.40160796,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HKEX23": {
       "close": 2.2,
-      "change": -0.03999996,
-      "changePercent": -1.7857125,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HL": {
@@ -2283,8 +2277,8 @@
     },
     "HPG19": {
       "close": 2.8,
-      "change": -0.01999998,
-      "changePercent": -0.70921916,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "HPT": {
@@ -2330,15 +2324,15 @@
       "asOfDate": "2026-08-11"
     },
     "IBM06": {
-      "close": 3.14,
-      "change": 0.02000022,
-      "changePercent": 0.6410327,
+      "close": 3.18,
+      "change": 0.03999996,
+      "changePercent": 1.273884,
       "asOfDate": "2026-08-11"
     },
     "ICBC06": {
       "close": 3.1,
-      "change": 0.059999943,
-      "changePercent": 1.9736823,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ICBC19": {
@@ -2373,8 +2367,8 @@
     },
     "IFLYTEK80": {
       "close": 2.12,
-      "change": 0.03999996,
-      "changePercent": 1.9230751,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "IFS": {
@@ -2535,8 +2529,8 @@
     },
     "ITOCHU19": {
       "close": 7.15,
-      "change": -0.1500001,
-      "changePercent": -2.0547957,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ITTHI": {
@@ -2589,8 +2583,8 @@
     },
     "JD80": {
       "close": 5.25,
-      "change": -0.1500001,
-      "changePercent": -2.7777796,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "JDF": {
@@ -2618,15 +2612,15 @@
       "asOfDate": "2026-08-11"
     },
     "JNJ03": {
-      "close": 4.32,
-      "change": 0.03999996,
-      "changePercent": 0.9345785,
+      "close": 4.3,
+      "change": -0.01999998,
+      "changePercent": -0.4629625,
       "asOfDate": "2026-08-11"
     },
     "JPANIME24": {
       "close": 1.44,
-      "change": 0.01000011,
-      "changePercent": 0.6993084,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "JPARK": {
@@ -2636,15 +2630,15 @@
       "asOfDate": "2026-08-11"
     },
     "JPMUS06": {
-      "close": 3.98,
+      "close": 4.02,
       "change": 0.03999996,
-      "changePercent": 1.0152274,
+      "changePercent": 1.0050242,
       "asOfDate": "2026-08-11"
     },
     "JPMUS19": {
-      "close": 23.8,
-      "change": 0.099998474,
-      "changePercent": 0.4219345,
+      "close": 23.9,
+      "change": 0.10000038,
+      "changePercent": 0.42016968,
       "asOfDate": "2026-08-11"
     },
     "JPROBOAI24": {
@@ -2751,8 +2745,8 @@
     },
     "KEYENCE23": {
       "close": 3.12,
-      "change": -0.06000018,
-      "changePercent": -1.886798,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "KGEN": {
@@ -2775,8 +2769,8 @@
     },
     "KINGSOFT23": {
       "close": 1.98,
-      "change": -0.01999998,
-      "changePercent": -0.99999905,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "KISS": {
@@ -2810,9 +2804,9 @@
       "asOfDate": "2026-08-11"
     },
     "KLAC19": {
-      "close": 3.26,
-      "change": -0.07999992,
-      "changePercent": -2.3952074,
+      "close": 3.36,
+      "change": 0.099999905,
+      "changePercent": 3.0674818,
       "asOfDate": "2026-08-11"
     },
     "KLINIQ": {
@@ -2822,9 +2816,9 @@
       "asOfDate": "2026-08-11"
     },
     "KO80": {
-      "close": 2.86,
-      "change": -0.0400002,
-      "changePercent": -1.3793173,
+      "close": 2.9,
+      "change": 0.0400002,
+      "changePercent": 1.3986084,
       "asOfDate": "2026-08-11"
     },
     "KOOL": {
@@ -2889,26 +2883,26 @@
     },
     "KUAISH01": {
       "close": 2.24,
-      "change": -0.1400001,
-      "changePercent": -5.882357,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "KUAISH06": {
       "close": 1.8,
-      "change": -0.05000007,
-      "changePercent": -2.7027066,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "KUAISH23": {
       "close": 1.31,
-      "change": -0.0200001,
-      "changePercent": -1.5037669,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "KUAISH80": {
       "close": 1.82,
-      "change": -0.03999996,
-      "changePercent": -2.1505356,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "KUMWEL": {
@@ -2973,8 +2967,8 @@
     },
     "LENOVO13": {
       "close": 6.2,
-      "change": -0.20000029,
-      "changePercent": -3.1250045,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "LEO": {
@@ -3032,21 +3026,21 @@
       "asOfDate": "2026-08-11"
     },
     "LLY23": {
-      "close": 4.1,
-      "change": 0.17999983,
-      "changePercent": 4.591832,
+      "close": 4.04,
+      "change": -0.059999943,
+      "changePercent": -1.4634132,
       "asOfDate": "2026-08-11"
     },
     "LLY80": {
       "close": 2.02,
-      "change": 0.07999992,
-      "changePercent": 4.1237073,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "LOREAL80": {
       "close": 1.48,
-      "change": 0.01999998,
-      "changePercent": 1.3698617,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "LOXLEY": {
@@ -3063,8 +3057,8 @@
     },
     "LPGOLD13": {
       "close": 1.59,
-      "change": -0.100000024,
-      "changePercent": -5.917161,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "LPH": {
@@ -3080,9 +3074,9 @@
       "asOfDate": "2026-08-11"
     },
     "LRCX23": {
-      "close": 3.94,
-      "change": -0.099999905,
-      "changePercent": -2.475245,
+      "close": 3.98,
+      "change": 0.03999996,
+      "changePercent": 1.0152274,
       "asOfDate": "2026-08-11"
     },
     "LRH": {
@@ -3254,27 +3248,27 @@
       "asOfDate": "2026-08-11"
     },
     "META01": {
-      "close": 5.8,
-      "change": 0,
-      "changePercent": 0,
+      "close": 5.9,
+      "change": 0.099999905,
+      "changePercent": 1.7241362,
       "asOfDate": "2026-08-11"
     },
     "META06": {
-      "close": 2.48,
+      "close": 2.5,
       "change": 0.01999998,
-      "changePercent": 0.81300735,
+      "changePercent": 0.80645084,
       "asOfDate": "2026-08-11"
     },
     "META23": {
-      "close": 2.34,
-      "change": 0,
-      "changePercent": 0,
+      "close": 2.36,
+      "change": 0.01999998,
+      "changePercent": 0.8547001,
       "asOfDate": "2026-08-11"
     },
     "META80": {
-      "close": 2.46,
-      "change": 0.01999998,
-      "changePercent": 0.81967133,
+      "close": 2.5,
+      "change": 0.03999996,
+      "changePercent": 1.6260147,
       "asOfDate": "2026-08-11"
     },
     "METCO": {
@@ -3320,39 +3314,39 @@
       "asOfDate": "2026-08-11"
     },
     "MICRON01": {
-      "close": 17.8,
-      "change": -0.30000114,
-      "changePercent": -1.6574649,
+      "close": 17.9,
+      "change": 0.10000038,
+      "changePercent": 0.5617999,
       "asOfDate": "2026-08-11"
     },
     "MICRON03": {
       "close": 9.6,
-      "change": -0.14999962,
-      "changePercent": -1.5384576,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MICRON19": {
       "close": 19.1,
-      "change": -0.19999886,
-      "changePercent": -1.0362636,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MICRON23": {
-      "close": 5.7,
-      "change": -0.10000038,
-      "changePercent": -1.7241445,
+      "close": 5.75,
+      "change": 0.05000019,
+      "changePercent": 0.8771963,
       "asOfDate": "2026-08-11"
     },
     "MICRON80": {
-      "close": 28.75,
+      "close": 28.5,
       "change": -0.25,
-      "changePercent": -0.86206895,
+      "changePercent": -0.8695652,
       "asOfDate": "2026-08-11"
     },
     "MIDEA80": {
       "close": 4.12,
-      "change": 0.03999996,
-      "changePercent": 0.98039126,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MII": {
@@ -3387,8 +3381,8 @@
     },
     "MITSU19": {
       "close": 8.35,
-      "change": -0.049999237,
-      "changePercent": -0.595229,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MJLF": {
@@ -3404,9 +3398,9 @@
       "asOfDate": "2026-08-11"
     },
     "MKSI03": {
-      "close": 2,
-      "change": -0.119999886,
-      "changePercent": -5.6603723,
+      "close": 1.97,
+      "change": -0.029999971,
+      "changePercent": -1.4999986,
       "asOfDate": "2026-08-11"
     },
     "ML": {
@@ -3441,8 +3435,8 @@
     },
     "MNSO80": {
       "close": 10.2,
-      "change": -0.10000038,
-      "changePercent": -0.9708774,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MODERN": {
@@ -3459,8 +3453,8 @@
     },
     "MONTAGE80": {
       "close": 11.2,
-      "change": 0.5,
-      "changePercent": 4.6728973,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MOONG": {
@@ -3483,8 +3477,8 @@
     },
     "MOUTAI80": {
       "close": 6.55,
-      "change": -0.049999714,
-      "changePercent": -0.75757146,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MPJ": {
@@ -3500,27 +3494,27 @@
       "asOfDate": "2026-08-11"
     },
     "MRVL06": {
-      "close": 6.9,
-      "change": -0.5,
-      "changePercent": -6.7567563,
+      "close": 7.05,
+      "change": 0.1500001,
+      "changePercent": 2.1739144,
       "asOfDate": "2026-08-11"
     },
     "MRVL23": {
-      "close": 5.75,
-      "change": -0.3499999,
-      "changePercent": -5.7377033,
+      "close": 5.85,
+      "change": 0.099999905,
+      "changePercent": 1.7391288,
       "asOfDate": "2026-08-11"
     },
     "MRVL80": {
-      "close": 6.85,
-      "change": -0.5,
-      "changePercent": -6.8027215,
+      "close": 7,
+      "change": 0.1500001,
+      "changePercent": 2.1897824,
       "asOfDate": "2026-08-11"
     },
     "MS06": {
       "close": 4.76,
-      "change": 0.020000458,
-      "changePercent": 0.42195058,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MSC": {
@@ -3531,38 +3525,38 @@
     },
     "MSFT01": {
       "close": 4.92,
-      "change": 0.07999992,
-      "changePercent": 1.652891,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MSFT03": {
-      "close": 3.34,
+      "close": 3.36,
       "change": 0.01999998,
-      "changePercent": 0.60240906,
+      "changePercent": 0.59880185,
       "asOfDate": "2026-08-11"
     },
     "MSFT06": {
-      "close": 4.2,
-      "change": 0.07999992,
-      "changePercent": 1.9417458,
+      "close": 4.18,
+      "change": -0.01999998,
+      "changePercent": -0.47619003,
       "asOfDate": "2026-08-11"
     },
     "MSFT19": {
-      "close": 5.55,
-      "change": 0.10000038,
-      "changePercent": 1.8348694,
+      "close": 5.6,
+      "change": 0.049999714,
+      "changePercent": 0.9008957,
       "asOfDate": "2026-08-11"
     },
     "MSFT23": {
-      "close": 3.12,
-      "change": 0.059999943,
-      "changePercent": 1.9607825,
+      "close": 3.1,
+      "change": -0.01999998,
+      "changePercent": -0.64102507,
       "asOfDate": "2026-08-11"
     },
     "MSFT80": {
-      "close": 8.35,
-      "change": 0.15000057,
-      "changePercent": 1.8292753,
+      "close": 8.3,
+      "change": -0.05000019,
+      "changePercent": -0.59880465,
       "asOfDate": "2026-08-11"
     },
     "MST": {
@@ -3597,26 +3591,26 @@
     },
     "MUFG19": {
       "close": 7.3,
-      "change": -0.049999714,
-      "changePercent": -0.6802682,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MUFG23": {
       "close": 2.98,
-      "change": -0.01999998,
-      "changePercent": -0.66666603,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MWG11": {
       "close": 3.86,
-      "change": -0.0400002,
-      "changePercent": -1.0256462,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "MWG19": {
       "close": 9.95,
-      "change": 0.05000019,
-      "changePercent": 0.50505245,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NAM": {
@@ -3639,14 +3633,14 @@
     },
     "NAURA23": {
       "close": 4.14,
-      "change": 0.07999992,
-      "changePercent": 1.9704415,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NAURA80": {
       "close": 37,
-      "change": 0.5,
-      "changePercent": 1.369863,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NC": {
@@ -3680,9 +3674,9 @@
       "asOfDate": "2026-08-11"
     },
     "NDAQ06": {
-      "close": 3.18,
-      "change": 0.06000018,
-      "changePercent": 1.9230828,
+      "close": 3.16,
+      "change": -0.01999998,
+      "changePercent": -0.6289302,
       "asOfDate": "2026-08-11"
     },
     "NDR": {
@@ -3693,26 +3687,26 @@
     },
     "NDX01": {
       "close": 25.5,
-      "change": -0.25,
-      "changePercent": -0.9708738,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NEE80": {
-      "close": 2.82,
+      "close": 2.84,
       "change": 0.01999998,
-      "changePercent": 0.7142851,
+      "changePercent": 0.70921916,
       "asOfDate": "2026-08-11"
     },
     "NEM06": {
-      "close": 3.84,
-      "change": 0.099999905,
-      "changePercent": 2.673794,
+      "close": 3.86,
+      "change": 0.01999998,
+      "changePercent": 0.52083284,
       "asOfDate": "2026-08-11"
     },
     "NEM23": {
-      "close": 2.4,
-      "change": 0.0400002,
-      "changePercent": 1.6949239,
+      "close": 2.42,
+      "change": 0.01999998,
+      "changePercent": 0.83333254,
       "asOfDate": "2026-08-11"
     },
     "NEO": {
@@ -3752,9 +3746,9 @@
       "asOfDate": "2025-06-04"
     },
     "NIKE80": {
-      "close": 0.7,
-      "change": 0.00999999,
-      "changePercent": 1.449274,
+      "close": 0.69,
+      "change": -0.00999999,
+      "changePercent": -1.4285702,
       "asOfDate": "2026-08-11"
     },
     "NIKKEI80": {
@@ -3771,8 +3765,8 @@
     },
     "NINTENDO23": {
       "close": 1.55,
-      "change": 0.01999998,
-      "changePercent": 1.3071884,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NKI": {
@@ -3807,8 +3801,8 @@
     },
     "NONGFU80": {
       "close": 1.81,
-      "change": -0.04000008,
-      "changePercent": -2.1621666,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NOVA": {
@@ -3818,9 +3812,9 @@
       "asOfDate": "2026-08-11"
     },
     "NOVOB80": {
-      "close": 1.57,
-      "change": 0.03000009,
-      "changePercent": 1.9480579,
+      "close": 1.58,
+      "change": 0.00999999,
+      "changePercent": 0.636942,
       "asOfDate": "2026-08-11"
     },
     "NPK": {
@@ -3878,39 +3872,39 @@
       "asOfDate": "2026-08-11"
     },
     "NVDA01": {
-      "close": 21.4,
-      "change": -0.5,
-      "changePercent": -2.2831051,
+      "close": 21.2,
+      "change": -0.19999886,
+      "changePercent": -0.9345741,
       "asOfDate": "2026-08-11"
     },
     "NVDA03": {
-      "close": 4.86,
-      "change": -0.099999905,
-      "changePercent": -2.016127,
+      "close": 4.84,
+      "change": -0.01999998,
+      "changePercent": -0.41152224,
       "asOfDate": "2026-08-11"
     },
     "NVDA06": {
       "close": 4.84,
-      "change": -0.099999905,
-      "changePercent": -2.0242896,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "NVDA19": {
-      "close": 29,
-      "change": -0.75,
-      "changePercent": -2.5210085,
+      "close": 28.75,
+      "change": -0.25,
+      "changePercent": -0.86206895,
       "asOfDate": "2026-08-11"
     },
     "NVDA23": {
-      "close": 3.48,
-      "change": -0.03999996,
-      "changePercent": -1.1363626,
+      "close": 3.46,
+      "change": -0.01999998,
+      "changePercent": -0.5747121,
       "asOfDate": "2026-08-11"
     },
     "NVDA80": {
-      "close": 36.5,
-      "change": -0.5,
-      "changePercent": -1.3513514,
+      "close": 36.25,
+      "change": -0.25,
+      "changePercent": -0.6849315,
       "asOfDate": "2026-08-11"
     },
     "NWR": {
@@ -3968,21 +3962,21 @@
       "asOfDate": "2026-08-11"
     },
     "ORCL01": {
-      "close": 3.12,
-      "change": 0.03999996,
-      "changePercent": 1.2987001,
+      "close": 3.04,
+      "change": -0.07999992,
+      "changePercent": -2.5641003,
       "asOfDate": "2026-08-11"
     },
     "ORCL06": {
-      "close": 2,
-      "change": 0.03999996,
-      "changePercent": 2.0408144,
+      "close": 1.92,
+      "change": -0.08000004,
+      "changePercent": -4.000002,
       "asOfDate": "2026-08-11"
     },
     "ORCL19": {
-      "close": 5,
-      "change": 0.119999886,
-      "changePercent": 2.459014,
+      "close": 4.82,
+      "change": -0.17999983,
+      "changePercent": -3.5999966,
       "asOfDate": "2026-08-11"
     },
     "ORI": {
@@ -4004,9 +3998,9 @@
       "asOfDate": "2026-08-11"
     },
     "OXY03": {
-      "close": 1.98,
-      "change": 0.120000005,
-      "changePercent": 6.4516134,
+      "close": 1.95,
+      "change": -0.029999971,
+      "changePercent": -1.5151501,
       "asOfDate": "2026-08-11"
     },
     "PACO": {
@@ -4101,8 +4095,8 @@
     },
     "PETROCN80": {
       "close": 4.12,
-      "change": 0.07999992,
-      "changePercent": 1.9801961,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "PF": {
@@ -4112,9 +4106,9 @@
       "asOfDate": "2026-08-11"
     },
     "PFIZER19": {
-      "close": 17.8,
-      "change": 0.29999924,
-      "changePercent": 1.7142813,
+      "close": 17.7,
+      "change": -0.099998474,
+      "changePercent": -0.5617892,
       "asOfDate": "2026-08-11"
     },
     "PG": {
@@ -4155,14 +4149,14 @@
     },
     "PINGAN01": {
       "close": 5.35,
-      "change": -0.05000019,
-      "changePercent": -0.9259295,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "PINGAN80": {
       "close": 2.38,
-      "change": -0.01999998,
-      "changePercent": -0.83333254,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "PIS": {
@@ -4244,9 +4238,9 @@
       "asOfDate": "2026-08-11"
     },
     "PNG80": {
-      "close": 4.9,
-      "change": 0.059999943,
-      "changePercent": 1.2396683,
+      "close": 4.86,
+      "change": -0.03999996,
+      "changePercent": -0.8163257,
       "asOfDate": "2026-08-11"
     },
     "POLY": {
@@ -4263,8 +4257,8 @@
     },
     "POPMART23": {
       "close": 1.55,
-      "change": -0.03000009,
-      "changePercent": -1.8987398,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "POPMART80": {
@@ -4467,8 +4461,8 @@
     },
     "PYPL06": {
       "close": 3.92,
-      "change": 0.03999996,
-      "changePercent": 1.0309268,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "Q-CON": {
@@ -4479,8 +4473,8 @@
     },
     "QCOM06": {
       "close": 2.7,
-      "change": -0.119999886,
-      "changePercent": -4.2553153,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "QH": {
@@ -4527,8 +4521,8 @@
     },
     "QQQM19": {
       "close": 19.7,
-      "change": 0.10000038,
-      "changePercent": 0.51020604,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "QTC": {
@@ -4736,21 +4730,21 @@
       "asOfDate": "2026-08-11"
     },
     "SANOFI80": {
-      "close": 2.9,
-      "change": 0.01999998,
-      "changePercent": 0.69444376,
+      "close": 2.88,
+      "change": -0.01999998,
+      "changePercent": -0.68965447,
       "asOfDate": "2026-08-11"
     },
     "SANRIO23": {
       "close": 2.12,
-      "change": -0.0400002,
-      "changePercent": -1.851861,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SANRIO80": {
       "close": 15.1,
-      "change": 0.20000076,
-      "changePercent": 1.3422871,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SAPPE": {
@@ -4784,9 +4778,9 @@
       "asOfDate": "2026-08-11"
     },
     "SBUX80": {
-      "close": 1.75,
-      "change": 0,
-      "changePercent": 0,
+      "close": 1.76,
+      "change": 0.00999999,
+      "changePercent": 0.571428,
       "asOfDate": "2026-08-11"
     },
     "SC": {
@@ -4886,9 +4880,9 @@
       "asOfDate": "2026-08-11"
     },
     "SEAGATE23": {
-      "close": 5.55,
-      "change": -0.099999905,
-      "changePercent": -1.7699099,
+      "close": 5.7,
+      "change": 0.14999962,
+      "changePercent": 2.7026956,
       "asOfDate": "2026-08-11"
     },
     "SEAOIL": {
@@ -4917,8 +4911,8 @@
     },
     "SEMB19": {
       "close": 4.88,
-      "change": 0.03999996,
-      "changePercent": 0.8264455,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SENA": {
@@ -4959,8 +4953,8 @@
     },
     "SGX19": {
       "close": 6.45,
-      "change": 0.049999714,
-      "changePercent": 0.7812455,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SHANG": {
@@ -4983,8 +4977,8 @@
     },
     "SIA19": {
       "close": 18.5,
-      "change": -1.1000004,
-      "changePercent": -5.6122465,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SIAM": {
@@ -5000,9 +4994,9 @@
       "asOfDate": "2026-08-11"
     },
     "SIL03": {
-      "close": 2.96,
-      "change": 0.03999996,
-      "changePercent": 1.3698617,
+      "close": 2.98,
+      "change": 0.01999998,
+      "changePercent": 0.67567503,
       "asOfDate": "2026-08-11"
     },
     "SIMAT": {
@@ -5019,8 +5013,8 @@
     },
     "SINGTEL80": {
       "close": 11.2,
-      "change": -0.10000038,
-      "changePercent": -0.8849591,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SINO": {
@@ -5031,8 +5025,8 @@
     },
     "SINOBIO19": {
       "close": 4.24,
-      "change": -0.020000458,
-      "changePercent": -0.46949428,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SIRI": {
@@ -5187,8 +5181,8 @@
     },
     "SOFTBANK23": {
       "close": 2.18,
-      "change": -0.01999998,
-      "changePercent": -0.90909004,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SONIC": {
@@ -5199,8 +5193,8 @@
     },
     "SONY80": {
       "close": 3.9,
-      "change": -0.03999996,
-      "changePercent": -1.0152274,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SORKON": {
@@ -5211,8 +5205,8 @@
     },
     "SP500US19": {
       "close": 15.1,
-      "change": 0.10000038,
-      "changePercent": 0.6666692,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SP500US80": {
@@ -5240,9 +5234,9 @@
       "asOfDate": "2026-08-11"
     },
     "SPBOND80": {
-      "close": 8.4,
-      "change": -0.05000019,
-      "changePercent": -0.59171826,
+      "close": 8.35,
+      "change": -0.049999237,
+      "changePercent": -0.595229,
       "asOfDate": "2026-08-11"
     },
     "SPC": {
@@ -5258,21 +5252,21 @@
       "asOfDate": "2026-08-11"
     },
     "SPCOM80": {
-      "close": 3.74,
-      "change": 0.01999998,
-      "changePercent": 0.5376339,
+      "close": 3.72,
+      "change": -0.01999998,
+      "changePercent": -0.53475887,
       "asOfDate": "2026-08-11"
     },
     "SPENGY80": {
-      "close": 4,
-      "change": 0.20000005,
-      "changePercent": 5.2631593,
+      "close": 4.02,
+      "change": 0.01999998,
+      "changePercent": 0.49999952,
       "asOfDate": "2026-08-11"
     },
     "SPFIN80": {
-      "close": 19.2,
-      "change": 0.30000114,
-      "changePercent": 1.5873077,
+      "close": 19.3,
+      "change": 0.099998474,
+      "changePercent": 0.5208254,
       "asOfDate": "2026-08-11"
     },
     "SPG": {
@@ -5282,9 +5276,9 @@
       "asOfDate": "2026-08-11"
     },
     "SPHLTH80": {
-      "close": 5.55,
-      "change": 0.10000038,
-      "changePercent": 1.8348694,
+      "close": 5.6,
+      "change": 0.049999714,
+      "changePercent": 0.9008957,
       "asOfDate": "2026-08-11"
     },
     "SPI": {
@@ -5312,9 +5306,9 @@
       "asOfDate": "2026-08-11"
     },
     "SPTECH80": {
-      "close": 12.4,
-      "change": 0,
-      "changePercent": 0,
+      "close": 12.3,
+      "change": -0.09999943,
+      "changePercent": -0.806447,
       "asOfDate": "2026-08-11"
     },
     "SPVI": {
@@ -5450,9 +5444,9 @@
       "asOfDate": "2026-08-11"
     },
     "STM03": {
-      "close": 1.83,
-      "change": -0.049999952,
-      "changePercent": -2.659572,
+      "close": 1.82,
+      "change": -0.00999999,
+      "changePercent": -0.5464476,
       "asOfDate": "2026-08-11"
     },
     "STOWER": {
@@ -5493,14 +5487,14 @@
     },
     "SUNNY19": {
       "close": 2.46,
-      "change": -0.03999996,
-      "changePercent": -1.5999984,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SUNNY80": {
       "close": 2.46,
-      "change": -0.01999998,
-      "changePercent": -0.80645084,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "SUPER": {
@@ -5595,8 +5589,8 @@
     },
     "TAIWANHD13": {
       "close": 34.5,
-      "change": -0.5,
-      "changePercent": -1.4285715,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TAKUNI": {
@@ -5703,38 +5697,38 @@
     },
     "TEL23": {
       "close": 4.36,
-      "change": -0.01999998,
-      "changePercent": -0.45662057,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TEL80": {
       "close": 11.6,
-      "change": -0.19999981,
-      "changePercent": -1.6949136,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TENCENT01": {
       "close": 4.52,
-      "change": -0.099999905,
-      "changePercent": -2.1645002,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TENCENT06": {
       "close": 1.99,
-      "change": -0.029999971,
-      "changePercent": -1.4851471,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TENCENT13": {
       "close": 4.12,
-      "change": -0.059999943,
-      "changePercent": -1.4354054,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TENCENT19": {
       "close": 10,
-      "change": -0.19999981,
-      "changePercent": -1.9607825,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TENCENT23": {
@@ -5745,8 +5739,8 @@
     },
     "TENCENT80": {
       "close": 20,
-      "change": -0.20000076,
-      "changePercent": -0.9901027,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TERA": {
@@ -5805,8 +5799,8 @@
     },
     "THAIBEV19": {
       "close": 12.1,
-      "change": 0.20000076,
-      "changePercent": 1.6806787,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "THANA": {
@@ -5973,8 +5967,8 @@
     },
     "TME23": {
       "close": 1.01,
-      "change": 0.029999971,
-      "changePercent": 3.0612216,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TMI": {
@@ -6177,8 +6171,8 @@
     },
     "TRIPCOM80": {
       "close": 1.54,
-      "change": 0.00999999,
-      "changePercent": 0.6535942,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "TRITN": {
@@ -6224,9 +6218,9 @@
       "asOfDate": "2026-08-11"
     },
     "TRVUS06": {
-      "close": 4.96,
-      "change": -0.09000015,
-      "changePercent": -1.7821811,
+      "close": 5.05,
+      "change": 0.09000015,
+      "changePercent": 1.8145193,
       "asOfDate": "2026-08-11"
     },
     "TSC": {
@@ -6398,9 +6392,9 @@
       "asOfDate": "2026-08-11"
     },
     "UNH19": {
-      "close": 6.75,
-      "change": 0.05000019,
-      "changePercent": 0.74627155,
+      "close": 6.7,
+      "change": -0.05000019,
+      "changePercent": -0.7407436,
       "asOfDate": "2026-08-11"
     },
     "UNIQ": {
@@ -6423,8 +6417,8 @@
     },
     "UOB19": {
       "close": 10.9,
-      "change": -0.40000057,
-      "changePercent": -3.5398278,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "UP": {
@@ -6507,8 +6501,8 @@
     },
     "VENTURE19": {
       "close": 4.42,
-      "change": 0.01999998,
-      "changePercent": 0.45454502,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "VGI": {
@@ -6519,8 +6513,8 @@
     },
     "VHM19": {
       "close": 9.2,
-      "change": 0.05000019,
-      "changePercent": 0.5464502,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "VIBHA": {
@@ -6537,14 +6531,14 @@
     },
     "VISA06": {
       "close": 1.51,
-      "change": 0.00999999,
-      "changePercent": 0.66666603,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "VISA80": {
-      "close": 1.49,
-      "change": 0,
-      "changePercent": 0,
+      "close": 1.51,
+      "change": 0.01999998,
+      "changePercent": 1.3422806,
       "asOfDate": "2026-08-11"
     },
     "VL": {
@@ -6561,8 +6555,8 @@
     },
     "VNM19": {
       "close": 7.9,
-      "change": 0.05000019,
-      "changePercent": 0.6369451,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "VRANDA": {
@@ -6572,9 +6566,9 @@
       "asOfDate": "2026-08-11"
     },
     "VRT23": {
-      "close": 2.62,
-      "change": -0.08000016,
-      "changePercent": -2.9629688,
+      "close": 2.74,
+      "change": 0.120000124,
+      "changePercent": 4.5801578,
       "asOfDate": "2026-08-11"
     },
     "VS": {
@@ -6584,9 +6578,9 @@
       "asOfDate": "2026-08-11"
     },
     "VST03": {
-      "close": 1.91,
-      "change": 0.029999971,
-      "changePercent": 1.5957432,
+      "close": 1.94,
+      "change": 0.03000009,
+      "changePercent": 1.5706854,
       "asOfDate": "2026-08-11"
     },
     "VT03": {
@@ -6686,15 +6680,15 @@
       "asOfDate": "2026-08-11"
     },
     "WMT06": {
-      "close": 3.72,
+      "close": 3.74,
       "change": 0.01999998,
-      "changePercent": 0.54054,
+      "changePercent": 0.5376339,
       "asOfDate": "2026-08-11"
     },
     "WMT80": {
       "close": 3.74,
-      "change": 0.03999996,
-      "changePercent": 1.08108,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "WORK": {
@@ -6777,26 +6771,26 @@
     },
     "ZIJIN13": {
       "close": 2.58,
-      "change": -0.120000124,
-      "changePercent": -4.444449,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ZIJIN23": {
       "close": 2.32,
-      "change": -0.08000016,
-      "changePercent": -3.33334,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ZIJIN80": {
       "close": 15,
-      "change": -0.6999998,
-      "changePercent": -4.4585977,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     },
     "ZJINNO80": {
       "close": 4.32,
-      "change": 0.10000038,
-      "changePercent": 2.3696775,
+      "change": 0,
+      "changePercent": 0,
       "asOfDate": "2026-08-11"
     }
   }
