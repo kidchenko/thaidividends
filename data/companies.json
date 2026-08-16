@@ -494,8 +494,24 @@
     "isIFF": false
   },
   {
+    "symbol": "AMAT01",
+    "name": "Depositary Receipt on AMAT Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "AMAT19",
     "name": "Depositary Receipt on AMAT Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "AMAT23",
+    "name": "Depositary Receipt on AMAT Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -544,6 +560,14 @@
   {
     "symbol": "AMGN06",
     "name": "Depositary Receipt on AMGN Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "AMKR03",
+    "name": "Depositary Receipt on AMKR Issued by PI",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -4464,6 +4488,14 @@
     "securityType": "S",
     "industry": "FINCIAL",
     "sector": "BANK",
+    "isIFF": false
+  },
+  {
+    "symbol": "KLAC01",
+    "name": "Depositary Receipt on KLAC Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -10612,6 +10644,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "SERVICE",
+    "isIFF": false
+  },
+  {
+    "symbol": "WDC03",
+    "name": "Depositary Receipt on WDC Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
