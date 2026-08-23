@@ -4507,6 +4507,14 @@
     "isIFF": false
   },
   {
+    "symbol": "KLAC23",
+    "name": "Depositary Receipt on KLAC Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "KLINIQ",
     "name": "The Klinique Medical Clinic Public Company Limited",
     "currency": "Baht",

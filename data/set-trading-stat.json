@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-08-16T03:42:19.603Z",
+  "asOf": "2026-08-23T03:44:31.719Z",
   "data": {
     "AMATA": [
       {
@@ -69194,6 +69194,22 @@
         "dividendPayoutRatio": null,
         "marketCap": 25925120,
         "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "KLAC23": [
+      {
+        "period": "YTD",
+        "date": "2026-08-21",
+        "close": 6.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 9351300,
+        "listedShare": 1666000000,
         "beta": null,
         "financialDate": null
       }
