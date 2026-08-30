@@ -574,6 +574,14 @@
     "isIFF": false
   },
   {
+    "symbol": "AMKR23",
+    "name": "Depositary Receipt on AMKR Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "AMR",
     "name": "AMR ASIA PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -2634,6 +2642,14 @@
     "isIFF": false
   },
   {
+    "symbol": "DOLLARG80",
+    "name": "Depositary Receipt on DOLLARG Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "DPAINT",
     "name": "DELTA PAINT PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -3351,6 +3367,14 @@
     "symbol": "GOLDPF",
     "name": "GOLD PROPERTY FUND (LEASE HOLD)",
     "currency": "Baht"
+  },
+  {
+    "symbol": "GOOG06",
+    "name": "Depositary Receipt on GOOG Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
   },
   {
     "symbol": "GOOG23",
@@ -4911,8 +4935,32 @@
     "isIFF": false
   },
   {
+    "symbol": "LRCX01",
+    "name": "Depositary Receipt on LRCX Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "LRCX19",
+    "name": "Depositary Receipt on LRCX Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "LRCX23",
     "name": "Depositary Receipt on LRCX Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "LRCX80",
+    "name": "Depositary Receipt on LRCX Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -7127,6 +7175,14 @@
     "isIFF": false
   },
   {
+    "symbol": "QCOM23",
+    "name": "Depositary Receipt on QCOM Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "QH",
     "name": "QUALITY HOUSES PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -9196,6 +9252,30 @@
   {
     "symbol": "TENCENT80",
     "name": "Depositary Receipt on TENCENT Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "TER01",
+    "name": "Depositary Receipt on TER Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "TER23",
+    "name": "Depositary Receipt on TER Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "TER80",
+    "name": "Depositary Receipt on TER Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",

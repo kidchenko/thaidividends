@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-08-23T03:44:31.719Z",
+  "asOf": "2026-08-30T08:49:00.402Z",
   "data": {
     "AMATA": [
       {
@@ -69210,6 +69210,166 @@
         "dividendPayoutRatio": null,
         "marketCap": 9351300,
         "listedShare": 1666000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AMKR23": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 1.68,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 11944800,
+        "listedShare": 4504000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "DOLLARG80": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 4.22,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2160640,
+        "listedShare": 2500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GOOG06": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 3.74,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 33660000,
+        "listedShare": 2500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "LRCX01": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 4.36,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 43823232,
+        "listedShare": 12000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "LRCX19": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 4,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5044000,
+        "listedShare": 3148000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "LRCX80": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 10.4,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1549600,
+        "listedShare": 1200000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "QCOM23": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 2.5,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4950000,
+        "listedShare": 3759000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "TER01": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 4.36,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 38699360,
+        "listedShare": 12000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "TER23": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 6.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 15969800,
+        "listedShare": 1769000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "TER80": [
+      {
+        "period": "YTD",
+        "date": "2026-08-28",
+        "close": 12,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3900000,
+        "listedShare": 800000000,
         "beta": null,
         "financialDate": null
       }
