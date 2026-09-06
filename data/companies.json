@@ -5111,6 +5111,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MAOGEP80",
+    "name": "Depositary Receipt on MAOGEP Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MASTEC",
     "name": "Masstec Link Public Company Limited",
     "currency": "Baht",
@@ -5967,6 +5975,14 @@
     "isIFF": false
   },
   {
+    "symbol": "NETEASE11",
+    "name": "Depositary Receipt on NTES Issued by KS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "NETEASE80",
     "name": "Depositary Receipt on NTES Issued by KTB",
     "currency": "Baht",
@@ -6633,6 +6649,14 @@
   {
     "symbol": "PINGAN01",
     "name": "Depositary Receipt on PINGAN Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "PINGAN11",
+    "name": "Depositary Receipt on PINGAN Issued by KS",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -10674,8 +10698,24 @@
     "isIFF": false
   },
   {
+    "symbol": "VRT01",
+    "name": "Depositary Receipt on VRT Issued by BLS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "VRT23",
     "name": "Depositary Receipt on VRT Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "VRT80",
+    "name": "Depositary Receipt on VRT Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -10970,6 +11010,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "SERVICE",
+    "isIFF": false
+  },
+  {
+    "symbol": "YOFC23",
+    "name": "Depositary Receipt on YOFC Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
