@@ -221,6 +221,14 @@
     "isIFF": false
   },
   {
+    "symbol": "ADVANT80",
+    "name": "Depositary Receipt on ADVANT Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "ADVICE",
     "name": "Advice IT Infinite Public Company Limited",
     "currency": "Baht",
@@ -383,6 +391,22 @@
     "isIFF": false
   },
   {
+    "symbol": "AJINO23",
+    "name": "Depositary Receipt on AJINO Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "AJINO80",
+    "name": "Depositary Receipt on AJINO Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "AKP",
     "name": "AKKHIE PRAKARN PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -512,6 +536,14 @@
   {
     "symbol": "AMAT23",
     "name": "Depositary Receipt on AMAT Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "AMAT80",
+    "name": "Depositary Receipt on AMAT Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -2539,6 +2571,22 @@
     "isIFF": false
   },
   {
+    "symbol": "DELL23",
+    "name": "Depositary Receipt on DELL Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "DELL80",
+    "name": "Depositary Receipt on DELL Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "DELTA",
     "name": "DELTA ELECTRONICS (THAILAND) PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -3191,6 +3239,14 @@
     "isIFF": false
   },
   {
+    "symbol": "GASVN11",
+    "name": "Depositary Receipt on GASVN Issued by KS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "GBX",
     "name": "GLOBLEX HOLDING MANAGEMENT PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -3651,6 +3707,14 @@
     "isIFF": false
   },
   {
+    "symbol": "HPE80",
+    "name": "Depositary Receipt on HPE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "HPF",
     "name": "HEMARAJ INDUSTRIAL PROPERTY AND LEASEHOLD FUND",
     "currency": "Baht",
@@ -3732,6 +3796,22 @@
     "market": "mai",
     "securityType": "S",
     "industry": "TECH",
+    "isIFF": false
+  },
+  {
+    "symbol": "IBIDEN23",
+    "name": "Depositary Receipt on IBIDEN Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "IBIDEN80",
+    "name": "Depositary Receipt on IBIDEN Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -4143,6 +4223,14 @@
     "isIFF": false
   },
   {
+    "symbol": "JCI03",
+    "name": "Depositary Receipt on JCI Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "JCP",
     "name": "JC LEASEHOLD PROPERTY FUND",
     "currency": "Baht"
@@ -4187,6 +4275,14 @@
     "symbol": "JKN",
     "name": "JKN GLOBAL GROUP PUBLIC COMPANY LIMITED",
     "currency": "Baht"
+  },
+  {
+    "symbol": "JLMAG80",
+    "name": "Depositary Receipt on JLMAG Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
   },
   {
     "symbol": "JMART",
@@ -5011,6 +5107,14 @@
     "isIFF": false
   },
   {
+    "symbol": "LUXSHARE80",
+    "name": "Depositary Receipt on LUXSHARE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "LVMH01",
     "name": "Depositary Receipt on LVMH Issued by BLS",
     "currency": "Baht",
@@ -5788,6 +5892,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MURATA23",
+    "name": "Depositary Receipt on MURATA Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MWG11",
     "name": "Depositary Receipt on MWG Issued by KS",
     "currency": "Baht",
@@ -6376,6 +6488,14 @@
   {
     "symbol": "ORCL19",
     "name": "Depositary Receipt on ORCL Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "ORCL80",
+    "name": "Depositary Receipt on ORCL Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -7163,6 +7283,22 @@
     "isIFF": false
   },
   {
+    "symbol": "PWR03",
+    "name": "Depositary Receipt on PWR Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "PWR80",
+    "name": "Depositary Receipt on PWR Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "PYLON",
     "name": "PYLON PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -7833,6 +7969,14 @@
     "isIFF": false
   },
   {
+    "symbol": "SCREEN23",
+    "name": "Depositary Receipt on SCREEN Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "SE",
     "name": "SIAMEAST SOLUTIONS PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -7865,6 +8009,14 @@
   {
     "symbol": "SEAGATE23",
     "name": "Depositary Receipt on SEAGATE Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "SEAGATE80",
+    "name": "Depositary Receipt on SEAGATE Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -8005,6 +8157,14 @@
   {
     "symbol": "SHINCHEM19",
     "name": "Depositary Receipt on SHINCHEM Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "SHINCHEM80",
+    "name": "Depositary Receipt on SHINCHEM Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -8353,6 +8513,14 @@
   {
     "symbol": "SOFTBANK23",
     "name": "Depositary Receipt on SOFTBANK Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "SOFTBANK80",
+    "name": "Depositary Receipt on SOFTBANK Issued by KTB",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -8897,6 +9065,14 @@
     "securityType": "S",
     "industry": "RESOURC",
     "sector": "ENERG",
+    "isIFF": false
+  },
+  {
+    "symbol": "SUSHI23",
+    "name": "Depositary Receipt on SUSHI Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {

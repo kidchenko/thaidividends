@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-06T07:29:28.398Z",
+  "asOf": "2026-09-13T07:53:34.231Z",
   "data": {
     "AMATA": [
       {
@@ -69466,6 +69466,386 @@
         "dividendPayoutRatio": null,
         "marketCap": 7425000,
         "listedShare": 1801000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ADVANT80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 6.9,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 11040000,
+        "listedShare": 1800000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AJINO23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.22,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7881000,
+        "listedShare": 4672000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AJINO80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.58,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1933200,
+        "listedShare": 2900000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "AMAT80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.7,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2821500,
+        "listedShare": 3200000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "DELL23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.38,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 11813100,
+        "listedShare": 3676000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "DELL80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.42,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3591000,
+        "listedShare": 3500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "GASVN11": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 3.58,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7876000,
+        "listedShare": 2500000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 4.26,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 8626500,
+        "listedShare": 2500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "HPE80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3106200,
+        "listedShare": 3500000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "IBIDEN23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 4.3,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 69660000,
+        "listedShare": 2631000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "IBIDEN80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.26,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2966600,
+        "listedShare": 3400000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "JCI03": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.38,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1428000,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "JLMAG80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 6.75,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 5332500,
+        "listedShare": 1000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "LUXSHARE80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.78,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1401120,
+        "listedShare": 3400000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MURATA23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.02,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 6787200,
+        "listedShare": 4587000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ORCL80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 5.4,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 25758000,
+        "listedShare": 1700000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "PWR03": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.06,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3708000,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "PWR80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.92,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2922920,
+        "listedShare": 3200000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SCREEN23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 2.72,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2720000,
+        "listedShare": 2906000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SEAGATE80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.22,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3187800,
+        "listedShare": 3300000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SHINCHEM80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 12.4,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3596000,
+        "listedShare": 700000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SOFTBANK80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 14,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 28000000,
+        "listedShare": 1200000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SUSHI23": [
+      {
+        "period": "2025",
+        "date": "2025-12-30",
+        "close": 2.44,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 26245616,
+        "listedShare": 4166000000,
+        "beta": null,
+        "financialDate": null
+      },
+      {
+        "period": "YTD",
+        "date": "2026-09-11",
+        "close": 3.4,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 32937840,
+        "listedShare": 4166000000,
         "beta": null,
         "financialDate": null
       }
