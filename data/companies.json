@@ -5565,6 +5565,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MIXUE80",
+    "name": "Depositary Receipt on MIXUE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MJLF",
     "name": "MAJOR CINEPLEX LIFESTYLE LEASEHOLD PROPERTY FUND",
     "currency": "Baht",
@@ -5725,6 +5733,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "SERVICE",
+    "isIFF": false
+  },
+  {
+    "symbol": "MPWR23",
+    "name": "Depositary Receipt on MPWR Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
@@ -6488,6 +6504,14 @@
   {
     "symbol": "ORCL19",
     "name": "Depositary Receipt on ORCL Issued by YUANTA",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "ORCL23",
+    "name": "Depositary Receipt on ORCL Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -9019,6 +9043,14 @@
     "securityType": "S",
     "industry": "AGRO",
     "sector": "FOOD",
+    "isIFF": false
+  },
+  {
+    "symbol": "SUNGROW80",
+    "name": "Depositary Receipt on SUNGROW Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {

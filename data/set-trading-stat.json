@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-13T07:53:34.231Z",
+  "asOf": "2026-09-20T08:10:49.765Z",
   "data": {
     "AMATA": [
       {
@@ -69846,6 +69846,70 @@
         "dividendPayoutRatio": null,
         "marketCap": 32937840,
         "listedShare": 4166000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MIXUE80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-18",
+        "close": 8.1,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 3321000,
+        "listedShare": 600000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MPWR23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-18",
+        "close": 3.92,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 8937600,
+        "listedShare": 1960000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "ORCL23": [
+      {
+        "period": "YTD",
+        "date": "2026-09-18",
+        "close": 2.52,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 14091840,
+        "listedShare": 4672000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "SUNGROW80": [
+      {
+        "period": "YTD",
+        "date": "2026-09-18",
+        "close": 2.72,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 2176000,
+        "listedShare": 3200000000,
         "beta": null,
         "financialDate": null
       }
