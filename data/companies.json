@@ -2635,6 +2635,14 @@
     "isIFF": true
   },
   {
+    "symbol": "DISCO24",
+    "name": "Depositary Receipt on DISCO Issued by FSS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "DISCO80",
     "name": "Depositary Receipt on DISCO Issued by KTB",
     "currency": "Baht",
@@ -3648,6 +3656,14 @@
     "isIFF": false
   },
   {
+    "symbol": "HITACHI24",
+    "name": "Depositary Receipt on HITACHI Issued by FSS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "HK01",
     "name": "Depositary Receipt on TRAHK ETF Issued by BLS",
     "currency": "Baht",
@@ -4647,6 +4663,14 @@
   {
     "symbol": "KO80",
     "name": "Depositary Receipt on KO Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "KONAMI24",
+    "name": "Depositary Receipt on KONAMI Issued by FSS",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",

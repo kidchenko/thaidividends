@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-20T08:10:49.765Z",
+  "asOf": "2026-09-27T08:50:39.966Z",
   "data": {
     "AMATA": [
       {
@@ -69910,6 +69910,54 @@
         "dividendPayoutRatio": null,
         "marketCap": 2176000,
         "listedShare": 3200000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "DISCO24": [
+      {
+        "period": "YTD",
+        "date": "2026-09-25",
+        "close": 0.8,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 10440000,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "HITACHI24": [
+      {
+        "period": "YTD",
+        "date": "2026-09-25",
+        "close": 1.47,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 7408800,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "KONAMI24": [
+      {
+        "period": "YTD",
+        "date": "2026-09-25",
+        "close": 1.2,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 4104000,
+        "listedShare": 10000000000,
         "beta": null,
         "financialDate": null
       }
