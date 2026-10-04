@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-27T08:50:39.966Z",
+  "asOf": "2026-10-04T09:12:30.070Z",
   "data": {
     "AMATA": [
       {
@@ -69958,6 +69958,22 @@
         "dividendPayoutRatio": null,
         "marketCap": 4104000,
         "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "DEYE80": [
+      {
+        "period": "YTD",
+        "date": "2026-10-02",
+        "close": 3.3,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 1980000,
+        "listedShare": 3000000000,
         "beta": null,
         "financialDate": null
       }

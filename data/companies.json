@@ -2519,9 +2519,10 @@
     "symbol": "D",
     "name": "DENTAL CORPORATION PUBLIC COMPANY LIMITED",
     "currency": "Baht",
-    "market": "mai",
+    "market": "SET",
     "securityType": "S",
     "industry": "SERVICE",
+    "sector": "HELTH",
     "isIFF": false
   },
   {
@@ -2613,6 +2614,14 @@
     "market": "mai",
     "securityType": "S",
     "industry": "SERVICE",
+    "isIFF": false
+  },
+  {
+    "symbol": "DEYE80",
+    "name": "Depositary Receipt on DEYE Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
