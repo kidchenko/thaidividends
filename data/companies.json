@@ -1718,6 +1718,14 @@
     "isIFF": false
   },
   {
+    "symbol": "CAT80",
+    "name": "Depositary Receipt on CAT Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "CATL01",
     "name": "Depositary Receipt on CATL Issued by BLS",
     "currency": "Baht",
@@ -4373,6 +4381,14 @@
   {
     "symbol": "JPROBOAI24",
     "name": "Depositary Receipt on JPROBOAI ETF Issued by FSS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "JPSEMI24",
+    "name": "Depositary Receipt on JPSEMI ETF Issued by FSS",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
