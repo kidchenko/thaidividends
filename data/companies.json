@@ -7416,6 +7416,14 @@
     "isIFF": false
   },
   {
+    "symbol": "QCOM80",
+    "name": "Depositary Receipt on QCOM Issued by KTB",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "QH",
     "name": "QUALITY HOUSES PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -10607,6 +10615,14 @@
     "securityType": "S",
     "industry": "TECH",
     "sector": "ICT",
+    "isIFF": false
+  },
+  {
+    "symbol": "TXN03",
+    "name": "Depositary Receipt on TXN Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
     "isIFF": false
   },
   {
