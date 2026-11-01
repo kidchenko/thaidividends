@@ -3813,6 +3813,14 @@
     "isIFF": false
   },
   {
+    "symbol": "HXL03",
+    "name": "Depositary Receipt on HXL Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "HYDROGEN",
     "name": "Hydrogen Freehold and Leasehold Real Estate Investment Trust",
     "currency": "Baht",
@@ -3848,8 +3856,24 @@
     "isIFF": false
   },
   {
+    "symbol": "IBM03",
+    "name": "Depositary Receipt on IBM Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "IBM06",
     "name": "Depositary Receipt on IBM Issued by KKPS",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
+    "symbol": "IBM23",
+    "name": "Depositary Receipt on IBM Issued by INVX",
     "currency": "Baht",
     "market": "SET",
     "securityType": "X",
@@ -5923,6 +5947,14 @@
     "isIFF": false
   },
   {
+    "symbol": "MTRN03",
+    "name": "Depositary Receipt on MTRN Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "MTW",
     "name": "MAKE TO WIN HOLDING PUBLIC COMPANY LIMITED",
     "currency": "Baht",
@@ -7400,6 +7432,14 @@
     "isIFF": false
   },
   {
+    "symbol": "QCOM03",
+    "name": "Depositary Receipt on QCOM Issued by PI",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "QCOM06",
     "name": "Depositary Receipt on QCOM Issued by KKPS",
     "currency": "Baht",
@@ -8288,9 +8328,10 @@
     "symbol": "SICT",
     "name": "SILICON CRAFT TECHNOLOGY PUBLIC COMPANY LIMITED",
     "currency": "Baht",
-    "market": "mai",
+    "market": "SET",
     "securityType": "S",
     "industry": "TECH",
+    "sector": "ETRON",
     "isIFF": false
   },
   {
@@ -9261,9 +9302,10 @@
     "symbol": "TACC",
     "name": "T.A.C. CONSUMER PUBLIC COMPANY LIMITED",
     "currency": "Baht",
-    "market": "mai",
+    "market": "SET",
     "securityType": "S",
     "industry": "AGRO",
+    "sector": "FOOD",
     "isIFF": false
   },
   {

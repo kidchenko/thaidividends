@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-25T07:59:44.481Z",
+  "asOf": "2026-11-01T09:57:19.990Z",
   "data": {
     "AMATA": [
       {
@@ -70037,6 +70037,86 @@
         "dividendYield": null,
         "dividendPayoutRatio": null,
         "marketCap": 377600,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "HXL03": [
+      {
+        "period": "YTD",
+        "date": "2026-10-30",
+        "close": 1.84,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 466440,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "IBM03": [
+      {
+        "period": "YTD",
+        "date": "2026-10-30",
+        "close": 2.94,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 732060,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "IBM23": [
+      {
+        "period": "YTD",
+        "date": "2026-10-30",
+        "close": 2.86,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 6074640,
+        "listedShare": 4237000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "MTRN03": [
+      {
+        "period": "YTD",
+        "date": "2026-10-30",
+        "close": 1.93,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 386000,
+        "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "QCOM03": [
+      {
+        "period": "YTD",
+        "date": "2026-10-30",
+        "close": 3.04,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 680960,
         "listedShare": 10000000000,
         "beta": null,
         "financialDate": null
