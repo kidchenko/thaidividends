@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-01T09:57:19.990Z",
+  "asOf": "2026-11-08T09:46:05.531Z",
   "data": {
     "AMATA": [
       {
@@ -70118,6 +70118,22 @@
         "dividendPayoutRatio": null,
         "marketCap": 680960,
         "listedShare": 10000000000,
+        "beta": null,
+        "financialDate": null
+      }
+    ],
+    "CCJ23": [
+      {
+        "period": "YTD",
+        "date": "2026-11-06",
+        "close": 1.47,
+        "pe": null,
+        "pbv": null,
+        "bookValuePerShare": null,
+        "dividendYield": null,
+        "dividendPayoutRatio": null,
+        "marketCap": 12496176,
+        "listedShare": 4237000000,
         "beta": null,
         "financialDate": null
       }

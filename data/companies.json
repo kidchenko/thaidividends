@@ -1779,6 +1779,14 @@
     "isIFF": false
   },
   {
+    "symbol": "CCJ23",
+    "name": "Depositary Receipt on CCJ Issued by INVX",
+    "currency": "Baht",
+    "market": "SET",
+    "securityType": "X",
+    "isIFF": false
+  },
+  {
     "symbol": "CCP",
     "name": "CHONBURI CONCRETE PRODUCT PUBLIC COMPANY LIMITED",
     "currency": "Baht",
